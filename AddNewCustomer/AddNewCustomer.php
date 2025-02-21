@@ -66,7 +66,7 @@ try {
             $pdo->commit();
 
             // Display success message
-            echo "<h1>User Added Successfully!</h1>";
+            echo "<h1>New Customer Added Successfully!</h1>";
             echo "<p><a href='/'>Go Back</a></p>";
         } catch (Exception $e) {
             // Rollback the transaction in case of an error
