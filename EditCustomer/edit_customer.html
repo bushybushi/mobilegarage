@@ -5,9 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit Customer</title>
     <link rel="stylesheet" href="../styles.css">
+	
+	
 </head>
 <body>
+
+<!-- Top bar -->
+<header>
+	<h2>Mobile Garage</h2>
+</header>
+
+<!-- Container for main area-->
+<div class = "container">
+
+
+<!-- Sidebar -->
 <div class = 'sidebar'>
+<p>Side Menu</p>
 <a href = "" class = "sidebar-button">Dashboard</a>
 <a href = "" class = "sidebar-button">Customers</a>
 <a href = "" class = "sidebar-button">Parts</a>
@@ -15,7 +29,9 @@
 <a href = "" class = "sidebar-button">Accounting</a>
 <a href = "" class = "sidebar-button">Invoices</a>
 </div>
-<div>
+
+<!-- Main Content area -->
+<div class = "main-content">
     <form action="EditCustomer.php" method="post">
         <label for="firstName">First Name</label>
         <input type="text" id="firstName" name="firstName" required>
@@ -35,8 +51,9 @@
         <label for="emailAddress">Email Address</label>
         <input type="email" id="emailAddress" name="emailAddress" required>
 
-        <input type="submit" value="Edit Customer">
+        <input  type="submit" value="Edit Customer" class = "submit-button">
     </form>
+</div>
 </div>
 </body>
 </html>
