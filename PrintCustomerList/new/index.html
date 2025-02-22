@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customers - Mobile Garage</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function loadCustomers() {
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", "fetch_customers.php", true);
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    document.getElementById("customerTable").innerHTML = xhr.responseText;
+                }
+            };
+            xhr.send();
+        }
+    </script>
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>Mobile Garage Larnaca</h2>
+        <ul>
+            <li><a href="#">Dashboard</a></li>
+            <li class="active"><a href="#">Customers</a></li>
+            <li><a href="#">Parts</a></li>
+            <li><a href="#">Jobs</a></li>
+            <li><a href="#">Accounting</a></li>
+            <li><a href="#">Invoice</a></li>
+            <li><a href="#">Log Out</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="header">
+            <h2>Tuesday, 13 May 2024</h2>
+            <input type="text" placeholder="Search something here">
+        </div>
+
+        <div class="content">
+            <div class="top-bar">
+                <h3>Total: <span id="customerCount">0</span> Customers</h3>
+                <div class="actions">
+                    <button class="btn">Sort by: Date Created</button>
+                    <button class="btn green">Print</button>
+                    <button class="btn blue">Add New Customer</button>
+                </div>
+            </div>
+
+            <!-- Customer Table -->
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Address</th>
+                </tr>
+                <tbody id="customerTable">
+                    <!-- Data will be loaded here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</body>
+</html>
