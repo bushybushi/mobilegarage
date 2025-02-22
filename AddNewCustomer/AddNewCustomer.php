@@ -1,9 +1,7 @@
 <?php
-// Include the database connection file
-require_once 'db_connection.php';
 
 // Include the input sanitization file
-require_once 'sanitize_inputs.php';
+require 'sanitize_inputs.php';
 
 // Get the PDO instance from the included file
 $pdo = require 'db_connection.php';
@@ -16,7 +14,7 @@ try {
 
         // Extract sanitized inputs for easier use
         $firstName = $sanitizedInputs['firstName'];
-        $surname = $sanitizedInputs['surname'];
+        $surname = $sanitizedInputs['surName'];
         $companyName = $sanitizedInputs['companyName'];
         $address = $sanitizedInputs['address'];
         $phoneNumber = $sanitizedInputs['phoneNumber'];
