@@ -1,10 +1,10 @@
 <?php
 
 // Include the input sanitization file
-require 'sanitize_inputs.php';
+require '../sanitize_inputs.php';
 
 // Get the PDO instance from the included file
-$pdo = require 'db_connection.php';
+$pdo = require '../db_connection.php';
 
 try {
     // Check if the form was submitted via POST
