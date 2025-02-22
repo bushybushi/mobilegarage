@@ -1,7 +1,7 @@
 <?php
 // Database configuration
 $host = 'localhost'; 
-$dbname = 'mobilegarage'; 
+$dbname = 'mobilegarage';
 $username = 'root'; 
 $password = '';
 
