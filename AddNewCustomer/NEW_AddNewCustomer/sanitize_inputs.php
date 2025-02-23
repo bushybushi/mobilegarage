@@ -1,11 +1,5 @@
 <?php
-/**
- * Function to sanitize and validate user inputs.
- * 
- * @param array $inputs An associative array of form inputs.
- * @param array &$errors An associative array to store error messages.
- * @return array Sanitized and validated inputs.
- */
+
 function sanitizeInputs($inputs, &$errors) {
     // Initialize an array to store sanitized data
     $sanitized = [];
