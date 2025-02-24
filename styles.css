@@ -12,11 +12,14 @@ header {
 
 .container {
 	display: flex;
+	width: 92%;
+	margin: auto;
 	height: 100%;
 }
 
 .main-content {
 	margin-top: 1%;
+	margin-left: 15%;
 	width: 75%;
 	flex-grow: 1;
 }
@@ -55,15 +58,15 @@ header {
 
 form {
     max-width: 40%;
-    margin: auto;
-    padding: 3%;
+	margin: auto;
+	padding: 3%;
     border: 1px solid #ccc;
     border-radius: 5px;
     background-color: #ffffff;
 }
 
 label {
-    display: block;
+    display: flex;
     margin-bottom: 5px;
     font-weight: bold;
 }

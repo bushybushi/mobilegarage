@@ -1,6 +1,4 @@
 <?php
-// Include the database connection file
-require_once 'db_connection.php';
 
 // Include the input sanitization file
 require_once 'sanitize_inputs.php';
