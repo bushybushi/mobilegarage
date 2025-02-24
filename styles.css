@@ -1,3 +1,12 @@
+:root {
+	--fgcolor: #fff;
+	--bgcolor: #F6F7F9;
+	--primary: #3563E9;
+	--info: #54A6FF;
+	--confirm: #4DBE3C;
+	--error: #EF3D3D;
+	
+}
 
 body {
     font-family: Arial, sans-serif;
@@ -54,6 +63,30 @@ header {
     border: none;
     border-radius: 4px;
     cursor: pointer;
+}
+
+.main-table {
+	border-radius: 5px;
+	background-color: #fff;
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+.pagination {
+	width: 30%;
+	border-radius: 5px;
+	background-color: #fff;
+	text-align: center;
+	margin: auto;
+}
+.button-confirm {
+	background-color: var(--confirm);
+	border: 5px;
+}
+
+.button-primary {
+	background-color: var(--primary);
+	border: 5px;
 }
 
 form {

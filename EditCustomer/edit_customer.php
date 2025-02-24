@@ -1,3 +1,12 @@
+<?php
+
+// Include the input sanitization file
+require_once '../sanitize_inputs.php';
+
+// Get the PDO instance from the included file
+$pdo = require '../db_connection.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,9 +36,6 @@
 </div>
 <!-- Container for main area-->
 <div class = "container">
-
-
-
 
 <!-- Main Content area -->
 <div class = "main-content">

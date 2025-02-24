@@ -80,6 +80,27 @@ $results = $customerStmt->fetchAll();
 
 <!-- Main Content area -->
 <div class = "main-content">
+	<div>
+	<table class = "main-table">
+	<tr>
+	<th>Total: X Customers</th>
+	<th>
+	<li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Sort</a>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="#">Action</a>
+      <a class="dropdown-item" href="#">Another action</a>
+      <a class="dropdown-item" href="#">Something else here</a>
+      <div class="dropdown-divider"></div>
+      <a class="dropdown-item" href="#">Separated link</a>
+    </div>
+  </li></th>
+	<th><a class="button-confirm">Print</a></th>
+	<th><a class="button-primary" href="AddNewCustomer/add_customer.html">Add Customer</a></th>
+	</tr>
+	</table>
+	</div>
+	
     <div>
 	<table class = "main-table">
 		<tr>
@@ -102,14 +123,14 @@ $results = $customerStmt->fetchAll();
 		?>
 	</table>
 	</div>
-	<nav aria-label="Page navigation example">
-	<ul class="pagination">
-		<li class="page-item"><a class="page-link" href="#">Previous</a></li>
-		<li class="page-item"><a class="page-link" href="#">1</a></li>
-		<li class="page-item"><a class="page-link" href="#">2</a></li>
-		<li class="page-item"><a class="page-link" href="#">3</a></li>
-		<li class="page-item"><a class="page-link" href="#">Next</a></li>
-	</ul>
+	<nav aria-label="Page navigation example" class="pagination">
+	<tr>
+		<td class="page-item"><a class="page-link" href="#">Previous</a></td>
+		<td class="page-item"><a class="page-link" href="#">1</a></td>
+		<td class="page-item"><a class="page-link" href="#">2</a></td>
+		<td class="page-item"><a class="page-link" href="#">3</a></td>
+		<td class="page-item"><a class="page-link" href="#">Next</a></td>
+	</tr>
 	</nav>
 </div>
 </body>
