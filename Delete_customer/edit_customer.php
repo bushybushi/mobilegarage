@@ -102,7 +102,7 @@ if (!$customer) {
                 <label>Email Address</label>
                 <input type="text" value="<?php echo htmlspecialchars($customer['email']); ?>" readonly>
             </div>
-
+   <!-- Delete Button/Important -->
             <button type="submit" class="delete-button">
                 Delete <i class="fas fa-trash-alt"></i>
             </button>
