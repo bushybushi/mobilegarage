@@ -63,13 +63,18 @@ try {
             outline: none;
         }
 
-        #search-input {
-            width: 50%;
-            padding: 10px;
-            font-size: 16px;
-            border: 1px solid #ccc;
+        .filter-buttons button {
+            padding: 8px 15px;
+            margin: 5px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
             border-radius: 5px;
-            outline: none;
+        }
+
+        .filter-buttons button:hover {
+            background-color: #0056b3;
         }
 
         #customer-list-form {
@@ -165,8 +170,16 @@ try {
 <body>
     <!-- Search Bar -->
     <div class="search-container">
-            <input type="text" id="search-input" placeholder="Search by Name, Email, Phone, or Address...">
-        </div>
+        <input type="text" id="search-input" placeholder="Search by Name, Email, Phone, or Address...">
+    </div>
+
+    <!-- Filter Buttons -->
+    <div class="filter-buttons">
+        <button id="filter-name">Name</button>
+        <button id="filter-email">Email</button>
+        <button id="filter-phone">Phone</button>
+        <button id="filter-address">Address</button>
+    </div>
 
         <div class="container">
         <h1 style="text-align: center;">Select Customers to Print</h1>
@@ -226,6 +239,7 @@ try {
 
         // Create a set to store selected customer IDs
         let selectedCustomers = new Set();
+        let filteredCustomers = customersData;
 
         // Select All Checkbox Functionality
         document.getElementById("select-all").addEventListener("change", function() {
@@ -242,50 +256,82 @@ try {
             });
         });
 
-        // If any individual checkbox is unchecked, uncheck the "Select All" checkbox
-        document.querySelectorAll(".customer-checkbox").forEach(checkbox => {
-            checkbox.addEventListener("change", function() {
-                if (!this.checked) {
-                    selectedCustomers.delete(this.value);  // Remove from selected customers set
-                    document.getElementById("select-all").checked = false;
-                } else {
-                    selectedCustomers.add(this.value);  // Add to selected customers set
-                    const allChecked = [...document.querySelectorAll(".customer-checkbox")]
-                        .filter(checkbox => checkbox.closest("tr").style.display !== "none") // Only consider visible checkboxes
-                        .every(checkbox => selectedCustomers.has(checkbox.value));
-                    document.getElementById("select-all").checked = allChecked;
-                }
-            });
-        });
-
         // Search Functionality
         document.getElementById("search-input").addEventListener("keyup", function(event) {
             if (event.key === "Enter") {
                 event.preventDefault();
                 const searchText = this.value.toLowerCase();
-                const rows = document.querySelectorAll("#customer-table-body tr");
-
-                rows.forEach(row => {
-                    const rowText = row.innerText.toLowerCase();
-                    const isVisible = rowText.includes(searchText);
-                    row.style.display = isVisible ? "table-row" : "none";
-
-                    const checkbox = row.querySelector(".customer-checkbox");
-                    if (!isVisible) {
-                        checkbox.checked = false;  // Uncheck hidden rows when search filters them out
-                    } else {
-                        // Reapply selection for visible rows based on the selectedCustomers set
-                        checkbox.checked = selectedCustomers.has(checkbox.value);
-                    }
-                });
-
-                // Update "Select All" checkbox state based on visible checkboxes
-                const visibleCheckboxes = [...document.querySelectorAll(".customer-checkbox")]
-                    .filter(checkbox => checkbox.closest("tr").style.display !== "none");
-                const allVisibleChecked = visibleCheckboxes.every(checkbox => selectedCustomers.has(checkbox.value));
-                document.getElementById("select-all").checked = allVisibleChecked;
+                filteredCustomers = customersData.filter(customer => 
+                    customer.FirstName.toLowerCase().includes(searchText) || 
+                    customer.LastName.toLowerCase().includes(searchText) || 
+                    customer.Emails.toLowerCase().includes(searchText) || 
+                    customer.Nr.toLowerCase().includes(searchText) || 
+                    customer.Address.toLowerCase().includes(searchText)
+                );
+                renderTable(filteredCustomers);
             }
         });
+
+        // Filter functionality for specific attributes
+        document.getElementById("filter-name").addEventListener("click", function() {
+            const searchText = document.getElementById("search-input").value.toLowerCase();
+            filteredCustomers = customersData.filter(customer => 
+                (customer.FirstName.toLowerCase().includes(searchText) || 
+                customer.LastName.toLowerCase().includes(searchText))
+            );
+            renderTable(filteredCustomers);
+        });
+
+        document.getElementById("filter-email").addEventListener("click", function() {
+            const searchText = document.getElementById("search-input").value.toLowerCase();
+            filteredCustomers = customersData.filter(customer => 
+                customer.Emails.toLowerCase().includes(searchText)
+            );
+            renderTable(filteredCustomers);
+        });
+
+        document.getElementById("filter-phone").addEventListener("click", function() {
+            const searchText = document.getElementById("search-input").value.toLowerCase();
+            filteredCustomers = customersData.filter(customer => 
+                customer.Nr.toLowerCase().includes(searchText)
+            );
+            renderTable(filteredCustomers);
+        });
+
+        document.getElementById("filter-address").addEventListener("click", function() {
+            const searchText = document.getElementById("search-input").value.toLowerCase();
+            filteredCustomers = customersData.filter(customer => 
+                customer.Address.toLowerCase().includes(searchText)
+            );
+            renderTable(filteredCustomers);
+        });
+
+        // Function to render the table based on filtered customers
+        function renderTable(customers) {
+            const tableBody = document.getElementById("customer-table-body");
+            tableBody.innerHTML = '';
+            customers.forEach(customer => {
+                const row = document.createElement("tr");
+                row.innerHTML = `
+                    <td style="width: 5%;"><input type="checkbox" class="customer-checkbox" value="${customer.CustomerID}"></td>
+                    <td style="width: 25%;">${customer.FirstName} ${customer.LastName}</td>
+                    <td style="width: 25%;">${customer.Emails}</td>
+                    <td style="width: 20%;">${customer.Nr}</td>
+                    <td style="width: 25%;">${customer.Address}</td>
+                `;
+                tableBody.appendChild(row);
+            });
+
+            // Reapply selected checkboxes after filtering
+            document.querySelectorAll(".customer-checkbox").forEach(checkbox => {
+                if (selectedCustomers.has(checkbox.value)) {
+                    checkbox.checked = true;
+                }
+            });
+        }
+
+        // Initialize the table
+        renderTable(filteredCustomers);
 
     </script>
 
