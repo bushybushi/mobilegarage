@@ -36,6 +36,7 @@ if (!$customer) {
     <title>Edit Customer</title>
     <link rel="stylesheet" href="edit_style.css">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <!-- Function to send a delete request to delete_customer.php and remove the customer -->
     <script>
         function deleteCustomer() {
             let customerID = document.getElementById('customerID').value;
@@ -102,7 +103,7 @@ if (!$customer) {
                 <label>Email Address</label>
                 <input type="text" value="<?php echo htmlspecialchars($customer['email']); ?>" readonly>
             </div>
-
+   <!-- Delete Button/Important -->
             <button type="submit" class="delete-button">
                 Delete <i class="fas fa-trash-alt"></i>
             </button>
