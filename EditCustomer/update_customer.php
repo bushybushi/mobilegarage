@@ -3,6 +3,9 @@
 // Include the input sanitization file
 require_once '../sanitize_inputs.php';
 
+// Include the function to flatten
+require_once '../flatten.php';
+
 // Get the PDO instance from the included file
 $pdo = require '../db_connection.php';
 
@@ -50,7 +53,6 @@ try {
 		$phoneNumber = $sanitizedInputs['phoneNumber'];
 		$emailAddress = $sanitizedInputs['emailAddress'];
 		
-
         // Start a transaction to ensure atomicity
         $pdo->beginTransaction();
 
@@ -73,16 +75,18 @@ try {
             $customerStmt->execute();
 			
 			}
-
 			
-			echo 'Address: '; var_dump($address); echo '<br>';
-			echo 'Old Address: '; var_dump($old_address); echo '<br>'; echo '<br>';
-            // Compare and check addresses that need to be added and deleted
+			// Flatten to only be a 1D array for array_diff
+			$address = flattenArray($address);
+			$old_address = flattenArray($old_address);
+			$phone_number = flattenArray($phoneNumber);
+			$old_phone = flattenArray($old_phone);
+			$emailAddress = flattenArray($emailAddress);
+			$old_email = flattenArray($old_email);
+			
+			// Compare and check addresses that need to be added and deleted
             $addressToAdd = array_diff($address, $old_address); // New addresses to insert
 			$addressToDelete = array_diff($old_address, $address); // Outdated addresses to delete
-			
-			echo 'AddressToAdd: '; var_dump($addressToAdd); echo '<br>';
-			echo 'AddressToDelete: '; var_dump($addressToDelete);
 			
 			
 			// Insert new Addresses
@@ -92,7 +96,7 @@ try {
 					$insertStmt->execute([$id, $row]);
 				}
 			}
-
+			
 			// Delete outdated Addresses
 			if (!empty($addressToDelete)) {
 				$deleteStmt = $pdo->prepare("DELETE FROM Addresses WHERE customerID = ? AND Address IN (" . str_repeat('?,', count($addressToDelete) - 1) . '?)');
@@ -112,7 +116,7 @@ try {
 			}
 
 			// Delete outdated emails
-			if (!empty($emailToDelete)) {
+			if (!empty($phoneToDelete)) {
 				$deleteStmt = $pdo->prepare("DELETE FROM emailNumbers WHERE customerID = ? AND Nr IN (" . str_repeat('?,', count($emailToDelete) - 1) . '?)');
 				$deleteStmt->execute(array_merge([$id], $emailToDelete));
 			}
@@ -134,7 +138,16 @@ try {
 				$deleteStmt = $pdo->prepare("DELETE FROM Emails WHERE customerID = ? AND Emails IN (" . str_repeat('?,', count($emailToDelete) - 1) . '?)');
 				$deleteStmt->execute(array_merge([$id], $emailToDelete));
 			}
-
+			
+			// Delete empty entries in Addresses
+			$deleteEmptyStmt = $pdo->prepare("DELETE FROM Addresses WHERE Address IS NULL OR TRIM(Address) = ''");
+			$deleteEmptyStmt->execute();
+			$deleteEmptyStmt = $pdo->prepare("DELETE FROM phoneNumbers WHERE Nr IS NULL OR TRIM(Nr) = ''");
+			$deleteEmptyStmt->execute();
+			$deleteEmptyStmt = $pdo->prepare("DELETE FROM Emails WHERE Emails IS NULL OR TRIM(Emails) = ''");
+			$deleteEmptyStmt->execute();
+			
+			
             // Commit the transaction
             $pdo->commit();
 

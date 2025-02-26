@@ -1,5 +1,4 @@
 <?php
-
 // Include the input sanitization file
 require_once '../sanitize_inputs.php';
 
@@ -69,34 +68,128 @@ $old_email = $emailStmt->fetchAll();
     <form action="update_customer.php" method="post">
         <label for="firstName">First Name</label>
 		<input type="hidden" name="id" value="<?php echo htmlspecialchars($id, ENT_QUOTES, 'UTF-8'); ?>">
-        <input type="text" id="firstName" name="firstName" value = "<?php echo htmlspecialchars($old_customer['FirstName'], ENT_QUOTES, 'UTF-8'); ?>"  required>
+        <input type="text" name="firstName" value = "<?php echo htmlspecialchars($old_customer['FirstName'], ENT_QUOTES, 'UTF-8'); ?>"  required>
 
         <label for="surname">Surname</label>
-        <input type="text" id="surname" name="surname" value = "<?php echo htmlspecialchars($old_customer['LastName'], ENT_QUOTES, 'UTF-8'); ?>" required>
+        <input type="text" name="surname" value = "<?php echo htmlspecialchars($old_customer['LastName'], ENT_QUOTES, 'UTF-8'); ?>" required>
 
         <label for="companyName">Company Name</label>
-        <input type="text" id="companyName" name="companyName" value = "<?php echo htmlspecialchars($old_customer['Company'], ENT_QUOTES, 'UTF-8'); ?>">
+        <input type="text" name="companyName" value = "<?php echo htmlspecialchars($old_customer['Company'], ENT_QUOTES, 'UTF-8'); ?>">
 
 		<?php 
+		//Addresses
+		echo '<div id="addresses">';
+		if (!empty($old_address)) {
 		foreach ($old_address as $row)
 		
-        echo '<label for="address">Address</label>
-        <input type="text" id="address" name="address[]" value = "' . htmlspecialchars($row['Address'], ENT_QUOTES, 'UTF-8') . '">';
+        echo '<div>
+		<label for="address">Address</label>
+        <input type="text" name="address[]" value = "' . htmlspecialchars($row['Address'], ENT_QUOTES, 'UTF-8') . '">
+		<button type="button" onclick="removeField(this)" class="remove-btn">Remove</button>
+		</div>';
 		
+		} else
+		{
+		echo '<div>
+		<label for="address">Address</label>
+        <input type="text" name="address[]">
+		</div>';	
+		}
+		
+		echo '<button type="button" onclick="addAddressField()">Add Another Address</button>';
+		echo '</div>';
+		
+		//Phone Numbers
+		echo '<div id="phoneNumbers">';
+		if (!empty($old_phone)) {
 		foreach ($old_phone as $row)
 		
-        echo '<label for="phoneNumber">Phone Number</label>
-        <input type="tel" id="phoneNumber" name="phoneNumber[]" value = "' . htmlspecialchars($row['Nr'], ENT_QUOTES, 'UTF-8') . '">';
+        echo '<div>
+		<label for="phoneNumber">Phone Number</label>
+        <input type="tel" name="phoneNumber[]" value = "' . htmlspecialchars($row['Nr'], ENT_QUOTES, 'UTF-8') . '">
+		<button type="button" onclick="removeField(this)" class="remove-btn">Remove</button>
+		</div>';
 		
+		} else
+		{
+		echo '<div>
+		<label for="phoneNumber">Phone Number</label>
+        <input type="text" name="phoneNumber[]">
+		</div>';	
+		}
+		echo '<button type="button" onclick="addPhoneNumberField()">Add Another Phone Number</button>';
+		echo '</div>';
+		
+		//Emails
+		echo '<div id="emailAddresses">';
+		if (!empty($old_email)) {
 		foreach ($old_email as $row)
 		
-        echo '<label for="emailAddress">Email Address</label>
-        <input type="email" id="emailAddress" name="emailAddress[]" value = "' . htmlspecialchars($row['Emails'], ENT_QUOTES, 'UTF-8') . '" required>';
+        echo '<div>
+		<label for="emailAddress">Email Address</label>
+        
+		<input type="email" name="emailAddress[]" value = "' . htmlspecialchars($row['Emails'], ENT_QUOTES, 'UTF-8') . '">
+		<button type="button" onclick="removeField(this)" class="remove-btn">Remove</button>
+		</div>';
+		} else
+		{
+		echo '<div>
+		<label for="emailAddress">Email Address</label>
+        <input type="email" name="emailAddress[]">
+		</div>';	
+		}
+		
+		echo '<button type="button" onclick="addEmailAddressField()">Add Another Email</button>';
+		echo '</div>';
 		?>
-
+		
+		
+	
         <input  type="submit" value="Edit Customer" class = "submit-button">
     </form>
 </div>
 </div>
+
+<script>
+        function addAddressField() {
+            const container = document.getElementById('addresses');
+            const newField = document.createElement('div');
+            newField.className = 'form-group';
+            newField.innerHTML = `
+                <label for="address[]">Address</label>
+                <input type="text" name="address[]" value="">
+                <button type="button" onclick="removeField(this)" class="remove-btn">Remove</button>
+            `;
+            container.appendChild(newField);
+        }
+
+        function addPhoneNumberField() {
+            const container = document.getElementById('phoneNumbers');
+            const newField = document.createElement('div');
+            newField.className = 'form-group';
+            newField.innerHTML = `
+                <label for="phoneNumber[]">Phone Number</label>
+                <input type="tel" name="phoneNumber[]" value="" required>
+                <button type="button" onclick="removeField(this)" class="remove-btn">Remove</button>
+            `;
+            container.appendChild(newField);
+        }
+
+        function addEmailAddressField() {
+            const container = document.getElementById('emailAddresses');
+            const newField = document.createElement('div');
+            newField.className = 'form-group';
+            newField.innerHTML = `
+                <label for="emailAddress[]">Email Address</label>
+                <input type="email" name="emailAddress[]" value="">
+                <button type="button" onclick="removeField(this)" class="remove-btn">Remove</button>
+            `;
+            container.appendChild(newField);
+        }
+
+        function removeField(button) {
+            button.parentElement.remove();
+        }
+    </script>
 </body>
 </html>
