@@ -30,28 +30,77 @@
                 <div class="error"><?php echo htmlspecialchars($errors['companyName']); ?></div>
             <?php endif; ?>
         </div>
-        <div class="form-group">
-            <label for="address">Address</label>
-            <input type="text" id="address" name="address" value="<?php echo htmlspecialchars(isset($sanitizedInputs['address']) ? $sanitizedInputs['address'] : ''); ?>">
-            <?php if (isset($errors['address'])): ?>
-                <div class="error"><?php echo htmlspecialchars($errors['address']); ?></div>
-            <?php endif; ?>
+
+        <!-- Addresses -->
+        <div id="addresses">
+            <div class="form-group">
+                <label for="address[]">Address</label>
+                <input type="text" id="address[]" name="address[]" value="">
+            </div>
         </div>
-        <div class="form-group">
-            <label for="phoneNumber">Phone Number</label>
-            <input type="tel" id="phoneNumber" name="phoneNumber" value="<?php echo htmlspecialchars(isset($sanitizedInputs['phoneNumber']) ? $sanitizedInputs['phoneNumber'] : ''); ?>">
-            <?php if (isset($errors['phoneNumber'])): ?>
-                <div class="error"><?php echo htmlspecialchars($errors['phoneNumber']); ?></div>
-            <?php endif; ?>
+        <button type="button" onclick="addAddressField()">Add Another Address</button>
+
+        <!-- Phone Numbers -->
+        <div id="phoneNumbers">
+            <div class="form-group">
+                <label for="phoneNumber[]">Phone Number</label>
+                <input type="tel" id="phoneNumber[]" name="phoneNumber[]" value="" required>
+            </div>
         </div>
-        <div class="form-group">
-            <label for="emailAddress">Email Address</label>
-            <input type="email" id="emailAddress" name="emailAddress" value="<?php echo htmlspecialchars(isset($sanitizedInputs['emailAddress']) ? $sanitizedInputs['emailAddress'] : ''); ?>" required>
-            <?php if (isset($errors['emailAddress'])): ?>
-                <div class="error"><?php echo htmlspecialchars($errors['emailAddress']); ?></div>
-            <?php endif; ?>
+        <button type="button" onclick="addPhoneNumberField()">Add Another Phone Number</button>
+
+        <!-- Email Addresses -->
+        <div id="emailAddresses">
+            <div class="form-group">
+                <label for="emailAddress[]">Email Address</label>
+                <input type="email" id="emailAddress[]" name="emailAddress[]" value="">
+            </div>
         </div>
+        <button type="button" onclick="addEmailAddressField()">Add Another Email Address</button>
+
         <input type="submit" value="Add Customer">
     </form>
+
+    <script>
+        function addAddressField() {
+            const container = document.getElementById('addresses');
+            const newField = document.createElement('div');
+            newField.className = 'form-group';
+            newField.innerHTML = `
+                <label for="address[]">Address</label>
+                <input type="text" id="address[]" name="address[]" value="">
+                <button type="button" onclick="removeField(this)" class="remove-btn">Remove</button>
+            `;
+            container.appendChild(newField);
+        }
+
+        function addPhoneNumberField() {
+            const container = document.getElementById('phoneNumbers');
+            const newField = document.createElement('div');
+            newField.className = 'form-group';
+            newField.innerHTML = `
+                <label for="phoneNumber[]">Phone Number</label>
+                <input type="tel" id="phoneNumber[]" name="phoneNumber[]" value="" required>
+                <button type="button" onclick="removeField(this)" class="remove-btn">Remove</button>
+            `;
+            container.appendChild(newField);
+        }
+
+        function addEmailAddressField() {
+            const container = document.getElementById('emailAddresses');
+            const newField = document.createElement('div');
+            newField.className = 'form-group';
+            newField.innerHTML = `
+                <label for="emailAddress[]">Email Address</label>
+                <input type="email" id="emailAddress[]" name="emailAddress[]" value="">
+                <button type="button" onclick="removeField(this)" class="remove-btn">Remove</button>
+            `;
+            container.appendChild(newField);
+        }
+
+        function removeField(button) {
+            button.parentElement.remove();
+        }
+    </script>
 </body>
 </html>
