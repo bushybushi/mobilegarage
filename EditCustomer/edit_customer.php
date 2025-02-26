@@ -66,8 +66,9 @@ $old_email = $emailStmt->fetchAll();
 
 <!-- Main Content area -->
 <div class = "main-content">
-    <form action="EditCustomer.php" method="post">
+    <form action="update_customer.php" method="post">
         <label for="firstName">First Name</label>
+		<input type="hidden" name="id" value="<?php echo htmlspecialchars($id, ENT_QUOTES, 'UTF-8'); ?>">
         <input type="text" id="firstName" name="firstName" value = "<?php echo htmlspecialchars($old_customer['FirstName'], ENT_QUOTES, 'UTF-8'); ?>"  required>
 
         <label for="surname">Surname</label>
@@ -80,17 +81,17 @@ $old_email = $emailStmt->fetchAll();
 		foreach ($old_address as $row)
 		
         echo '<label for="address">Address</label>
-        <input type="text" id="address" name="address" value = "' . htmlspecialchars($row['Address'], ENT_QUOTES, 'UTF-8') . '">';
+        <input type="text" id="address" name="address[]" value = "' . htmlspecialchars($row['Address'], ENT_QUOTES, 'UTF-8') . '">';
 		
 		foreach ($old_phone as $row)
 		
         echo '<label for="phoneNumber">Phone Number</label>
-        <input type="tel" id="phoneNumber" name="phoneNumber" value = "' . htmlspecialchars($row['Nr'], ENT_QUOTES, 'UTF-8') . '">';
+        <input type="tel" id="phoneNumber" name="phoneNumber[]" value = "' . htmlspecialchars($row['Nr'], ENT_QUOTES, 'UTF-8') . '">';
 		
 		foreach ($old_email as $row)
 		
         echo '<label for="emailAddress">Email Address</label>
-        <input type="email" id="emailAddress" name="emailAddress" value = "' . htmlspecialchars($row['Emails'], ENT_QUOTES, 'UTF-8') . '" required>';
+        <input type="email" id="emailAddress" name="emailAddress[]" value = "' . htmlspecialchars($row['Emails'], ENT_QUOTES, 'UTF-8') . '" required>';
 		?>
 
         <input  type="submit" value="Edit Customer" class = "submit-button">
