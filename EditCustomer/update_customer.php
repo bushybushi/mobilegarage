@@ -115,10 +115,10 @@ try {
 				}
 			}
 
-			// Delete outdated emails
+			// Delete outdated phones
 			if (!empty($phoneToDelete)) {
-				$deleteStmt = $pdo->prepare("DELETE FROM emailNumbers WHERE customerID = ? AND Nr IN (" . str_repeat('?,', count($emailToDelete) - 1) . '?)');
-				$deleteStmt->execute(array_merge([$id], $emailToDelete));
+				$deleteStmt = $pdo->prepare("DELETE FROM phoneNumbers WHERE customerID = ? AND Nr IN (" . str_repeat('?,', count($phoneToDelete) - 1) . '?)');
+				$deleteStmt->execute(array_merge([$id], $phoneToDelete));
 			}
 
             // Compare and check emails that need to be added and deleted
