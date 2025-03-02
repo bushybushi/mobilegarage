@@ -1,9 +1,9 @@
 <?php
 // Include the input sanitization file
-require_once 'sanitize_inputs.php';
+require_once '../sanitize_inputs.php';
 
 // Get the PDO instance from the included file
-$pdo = require 'db_connection.php';
+$pdo = require '../db_connection.php';
 
 $username = isset($_GET['username']) ? $_GET['username'] : null;
 
