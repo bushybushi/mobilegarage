@@ -1,7 +1,7 @@
 <?php
 
-require_once 'db_connection.php';
-$pdo = require 'db_connection.php';
+require_once '../db_connection.php';
+$pdo = require '../db_connection.php';
 
 // Fetch data from the database
 $sql = "SELECT users.username, users.email, users.admin
@@ -19,7 +19,7 @@ $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Management</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../styles.css">
     <link href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- [Tabler Icons] https://tablericons.com -->
     <link rel="stylesheet" href="../assets/fonts/tabler-icons.min.css" />
