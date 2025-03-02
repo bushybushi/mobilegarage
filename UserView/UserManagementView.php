@@ -1,6 +1,6 @@
 <?php
-require_once 'db_connection.php';
-$pdo = require 'db_connection.php';
+require_once '../db_connection.php';
+$pdo = require '../db_connection.php';
 
 // Fetch data from the database
 $username = isset($_GET['id']) ? $_GET['id'] : null;
@@ -37,7 +37,7 @@ $users = $stmt->fetch(PDO::FETCH_ASSOC);
             User Management
         </div>
     </div>
-        <form action="User.php" method="POST">
+        <form action="../User.php" method="POST">
             <fieldset disabled>
             <?php if ($users): ?>
             <div class="form-group">
