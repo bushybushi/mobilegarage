@@ -78,7 +78,7 @@ $users = $stmt->fetch(PDO::FETCH_ASSOC);
 
     <script>
 function openForm(username) {
-  $.get('EditUser.php', { username: username }, function(response) {
+  $.get('../EditUser/EditUser.php', { username: username }, function(response) {
     $('.pc-container4').html(response);
   });
 }
