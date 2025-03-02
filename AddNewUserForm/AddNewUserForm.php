@@ -87,7 +87,7 @@
                 // Use AJAX to submit the form
                 $.ajax({
                     type: 'POST',
-                    url: 'User.php',  // Your server-side script to handle the form data
+                    url: '../User.php',  // Your server-side script to handle the form data
                     data: $(this).serialize(),  // Serialize the form data
                     dataType: 'json',  // Expect a JSON response
                     success: function(response) {
