@@ -92,7 +92,7 @@ function openForm(username) {
       $(document).ready(function() {
         $('#addnewuser-link').on('click', function(e) {
           e.preventDefault();
-          $.get('AddNewUserForm.php', function(response) {
+          $.get('../AddNewUserForm/AddNewUserForm.php', function(response) {
             $('.pc-container3').html(response);
           });
         });
