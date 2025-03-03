@@ -1,0 +1,141 @@
+@media print {
+    /* General print styles */
+    body {
+        margin: 0;
+        padding: 20px;
+        font-family: 'Roboto', Arial, sans-serif;
+        font-size: 14px;
+        background-color: white !important; /* Ensures print background is always white */
+    }
+
+    /* Hide unnecessary elements */
+    nav, header, footer, button, .no-print {
+        display: none !important; /* Prevents non-essential UI elements from being printed */
+    }
+
+    /* Content container */
+    .container {
+        width: 100%;
+        max-width: 800px;
+        margin: auto; /* Ensures centered print layout */
+    }
+
+    /* Customer Details Section */
+    #customerDetails {
+        background: #f8f9fa; /* Light gray background for better readability */
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for professional look */
+        page-break-after: avoid; /* Ensures the entire customer info stays on the same page */
+    }
+
+    #customerDetails h2 {
+        text-align: center;
+        font-size: 22px;
+        font-weight: bold;
+        margin-bottom: 15px; /* Adds spacing below title */
+    }
+
+    /* Customer Info Grid */
+    .customer-info-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Two equal-width columns */
+        gap: 5px 15px; /* Controls spacing between grid items */
+        align-items: center; /* Aligns text properly */
+    }
+
+    /* Aligns First Name & Surname */
+    .name-container {
+        display: flex;
+        justify-content: space-between; /* Ensures equal spacing */
+        align-items: center;
+        width: 100%;
+    }
+
+    .company-container,
+    .contact-container {
+        grid-column: span 2; /* Ensures company name, address, phone, and email take full width */
+    }
+
+    /* Formatting for customer info */
+    .customer-info-grid p {
+        font-size: 16px;
+        margin: 5px 0;
+        font-weight: 500;
+    }
+
+    .customer-info-grid strong {
+        font-weight: bold;
+        min-width: 140px; /* Keeps labels aligned */
+        display: inline-block;
+    }
+
+    /* Car Section - Separate Page */
+    #brandModelSection {
+        margin-top: 30px; /* Adds space before car section */
+        background: white;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+        border-top: 4px solid #007bff; /* Creates a visual separator */
+        page-break-before: always; /* Ensures car section starts on a new page */
+    }
+
+    #brandModelSection h3 {
+        text-align: center;
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 15px;
+        color: #007bff; /* Blue color for section heading */
+    }
+
+    /* Car Details */
+    .car-container {
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin: 20px 0;
+        background-color: #f9f9f9; /* Light background for contrast */
+        border-radius: 5px;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+        page-break-inside: avoid; /* Prevents car details from splitting across pages */
+    }
+
+    /* Forces a new page every 2 cars */
+    .car-container:nth-child(2n + 3) {
+        page-break-before: always; /* Ensures that a maximum of 2 cars per page */
+    }
+
+    .car-container h4 {
+        color: #007bff;
+        margin-bottom: 10px;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    /* Table Formatting */
+    .car-container table {
+        width: 100%;
+        table-layout: fixed; /* Prevents table stretching */
+        border-collapse: collapse; /* Ensures clean, modern table look */
+    }
+
+    .car-container td {
+        padding: 5px;
+        border-bottom: 1px solid #ddd; /* Adds a subtle border for readability */
+        vertical-align: top; /* Ensures text starts at the top */
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+
+    /* Remove the last row's border */
+    .car-container tr:last-child td {
+        border-bottom: none;
+    }
+
+    /* Fix long comments from breaking layout */
+    .car-container td:last-child {
+        word-break: break-word;
+        white-space: normal;
+        max-width: 100%;
+    }
+}
