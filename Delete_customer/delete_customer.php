@@ -2,7 +2,7 @@
 // delete_customer.php
 
 // Include the database connection file
-$pdo = require 'db_connection.php';
+$pdo = require '../db_connection.php';
 
 // Set response as JSON
 header('Content-Type: application/json');

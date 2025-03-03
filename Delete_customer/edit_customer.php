@@ -2,14 +2,14 @@
 // edit_customer.php
 
 // Include the database connection file
-$pdo = require 'db_connection.php';
+$pdo = require '../db_connection.php';
 
 // Check for the customerID in the URL
-if (!isset($_GET['customerID'])) {
+if (!isset($_GET['id'])) {
     die("No customer specified.");
 }
 
-$customerID = intval($_GET['customerID']);
+$customerID = intval($_GET['id']);
 
 // Retrieve customer details
 $sql = "SELECT c.CustomerID, c.FirstName, c.LastName, c.Company,
