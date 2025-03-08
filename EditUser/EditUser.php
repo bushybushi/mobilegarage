@@ -37,7 +37,7 @@ $old_user = $userStmt->fetch();
             <form id="updateForm" method="POST">
             <div class="form-group">
                 <label for="username">Username</label>
-                <input type="hidden" name="username" value="<?php echo htmlspecialchars($username, ENT_QUOTES, 'UTF-8'); ?>">
+                <input type="hidden" name="old_username" value="<?php echo htmlspecialchars($username, ENT_QUOTES, 'UTF-8'); ?>">
                 <input type="text" name="username" class="form-control" value="<?php echo htmlspecialchars($old_user['username'], ENT_QUOTES, 'UTF-8'); ?>" required>
             </div>
 
