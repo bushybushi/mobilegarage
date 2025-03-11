@@ -7,7 +7,7 @@ $pdo = require '../db_connection.php';
 
 $id = isset($_GET['id']) ? (int)$_GET['id'] : null;
 
-$partSql = 'SELECT PartDesc, NAME, PiecesPurch, PricePerPiece, PriceBulk, Vat, SellPrice, Sold, Stock
+$partSql = 'SELECT PartDesc, NAME, Email, PhoneNr, PiecesPurch, PricePerPiece, PriceBulk, Vat, SellPrice, Sold, Stock
             FROM parts JOIN partssupply USING (PartID)
             	JOIN invoices USING (InvoiceID)
                 JOIN invoicesupply USING (InvoiceID)
@@ -25,7 +25,7 @@ $old_part = $partStmt->fetch();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit Customer</title>
+    <title>Edit Part</title>
     <link rel="stylesheet" href="../styles.css">
 
 	
@@ -60,20 +60,26 @@ $old_part = $partStmt->fetch();
         <label for="supplier">Supplier</label>
         <input type="text" name="supplier" value = "<?php echo htmlspecialchars($old_part['NAME'], ENT_QUOTES, 'UTF-8'); ?>" required>
 
+        <label for="suppemail">Supplier Email</label>
+        <input type="text" name="suppemail" value = "<?php echo htmlspecialchars($old_part['Email'], ENT_QUOTES, 'UTF-8'); ?>">
+
+        <label for="suppphone">Supplier Phone</label>
+        <input type="text" name="suppphone" value = "<?php echo htmlspecialchars($old_part['PhoneNr'], ENT_QUOTES, 'UTF-8'); ?>">
+
         <label for="piecespurch">Pieces Purchased</label>
-        <input type="text" name="piecespurch" value = "<?php echo htmlspecialchars($old_part['PiecesPurch'], ENT_QUOTES, 'UTF-8'); ?>">
+        <input type="text" name="piecespurch" value = "<?php echo htmlspecialchars($old_part['PiecesPurch'], ENT_QUOTES, 'UTF-8'); ?>" required>
 
         <label for="priceperpiece">Price Per Piece</label>
-        <input type="text" name="priceperpiece" value = "<?php echo htmlspecialchars($old_part['PricePerPiece'], ENT_QUOTES, 'UTF-8'); ?>">
+        <input type="text" name="priceperpiece" value = "<?php echo htmlspecialchars($old_part['PricePerPiece'], ENT_QUOTES, 'UTF-8'); ?>" required>
 
         <label for="pricebulk">Price Bulk</label>
         <input type="text" name="pricebulk" value = "<?php echo htmlspecialchars($old_part['PriceBulk'], ENT_QUOTES, 'UTF-8'); ?>">
 
         <label for="vat">VAT</label>
-        <input type="text" name="vat" value = "<?php echo htmlspecialchars($old_part['Vat'], ENT_QUOTES, 'UTF-8'); ?>">
+        <input type="text" name="vat" value = "<?php echo htmlspecialchars($old_part['Vat'], ENT_QUOTES, 'UTF-8'); ?>" required>
 
         <label for="sellprice">Selling Price</label>
-        <input type="text" name="sellprice" value = "<?php echo htmlspecialchars($old_part['SellPrice'], ENT_QUOTES, 'UTF-8'); ?>">
+        <input type="text" name="sellprice" value = "<?php echo htmlspecialchars($old_part['SellPrice'], ENT_QUOTES, 'UTF-8'); ?>" required>
 
         <label for="sold">Pieces Sold</label>
         <input type="text" name="sold" value = "<?php echo htmlspecialchars($old_part['Sold'], ENT_QUOTES, 'UTF-8'); ?>">

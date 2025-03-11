@@ -9,7 +9,7 @@ $id = isset($_POST['id']) ? (int)$_POST['id'] : null;
 
 try {
     // Fetch old part data
-    $partSql = 'SELECT PartDesc, NAME, PiecesPurch, PricePerPiece, PriceBulk, Vat, SellPrice, Sold, Stock
+    $partSql = 'SELECT PartDesc, NAME, Email, PhoneNr, PiecesPurch, PricePerPiece, PriceBulk, Vat, SellPrice, Sold, Stock
                 FROM parts JOIN partssupply USING (PartID)
                 JOIN invoices USING (InvoiceID)
                 JOIN invoicesupply USING (InvoiceID)
@@ -65,10 +65,12 @@ try {
 
     // Update suppliers table
     $supplierSql = "UPDATE suppliers
-                    SET NAME = :Supplier
+                    SET NAME = :Supplier, Email = :Email, PhoneNr = :PhoneNr
                     WHERE SupplierID = (SELECT SupplierID FROM invoicesupply NATURAL JOIN partssupply WHERE PartID = :id)";
     $pdo->prepare($supplierSql)->execute([
         ':Supplier' => $supplier,
+        ':Email' => $suppemail,
+        ':PhoneNr' => $suppphone,
         ':id' => $id
     ]);
 
