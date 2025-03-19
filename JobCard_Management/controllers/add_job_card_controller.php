@@ -6,7 +6,7 @@ try {
     // First, verify if the license number exists in the cars table
     $licenseNr = $_POST['registration'] ?? '';
     if (empty($licenseNr)) {
-        throw new Exception("Ο αριθμός πινακίδας είναι υποχρεωτικός");
+        throw new Exception("Registration plate is required");
     }
 
     // Check if the license number exists in the cars table
@@ -44,6 +44,9 @@ try {
 
     // Process parts data
     $partData = [];
+    $partIds = [];
+    $partPrices = [];
+    $partQuantities = [];
     if (!empty($_POST['parts'])) {
         foreach ($_POST['parts'] as $key => $partId) {
             if (!empty($partId)) {
@@ -53,11 +56,20 @@ try {
                 $part = $partStmt->fetch(PDO::FETCH_ASSOC);
                 
                 if ($part) {
+                    $quantity = isset($_POST['partQuantities'][$key]) ? (int)$_POST['partQuantities'][$key] : 1;
+                    if ($quantity < 1) $quantity = 1;
+                    
                     $partData[] = [
                         'id' => $partId,
                         'name' => $part['PartDesc'],
-                        'price' => $_POST['partPrices'][$key] ?? $part['SellPrice']
+                        'price' => $_POST['partPrices'][$key] ?? $part['SellPrice'],
+                        'quantity' => $quantity
                     ];
+                    
+                    // Store part IDs, prices and quantities separately for the model
+                    $partIds[] = $partId;
+                    $partPrices[] = $_POST['partPrices'][$key] ?? $part['SellPrice'];
+                    $partQuantities[] = $quantity;
                 }
             }
         }
@@ -75,7 +87,9 @@ try {
         'rides' => $_POST['rides'] ?? 0,
         'driveCosts' => $_POST['driveCosts'] ?? 0,
         'registration' => $licenseNr, // Use the verified license number
-        'parts' => !empty($partData) ? json_encode($partData) : null,
+        'parts' => $partIds,
+        'partPrices' => $partPrices,
+        'partQuantities' => $partQuantities,
         'totalCosts' => $_POST['totalCosts'] ?? 0,
         'photos' => !empty($photos) ? json_encode($photos) : null
     ];
@@ -84,10 +98,10 @@ try {
     $jobCard = new JobCard($jobCardData);
     
     if ($jobCard->save()) {
-        $_SESSION['message'] = "Η κάρτα εργασίας αποθηκεύτηκε επιτυχώς!";
+        $_SESSION['message'] = "Job card saved successfully!";
         $_SESSION['message_type'] = "success";
     } else {
-        throw new Exception("Αποτυχία δημιουργίας κάρτας εργασίας");
+        throw new Exception("Failed to create job card");
     }
 
     // Redirect back to main page
@@ -95,7 +109,7 @@ try {
     exit();
 
 } catch (Exception $e) {
-    $_SESSION['message'] = "Σφάλμα: " . $e->getMessage();
+    $_SESSION['message'] = "Error: " . $e->getMessage();
     $_SESSION['message_type'] = "error";
     header("Location: ../views/job_cards_main.php");
     exit();
