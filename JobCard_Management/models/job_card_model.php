@@ -17,6 +17,7 @@ class JobCard {
     private $licensePlate;
     private $parts;
     private $partPrices;
+    private $partQuantities;
     private $totalCosts;
 
     public function __construct($data = []) {
@@ -32,8 +33,38 @@ class JobCard {
         $this->driveCosts = $data['driveCosts'] ?? null;
         $this->photo = $data['photos'] ?? null;
         $this->licensePlate = $data['registration'] ?? null;
-        $this->parts = $data['parts'] ?? [];
+        
+        // Handle parts data - ensure it's always an array
+        if (isset($data['parts'])) {
+            if (is_string($data['parts'])) {
+                // If it's a JSON string, decode it
+                $decodedParts = json_decode($data['parts'], true);
+                if (is_array($decodedParts)) {
+                    // Extract part IDs if it's in the format [{id: ..., name: ..., price: ...}]
+                    if (!empty($decodedParts) && isset($decodedParts[0]['id'])) {
+                        $this->parts = array_column($decodedParts, 'id');
+                        $this->partPrices = array_column($decodedParts, 'price');
+                        $this->partQuantities = array_column($decodedParts, 'quantity', null) ?: array_fill(0, count($this->parts), 1);
+                    } else {
+                        $this->parts = $decodedParts;
+                    }
+                } else {
+                    $this->parts = [];
+                }
+            } else {
+                // If it's already an array, use it directly
+                $this->parts = $data['parts'];
+            }
+        } else {
+            $this->parts = [];
+        }
+        
+        // Handle part prices
         $this->partPrices = $data['partPrices'] ?? [];
+        
+        // Handle part quantities
+        $this->partQuantities = $data['partQuantities'] ?? array_fill(0, count($this->parts), 1);
+        
         $this->totalCosts = $data['totalCosts'] ?? 0;
     }
 
@@ -75,16 +106,18 @@ class JobCard {
                 $stmt = $pdo->prepare($sql);
                 
                 // Prepare SQL for updating parts inventory
-                $updatePartSql = "UPDATE Parts SET Sold = Sold + 1, Stock = Stock - 1 WHERE PartID = ?";
+                $updatePartSql = "UPDATE Parts SET Sold = Sold + ?, Stock = Stock - ? WHERE PartID = ?";
                 $updatePartStmt = $pdo->prepare($updatePartSql);
                 
                 foreach ($this->parts as $index => $partId) {
                     if (!empty($partId)) {
                         $price = $this->partPrices[$index] ?? 0;
-                        $stmt->execute([$this->jobId, $partId, 1, $price]);
+                        $quantity = $this->partQuantities[$index] ?? 1;
+                        
+                        $stmt->execute([$this->jobId, $partId, $quantity, $price]);
                         
                         // Update the parts inventory (increment Sold, decrement Stock)
-                        $updatePartStmt->execute([$partId]);
+                        $updatePartStmt->execute([$quantity, $quantity, $partId]);
                     }
                 }
             }
@@ -145,8 +178,32 @@ class JobCard {
             $stmt = $pdo->prepare($sql);
             $stmt->execute([$data['registration'], $jobId]);
 
+            // Process parts data if it's a JSON string
+            $parts = $data['parts'] ?? [];
+            $partPrices = $data['partPrices'] ?? [];
+            $partQuantities = $data['partQuantities'] ?? [];
+            
+            if (is_string($parts)) {
+                $decodedParts = json_decode($parts, true);
+                if (is_array($decodedParts) && !empty($decodedParts) && isset($decodedParts[0]['id'])) {
+                    // Extract part IDs, prices and quantities if it's in the format [{id: ..., name: ..., price: ...}]
+                    $parts = array_column($decodedParts, 'id');
+                    $partPrices = array_column($decodedParts, 'price');
+                    $partQuantities = array_column($decodedParts, 'quantity', null) ?: array_fill(0, count($parts), 1);
+                } else if (is_array($decodedParts)) {
+                    $parts = $decodedParts;
+                } else {
+                    $parts = [];
+                }
+            }
+
+            // If quantities are not provided, default to 1 for each part
+            if (empty($partQuantities) && !empty($parts)) {
+                $partQuantities = array_fill(0, count($parts), 1);
+            }
+
             // Update parts
-            if (!empty($data['parts'])) {
+            if (!empty($parts)) {
                 // First, get existing parts to restore stock counts
                 $existingPartsSql = "SELECT PartID, PiecesSold FROM JobCardParts WHERE JobID = ? ORDER BY PiecesSold DESC";
                 $existingPartsStmt = $pdo->prepare($existingPartsSql);
@@ -171,16 +228,18 @@ class JobCard {
                 $stmt = $pdo->prepare($sql);
                 
                 // Prepare SQL for updating parts inventory
-                $updatePartSql = "UPDATE Parts SET Sold = Sold + 1, Stock = Stock - 1 WHERE PartID = ?";
+                $updatePartSql = "UPDATE Parts SET Sold = Sold + ?, Stock = Stock - ? WHERE PartID = ?";
                 $updatePartStmt = $pdo->prepare($updatePartSql);
                 
-                foreach ($data['parts'] as $index => $partId) {
+                foreach ($parts as $index => $partId) {
                     if (!empty($partId)) {
-                        $price = $data['partPrices'][$index] ?? 0;
-                        $stmt->execute([$jobId, $partId, 1, $price]);
+                        $price = $partPrices[$index] ?? 0;
+                        $quantity = $partQuantities[$index] ?? 1;
+                        
+                        $stmt->execute([$jobId, $partId, $quantity, $price]);
                         
                         // Update the parts inventory (increment Sold, decrement Stock)
-                        $updatePartStmt->execute([$partId]);
+                        $updatePartStmt->execute([$quantity, $quantity, $partId]);
                     }
                 }
             }
