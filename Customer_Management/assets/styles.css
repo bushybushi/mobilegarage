@@ -1,10 +1,13 @@
+/* Import Google Font - Plus Jakarta Sans */
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
 
+/* Base styles */
 body {
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 400;
 }
 
+/* First Time Password Container */
 .firsttimepass-container {
   max-width: 40rem;
   padding: 2rem;
@@ -13,16 +16,17 @@ body {
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
 }
 
+/* Main Form Container */
 .form-container {
     padding: 2rem;
     background-color: white;
     border-radius: 1rem;
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
     max-width: 1080px;
-    
-  }
+}
 
-  .top-container {
+/* Top Navigation Bar */
+.top-container {
     padding: 1rem;
     background-image: url('Cover.png');
     background-position: top;
@@ -36,15 +40,16 @@ body {
     align-items: center;
 }
 
+/* Table Styles */
 .table{
   padding-left: 2rem;
   padding: 2rem;
   background-color: white;
   border-radius: 1rem;
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
-  
 }
 
+/* Title Container */
 .title-container{
   padding-left: 2rem;
   padding: 1rem;
@@ -52,37 +57,40 @@ body {
   border-radius: 1rem;
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
   margin-bottom: 2rem;
- 
 }
 
+/* Button Styles */
 .btn{
   font-weight: 500;
   border-radius: 1rem!important;
 }
 
+/* Edit User Form */
 .edituserform{
   padding: 2rem;
   max-width: 1080px;
 }
 
-
-
+/* Button Group Container */
 .btngroup{
   text-align: center;
   padding: 1rem;
 }
 
- .bottombtn {
+/* Bottom Button Styles */
+.bottombtn {
     border-radius: 2rem;
     padding: 0.7rem 2rem;
-  }
-  
-   .topbtn {
-      border-radius: 2rem;
-      padding: 0.5rem 1rem;
-      font-size: 1rem;
-    }
+}
 
+/* Top Button Styles */
+.topbtn {
+    border-radius: 2rem;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+}
+
+/* Back Arrow Link */
 .back-arrow {
     color: #333;
     font-size: 16px;
@@ -92,14 +100,77 @@ body {
     transition: color 0.3s ease;
 }
 
+/* Back Arrow Hover Effect */
 .back-arrow:hover {
     color: #007bff;
     text-decoration: none;
 }
 
+/* Form Label Styles */
 label {
     font-weight: 500;
     color: #555;
 }
 
+/* Popup/Notification Styles */
+/* Popup container styling */
+.popup-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+    animation: slideIn 0.5s ease-out;
+}
 
+/* Popup content styling */
+.popup-content {
+    background-color: #2196F3;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    min-width: 300px;
+}
+
+.popup-content p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.popup-content i {
+    margin-right: 12px;
+    font-size: 20px;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+.popup-hide {
+    animation: fadeOut 0.5s ease-in forwards;
+}
+
+.modal-content {
+  border-radius: 1rem!important;
+}
