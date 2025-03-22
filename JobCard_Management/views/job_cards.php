@@ -475,12 +475,31 @@
                             col.className = 'col-md-3 mb-3';
                             col.id = previewId;
                             
+                            const div = document.createElement('div');
+                            div.className = 'position-relative';
+                            
                             const img = document.createElement('img');
                             img.src = e.target.result;
                             img.className = 'img-fluid rounded';
                             img.style.maxHeight = '150px';
                             
-                            col.appendChild(img);
+                            const deleteBtn = document.createElement('button');
+                            deleteBtn.type = 'button';
+                            deleteBtn.className = 'btn btn-danger btn-sm position-absolute';
+                            deleteBtn.style.cssText = 'top: 5px; right: 5px;';
+                            deleteBtn.innerHTML = '<i class="fas fa-trash"></i>';
+                            deleteBtn.onclick = function() {
+                                if (confirm('Are you sure you want to delete this photo?')) {
+                                    // Clear the file input
+                                    input.value = '';
+                                    // Remove the preview
+                                    col.remove();
+                                }
+                            };
+                            
+                            div.appendChild(img);
+                            div.appendChild(deleteBtn);
+                            col.appendChild(div);
                             previewContainer.appendChild(col);
                         };
                         
