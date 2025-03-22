@@ -322,8 +322,16 @@ $parts = $partsStmt->fetchAll();
                                     $photos = json_decode($jobCard['Photo'], true);
                                     foreach ($photos as $photo): ?>
                                         <div class="col-md-3 mb-3">
-                                            <img src="../uploads/job_photos/<?php echo htmlspecialchars($photo); ?>" 
-                                                 class="img-fluid rounded" alt="Job photo">
+                                            <div class="position-relative">
+                                                <img src="../uploads/job_photos/<?php echo htmlspecialchars($photo); ?>" 
+                                                     class="img-fluid rounded" alt="Job photo">
+                                                <button type="button" class="btn btn-danger btn-sm position-absolute" 
+                                                        style="top: 5px; right: 5px;" 
+                                                        onclick="deletePhoto(this, '<?php echo htmlspecialchars($photo); ?>')">
+                                                    <i class="fas fa-trash"></i>
+                                                </button>
+                                                <input type="hidden" name="existing_photos[]" value="<?php echo htmlspecialchars($photo); ?>">
+                                            </div>
                                         </div>
                                     <?php endforeach;
                                 }
@@ -828,6 +836,28 @@ $parts = $partsStmt->fetchAll();
                 setupPartSearch(searchInput, newSelect);
             }
         };
+
+        // Function to delete a photo
+        function deletePhoto(button, photoName) {
+            if (confirm('Are you sure you want to delete this photo?')) {
+                // Add the photo name to a hidden input for tracking deleted photos
+                const deletedPhotosInput = document.querySelector('input[name="removed_photos"]') || (() => {
+                    const input = document.createElement('input');
+                    input.type = 'hidden';
+                    input.name = 'removed_photos';
+                    document.querySelector('form').appendChild(input);
+                    return input;
+                })();
+                
+                // Add to the list of removed photos
+                const removedPhotos = deletedPhotosInput.value ? JSON.parse(deletedPhotosInput.value) : [];
+                removedPhotos.push(photoName);
+                deletedPhotosInput.value = JSON.stringify(removedPhotos);
+                
+                // Remove the photo container from the display
+                button.closest('.col-md-3').remove();
+            }
+        }
     </script>
 </body>
 </html> 
