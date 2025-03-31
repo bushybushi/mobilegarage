@@ -21,7 +21,7 @@ $stmt->execute();
 $jobCard = $stmt->fetch(PDO::FETCH_ASSOC);
 
 // Get parts used in this job
-$partsSql = "SELECT p.PartDesc, jp.PricePerPiece, jp.PiecesSold
+$partsSql = "SELECT p.PartID, p.PartDesc, jp.PricePerPiece, jp.PiecesSold
              FROM JobCardParts jp
              JOIN Parts p ON jp.PartID = p.PartID
              WHERE jp.JobID = :jobId
@@ -51,22 +51,52 @@ foreach ($parts as $part) {
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <style>
+        #sticky-customer-header {
+            position: fixed;
+            top: 50px; /* Set a fixed top position to appear below the Job Card header */
+            left: 50%;
+            transform: translateX(-50%);
+            width: auto;
+            max-width: 80%;
+            z-index: 1000;
+            transition: all 0.3s ease;
+            border-radius: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            background-color: #ffffff;
+            padding: 8px 20px;
+            font-size: 0.9rem;
+        }
+        
+        /* Ensure there's padding-top to prevent content jump when sticky header appears */
+        body {
+            padding-top: 0;
+        }
+    </style>
 </head>
 
 <body>
     <div class="pc-container3">
+        <!-- Sticky header for customer name -->
+        <div id="sticky-customer-header" class="sticky-top shadow-sm d-none">
+            <div class="d-flex align-items-center">
+                <span class="font-weight-bold mr-2"><?php echo htmlspecialchars($jobCard['CustomerName']); ?></span>
+                <span class="mr-2">|</span>
+                <span class="mr-2"><?php echo htmlspecialchars($jobCard['Brand'] . ' ' . $jobCard['Model']); ?></span>
+            </div>
+        </div>
+        
         <div class="form-container">
             <div class="top-container d-flex justify-content-between align-items-center">
                 <a href="javascript:void(0);" onclick="window.location.href='job_cards_main.php'" class="back-arrow">
                     <i class="fas fa-arrow-left"></i>
                 </a>
                 <div class="flex-grow-1 text-center">
-                    <h5 class="mb-0">Job Card #<?php echo htmlspecialchars($jobId); ?></h5>
+                    <h5 class="mb-0">Job Card</h5>
                 </div>
                 <div class="d-flex justify-content-end">
                     <div class="btngroup">
-                        <button href="#" type="button" class="btn btn-success mr-2">Print</button>
-                        <button href="#" type="button" class="btn btn-primary">Create Invoice</button>
+                        <button type="button" class="btn btn-success" onclick="window.open('print/PrintInvoice.php?id=<?php echo $jobId; ?>', '_blank')">Print/Create Invoice</button>
                     </div>
                 </div>
             </div>
@@ -94,10 +124,31 @@ foreach ($parts as $part) {
                                 <input type="text" class="form-control" value="<?php echo htmlspecialchars($jobCard['LicenseNr']); ?>">
                             </div>
 
-                            <!-- Date of Call -->
-                            <div class="form-group">
-                                <label>Date of Call</label>
-                                <input type="text" class="form-control" value="<?php echo htmlspecialchars($jobCard['DateCall']); ?>">
+                            <!-- Dates Row -->
+                            <div class="row">
+                                <!-- Date of Call -->
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Date of Call</label>
+                                        <input type="text" class="form-control" value="<?php echo htmlspecialchars($jobCard['DateCall']); ?>">
+                                    </div>
+                                </div>
+
+                                <!-- Job Start Date -->
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Job Start Date</label>
+                                        <input type="text" class="form-control" value="<?php echo !empty($jobCard['DateStart']) ? htmlspecialchars($jobCard['DateStart']) : 'Not started'; ?>">
+                                    </div>
+                                </div>
+
+                                <!-- Job End Date -->
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Job End Date</label>
+                                        <input type="text" class="form-control" value="<?php echo !empty($jobCard['DateFinish']) ? htmlspecialchars($jobCard['DateFinish']) : 'Not finished'; ?>">
+                                    </div>
+                                </div>
                             </div>
 
                             <!-- Job Report -->
@@ -106,52 +157,42 @@ foreach ($parts as $part) {
                                 <textarea class="form-control" rows="3"><?php echo htmlspecialchars($jobCard['JobReport']); ?></textarea>
                             </div>
 
-                            <!-- Job End Date -->
-                            <div class="form-group">
-                                <label>Job End Date</label>
-                                <input type="text" class="form-control" value="<?php echo !empty($jobCard['DateFinish']) ? htmlspecialchars($jobCard['DateFinish']) : 'Not finished'; ?>">
-                            </div>
-
                             <!-- Parts Used -->
                             <div class="form-group">
                                 <label>Parts Used/Replaced</label>
                                 <div id="partsContainer">
                                     <?php foreach ($parts as $part): ?>
-                                    <div class="input-group mb-2">
-                                        <input type="text" class="form-control" value="<?php echo htmlspecialchars($part['PartDesc']); ?>" readonly>
-                                        <input type="text" class="form-control" style="max-width: 80px;" value="<?php echo htmlspecialchars($part['PiecesSold']); ?>" readonly>
+                                    <div class="input-group">
+                                        <div class="position-relative" style="flex: 1;">
+                                            <input type="text" class="form-control" value="<?php echo htmlspecialchars($part['PartDesc']); ?>" readonly>
+                                        </div>
+                                        <input type="text" class="form-control ml-2" style="max-width: 80px;" value="<?php echo htmlspecialchars($part['PiecesSold']); ?>" readonly>
+                                        <input type="text" class="form-control ml-2" style="max-width: 100px;" value="€<?php echo htmlspecialchars(number_format($part['PricePerPiece'], 2)); ?>" readonly>
                                     </div>
                                     <?php endforeach; ?>
                                     <?php if (empty($parts)): ?>
-                                    <div class="input-group mb-2">
+                                    <div class="input-group">
                                         <input type="text" class="form-control" value="No parts used" readonly>
                                     </div>
                                     <?php endif; ?>
                                 </div>
+                                <small class="form-text text-muted mt-2">Total parts: €<?php echo number_format($totalPartsCost, 2); ?></small>
                             </div>
 
                             <!-- Costs Row -->
                             <div class="row mt-3">
-                                <!-- Additional Costs -->
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label>Additional Costs</label>
-                                        <div class="form-control">
-                                            €<?php echo htmlspecialchars(number_format($jobCard['AdditionalCosts'] ?? 0, 2)); ?>
-                                        </div>
-                                    </div>
-                                </div>
                                 <!-- Total Costs -->
-                                <div class="col-md-6">
+                                <div class="col-md-4">
                                     <div class="form-group">
                                         <label>Total Costs</label>
-                                        <div class="form-control">
-                                            €<?php 
-                                                $additionalCosts = $jobCard['AdditionalCosts'] ?? 0;
-                                                $totalCost = $totalPartsCost + $jobCard['DriveCosts'] + $additionalCosts;
-                                                echo htmlspecialchars(number_format($totalCost, 2)); 
-                                            ?>
-                                        </div>
+                                        <input type="text" class="form-control" value="€<?php 
+                                            $totalPartsCost = 0;
+                                            foreach ($parts as $part) {
+                                                $totalPartsCost += $part['PricePerPiece'] * $part['PiecesSold'];
+                                            }
+                                            $totalCost = $totalPartsCost + $jobCard['DriveCosts'];
+                                            echo htmlspecialchars(number_format($totalCost, 2)); 
+                                        ?>">
                                     </div>
                                 </div>
                             </div>
@@ -177,12 +218,6 @@ foreach ($parts as $part) {
                                 <textarea class="form-control" rows="3"><?php echo htmlspecialchars($jobCard['JobDesc']); ?></textarea>
                             </div>
 
-                            <!-- Job Start Date -->
-                            <div class="form-group">
-                                <label>Job Start Date</label>
-                                <input type="text" class="form-control" value="<?php echo !empty($jobCard['DateStart']) ? htmlspecialchars($jobCard['DateStart']) : 'Not started'; ?>">
-                            </div>
-
                             <!-- Rides -->
                             <div class="form-group">
                                 <label>Rides</label>
@@ -195,39 +230,24 @@ foreach ($parts as $part) {
                                 <input type="text" class="form-control" value="€<?php echo htmlspecialchars(number_format($jobCard['DriveCosts'], 2)); ?>">
                             </div>
 
-                            <!-- Price for Each Part -->
-                            <div class="form-group">
-                                <label>Price for Each Part</label>
-                                <div id="partPricesContainer">
-                                    <?php foreach ($parts as $part): ?>
-                                    <div class="input-group mb-2">
-                                        <input type="text" class="form-control" value="€<?php echo htmlspecialchars(number_format($part['PricePerPiece'], 2)); ?>" readonly>
-                                    </div>
-                                    <?php endforeach; ?>
-                                    <?php if (empty($parts)): ?>
-                                    <div class="input-group mb-2">
-                                        <input type="text" class="form-control" value="No prices" readonly>
-                                    </div>
-                                    <?php endif; ?>
-                                </div>
-                            </div>
-
                             <!-- Photos -->
                             <?php if (!empty($jobCard['Photo'])): ?>
                             <div class="form-group">
                                 <label>Photos</label>
-                                <div class="row">
+                                <div class="row" id="photoPreviewContainer">
                                     <?php 
                                     $photos = json_decode($jobCard['Photo'], true);
                                     foreach ($photos as $photo): ?>
                                         <div class="col-md-3 mb-3">
-                                            <a href="../uploads/job_photos/<?php echo htmlspecialchars($photo); ?>" 
-                                               data-toggle="modal" data-target="#photoModal" 
-                                               class="photo-link">
-                                                <img src="../uploads/job_photos/<?php echo htmlspecialchars($photo); ?>" 
-                                                     class="img-fluid rounded" alt="Job photo"
-                                                     style="max-height: 150px;">
-                                            </a>
+                                            <div class="position-relative">
+                                                <a href="../uploads/job_photos/<?php echo htmlspecialchars($photo); ?>" 
+                                                   data-toggle="modal" data-target="#photoModal" 
+                                                   class="photo-link">
+                                                    <img src="../uploads/job_photos/<?php echo htmlspecialchars($photo); ?>" 
+                                                         class="img-fluid rounded" alt="Job photo"
+                                                         style="max-height: 150px;">
+                                                </a>
+                                            </div>
                                         </div>
                                     <?php endforeach; ?>
                                 </div>
@@ -237,12 +257,9 @@ foreach ($parts as $part) {
                     </div>
                 </fieldset>
 
-                <div class="btngroup">
-                    <a href="edit_job_card.php?id=<?php echo $jobId; ?>" class="btn btn-primary">Edit</a>
-                    <form action="../controllers/delete_job_card_controller.php" method="POST" style="display: inline;">
-                        <input type="hidden" name="id" value="<?php echo $jobId; ?>">
-                        <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this job card?');">Delete</button>
-                    </form>
+                <div class="btngroup mt-3">
+                    <button type="button" class="btn btn-primary mr-2" onclick="window.location.href='edit_job_card.php?id=<?php echo $jobId; ?>'">Edit</button>
+                    <button type="button" class="btn btn-danger" onclick="showDeleteModal()">Delete</button>
                 </div>
             </div>
         </div>
@@ -265,6 +282,59 @@ foreach ($parts as $part) {
         </div>
     </div>
 
+    <!-- Delete Confirmation Modal -->
+    <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="deleteModalLabel">Delete Job Card</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>What would you like to do with the parts used in this job card?</p>
+                    
+                    <div class="parts-list mb-3">
+                        <h6>Parts Used:</h6>
+                        <div class="table-responsive">
+                            <table class="table table-sm">
+                                <thead>
+                                    <tr>
+                                        <th>Part</th>
+                                        <th>Quantity</th>
+                                        <th>Return to Stock</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <?php foreach ($parts as $part): ?>
+                                    <tr>
+                                        <td><?php echo htmlspecialchars($part['PartDesc']); ?></td>
+                                        <td><?php echo htmlspecialchars($part['PiecesSold']); ?></td>
+                                        <td>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input return-part-checkbox" 
+                                                       id="return_<?php echo $part['PartID']; ?>" 
+                                                       data-part-id="<?php echo $part['PartID']; ?>"
+                                                       data-quantity="<?php echo $part['PiecesSold']; ?>">
+                                                <label class="custom-control-label" for="return_<?php echo $part['PartID']; ?>"></label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <?php endforeach; ?>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-danger" onclick="deleteJobCard()">Delete Job Card</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script>
         // Set modal image source when a photo is clicked
         document.querySelectorAll('.photo-link').forEach(link => {
@@ -273,6 +343,114 @@ foreach ($parts as $part) {
                 document.getElementById('modalImage').src = this.href;
             });
         });
+
+        // Function to show delete confirmation modal
+        function showDeleteModal() {
+            $('#deleteModal').modal('show');
+        }
+
+        // Sticky header logic
+        window.addEventListener('scroll', function() {
+            const customerNameField = document.querySelector('.form-group:first-child');
+            const stickyHeader = document.getElementById('sticky-customer-header');
+            const headerHeight = document.querySelector('.top-container').offsetHeight;
+            
+            if (customerNameField) {
+                const rect = customerNameField.getBoundingClientRect();
+                // Show the sticky header when the customer name field is scrolled out of view
+                if (rect.bottom <= headerHeight + 10) {
+                    stickyHeader.classList.remove('d-none');
+                    
+                    // Adjust the sticky header position to be within the form container width
+                    const formContainer = document.querySelector('.form-container');
+                    if (formContainer) {
+                        const formContainerRect = formContainer.getBoundingClientRect();
+                        stickyHeader.style.maxWidth = (formContainerRect.width * 0.8) + 'px';
+                    }
+                } else {
+                    stickyHeader.classList.add('d-none');
+                }
+            }
+        });
+
+        // Function to delete job card and handle parts
+        function deleteJobCard() {
+            // Get all checked parts
+            const checkedParts = [];
+            document.querySelectorAll('.return-part-checkbox:checked').forEach(checkbox => {
+                checkedParts.push({
+                    partId: checkbox.dataset.partId,
+                    quantity: parseInt(checkbox.dataset.quantity)
+                });
+            });
+
+            // Send delete request with parts information
+            fetch('../controllers/delete_job_card.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    jobId: <?php echo $jobId; ?>,
+                    partsToReturn: checkedParts
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    // Redirect to job cards list
+                    window.location.href = 'job_cards_main.php';
+                } else {
+                    alert('Error deleting job card: ' + data.message);
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('An error occurred while deleting the job card');
+            });
+        }
+
+        // Function to calculate total costs
+        function calculateTotal() {
+            const driveCosts = parseFloat(document.getElementById('driveCosts').value) || 0;
+            let partPricesTotal = 0;
+            
+            // Get all part prices and quantities
+            const partPrices = document.getElementsByName('partPrices[]');
+            const partQuantities = document.getElementsByName('partQuantities[]');
+            
+            for (let i = 0; i < partPrices.length; i++) {
+                const price = parseFloat(partPrices[i].value) || 0;
+                const quantity = parseInt(partQuantities[i]?.value) || 1;
+                partPricesTotal += price * quantity;
+            }
+            
+            // Update parts total display
+            const partsTotalElement = document.getElementById('partsTotal');
+            if (partsTotalElement) {
+                partsTotalElement.textContent = `Total parts: ${partPricesTotal.toFixed(2)} €`;
+            }
+            
+            const total = driveCosts + partPricesTotal;
+            
+            // Update both the total costs field and the calculated total display
+            const totalCostsField = document.getElementById('totalCosts');
+            totalCostsField.value = total.toFixed(2);
+            
+            const totalCostsGroup = totalCostsField.closest('.form-group');
+            let calculatedTotalElement = totalCostsGroup.querySelector('.calculated-total');
+            
+            if (!calculatedTotalElement) {
+                calculatedTotalElement = document.createElement('small');
+                calculatedTotalElement.className = 'form-text text-muted calculated-total';
+                totalCostsGroup.appendChild(calculatedTotalElement);
+            }
+            
+            calculatedTotalElement.textContent = `Calculated total: ${total.toFixed(2)} €`;
+        }
+
+        // Add event listeners for cost calculation
+        document.getElementById('driveCosts').addEventListener('input', calculateTotal);
     </script>
 </body>
 </html> 
