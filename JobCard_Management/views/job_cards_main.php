@@ -191,7 +191,7 @@ if (isset($_SESSION['message'])) {
                         </ul>
                     </div>
 
-                    <button href="#" type="button" class="btn btn-success mr-3">Print 
+                    <button href="#" type="button" class="btn btn-success mr-3" data-toggle="modal" data-target="#printModal">Print 
                         <span>
                             <i class="fas fa-print"></i>
                         </span>
@@ -253,6 +253,77 @@ if (isset($_SESSION['message'])) {
             </table>
         </div>
     </div>
+
+    <!-- Print Modal -->
+    <div class="modal fade" id="printModal" tabindex="-1" role="dialog" aria-labelledby="printModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="printModalLabel">Print Job Cards</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <input type="text" id="printSearch" class="form-control" placeholder="Search job cards...">
+                        </div>
+                        <div class="col-md-6">
+                            <select id="printFilter" class="form-control">
+                                <option value="all">All Job Cards</option>
+                                <option value="name">Customer Name</option>
+                                <option value="car">Car Info</option>
+                                <option value="status">Status</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <span id="selectionCount">0 job(s) selected</span>
+                        </div>
+                        <div class="col-md-6 text-right">
+                            <button type="button" class="btn btn-primary" onclick="printAllJobs()">Print All</button>
+                            <button type="button" class="btn btn-success ml-2" onclick="printSelectedJobs()">Print Selected</button>
+                        </div>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th><input type="checkbox" id="printSelectAll"></th>
+                                    <th>Name</th>
+                                    <th>Car Info</th>
+                                    <th>Phone</th>
+                                    <th>Job Start/End date</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody id="printJobsTable">
+                                <!-- Jobs will be loaded here -->
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="d-flex justify-content-end mt-3">
+                        <nav aria-label="Print modal pagination" class="modal-pagination">
+                            <ul class="pagination mb-0">
+                                <?php
+                                for ($i = 1; $i <= ceil(count($result) / 10); $i++) {
+                                    echo "<li class='page-item'><a class='page-link' href='#' onclick='loadPrintModalPage($i)'>$i</a></li>";
+                                }
+                                ?>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="modal-footer" style="display: none;">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hidden iframe for printing -->
+    <iframe id="printFrame" style="display: none;"></iframe>
 
     <script>
         function updateSort(sortBy) {
@@ -337,6 +408,150 @@ if (isset($_SESSION['message'])) {
             $('#addnewjobcard-link').on('click', function(e) {
                 e.preventDefault();
                 window.location.href = 'job_cards.php';
+            });
+        });
+
+        // Global variable to store selected job IDs
+        let selectedJobIds = new Set();
+
+        // Function to update selection count
+        function updateSelectionCount() {
+            const selectedCount = selectedJobIds.size;
+            $('#selectionCount').text(selectedCount + ' job(s) selected');
+        }
+
+        // Function to load print modal page
+        function loadPrintModalPage(page) {
+            $.ajax({
+                url: 'print/get_print_jobs.php',
+                method: 'GET',
+                data: { page: page },
+                success: function(response) {
+                    $('#printJobsTable').html(response);
+                    
+                    // Restore selections after loading new page
+                    $('.print-job-select').each(function() {
+                        const jobId = $(this).closest('tr').data('job-id');
+                        $(this).prop('checked', selectedJobIds.has(jobId));
+                    });
+                    
+                    // Update select all checkbox state
+                    const totalCheckboxes = $('.print-job-select').length;
+                    const checkedCheckboxes = $('.print-job-select:checked').length;
+                    $('#printSelectAll').prop('checked', totalCheckboxes === checkedCheckboxes);
+                    
+                    // Update pagination active state
+                    $('.modal-pagination .page-item').removeClass('active');
+                    $(`.modal-pagination .page-item:nth-child(${page})`).addClass('active');
+
+                    // Update selection count
+                    updateSelectionCount();
+                },
+                error: function() {
+                    alert('Error loading jobs. Please try again.');
+                }
+            });
+        }
+
+        // Print functions
+        function printAllJobs() {
+            const iframe = document.getElementById('printFrame');
+            iframe.src = 'print/PrintJobCardList.php';
+            iframe.onload = function() {
+                iframe.contentWindow.print();
+            };
+            $('#printModal').modal('hide');
+        }
+
+        function printSelectedJobs() {
+            if (selectedJobIds.size === 0) {
+                alert('Please select at least one job to print');
+                return;
+            }
+            
+            const iframe = document.getElementById('printFrame');
+            iframe.src = 'print/PrintSelectedJobs.php?ids=' + Array.from(selectedJobIds).join(',');
+            iframe.onload = function() {
+                iframe.contentWindow.print();
+            };
+            $('#printModal').modal('hide');
+        }
+
+        // Initialize print modal functionality
+        $(document).ready(function() {
+            // Load first page when modal opens
+            $('#printModal').on('show.bs.modal', function() {
+                loadPrintModalPage(1);
+            });
+
+            // Handle print select all checkbox
+            $('#printSelectAll').change(function() {
+                const isChecked = $(this).prop('checked');
+                $('.print-job-select').prop('checked', isChecked);
+                
+                // Update selectedJobIds set
+                if (isChecked) {
+                    $('.print-job-select').each(function() {
+                        selectedJobIds.add($(this).closest('tr').data('job-id'));
+                    });
+                } else {
+                    selectedJobIds.clear();
+                }
+                
+                updateSelectionCount();
+            });
+
+            // Handle individual checkbox changes
+            $(document).on('change', '.print-job-select', function() {
+                const jobId = $(this).closest('tr').data('job-id');
+                if ($(this).prop('checked')) {
+                    selectedJobIds.add(jobId);
+                } else {
+                    selectedJobIds.delete(jobId);
+                }
+                
+                // Update select all checkbox state
+                const totalCheckboxes = $('.print-job-select').length;
+                const checkedCheckboxes = $('.print-job-select:checked').length;
+                $('#printSelectAll').prop('checked', totalCheckboxes === checkedCheckboxes);
+                
+                updateSelectionCount();
+            });
+
+            // Handle search functionality
+            $('#printSearch').on('keyup', function() {
+                var searchText = $(this).val().toLowerCase();
+                var filterType = $('#printFilter').val();
+                
+                $('#printJobsTable tr').each(function() {
+                    var row = $(this);
+                    var show = false;
+                    
+                    if (searchText === '') {
+                        show = true;
+                    } else {
+                        switch(filterType) {
+                            case 'name':
+                                show = row.find('td:eq(1)').text().toLowerCase().includes(searchText);
+                                break;
+                            case 'car':
+                                show = row.find('td:eq(2)').text().toLowerCase().includes(searchText);
+                                break;
+                            case 'status':
+                                show = row.find('td:eq(5)').text().toLowerCase().includes(searchText);
+                                break;
+                            default:
+                                show = row.text().toLowerCase().includes(searchText);
+                        }
+                    }
+                    
+                    row.toggle(show);
+                });
+            });
+
+            // Handle filter change
+            $('#printFilter').change(function() {
+                $('#printSearch').trigger('keyup');
             });
         });
     </script>
