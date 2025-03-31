@@ -52,24 +52,79 @@ $parts = $partsStmt->fetchAll();
         input[type=number] {
             -moz-appearance: textfield;
         }
+        .modal-fullscreen {
+            padding: 0 !important;
+        }
+        .modal-fullscreen .modal-dialog {
+            width: 100% !important;
+            max-width: none;
+            height: 100%;
+            margin: 0;
+        }
+        .modal-fullscreen .modal-content {
+            height: 100%;
+            border: 0;
+            border-radius: 0;
+        }
+        .modal-fullscreen .modal-body {
+            overflow-y: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+        .modal-fullscreen #modalImage {
+            max-height: 95vh;
+            object-fit: contain;
+        }
+        .text-danger {
+            color: #dc3545;
+        }
+        .photo-preview {
+            max-height: 150px;
+            object-fit: contain;
+        }
+        .error {
+            color: #dc3545;
+        }
+        #sticky-customer-header {
+            position: fixed;
+            top: 50px; /* Set a fixed top position to appear below the Job Card header */
+            left: 50%;
+            transform: translateX(-50%);
+            width: auto;
+            max-width: 80%;
+            z-index: 1000;
+            transition: all 0.3s ease;
+            border-radius: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            background-color: #ffffff;
+            padding: 8px 20px;
+            font-size: 0.9rem;
+        }
     </style>
 </head>
 
 <body>
     <div class="pc-container3">
+        <!-- Sticky header for customer name -->
+        <div id="sticky-customer-header" class="sticky-top shadow-sm d-none">
+            <div class="d-flex align-items-center">
+                <span class="font-weight-bold mr-2"><?php echo htmlspecialchars($jobCard['CustomerName'] ?? ''); ?></span>
+                <span class="mr-2">|</span>
+                <span class="mr-2"><?php echo htmlspecialchars($jobCard['Brand'] . ' ' . $jobCard['Model']); ?></span>
+            </div>
+        </div>
+        
         <div class="form-container">
             <div class="top-container d-flex justify-content-between align-items-center">
-                <a href="javascript:void(0);" onclick="window.location.href='job_card_view.php?id=<?php echo $jobId; ?>'" class="back-arrow">
+                <a href="javascript:void(0);" onclick="window.location.href='job_cards_main.php'" class="back-arrow">
                     <i class="fas fa-arrow-left"></i>
                 </a>
                 <div class="flex-grow-1 text-center">
-                    <h5 class="mb-0">Edit Job Card #<?php echo htmlspecialchars($jobId); ?></h5>
+                    <h5 class="mb-0">Edit Job Card</h5>
                 </div>
                 <div class="d-flex justify-content-end">
-                    <div class="btngroup">
-                        <button href="#" type="button" class="btn btn-success mr-2">Print</button>
-                        <button href="#" type="button" class="btn btn-primary">Create Invoice</button>
-                    </div>
                 </div>
             </div>
 
@@ -80,7 +135,7 @@ $parts = $partsStmt->fetchAll();
                     <div class="col-md-6">
                         <!-- Customer Selection -->
                         <div class="form-group">
-                            <label for="customer">Customer</label>
+                            <label for="customer">Customer <span class="text-danger">*</span></label>
                             <input type="text" id="customerSearch" class="form-control" placeholder="Search customer..." value="<?php echo htmlspecialchars($jobCard['CustomerName']); ?>">
                             <div id="customerSearchResults" class="list-group mt-1"></div>
                             <select name="customer" id="customer" class="form-control mt-2" required style="display: none;">
@@ -99,8 +154,8 @@ $parts = $partsStmt->fetchAll();
 
                         <!-- Car Brand and Model -->
                         <div class="form-group">
-                            <label for="carBrandModel">Car Brand and Model</label>
-                            <select name="carBrandModel" id="carBrandModel" class="form-control" onchange="updateRegistrationPlate(this)">
+                            <label for="carBrandModel">Car Brand and Model <span class="text-danger">*</span></label>
+                            <select name="carBrandModel" id="carBrandModel" class="form-control" onchange="updateRegistrationPlate(this)" required>
                                 <option value="">Select Car Brand and Model</option>
                                 <?php
                                 // Get cars for this customer
@@ -125,14 +180,37 @@ $parts = $partsStmt->fetchAll();
                         <div class="form-group">
                             <label for="registration">Registration Plate</label>
                             <input type="text" name="registration" id="registration" class="form-control" 
-                                   value="<?php echo htmlspecialchars($jobCard['LicenseNr']); ?>" required>
+                                   value="<?php echo htmlspecialchars($jobCard['LicenseNr']); ?>" required readonly style="background-color: #e9ecef;">
                         </div>
 
-                        <!-- Date of Call -->
-                        <div class="form-group">
-                            <label for="dateCall">Date of Call</label>
-                            <input type="date" name="dateCall" id="dateCall" class="form-control" 
-                                   value="<?php echo htmlspecialchars($jobCard['DateCall']); ?>" required>
+                        <!-- Dates Row -->
+                        <div class="row">
+                            <!-- Date of Call -->
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="dateCall">Date of Call <span class="text-danger">*</span></label>
+                                    <input type="date" name="dateCall" id="dateCall" class="form-control" 
+                                           value="<?php echo htmlspecialchars($jobCard['DateCall']); ?>" required>
+                                </div>
+                            </div>
+
+                            <!-- Job Start Date -->
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="jobStartDate">Job Start Date <span class="text-danger">*</span></label>
+                                    <input type="date" name="jobStartDate" id="jobStartDate" class="form-control" 
+                                           value="<?php echo htmlspecialchars($jobCard['DateStart']); ?>" required>
+                                </div>
+                            </div>
+
+                            <!-- Job End Date -->
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="jobEndDate">Job End Date</label>
+                                    <input type="date" name="jobEndDate" id="jobEndDate" class="form-control" 
+                                           value="<?php echo htmlspecialchars($jobCard['DateFinish']); ?>">
+                                </div>
+                            </div>
                         </div>
 
                         <!-- Job Report -->
@@ -141,86 +219,51 @@ $parts = $partsStmt->fetchAll();
                             <textarea name="jobReport" id="jobReport" class="form-control" rows="3"><?php echo htmlspecialchars($jobCard['JobReport']); ?></textarea>
                         </div>
 
-                        <!-- Job End Date -->
+                        <!-- Parts Used/Replaced -->
                         <div class="form-group">
-                            <label for="jobEndDate">Job End Date</label>
-                            <input type="date" name="jobEndDate" id="jobEndDate" class="form-control" 
-                                   value="<?php echo htmlspecialchars($jobCard['DateFinish']); ?>">
-                        </div>
-
-                        <!-- Parts Used -->
-                        <div class="form-group">
-                            <label>Parts Used/Replaced</label>
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <label for="partsUsed" class="mb-0">Parts Used/Replaced</label>
+                                <button type="button" class="btn btn-primary btn-sm" style="padding: 0.25rem 0.5rem; font-size: 0.875rem;" onclick="addPartField()">Add Part</button>
+                            </div>
                             <div id="partsContainer">
                                 <?php foreach ($parts as $part): ?>
-                                <div class="input-group mb-2">
-                                    <input type="text" class="form-control part-search" placeholder="Search part..." value="<?php echo htmlspecialchars($part['PartDesc']); ?>">
-                                    <input type="number" name="partQuantities[]" class="form-control" min="1" max="<?php 
-                                        // Get current stock for this part
-                                        $stockSql = "SELECT Stock FROM Parts WHERE PartID = ?";
-                                        $stockStmt = $pdo->prepare($stockSql);
-                                        $stockStmt->execute([$part['PartID']]);
-                                        $stock = $stockStmt->fetchColumn();
-                                        echo $stock;
-                                    ?>" value="<?php echo htmlspecialchars($part['PiecesSold']); ?>" style="max-width: 80px;" placeholder="Qty">
-                                    <div class="input-group-append">
-                                        <?php if ($part === reset($parts)): ?>
-                                        <button type="button" class="btn btn-primary" onclick="addPartField()">+</button>
-                                        <?php else: ?>
-                                        <button type="button" class="btn btn-danger" onclick="removePart(this)">-</button>
-                                        <?php endif; ?>
+                                <div class="input-group mt-2">
+                                    <div class="position-relative" style="flex: 1;">
+                                        <input type="text" class="form-control part-search" placeholder="Search part..." value="<?php echo htmlspecialchars($part['PartDesc']); ?>">
+                                        <div class="list-group mt-1 position-absolute" style="width: 100%; top: 38px; z-index: 1000;"></div>
+                                        <div class="input-group-append" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); z-index: 10;">
+                                            <button type="button" class="btn btn-link text-danger" onclick="removePart(this)" style="padding: 0;">
+                                                <i class="fas fa-minus"></i>
+                                            </button>
+                                        </div>
                                     </div>
-                                    <select name="parts[]" class="form-control part-select" style="display: none;" onchange="updatePartPrice(this)">
+                                    <input type="number" name="partQuantities[]" class="form-control ml-2" min="1" value="<?php echo htmlspecialchars($part['PiecesSold']); ?>" style="max-width: 80px;">
+                                    <input type="number" name="partPrices[]" class="form-control ml-2" step="0.01" min="0" value="<?php echo htmlspecialchars($part['PricePerPiece']); ?>" style="max-width: 100px;">
+                                    <input type="hidden" name="parts[]" value="<?php echo htmlspecialchars($part['PartID']); ?>">
+                                    <select name="parts_select[]" class="form-control part-select" style="display: none;" onchange="updatePartPrice(this)">
                                         <option value="">Select Part</option>
                                         <?php
-                                        $partsSql = "SELECT PartID, PartDesc, SellPrice, Stock FROM Parts ORDER BY SellPrice ASC";
-                                        $partsStmt = $pdo->prepare($partsSql);
-                                        $partsStmt->execute();
-                                        while ($row = $partsStmt->fetch()) {
+                                        $stmt = $pdo->prepare("SELECT PartID, PartDesc, SellPrice, Stock FROM Parts ORDER BY SellPrice ASC");
+                                        $stmt->execute();
+                                        while ($row = $stmt->fetch()) {
                                             $selected = ($row['PartID'] == $part['PartID']) ? 'selected' : '';
-                                            echo "<option value='" . $row['PartID'] . "' data-stock='" . $row['Stock'] . "' data-price='" . $row['SellPrice'] . "' " . $selected . ">" . 
-                                                 htmlspecialchars($row['PartDesc']) . " (Stock: " . $row['Stock'] . ")</option>";
+                                            // Only disable if stock is 0 AND it's not the currently selected part
+                                            $disabled = ($row['Stock'] <= 0 && $row['PartID'] != $part['PartID']) ? 'disabled' : '';
+                                            echo "<option value='" . $row['PartID'] . "' data-stock='" . $row['Stock'] . "' data-price='" . $row['SellPrice'] . "' " . $selected . " " . $disabled . ">" . 
+                                                 htmlspecialchars($row['PartDesc']) . " (Stock: " . $row['Stock'] . ")" . (($row['Stock'] <= 0 && $row['PartID'] != $part['PartID']) ? ' - Out of Stock' : '') . "</option>";
                                         }
                                         ?>
                                     </select>
                                 </div>
                                 <?php endforeach; ?>
-                                <?php if (empty($parts)): ?>
-                                <div class="input-group mb-2">
-                                    <input type="text" class="form-control part-search" placeholder="Search part...">
-                                    <input type="number" name="partQuantities[]" class="form-control" min="1" value="1" style="max-width: 80px;" placeholder="Qty">
-                                    <div class="input-group-append">
-                                        <button type="button" class="btn btn-primary" onclick="addPartField()">+</button>
-                                    </div>
-                                    <select name="parts[]" class="form-control part-select" style="display: none;" onchange="updatePartPrice(this)">
-                                        <option value="">Select Part</option>
-                                        <?php
-                                        $partsSql = "SELECT PartID, PartDesc, SellPrice, Stock FROM Parts ORDER BY SellPrice ASC";
-                                        $partsStmt = $pdo->prepare($partsSql);
-                                        $partsStmt->execute();
-                                        while ($row = $partsStmt->fetch()) {
-                                            echo "<option value='" . $row['PartID'] . "' data-stock='" . $row['Stock'] . "' data-price='" . $row['SellPrice'] . "'>" . 
-                                                 htmlspecialchars($row['PartDesc']) . " (Stock: " . $row['Stock'] . ")</option>";
-                                        }
-                                        ?>
-                                    </select>
-                                </div>
-                                <?php endif; ?>
                             </div>
+                            <small class="form-text text-muted mt-2" id="partsTotal"></small>
                         </div>
 
                         <!-- Costs Row -->
                         <div class="row mt-3">
-                            <!-- Additional Costs -->
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="additionalCosts">Additional Costs</label>
-                                    <input type="number" name="additionalCosts" id="additionalCosts" class="form-control" step="0.01" min="0" 
-                                           value="<?php echo htmlspecialchars($jobCard['AdditionalCosts'] ?? 0); ?>">
-                                </div>
-                            </div>
                             <!-- Total Costs -->
-                            <div class="col-md-6">
+                            <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="totalCosts">Total Costs</label>
                                     <input type="number" name="totalCosts" id="totalCosts" class="form-control" step="0.01" min="0" 
@@ -230,10 +273,9 @@ $parts = $partsStmt->fetchAll();
                                                 foreach ($parts as $part) {
                                                     $totalPartsCost += $part['PricePerPiece'] * $part['PiecesSold'];
                                                 }
-                                                $additionalCosts = $jobCard['AdditionalCosts'] ?? 0;
-                                                $totalCost = $totalPartsCost + $jobCard['DriveCosts'] + $additionalCosts;
+                                                $totalCost = $totalPartsCost + $jobCard['DriveCosts'];
                                                 echo htmlspecialchars($totalCost);
-                                           ?>">
+                                           ?>" readonly style="background-color: #e9ecef;">
                                 </div>
                             </div>
                         </div>
@@ -245,27 +287,20 @@ $parts = $partsStmt->fetchAll();
                         <div class="form-group">
                             <label for="phone">Phone</label>
                             <input type="tel" name="phone" id="phone" class="form-control" 
-                                   value="<?php echo htmlspecialchars($jobCard['PhoneNumber']); ?>">
+                                   value="<?php echo htmlspecialchars($jobCard['PhoneNumber']); ?>" readonly style="background-color: #e9ecef;">
                         </div>
 
                         <!-- Location -->
                         <div class="form-group">
-                            <label for="location">Location of Visit</label>
+                            <label for="location">Location of Visit <span class="text-danger">*</span></label>
                             <input type="text" name="location" id="location" class="form-control" 
                                    value="<?php echo htmlspecialchars($jobCard['Location']); ?>" required>
                         </div>
 
                         <!-- Job Description -->
                         <div class="form-group">
-                            <label for="jobDescription">Job Description by Customer</label>
+                            <label for="jobDescription">Job Description by Customer <span class="text-danger">*</span></label>
                             <textarea name="jobDescription" id="jobDescription" class="form-control" rows="3" required><?php echo htmlspecialchars($jobCard['JobDesc']); ?></textarea>
-                        </div>
-
-                        <!-- Job Start Date -->
-                        <div class="form-group">
-                            <label for="jobStartDate">Job Start Date</label>
-                            <input type="date" name="jobStartDate" id="jobStartDate" class="form-control" 
-                                   value="<?php echo htmlspecialchars($jobCard['DateStart']); ?>">
                         </div>
 
                         <!-- Rides -->
@@ -282,37 +317,16 @@ $parts = $partsStmt->fetchAll();
                                    value="<?php echo htmlspecialchars($jobCard['DriveCosts']); ?>">
                         </div>
 
-                        <!-- Price for Each Part -->
-                        <div class="form-group">
-                            <label for="partPrices">Price for Each Part</label>
-                            <div id="partPricesContainer">
-                                <?php foreach ($parts as $part): ?>
-                                <div class="input-group mb-2">
-                                    <input type="number" name="partPrices[]" class="form-control" step="0.01" min="0" 
-                                           value="<?php echo htmlspecialchars($part['PricePerPiece']); ?>" placeholder="Price">
-                                    <?php if ($part !== reset($parts)): ?>
-                                    <div class="input-group-append">
-                                        <button type="button" class="btn btn-danger" onclick="removePart(this)">-</button>
-                                    </div>
-                                    <?php endif; ?>
-                                </div>
-                                <?php endforeach; ?>
-                                <?php if (empty($parts)): ?>
-                                <div class="input-group mb-2">
-                                    <input type="number" name="partPrices[]" class="form-control" step="0.01" min="0" placeholder="Price">
-                                </div>
-                                <?php endif; ?>
-                            </div>
-                        </div>
-
                         <!-- Photos -->
                         <div class="form-group">
-                            <label>Photos</label>
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <label for="photos" class="mb-0">Photos of damage</label>
+                                <button type="button" class="btn btn-primary btn-sm" style="padding: 0.25rem 0.5rem; font-size: 0.875rem;" onclick="addPhotoField()">Add Photos</button>
+                            </div>
                             <div id="photosContainer">
-                                <div class="input-group mb-2">
-                                    <input type="file" name="photos[]" class="form-control-file photo-input" accept="image/*">
-                                    <div class="input-group-append">
-                                        <button type="button" class="btn btn-primary" onclick="addPhotoField()">+</button>
+                                <div class="input-group">
+                                    <div class="position-relative" style="flex: 1;">
+                                        <input type="file" name="photos[]" class="form-control photo-input" accept="image/*">
                                     </div>
                                 </div>
                             </div>
@@ -320,20 +334,23 @@ $parts = $partsStmt->fetchAll();
                                 <?php 
                                 if (!empty($jobCard['Photo'])) {
                                     $photos = json_decode($jobCard['Photo'], true);
-                                    foreach ($photos as $photo): ?>
-                                        <div class="col-md-3 mb-3">
-                                            <div class="position-relative">
-                                                <img src="../uploads/job_photos/<?php echo htmlspecialchars($photo); ?>" 
-                                                     class="img-fluid rounded" alt="Job photo">
-                                                <button type="button" class="btn btn-danger btn-sm position-absolute" 
-                                                        style="top: 5px; right: 5px;" 
-                                                        onclick="deletePhoto(this, '<?php echo htmlspecialchars($photo); ?>')">
-                                                    <i class="fas fa-trash"></i>
-                                                </button>
-                                                <input type="hidden" name="existing_photos[]" value="<?php echo htmlspecialchars($photo); ?>">
+                                    if (is_array($photos)) {
+                                        foreach ($photos as $photo): ?>
+                                            <div class="col-md-3 mb-3">
+                                                <div class="position-relative">
+                                                    <img src="../uploads/job_photos/<?php echo htmlspecialchars($photo); ?>" 
+                                                         class="img-fluid rounded" alt="Job photo"
+                                                         style="max-height: 150px; cursor: pointer;">
+                                                    <button type="button" class="btn btn-danger btn-sm position-absolute" 
+                                                            style="top: 5px; right: 5px;" 
+                                                            onclick="deletePhoto(this, '<?php echo htmlspecialchars($photo); ?>')">
+                                                        <i class="fas fa-trash"></i>
+                                                    </button>
+                                                    <input type="hidden" name="existing_photos[]" value="<?php echo htmlspecialchars($photo); ?>">
+                                                </div>
                                             </div>
-                                        </div>
-                                    <?php endforeach;
+                                        <?php endforeach;
+                                    }
                                 }
                                 ?>
                             </div>
@@ -348,128 +365,289 @@ $parts = $partsStmt->fetchAll();
         </div>
     </div>
 
+    <!-- Photo Modal -->
+    <div class="modal fade" id="photoModal" tabindex="-1" role="dialog" aria-labelledby="photoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" id="photoModalDialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="photoModalLabel">Photo View</h5>
+                    <div>
+                        <button type="button" class="btn btn-sm btn-outline-secondary mr-2" id="toggleSize">
+                            <i class="fas fa-expand" id="sizeIcon"></i>
+                        </button>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="modal-body text-center">
+                    <img src="" id="modalImage" class="img-fluid" alt="Enlarged photo">
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script>
+        // Initialize form functionality when the page loads
+        $(document).ready(function() {
+            // Initialize part search for all existing part fields
+            const partSearchInputs = document.querySelectorAll('.part-search');
+            partSearchInputs.forEach(input => {
+                const selectElement = input.closest('.input-group').querySelector('.part-select');
+                setupPartSearch(input, selectElement);
+            });
+        });
+
+        // Function to setup part search functionality
+        function setupPartSearch(searchInput, selectElement) {
+            const searchResultsDiv = searchInput.closest('.position-relative').querySelector('.list-group');
+            const partField = searchInput.closest('.input-group');
+            const priceInput = partField.querySelector('input[name="partPrices[]"]');
+            const quantityInput = partField.querySelector('input[name="partQuantities[]"]');
+            const hiddenInput = partField.querySelector('input[name="parts[]"]');
+            
+            searchInput.addEventListener('keyup', function() {
+                const query = this.value.trim().toLowerCase();
+                if (query.length > 0) {
+                    // Get all options from the select
+                    const options = Array.from(selectElement.options).slice(1); // Skip the first "Select Part" option
+                    
+                    // Filter options based on search query
+                    const filteredOptions = options.filter(option => {
+                        return option.text.toLowerCase().includes(query);
+                    });
+                    
+                    // Create search results
+                    searchResultsDiv.innerHTML = '';
+                    if (filteredOptions.length > 0) {
+                        filteredOptions.forEach(option => {
+                            const resultItem = document.createElement('a');
+                            resultItem.href = '#';
+                            resultItem.className = 'list-group-item list-group-item-action';
+                            resultItem.textContent = option.text;
+                            resultItem.dataset.id = option.value;
+                            resultItem.dataset.stock = option.dataset.stock;
+                            resultItem.dataset.price = option.dataset.price;
+                            
+                            // Check if this part is already added with stock of 1
+                            const stock = parseInt(option.dataset.stock);
+                            const partId = parseInt(option.value);
+                            const currentPartId = hiddenInput ? parseInt(hiddenInput.value) : null;
+                            
+                            // If stock is 1 and it's already added, disable the option
+                            if (stock === 1 && partId !== currentPartId) {
+                                const existingPartInputs = document.querySelectorAll('input[name="parts[]"]');
+                                let isAlreadyAdded = false;
+                                existingPartInputs.forEach(input => {
+                                    if (parseInt(input.value) === partId) {
+                                        isAlreadyAdded = true;
+                                    }
+                                });
+                                
+                                if (isAlreadyAdded) {
+                                    resultItem.className += ' disabled text-muted';
+                                    resultItem.style.pointerEvents = 'none';
+                                    resultItem.title = 'This part is already added and has only 1 in stock';
+                                }
+                            }
+                            // If stock is 0 or less and it's not a currently selected part, disable it
+                            else if (stock <= 0 && partId !== currentPartId) {
+                                resultItem.className += ' disabled text-muted';
+                                resultItem.style.pointerEvents = 'none';
+                                resultItem.title = 'Out of stock';
+                            }
+                            
+                            resultItem.addEventListener('click', function(e) {
+                                e.preventDefault();
+                                
+                                // Check if part is already added with stock of 1
+                                const stock = parseInt(this.dataset.stock);
+                                const partId = parseInt(this.dataset.id);
+                                
+                                if (stock === 1) {
+                                    const existingPartInputs = document.querySelectorAll('input[name="parts[]"]');
+                                    let isAlreadyAdded = false;
+                                    existingPartInputs.forEach(input => {
+                                        if (parseInt(input.value) === partId) {
+                                            isAlreadyAdded = true;
+                                        }
+                                    });
+                                    
+                                    if (isAlreadyAdded) {
+                                        alert('This part is already added and has only 1 in stock');
+                                        return;
+                                    }
+                                }
+                                
+                                selectElement.value = this.dataset.id;
+                                searchInput.value = this.textContent;
+                                searchResultsDiv.innerHTML = '';
+                                
+                                // Update hidden input with selected part ID
+                                if (hiddenInput) {
+                                    hiddenInput.value = this.dataset.id;
+                                }
+                                
+                                // Set the price input value
+                                if (priceInput && this.dataset.price) {
+                                    priceInput.value = this.dataset.price;
+                                }
+
+                                // Set max quantity based on stock
+                                if (quantityInput && this.dataset.stock) {
+                                    const stock = parseInt(this.dataset.stock);
+                                    quantityInput.max = stock;
+                                    quantityInput.title = `Maximum available: ${stock}`;
+                                    
+                                    // If current quantity is more than stock, adjust it
+                                    if (parseInt(quantityInput.value) > stock) {
+                                        quantityInput.value = stock;
+                                    }
+                                }
+                                
+                                // Trigger the change event to update price and stock
+                                const changeEvent = new Event('change');
+                                selectElement.dispatchEvent(changeEvent);
+                                
+                                // Trigger total calculation
+                                calculateTotal();
+                            });
+                            
+                            searchResultsDiv.appendChild(resultItem);
+                        });
+                    } else {
+                        const noResults = document.createElement('div');
+                        noResults.className = 'list-group-item text-muted';
+                        noResults.textContent = 'No parts found';
+                        searchResultsDiv.appendChild(noResults);
+                    }
+                } else {
+                    searchResultsDiv.innerHTML = '';
+                }
+            });
+            
+            // Add event listener to validate quantity against stock
+            if (quantityInput) {
+                quantityInput.addEventListener('input', function() {
+                    const max = parseInt(this.max) || 0;
+                    const value = parseInt(this.value) || 0;
+                    
+                    if (value > max) {
+                        alert(`Cannot exceed available stock of ${max} units`);
+                        this.value = max;
+                        calculateTotal();
+                    }
+                });
+            }
+            
+            // Hide search results when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!searchInput.contains(e.target) && !searchResultsDiv.contains(e.target)) {
+                    searchResultsDiv.innerHTML = '';
+                }
+            });
+        }
+
         // Function to add new part field
         function addPartField() {
             const container = document.getElementById('partsContainer');
-            const partFields = container.getElementsByClassName('input-group').length;
             
             const newField = document.createElement('div');
-            newField.className = 'input-group mb-2';
+            newField.className = 'input-group mt-2';
             newField.innerHTML = `
-                <select name="parts[]" class="form-control part-select" onchange="updatePartPrice(this)">
+                <div class="position-relative" style="flex: 1;">
+                    <input type="text" class="form-control part-search" placeholder="Search part...">
+                    <div class="list-group mt-1 position-absolute" style="width: 100%; top: 38px; z-index: 1000;"></div>
+                    <div class="input-group-append" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); z-index: 10;">
+                        <button type="button" class="btn btn-link text-danger" onclick="removePart(this)" style="padding: 0;">
+                            <i class="fas fa-minus"></i>
+                        </button>
+                    </div>
+                </div>
+                <input type="number" name="partQuantities[]" class="form-control ml-2" min="1" value="1" style="max-width: 80px;" placeholder="Qty">
+                <input type="number" name="partPrices[]" class="form-control ml-2" step="0.01" min="0" value="0.00" style="max-width: 100px;" placeholder="Price" onchange="formatPrice(this)">
+                <input type="hidden" name="parts[]" value="">
+                <select name="parts_select[]" class="form-control part-select" style="display: none;" onchange="updatePartPrice(this)">
                     <option value="">Select Part</option>
                     <?php
                     $stmt = $pdo->prepare("SELECT PartID, PartDesc, SellPrice, Stock FROM Parts ORDER BY SellPrice ASC");
                     $stmt->execute();
                     while ($row = $stmt->fetch()) {
-                        echo "<option value='" . $row['PartID'] . "' data-stock='" . $row['Stock'] . "'>" . 
-                             htmlspecialchars($row['PartDesc']) . " (Stock: " . $row['Stock'] . ")</option>";
+                        $disabled = ($row['Stock'] <= 0) ? 'disabled' : '';
+                        echo "<option value='" . $row['PartID'] . "' data-stock='" . $row['Stock'] . "' data-price='" . $row['SellPrice'] . "' " . $disabled . ">" . 
+                             htmlspecialchars($row['PartDesc']) . " (Stock: " . $row['Stock'] . ")" . ($row['Stock'] <= 0 ? ' - Out of Stock' : '') . "</option>";
                     }
                     ?>
                 </select>
-                <input type="number" name="partQuantities[]" class="form-control" min="1" value="1" style="max-width: 80px;" placeholder="Qty" onchange="calculateTotal()">
-                <div class="input-group-append">
-                    <button type="button" class="btn btn-danger" onclick="removePart(this)">-</button>
-                </div>
             `;
             container.appendChild(newField);
 
-            // Add corresponding price field
-            const priceContainer = document.getElementById('partPricesContainer');
-            const newPriceField = document.createElement('div');
-            newPriceField.className = 'input-group mb-2';
-            newPriceField.innerHTML = `
-                <input type="number" name="partPrices[]" class="form-control" step="0.01" min="0" placeholder="Price">
-                <div class="input-group-append">
-                    <button type="button" class="btn btn-danger" onclick="removePart(this)">-</button>
-                </div>
-            `;
-            priceContainer.appendChild(newPriceField);
-            
-            // Store references to link the fields
-            newField.dataset.priceField = priceContainer.children.length - 1;
-            newPriceField.dataset.partField = container.children.length - 1;
-        }
-        
-        // Function to remove part and its corresponding price field
-        function removePart(button) {
-            const partField = button.closest('.input-group');
-            const priceFields = document.getElementById('partPricesContainer').children;
-            const partFields = document.getElementById('partsContainer').children;
-            
-            // Find index of the current field
-            let index = Array.from(partFields).indexOf(partField);
-            if (index === -1) {
-                // If not found in part fields, check price fields
-                index = Array.from(priceFields).indexOf(partField);
-                if (index !== -1) {
-                    // Remove corresponding part field
-                    partFields[index].remove();
-                }
-            } else {
-                // Remove corresponding price field
-                priceFields[index].remove();
-            }
-            
-            // Remove this field
-            partField.remove();
-            
-            // Update total
-            calculateTotal();
+            // Setup part search for the new field
+            setupPartSearch(newField.querySelector('.part-search'), newField.querySelector('.part-select'));
         }
 
-        // Function to update part price and stock limit when a part is selected
+        // Function to format price with 2 decimal places
+        function formatPrice(input) {
+            const value = parseFloat(input.value) || 0;
+            input.value = value.toFixed(2);
+        }
+
+        // Function to remove part field
+        function removePart(button) {
+            const partField = button.closest('.input-group');
+            if (partField) {
+                if (confirm('Are you sure you want to remove this part?')) {
+                    partField.remove();
+                    calculateTotal();
+                }
+            }
+        }
+
+        // Function to update part price and stock when a part is selected
         function updatePartPrice(selectElement) {
             const partId = selectElement.value;
             if (!partId) return;
             
-            // Find the corresponding price input and quantity input
-            const quantityInput = selectElement.nextElementSibling;
-            const priceInput = document.getElementsByName('partPrices[]')[Array.from(document.getElementsByName('parts[]')).indexOf(selectElement)];
+            // Find the corresponding part field container
+            const partField = selectElement.closest('.input-group');
+            const priceInput = partField.querySelector('input[name="partPrices[]"]');
+            const quantityInput = partField.querySelector('input[name="partQuantities[]"]');
+            const hiddenInput = partField.querySelector('input[name="parts[]"]');
             
-            // Get stock from selected option
+            // Get stock and price from selected option
             const selectedOption = selectElement.options[selectElement.selectedIndex];
-            const stock = selectedOption.dataset.stock;
+            const stock = parseInt(selectedOption.dataset.stock);
+            const price = parseFloat(selectedOption.dataset.price);
             
-            // Update quantity input max attribute
-            quantityInput.max = stock;
-            
-            // Fetch part information including price
-            fetch(`../controllers/get_part_info.php?id=${partId}`)
-                .then(response => response.json())
-                .then(data => {
-                    if (data.success && data.part) {
-                        priceInput.value = data.part.SellPrice || 0;
-                        calculateTotal();
-                    }
-                })
-                .catch(error => console.error('Error fetching part info:', error));
-        }
-
-        // Add event listener to validate quantity against stock
-        document.addEventListener('DOMContentLoaded', function() {
-            const partsContainer = document.getElementById('partsContainer');
-            
-            partsContainer.addEventListener('input', function(e) {
-                if (e.target.matches('input[name="partQuantities[]"]')) {
-                    const input = e.target;
-                    const max = parseInt(input.max);
-                    const value = parseInt(input.value);
-                    
-                    if (value > max) {
-                        alert('Cannot exceed available stock of ' + max + ' units');
-                        input.value = max;
-                    }
-                    calculateTotal();
+            // Update quantity input max attribute and title
+            if (quantityInput) {
+                quantityInput.max = stock;
+                quantityInput.title = `Maximum available: ${stock}`;
+                
+                // If current quantity is more than stock, adjust it
+                const currentQty = parseInt(quantityInput.value) || 0;
+                if (currentQty > stock) {
+                    alert(`Cannot exceed available stock of ${stock} units`);
+                    quantityInput.value = stock;
                 }
-            });
-        });
+            }
+            
+            // Update price input with 2 decimal places
+            if (priceInput && price) {
+                priceInput.value = price.toFixed(2);
+            }
+            
+            // Update hidden input
+            if (hiddenInput) {
+                hiddenInput.value = partId;
+            }
+            
+            calculateTotal();
+        }
 
         // Function to calculate total costs
         function calculateTotal() {
             const driveCosts = parseFloat(document.getElementById('driveCosts').value) || 0;
-            const additionalCosts = parseFloat(document.getElementById('additionalCosts').value) || 0;
             let partPricesTotal = 0;
             
             // Get all part prices and quantities
@@ -482,7 +660,13 @@ $parts = $partsStmt->fetchAll();
                 partPricesTotal += price * quantity;
             }
             
-            const total = driveCosts + partPricesTotal + additionalCosts;
+            // Update parts total display
+            const partsTotalElement = document.getElementById('partsTotal');
+            if (partsTotalElement) {
+                partsTotalElement.textContent = `Total parts: ${partPricesTotal.toFixed(2)} €`;
+            }
+            
+            const total = driveCosts + partPricesTotal;
             
             // Update both the total costs field and the calculated total display
             const totalCostsField = document.getElementById('totalCosts');
@@ -502,29 +686,6 @@ $parts = $partsStmt->fetchAll();
 
         // Add event listeners for cost calculation
         document.getElementById('driveCosts').addEventListener('input', calculateTotal);
-        document.getElementById('additionalCosts').addEventListener('input', calculateTotal);
-        
-        // Add event listener for part quantities and prices
-        document.addEventListener('DOMContentLoaded', function() {
-            const partsContainer = document.getElementById('partsContainer');
-            const partPricesContainer = document.getElementById('partPricesContainer');
-            
-            // Listen for changes in quantities and prices
-            partsContainer.addEventListener('input', function(e) {
-                if (e.target.matches('input[name="partQuantities[]"]')) {
-                    calculateTotal();
-                }
-            });
-            
-            partPricesContainer.addEventListener('input', function(e) {
-                if (e.target.matches('input[name="partPrices[]"]')) {
-                    calculateTotal();
-                }
-            });
-            
-            // Initial calculation
-            calculateTotal();
-        });
 
         // Auto-populate phone when customer is selected
         document.getElementById('customer').addEventListener('change', function() {
@@ -573,22 +734,91 @@ $parts = $partsStmt->fetchAll();
             setupPhotoPreview();
         });
 
+        // Sticky header logic
+        window.addEventListener('scroll', function() {
+            const customerNameField = document.querySelector('.form-group:first-child');
+            const stickyHeader = document.getElementById('sticky-customer-header');
+            const headerHeight = document.querySelector('.top-container').offsetHeight;
+            
+            if (customerNameField) {
+                const rect = customerNameField.getBoundingClientRect();
+                // Show the sticky header when the customer name field is scrolled out of view
+                if (rect.bottom <= headerHeight + 10) {
+                    stickyHeader.classList.remove('d-none');
+                    
+                    // Adjust the sticky header position to be within the form container width
+                    const formContainer = document.querySelector('.form-container');
+                    if (formContainer) {
+                        const formContainerRect = formContainer.getBoundingClientRect();
+                        stickyHeader.style.maxWidth = (formContainerRect.width * 0.8) + 'px';
+                    }
+                } else {
+                    stickyHeader.classList.add('d-none');
+                }
+            }
+        });
+
         // Function to add new photo field
         function addPhotoField() {
             const container = document.getElementById('photosContainer');
             
             const newField = document.createElement('div');
-            newField.className = 'input-group mb-2';
+            newField.className = 'input-group mt-2';
             newField.innerHTML = `
-                <input type="file" name="photos[]" class="form-control-file photo-input" accept="image/*">
-                <div class="input-group-append">
-                    <button type="button" class="btn btn-danger" onclick="this.closest('.input-group').remove()">-</button>
+                <div class="position-relative" style="flex: 1;">
+                    <input type="file" name="photos[]" class="form-control photo-input" accept="image/*">
+                    <div class="input-group-append" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); z-index: 10;">
+                        <button type="button" class="btn btn-link text-danger" onclick="removeNewPhoto(this)" style="padding: 0;">
+                            <i class="fas fa-minus"></i>
+                        </button>
+                    </div>
                 </div>
             `;
             container.appendChild(newField);
             
             // Setup preview for the new field
             setupPhotoPreview(newField.querySelector('.photo-input'));
+        }
+
+        // Function to remove new photo field with confirmation
+        function removeNewPhoto(button) {
+            const inputGroup = button.closest('.input-group');
+            const previewId = inputGroup.querySelector('.photo-input')?.dataset.previewId;
+            const previewElement = previewId ? document.getElementById(previewId) : null;
+            
+            if (previewElement) {
+                // If there's a preview, show confirmation dialog
+                if (confirm('Are you sure you want to delete this photo?')) {
+                    // Remove both the input field and the preview
+                    inputGroup.remove();
+                    previewElement.remove();
+                }
+            } else {
+                // If there's no preview (just the input field), remove it directly
+                inputGroup.remove();
+            }
+        }
+
+        // Function to delete an existing photo
+        function deletePhoto(button, photoName) {
+            if (confirm('Are you sure you want to delete this photo?')) {
+                // Add the photo name to a hidden input for tracking deleted photos
+                const deletedPhotosInput = document.querySelector('input[name="removed_photos"]') || (() => {
+                    const input = document.createElement('input');
+                    input.type = 'hidden';
+                    input.name = 'removed_photos';
+                    document.querySelector('form').appendChild(input);
+                    return input;
+                })();
+                
+                // Add to the list of removed photos
+                const removedPhotos = deletedPhotosInput.value ? JSON.parse(deletedPhotosInput.value) : [];
+                removedPhotos.push(photoName);
+                deletedPhotosInput.value = JSON.stringify(removedPhotos);
+                
+                // Remove the photo container from the display
+                button.closest('.col-md-3').remove();
+            }
         }
 
         // Setup photo preview functionality
@@ -624,12 +854,37 @@ $parts = $partsStmt->fetchAll();
                             col.className = 'col-md-3 mb-3';
                             col.id = previewId;
                             
+                            const div = document.createElement('div');
+                            div.className = 'position-relative';
+                            
                             const img = document.createElement('img');
                             img.src = e.target.result;
-                            img.className = 'img-fluid rounded';
-                            img.style.maxHeight = '150px';
+                            img.className = 'img-fluid rounded photo-preview';
+                            img.style.cursor = 'pointer';
                             
-                            col.appendChild(img);
+                            // Add click event to open modal
+                            img.addEventListener('click', function() {
+                                document.getElementById('modalImage').src = this.src;
+                                $('#photoModal').modal('show');
+                            });
+                            
+                            const deleteBtn = document.createElement('button');
+                            deleteBtn.type = 'button';
+                            deleteBtn.className = 'btn btn-danger btn-sm position-absolute';
+                            deleteBtn.style.cssText = 'top: 5px; right: 5px;';
+                            deleteBtn.innerHTML = '<i class="fas fa-trash"></i>';
+                            deleteBtn.onclick = function() {
+                                if (confirm('Are you sure you want to delete this photo?')) {
+                                    // Clear the file input
+                                    input.value = '';
+                                    // Remove the preview
+                                    col.remove();
+                                }
+                            };
+                            
+                            div.appendChild(img);
+                            div.appendChild(deleteBtn);
+                            col.appendChild(div);
                             previewContainer.appendChild(col);
                         };
                         
@@ -640,224 +895,20 @@ $parts = $partsStmt->fetchAll();
             });
         }
 
-        // Customer search functionality
-        const customerSearchInput = document.getElementById('customerSearch');
-        const customerSelect = document.getElementById('customer');
-        const customerSearchResults = document.getElementById('customerSearchResults');
-        
-        customerSearchInput.addEventListener('keyup', function() {
-            const query = this.value.trim();
-            if (query.length > 0) {
-                // Get all options from the select
-                const options = Array.from(customerSelect.options);
-                
-                // Filter options based on search query
-                const filteredOptions = options.filter(option => {
-                    const names = option.text.toLowerCase().split(' ');
-                    return names.some(name => name.startsWith(query.toLowerCase()));
-                });
-                
-                // Create search results
-                customerSearchResults.innerHTML = '';
-                if (filteredOptions.length > 0) {
-                    filteredOptions.forEach(option => {
-                        const resultItem = document.createElement('a');
-                        resultItem.href = '#';
-                        resultItem.className = 'list-group-item list-group-item-action';
-                        resultItem.textContent = option.text;
-                        resultItem.dataset.id = option.value;
-                        
-                        resultItem.addEventListener('click', function(e) {
-                            e.preventDefault();
-                            customerSelect.value = this.dataset.id;
-                            customerSearchInput.value = this.textContent;
-                            customerSearchResults.innerHTML = '';
-                            
-                            // Trigger the change event to load customer data
-                            const changeEvent = new Event('change');
-                            customerSelect.dispatchEvent(changeEvent);
-                        });
-                        
-                        customerSearchResults.appendChild(resultItem);
-                    });
-                } else {
-                    const noResults = document.createElement('div');
-                    noResults.className = 'list-group-item text-muted';
-                    noResults.textContent = 'No customers found';
-                    customerSearchResults.appendChild(noResults);
-                }
-            } else {
-                customerSearchResults.innerHTML = '';
-            }
-        });
-        
-        // Hide search results when clicking outside
-        document.addEventListener('click', function(e) {
-            if (!customerSearchInput.contains(e.target) && !customerSearchResults.contains(e.target)) {
-                customerSearchResults.innerHTML = '';
-            }
-        });
-
-        // Part search functionality
-        function setupPartSearch(partSearchInput, partSelect) {
-            const searchResultsId = 'partSearchResults-' + Math.random().toString(36).substr(2, 9);
-            
-            const searchResultsDiv = document.createElement('div');
-            searchResultsDiv.id = searchResultsId;
-            searchResultsDiv.className = 'list-group mt-1 position-absolute';
-            searchResultsDiv.style.width = 'calc(100% - 130px)';
-            searchResultsDiv.style.top = '38px';
-            searchResultsDiv.style.zIndex = '1000';
-            
-            // Insert the search results div after the search input
-            partSearchInput.parentNode.insertBefore(searchResultsDiv, partSearchInput.nextSibling);
-            
-            partSearchInput.addEventListener('keyup', function() {
-                const query = this.value.trim();
-                if (query.length > 0) {
-                    // Get all options from the select
-                    const options = Array.from(partSelect.options).slice(1); // Skip the first "Select Part" option
-                    
-                    // Filter options based on search query
-                    const filteredOptions = options.filter(option => {
-                        return option.text.toLowerCase().startsWith(query.toLowerCase());
-                    });
-                    
-                    // Create search results
-                    searchResultsDiv.innerHTML = '';
-                    if (filteredOptions.length > 0) {
-                        filteredOptions.forEach(option => {
-                            const resultItem = document.createElement('a');
-                            resultItem.href = '#';
-                            resultItem.className = 'list-group-item list-group-item-action';
-                            resultItem.textContent = option.text;
-                            resultItem.dataset.id = option.value;
-                            resultItem.dataset.stock = option.dataset.stock;
-                            resultItem.dataset.price = option.dataset.price;
-                            
-                            resultItem.addEventListener('click', function(e) {
-                                e.preventDefault();
-                                partSelect.value = this.dataset.id;
-                                partSearchInput.value = this.textContent;
-                                searchResultsDiv.innerHTML = '';
-                                
-                                // Update corresponding price field and max quantity
-                                const quantityInput = partSearchInput.nextElementSibling;
-                                quantityInput.max = this.dataset.stock;
-                                
-                                // Find the index of this part field
-                                const partFields = document.querySelectorAll('#partsContainer .input-group');
-                                const index = Array.from(partFields).indexOf(partSearchInput.closest('.input-group'));
-                                
-                                // Update price
-                                const priceInputs = document.getElementsByName('partPrices[]');
-                                if (priceInputs[index]) {
-                                    priceInputs[index].value = this.dataset.price;
-                                }
-                                
-                                // Update total
-                                calculateTotal();
-                            });
-                            
-                            searchResultsDiv.appendChild(resultItem);
-                        });
-                    } else {
-                        const noResults = document.createElement('div');
-                        noResults.className = 'list-group-item text-muted';
-                        noResults.textContent = 'No parts found';
-                        searchResultsDiv.appendChild(noResults);
-                    }
-                } else {
-                    searchResultsDiv.innerHTML = '';
-                }
-            });
-            
-            // Hide search results when clicking outside
-            document.addEventListener('click', function(e) {
-                if (!partSearchInput.contains(e.target) && !searchResultsDiv.contains(e.target)) {
-                    searchResultsDiv.innerHTML = '';
-                }
-            });
-            
-            return searchResultsDiv;
-        }
-        
-        // Setup part search for all part search fields
+        // Add event listener for part quantities and prices
         document.addEventListener('DOMContentLoaded', function() {
-            const partSearchInputs = document.querySelectorAll('.part-search');
+            const partsContainer = document.getElementById('partsContainer');
             
-            partSearchInputs.forEach(function(partSearchInput) {
-                const partSelect = partSearchInput.parentNode.querySelector('.part-select');
-                if (partSelect) {
-                    setupPartSearch(partSearchInput, partSelect);
+            // Listen for changes in quantities and prices in the parts container
+            partsContainer.addEventListener('input', function(e) {
+                if (e.target.matches('input[name="partQuantities[]"]') || e.target.matches('input[name="partPrices[]"]')) {
+                    calculateTotal();
                 }
             });
+            
+            // Initial calculation
+            calculateTotal();
         });
-        
-        // Update the addPartField function to include part search
-        const originalAddPartField = addPartField;
-        addPartField = function() {
-            originalAddPartField();
-            
-            // Get the new part field
-            const container = document.getElementById('partsContainer');
-            const newPartField = container.lastElementChild;
-            
-            // Replace the select with search input if not already there
-            const oldSelect = newPartField.querySelector('select');
-            if (oldSelect && !newPartField.querySelector('.part-search')) {
-                const selectName = oldSelect.name;
-                const selectId = 'parts-' + Math.random().toString(36).substr(2, 9);
-                const selectClasses = oldSelect.className;
-                const selectOnChange = oldSelect.getAttribute('onchange');
-                const selectOptions = oldSelect.innerHTML;
-                
-                // Create new search input
-                const searchInput = document.createElement('input');
-                searchInput.type = 'text';
-                searchInput.className = 'form-control part-search';
-                searchInput.placeholder = 'Search part...';
-                
-                // Create new hidden select
-                const newSelect = document.createElement('select');
-                newSelect.name = selectName;
-                newSelect.id = selectId;
-                newSelect.className = selectClasses;
-                newSelect.setAttribute('onchange', selectOnChange);
-                newSelect.style.display = 'none';
-                newSelect.innerHTML = selectOptions;
-                
-                // Replace the old select with search input and hidden select
-                oldSelect.parentNode.insertBefore(searchInput, oldSelect);
-                oldSelect.parentNode.insertBefore(newSelect, oldSelect);
-                oldSelect.remove();
-                
-                // Setup search functionality
-                setupPartSearch(searchInput, newSelect);
-            }
-        };
-
-        // Function to delete a photo
-        function deletePhoto(button, photoName) {
-            if (confirm('Are you sure you want to delete this photo?')) {
-                // Add the photo name to a hidden input for tracking deleted photos
-                const deletedPhotosInput = document.querySelector('input[name="removed_photos"]') || (() => {
-                    const input = document.createElement('input');
-                    input.type = 'hidden';
-                    input.name = 'removed_photos';
-                    document.querySelector('form').appendChild(input);
-                    return input;
-                })();
-                
-                // Add to the list of removed photos
-                const removedPhotos = deletedPhotosInput.value ? JSON.parse(deletedPhotosInput.value) : [];
-                removedPhotos.push(photoName);
-                deletedPhotosInput.value = JSON.stringify(removedPhotos);
-                
-                // Remove the photo container from the display
-                button.closest('.col-md-3').remove();
-            }
-        }
     </script>
 </body>
-</html> 
+</html>
