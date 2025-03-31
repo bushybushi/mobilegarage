@@ -28,6 +28,8 @@ $sql .= ' WHERE j.DateFinish BETWEEN :startDate AND :endDate';
 	 // Bind parameters to the prepared statement
 }
 
+
+
 $sql .= " ORDER BY j.DateCall DESC";
 
 $stmt = $pdo->prepare($sql);
@@ -50,6 +52,15 @@ if (isset($_SESSION['message'])) {
     unset($_SESSION['message']);
     unset($_SESSION['message_type']);
 }
+
+// Calculate total profit
+$totalProfit = 0;
+foreach ($result as $row) {
+    $income = $row['Income'] ?: 0;
+    $expenses = $row['Expenses'] ?: 0;
+    $totalProfit += ($income - $expenses);
+}
+
 ?>
 
 <style>
@@ -161,6 +172,7 @@ if (isset($_SESSION['message'])) {
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
 </head>
 
 <body>
@@ -192,7 +204,7 @@ if (isset($_SESSION['message'])) {
                 </div>
             </div>
 
-            <table class="table table-striped">
+            <table class="table table-striped" id="jobCardsTable">
                 <thead>
                     <tr>
                         <th></th>
@@ -206,22 +218,32 @@ if (isset($_SESSION['message'])) {
                 <tbody>
                     <?php foreach ($result as $row): ?>
                         <tr>
-                            <td><i class="fas fa-file-alt"></i></td>
-                            <td><?php echo htmlspecialchars($row['CustomerName']); ?></td>
-                            <td>
-                                <?php 
-                                    $startDate = !empty($row['DateStart']) ? date('d/m/Y', strtotime($row['DateStart'])) : 'N/A';
-                                    $endDate = !empty($row['DateFinish']) ? date('d/m/Y', strtotime($row['DateFinish'])) : 'N/A';
-                                    echo $startDate . ' - ' . $endDate;
-                                ?>
-                            </td>
-                            <td><?php echo htmlspecialchars($row['Expenses'] ?: 'N/A'); ?></td>
-                            <td><?php echo htmlspecialchars($row['Income'] ?: 'N/A'); ?></td>
-                            <td><?php echo htmlspecialchars($row['Income'] ?: 'N/A') - htmlspecialchars($row['Expenses'] ?: 'N/A'); ?></td>
+                            <tr onclick="openForm(<?php echo $row['JobID']; ?>)">
+                                <td><i class="fas fa-file-alt"></i></td>
+                                <td><?php echo htmlspecialchars($row['CustomerName']); ?></td>
+                                <td>
+                                    <?php 
+                                        $startDate = !empty($row['DateStart']) ? date('d/m/Y', strtotime($row['DateStart'])) : 'N/A';
+                                        $endDate = !empty($row['DateFinish']) ? date('d/m/Y', strtotime($row['DateFinish'])) : 'N/A';
+                                        echo $startDate . ' - ' . $endDate;
+                                    ?>
+                                </td>
+                                <td><?php echo htmlspecialchars($row['Expenses'] ?: 'N/A'); ?></td>
+                                <td><?php echo htmlspecialchars($row['Income'] ?: 'N/A'); ?></td>
+                                <td class="profit" data-profit="<?php echo ($row['Income'] ?: 0) - ($row['Expenses'] ?: 0); ?>">
+                                    <?php echo number_format(($row['Income'] ?: 0) - ($row['Expenses'] ?: 0), 2); ?>
+                                </td>
+                            </tr>
                         </tr>
                     <?php endforeach; ?>
                 </tbody>
             </table>
+
+            <!-- Total Profit -->
+            <div class="total-profit">
+                Total Profit: <?php echo number_format($totalProfit, 2); ?>
+            </div>
+
         </div>
     </div>
 
@@ -250,6 +272,10 @@ if (isset($_SESSION['message'])) {
 
         function openForm(jobId) {
             window.location.href = '/JobCard_Management/views/job_card_view.php?id=' + jobId;
+        }
+
+        function openForm(jobId) {
+            window.location.href = '../../JobCard_Management/views/job_card_view.php?id=' + jobId;
         }
     </script>
 </body>
