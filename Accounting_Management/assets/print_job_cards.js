@@ -38,16 +38,8 @@ function printFilteredJobCards() {
         totalProfit += profit;
     });
 
-    // Create a new window for printing
-    const printWindow = window.open('', '_blank');
-    if (!printWindow) {
-        alert('Unable to open print window. Please check your browser settings.');
-        return;
-    }
-
-    // Write the content to the new window
-    printWindow.document.open();
-    printWindow.document.write(`
+    // Create a printable HTML structure
+    const printContent = `
         <!DOCTYPE html>
         <html lang="en">
         <head>
@@ -69,8 +61,8 @@ function printFilteredJobCards() {
                         border-bottom: 2px solid #ddd;
                     }
                     .logo {
-                        width: 250px; /* Increased width */
-                        height: auto; /* Maintain aspect ratio */
+                        width: 250px;
+                        height: auto;
                     }
                     .header-text {
                         text-align: right;
@@ -126,15 +118,19 @@ function printFilteredJobCards() {
                     ${clonedTable.querySelector('tbody').innerHTML}
                 </tbody>
             </table>
-            <div class="total-profit">Total Profit: ${totalProfit.toFixed(2)}</div>
-            <script>
-                window.onload = function () {
-                    window.print();
-                    window.close();
-                };
-            </script>
+            <div class="total-profit">Total Profit: €${totalProfit.toFixed(2)}</div>
         </body>
         </html>
-    `);
-    printWindow.document.close();
+    `;
+
+    // Replace the current page's content with the printable content
+    const originalContent = document.body.innerHTML;
+    document.body.innerHTML = printContent;
+
+    // Trigger the print dialog
+    window.print();
+
+    // Restore the original content after printing
+    document.body.innerHTML = originalContent;
+    location.reload(); // Reload the page to restore event listeners
 }
