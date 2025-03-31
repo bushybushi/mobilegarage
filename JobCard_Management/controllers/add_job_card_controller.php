@@ -86,6 +86,7 @@ try {
         'jobEndDate' => !empty($_POST['jobEndDate']) ? $_POST['jobEndDate'] : null,
         'rides' => $_POST['rides'] ?? 0,
         'driveCosts' => $_POST['driveCosts'] ?? 0,
+        'additionalCost' => $_POST['additionalCosts'] ?? 0,
         'registration' => $licenseNr, // Use the verified license number
         'parts' => $partIds,
         'partPrices' => $partPrices,
