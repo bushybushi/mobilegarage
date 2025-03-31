@@ -271,10 +271,6 @@ foreach ($result as $row) {
         }, 3000);
 
         function openForm(jobId) {
-            window.location.href = '/JobCard_Management/views/job_card_view.php?id=' + jobId;
-        }
-
-        function openForm(jobId) {
             window.location.href = '../../JobCard_Management/views/job_card_view.php?id=' + jobId;
         }
     </script>
