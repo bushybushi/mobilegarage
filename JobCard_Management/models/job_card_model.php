@@ -13,6 +13,7 @@ class JobCard {
     private $dateFinish;
     private $rides;
     private $driveCosts;
+    private $additionalCost;
     private $photo;
     private $licensePlate;
     private $parts;
@@ -31,6 +32,7 @@ class JobCard {
         $this->dateFinish = $data['jobEndDate'] ?? null;
         $this->rides = $data['rides'] ?? null;
         $this->driveCosts = $data['driveCosts'] ?? null;
+        $this->additionalCost = $data['additionalCost'] ?? 0;
         $this->photo = $data['photos'] ?? null;
         $this->licensePlate = $data['registration'] ?? null;
         
@@ -79,7 +81,7 @@ class JobCard {
 
             // Insert into JobCards table
             $sql = "INSERT INTO JobCards (Location, DateCall, JobDesc, JobReport, DateStart, DateFinish, 
-                    Rides, DriveCosts, Photo) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+                    Rides, DriveCosts, AdditionalCost, Photo) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
             $stmt = $pdo->prepare($sql);
             $stmt->execute([
                 $this->location,
@@ -90,6 +92,7 @@ class JobCard {
                 $dateFinish,
                 $this->rides,
                 $this->driveCosts,
+                $this->additionalCost,
                 $this->photo
             ]);
 
@@ -157,7 +160,7 @@ class JobCard {
             $sql = "UPDATE JobCards SET 
                     Location = ?, DateCall = ?, JobDesc = ?, JobReport = ?, 
                     DateStart = ?, DateFinish = ?, Rides = ?, DriveCosts = ?, 
-                    Photo = ? WHERE JobID = ?";
+                    AdditionalCost = ?, Photo = ? WHERE JobID = ?";
             
             $stmt = $pdo->prepare($sql);
             $stmt->execute([
@@ -169,6 +172,7 @@ class JobCard {
                 $dateFinish,
                 $data['rides'],
                 $data['driveCosts'],
+                $data['additionalCost'] ?? 0,
                 $data['photos'],
                 $jobId
             ]);
@@ -204,42 +208,55 @@ class JobCard {
 
             // Update parts
             if (!empty($parts)) {
-                // First, get existing parts to restore stock counts
-                $existingPartsSql = "SELECT PartID, PiecesSold FROM JobCardParts WHERE JobID = ? ORDER BY PiecesSold DESC";
+                // First, get existing parts
+                $existingPartsSql = "SELECT PartID, PiecesSold FROM JobCardParts WHERE JobID = ?";
                 $existingPartsStmt = $pdo->prepare($existingPartsSql);
                 $existingPartsStmt->execute([$jobId]);
                 $existingParts = $existingPartsStmt->fetchAll(PDO::FETCH_ASSOC);
                 
-                // Restore stock for parts that will be removed or changed
-                $restoreStockSql = "UPDATE Parts SET Sold = Sold - ?, Stock = Stock + ? WHERE PartID = ?";
-                $restoreStockStmt = $pdo->prepare($restoreStockSql);
-                
+                // Create associative array of existing parts for easy lookup
+                $existingPartsMap = [];
                 foreach ($existingParts as $part) {
-                    $restoreStockStmt->execute([$part['PiecesSold'], $part['PiecesSold'], $part['PartID']]);
+                    $existingPartsMap[$part['PartID']] = $part['PiecesSold'];
                 }
-                
-                // Delete existing parts
-                $sql = "DELETE FROM JobCardParts WHERE JobID = ?";
-                $stmt = $pdo->prepare($sql);
-                $stmt->execute([$jobId]);
 
-                // Insert new parts
-                $sql = "INSERT INTO JobCardParts (JobID, PartID, PiecesSold, PricePerPiece) VALUES (?, ?, ?, ?)";
-                $stmt = $pdo->prepare($sql);
-                
-                // Prepare SQL for updating parts inventory
+                // Prepare statements for stock updates
                 $updatePartSql = "UPDATE Parts SET Sold = Sold + ?, Stock = Stock - ? WHERE PartID = ?";
                 $updatePartStmt = $pdo->prepare($updatePartSql);
-                
+
+                // Delete existing JobCardParts entries
+                $deletePartsSql = "DELETE FROM JobCardParts WHERE JobID = ?";
+                $deletePartsStmt = $pdo->prepare($deletePartsSql);
+                $deletePartsStmt->execute([$jobId]);
+
+                // Insert new parts and update stock only for changes
+                $insertPartSql = "INSERT INTO JobCardParts (JobID, PartID, PiecesSold, PricePerPiece) VALUES (?, ?, ?, ?)";
+                $insertPartStmt = $pdo->prepare($insertPartSql);
+
                 foreach ($parts as $index => $partId) {
                     if (!empty($partId)) {
+                        $newQuantity = $partQuantities[$index] ?? 1;
                         $price = $partPrices[$index] ?? 0;
-                        $quantity = $partQuantities[$index] ?? 1;
+
+                        // Insert the new part record
+                        $insertPartStmt->execute([$jobId, $partId, $newQuantity, $price]);
+
+                        // Update stock only if quantity has changed
+                        $oldQuantity = $existingPartsMap[$partId] ?? 0;
+                        $quantityDiff = $newQuantity - $oldQuantity;
                         
-                        $stmt->execute([$jobId, $partId, $quantity, $price]);
-                        
-                        // Update the parts inventory (increment Sold, decrement Stock)
-                        $updatePartStmt->execute([$quantity, $quantity, $partId]);
+                        if ($quantityDiff != 0) {
+                            // Update the parts inventory only for the difference
+                            $updatePartStmt->execute([$quantityDiff, $quantityDiff, $partId]);
+                        }
+                    }
+                }
+
+                // Handle removed parts - restore their stock
+                foreach ($existingPartsMap as $partId => $oldQuantity) {
+                    if (!in_array($partId, $parts)) {
+                        // Part was removed, restore its stock
+                        $updatePartStmt->execute([-$oldQuantity, -$oldQuantity, $partId]);
                     }
                 }
             }
@@ -271,6 +288,32 @@ class JobCard {
                 $restoreStockStmt->execute([$part['PiecesSold'], $part['PiecesSold'], $part['PartID']]);
             }
 
+            // Get invoice IDs associated with this job
+            $invoiceSql = "SELECT InvoiceID FROM InvoiceJob WHERE JobID = ?";
+            $invoiceStmt = $pdo->prepare($invoiceSql);
+            $invoiceStmt->execute([$jobId]);
+            $invoiceIds = $invoiceStmt->fetchAll(PDO::FETCH_COLUMN);
+
+            // Delete from InvoiceJob first
+            $sql = "DELETE FROM InvoiceJob WHERE JobID = ?";
+            $stmt = $pdo->prepare($sql);
+            $stmt->execute([$jobId]);
+
+            // Delete invoices that were linked to this job
+            if (!empty($invoiceIds)) {
+                $invoicePlaceholders = implode(',', array_fill(0, count($invoiceIds), '?'));
+                
+                // Delete from PartsSupply first if it exists
+                $sql = "DELETE FROM PartsSupply WHERE InvoiceID IN ($invoicePlaceholders)";
+                $stmt = $pdo->prepare($sql);
+                $stmt->execute($invoiceIds);
+                
+                // Delete the invoices
+                $sql = "DELETE FROM Invoices WHERE InvoiceID IN ($invoicePlaceholders)";
+                $stmt = $pdo->prepare($sql);
+                $stmt->execute($invoiceIds);
+            }
+
             // Delete from JobCardParts
             $sql = "DELETE FROM JobCardParts WHERE JobID = ?";
             $stmt = $pdo->prepare($sql);
@@ -278,11 +321,6 @@ class JobCard {
 
             // Delete from JobCar
             $sql = "DELETE FROM JobCar WHERE JobID = ?";
-            $stmt = $pdo->prepare($sql);
-            $stmt->execute([$jobId]);
-
-            // Delete from InvoiceJob
-            $sql = "DELETE FROM InvoiceJob WHERE JobID = ?";
             $stmt = $pdo->prepare($sql);
             $stmt->execute([$jobId]);
 
