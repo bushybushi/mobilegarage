@@ -2,40 +2,37 @@
 require_once '../config/db_connection.php';
 require_once '../includes/sanitize_inputs.php';
 
-                    $startDate = $_GET['startDate'] ?? NULL;
-                    $endDate = $_GET['endDate'] ?? NULL;
+$startDate = $_GET['startDate'] ?? NULL;
+$endDate = $_GET['endDate'] ?? NULL;
 
 // SQL query to fetch all job cards with related information
-$sql = "SELECT j.JobID as JobID, j.DateStart as DateStart, j.DateFinish as DateFinish, 
+$sql = "SELECT DISTINCT j.JobID as JobID, j.DateStart as DateStart, j.DateFinish as DateFinish, 
             CONCAT(c.FirstName, ' ', c.LastName) as CustomerName, i.Total as Income,
             (SELECT SUM((jp.PiecesSold * p.PricePerPiece))
-            FROM Jobcardparts jp
-                LEFT JOIN Parts p ON jp.PartID = p.PartID
-            WHERE j.JobID = jp.JobID
-            GROUP BY jp.PartID) as Expenses
+             FROM Jobcardparts jp
+             LEFT JOIN Parts p ON jp.PartID = p.PartID
+             WHERE j.JobID = jp.JobID) as Expenses
         FROM JobCards j 
-            LEFT JOIN JobCar jc ON j.JobID = jc.JobID
-            LEFT JOIN Carassoc ca ON jc.LicenseNr = ca.LicenseNr
-            LEFT JOIN Customers c ON ca.CustomerID = c.CustomerID
-            LEFT JOIN Invoicejob ij ON j.JobID = ij.JobID
-            LEFT JOIN Invoices i ON ij.InvoiceID = i.InvoiceID";
-		
-if ($startDate != NULL AND $endDate != NULL) {
-	// transform dates into real dates
-	$startDate = date('Y-m-d', strtotime($startDate));
+        LEFT JOIN JobCar jc ON j.JobID = jc.JobID
+        LEFT JOIN Carassoc ca ON jc.LicenseNr = ca.LicenseNr
+        LEFT JOIN Customers c ON ca.CustomerID = c.CustomerID
+        LEFT JOIN Invoicejob ij ON j.JobID = ij.JobID
+        LEFT JOIN Invoices i ON ij.InvoiceID = i.InvoiceID";
+
+if ($startDate != NULL && $endDate != NULL) {
+    // Transform dates into real dates
+    $startDate = date('Y-m-d', strtotime($startDate));
     $endDate = date('Y-m-d', strtotime($endDate));
-$sql .= ' WHERE j.DateFinish BETWEEN :startDate AND :endDate';
-	 // Bind parameters to the prepared statement
+    $sql .= ' WHERE j.DateFinish BETWEEN :startDate AND :endDate';
 }
 
-
-
-$sql .= " ORDER BY j.DateCall DESC";
+$sql .= " ORDER BY j.DateFinish DESC";
 
 $stmt = $pdo->prepare($sql);
-if ($startDate != NULL AND $endDate != NULL) {
-$stmt->bindParam(':startDate', $startDate);
-$stmt->bindParam(':endDate', $endDate); }
+if ($startDate != NULL && $endDate != NULL) {
+    $stmt->bindParam(':startDate', $startDate);
+    $stmt->bindParam(':endDate', $endDate);
+}
 $stmt->execute();
 $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
@@ -60,7 +57,6 @@ foreach ($result as $row) {
     $expenses = $row['Expenses'] ?: 0;
     $totalProfit += ($income - $expenses);
 }
-
 ?>
 
 <style>
@@ -155,8 +151,6 @@ foreach ($result as $row) {
     .badge-secondary {
         background-color: #6c757d;
     }
-    
-    
 </style>
 
 <!DOCTYPE html>
@@ -171,8 +165,7 @@ foreach ($result as $row) {
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-
+    <script src="../assets/print_job_cards.js"></script>
 </head>
 
 <body>
@@ -184,22 +177,16 @@ foreach ($result as $row) {
                 </div>
                 <div class="d-flex">
                     <div class="col-md-4">
-                    <label for="startDate">Start Date:</label>
-                    <input type="date" id="startDate" name="startDate" class="form-control" value="<?php echo $startDate; ?>" required>
-                </div>
-
-                    
-                <div class="col-md-4">
-                    <label for="endDate">End Date:</label>
-                    <input type="date" id="endDate" name="endDate" class="form-control" value="<?php echo $endDate; ?>" required>
-                </div>
-				
-				<button type="button" id="filterButton" class="btn btn-primary">Filter</button>
-
-                    <button href="#" type="button" class="btn btn-success mr-3">Print 
-                        <span>
-                            <i class="ti ti-printer"></i>
-                        </span>
+                        <label for="startDate">Start Date:</label>
+                        <input type="date" id="startDate" name="startDate" class="form-control" value="<?php echo $startDate; ?>" required>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="endDate">End Date:</label>
+                        <input type="date" id="endDate" name="endDate" class="form-control" value="<?php echo $endDate; ?>" required>
+                    </div>
+                    <button type="button" id="filterButton" class="btn btn-primary">Filter</button>
+                    <button type="button" class="btn btn-success mr-3">Print 
+                        <span><i class="ti ti-printer"></i></span>
                     </button>
                 </div>
             </div>
@@ -209,7 +196,7 @@ foreach ($result as $row) {
                     <tr>
                         <th></th>
                         <th>Name</th>
-                        <th>Job Start/End date</th>
+                        <th>Job Start/End Date</th>
                         <th>Expenses</th>
                         <th>Income</th>
                         <th>Profit</th>
@@ -217,50 +204,50 @@ foreach ($result as $row) {
                 </thead>
                 <tbody>
                     <?php foreach ($result as $row): ?>
-                        <tr>
-                            <tr onclick="openForm(<?php echo $row['JobID']; ?>)">
-                                <td><i class="fas fa-file-alt"></i></td>
-                                <td><?php echo htmlspecialchars($row['CustomerName']); ?></td>
-                                <td>
-                                    <?php 
-                                        $startDate = !empty($row['DateStart']) ? date('d/m/Y', strtotime($row['DateStart'])) : 'N/A';
-                                        $endDate = !empty($row['DateFinish']) ? date('d/m/Y', strtotime($row['DateFinish'])) : 'N/A';
-                                        echo $startDate . ' - ' . $endDate;
-                                    ?>
-                                </td>
-                                <td><?php echo htmlspecialchars($row['Expenses'] ?: 'N/A'); ?></td>
-                                <td><?php echo htmlspecialchars($row['Income'] ?: 'N/A'); ?></td>
-                                <td class="profit" data-profit="<?php echo ($row['Income'] ?: 0) - ($row['Expenses'] ?: 0); ?>">
-                                    <?php echo number_format(($row['Income'] ?: 0) - ($row['Expenses'] ?: 0), 2); ?>
-                                </td>
-                            </tr>
+                        <tr onclick="openForm(<?php echo $row['JobID']; ?>)">
+                            <td><i class="fas fa-file-alt"></i></td>
+                            <td><?php echo htmlspecialchars($row['CustomerName']); ?></td>
+                            <td>
+                                <?php 
+                                    $rowStartDate = !empty($row['DateStart']) ? date('d/m/Y', strtotime($row['DateStart'])) : 'N/A';
+                                    $rowEndDate = !empty($row['DateFinish']) ? date('d/m/Y', strtotime($row['DateFinish'])) : 'N/A';
+                                    echo $rowStartDate . ' - ' . $rowEndDate;
+                                ?>
+                            </td>
+                            <td><?php echo htmlspecialchars($row['Expenses'] ?: 'N/A'); ?></td>
+                            <td><?php echo htmlspecialchars($row['Income'] ?: 'N/A'); ?></td>
+                            <td class="profit" data-profit="<?php echo ($row['Income'] ?: 0) - ($row['Expenses'] ?: 0); ?>">
+                                <?php echo number_format(($row['Income'] ?: 0) - ($row['Expenses'] ?: 0), 2); ?>
+                            </td>
                         </tr>
                     <?php endforeach; ?>
                 </tbody>
             </table>
 
-            <!-- Total Profit -->
             <div class="total-profit">
                 Total Profit: <?php echo number_format($totalProfit, 2); ?>
             </div>
-
         </div>
     </div>
 
     <script>
         document.getElementById('filterButton').addEventListener('click', function() {
-    var startDate = document.getElementById('startDate').value;
-    var endDate = document.getElementById('endDate').value;
+            var startDate = document.getElementById('startDate').value;
+            var endDate = document.getElementById('endDate').value;
 
-    // Reload the page with the selected startDate and endDate
-    var url = new URL(window.location.href);
-    var params = new URLSearchParams(url.search);
-    if (startDate) params.set('startDate', startDate);
-    if (endDate) params.set('endDate', endDate);
-    
-    url.search = params.toString();
-    window.location.href = url.toString();
-	});
+            if (startDate && endDate && new Date(startDate) > new Date(endDate)) {
+                alert('Start Date cannot be greater than End Date.');
+                return;
+            }
+
+            var url = new URL(window.location.href);
+            var params = new URLSearchParams(url.search);
+            if (startDate) params.set('startDate', startDate);
+            if (endDate) params.set('endDate', endDate);
+
+            url.search = params.toString();
+            window.location.href = url.toString();
+        });
 
         setTimeout(function() {
             let popup = document.getElementById("customPopup");
@@ -275,4 +262,4 @@ foreach ($result as $row) {
         }
     </script>
 </body>
-</html> 
+</html>
