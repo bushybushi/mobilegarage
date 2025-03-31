@@ -3,58 +3,45 @@ session_start();
 require_once "../models/job_card_model.php";
 
 try {
-    // Handle file uploads
-    $photos = [];
-    if (!empty($_FILES['photos']['name'][0])) {
-        $uploadDir = '../uploads/job_photos/';
-        if (!file_exists($uploadDir)) {
-            mkdir($uploadDir, 0777, true);
-        }
+    // Handle photo uploads
+    $uploadDir = '../uploads/job_photos/';
+    if (!file_exists($uploadDir)) {
+        mkdir($uploadDir, 0777, true);
+    }
 
+    $existingPhotos = isset($_POST['existing_photos']) ? $_POST['existing_photos'] : [];
+    $removedPhotos = isset($_POST['removed_photos']) ? json_decode($_POST['removed_photos'], true) : [];
+    $newPhotos = [];
+
+    // Handle new photo uploads
+    if (isset($_FILES['photos'])) {
         foreach ($_FILES['photos']['tmp_name'] as $key => $tmp_name) {
-            if (!empty($tmp_name) && !empty($_FILES['photos']['name'][$key])) {
-                $fileName = uniqid() . '_' . $_FILES['photos']['name'][$key];
-                $targetPath = $uploadDir . $fileName;
+            if ($_FILES['photos']['error'][$key] === UPLOAD_ERR_OK) {
+                $fileName = $_FILES['photos']['name'][$key];
+                $fileExt = strtolower(pathinfo($fileName, PATHINFO_EXTENSION));
+                
+                // Generate unique filename
+                $newFileName = uniqid() . '_' . time() . '.' . $fileExt;
+                $targetPath = $uploadDir . $newFileName;
                 
                 if (move_uploaded_file($tmp_name, $targetPath)) {
-                    $photos[] = $fileName;
+                    $newPhotos[] = $newFileName;
                 }
             }
         }
     }
 
-    // Get existing photos
-    $existingPhotos = [];
-    if (!empty($_POST['existing_photos']) && is_array($_POST['existing_photos'])) {
-        $existingPhotos = $_POST['existing_photos'];
-    } else {
-        $existingJobCard = JobCard::getById($_POST['id']);
-        if ($existingJobCard && !empty($existingJobCard['Photo'])) {
-            $existingPhotos = json_decode($existingJobCard['Photo'], true) ?: [];
+    // Remove deleted photos
+    foreach ($removedPhotos as $photo) {
+        $photoPath = $uploadDir . $photo;
+        if (file_exists($photoPath)) {
+            unlink($photoPath);
         }
     }
-    
-    // Handle removed photos
-    if (!empty($_POST['removed_photos'])) {
-        $removedPhotos = json_decode($_POST['removed_photos'], true) ?: [];
-        
-        // Remove from existing photos
-        $existingPhotos = array_filter($existingPhotos, function($photo) use ($removedPhotos) {
-            return !in_array($photo, $removedPhotos);
-        });
-        
-        // Delete files from server
-        $uploadDir = '../uploads/job_photos/';
-        foreach ($removedPhotos as $photo) {
-            $filePath = $uploadDir . $photo;
-            if (file_exists($filePath)) {
-                unlink($filePath);
-            }
-        }
-    }
-    
+
     // Combine existing and new photos
-    $photos = array_merge($existingPhotos, $photos);
+    $allPhotos = array_merge($existingPhotos, $newPhotos);
+    $photosJson = !empty($allPhotos) ? json_encode($allPhotos) : null;
 
     // Process parts data
     $partIds = [];
@@ -82,10 +69,15 @@ try {
     }
 
     // Update job card data
-    $_POST['photos'] = !empty($photos) ? json_encode($photos) : null;
+    $_POST['photos'] = $photosJson;
     $_POST['parts'] = $partIds;
     $_POST['partPrices'] = $partPrices;
     $_POST['partQuantities'] = $partQuantities;
+    
+    // Make sure additionalCost is included in the update
+    if (!isset($_POST['additionalCost'])) {
+        $_POST['additionalCost'] = $_POST['additionalCosts'] ?? 0;
+    }
     
     if (JobCard::update($_POST['id'], $_POST)) {
         $_SESSION['message'] = "Job card updated successfully!";
