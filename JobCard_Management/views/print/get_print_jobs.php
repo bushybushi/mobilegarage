@@ -11,13 +11,11 @@ $totalPages = ceil($totalJobs / $jobsPerPage);
 $offset = ($page - 1) * $jobsPerPage;
 
 // SQL query to fetch job cards with pagination
-$sql = "SELECT j.JobID, j.Location, j.DateCall, j.JobDesc, j.DateStart, j.DateFinish, j.DriveCosts,
+$sql = "SELECT j.JobID, j.Location, j.DateCall, j.JobDesc, j.DateStart, j.DateFinish,
         CONCAT(c.FirstName, ' ', c.LastName) as CustomerName, 
         car.LicenseNr, car.Brand, car.Model, 
         pn.Nr as PhoneNumber,
-        a.Address,
-        (SELECT SUM(PricePerPiece * PiecesSold) FROM JobCardParts WHERE JobID = j.JobID) as PartsTotal,
-        j.DriveCosts as AdditionalCost
+        a.Address
         FROM JobCards j 
         LEFT JOIN JobCar jc ON j.JobID = jc.JobID
         LEFT JOIN Cars car ON jc.LicenseNr = car.LicenseNr
@@ -69,24 +67,6 @@ foreach ($result as $row): ?>
             } else {
                 echo '<span class="status-open">OPEN</span>';
             }
-            ?>
-        </td>
-        <td class="cost">
-            <?php 
-            $partsTotal = floatval($row['PartsTotal'] ?: 0);
-            echo '€' . number_format($partsTotal, 2);
-            ?>
-        </td>
-        <td class="cost">
-            <?php 
-            $additionalCost = floatval($row['AdditionalCost'] ?: 0);
-            echo '€' . number_format($additionalCost, 2);
-            ?>
-        </td>
-        <td class="cost">
-            <?php 
-            $totalCost = $partsTotal + $additionalCost;
-            echo '€' . number_format($totalCost, 2);
             ?>
         </td>
     </tr>
