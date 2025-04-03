@@ -243,14 +243,23 @@ $parts = $partsStmt->fetchAll();
                                     <select name="parts_select[]" class="form-control part-select" style="display: none;" onchange="updatePartPrice(this)">
                                         <option value="">Select Part</option>
                                         <?php
-                                        $stmt = $pdo->prepare("SELECT PartID, PartDesc, SellPrice, Stock FROM Parts ORDER BY SellPrice ASC");
+                                        $stmt = $pdo->prepare("SELECT p.PartID, p.PartDesc, p.SellPrice, p.Stock, p.DateCreated, s.Name as SupplierName 
+                                                               FROM Parts p 
+                                                               LEFT JOIN Suppliers s ON p.SupplierID = s.SupplierID 
+                                                               ORDER BY p.SellPrice ASC");
                                         $stmt->execute();
                                         while ($row = $stmt->fetch()) {
                                             $selected = ($row['PartID'] == $part['PartID']) ? 'selected' : '';
                                             // Only disable if stock is 0 AND it's not the currently selected part
                                             $disabled = ($row['Stock'] <= 0 && $row['PartID'] != $part['PartID']) ? 'disabled' : '';
-                                            echo "<option value='" . $row['PartID'] . "' data-stock='" . $row['Stock'] . "' data-price='" . $row['SellPrice'] . "' " . $selected . " " . $disabled . ">" . 
-                                                 htmlspecialchars($row['PartDesc']) . " (Stock: " . $row['Stock'] . ")" . (($row['Stock'] <= 0 && $row['PartID'] != $part['PartID']) ? ' - Out of Stock' : '') . "</option>";
+                                            echo "<option value='" . $row['PartID'] . "' 
+                                                data-stock='" . $row['Stock'] . "' 
+                                                data-price='" . $row['SellPrice'] . "' 
+                                                data-date-created='" . $row['DateCreated'] . "' 
+                                                data-supplier='" . htmlspecialchars($row['SupplierName']) . "' " . 
+                                                $selected . " " . $disabled . ">" . 
+                                                htmlspecialchars($row['PartDesc']) . " (Stock: " . $row['Stock'] . ")" . 
+                                                (($row['Stock'] <= 0 && $row['PartID'] != $part['PartID']) ? ' - Out of Stock' : '') . "</option>";
                                         }
                                         ?>
                                     </select>
@@ -420,22 +429,54 @@ $parts = $partsStmt->fetchAll();
                     // Create search results
                     searchResultsDiv.innerHTML = '';
                     if (filteredOptions.length > 0) {
+                        // Group parts by description to find duplicates
+                        const partsByDesc = {};
+                        filteredOptions.forEach(option => {
+                            const desc = option.text.split(' (Stock:')[0]; // Get description without stock info
+                            if (!partsByDesc[desc]) {
+                                partsByDesc[desc] = [];
+                            }
+                            partsByDesc[desc].push(option);
+                        });
+
+                        // Create result items
                         filteredOptions.forEach(option => {
                             const resultItem = document.createElement('a');
                             resultItem.href = '#';
                             resultItem.className = 'list-group-item list-group-item-action';
-                            resultItem.textContent = option.text;
+                            
+                            // Get description without stock info
+                            const desc = option.text.split(' (Stock:')[0];
+                            const stock = option.text.match(/Stock: (\d+)/)[1];
+                            const dateCreated = option.dataset.dateCreated || 'N/A';
+                            const supplier = option.dataset.supplier || 'N/A';
+                            
+                            // Check if this is a duplicate part
+                            const isDuplicate = partsByDesc[desc].length > 1;
+                            
+                            // Create the display text with date created and supplier if it's a duplicate
+                            const displayText = isDuplicate ? 
+                                `${desc} (Stock: ${stock}) (Created: ${dateCreated}) (Supplier: ${supplier})` : 
+                                option.text;
+                            
+                            resultItem.textContent = displayText;
                             resultItem.dataset.id = option.value;
                             resultItem.dataset.stock = option.dataset.stock;
                             resultItem.dataset.price = option.dataset.price;
                             
+                            // Add visual indicator for duplicates
+                            if (isDuplicate) {
+                                resultItem.style.borderLeft = '4px solid #007bff';
+                                resultItem.title = 'This part has duplicates. Date created and supplier are shown to distinguish between them.';
+                            }
+                            
                             // Check if this part is already added with stock of 1
-                            const stock = parseInt(option.dataset.stock);
+                            const stockNum = parseInt(option.dataset.stock);
                             const partId = parseInt(option.value);
                             const currentPartId = hiddenInput ? parseInt(hiddenInput.value) : null;
                             
                             // If stock is 1 and it's already added, disable the option
-                            if (stock === 1 && partId !== currentPartId) {
+                            if (stockNum === 1 && partId !== currentPartId) {
                                 const existingPartInputs = document.querySelectorAll('input[name="parts[]"]');
                                 let isAlreadyAdded = false;
                                 existingPartInputs.forEach(input => {
@@ -451,7 +492,7 @@ $parts = $partsStmt->fetchAll();
                                 }
                             }
                             // If stock is 0 or less and it's not a currently selected part, disable it
-                            else if (stock <= 0 && partId !== currentPartId) {
+                            else if (stockNum <= 0 && partId !== currentPartId) {
                                 resultItem.className += ' disabled text-muted';
                                 resultItem.style.pointerEvents = 'none';
                                 resultItem.title = 'Out of stock';
@@ -570,12 +611,20 @@ $parts = $partsStmt->fetchAll();
                 <select name="parts_select[]" class="form-control part-select" style="display: none;" onchange="updatePartPrice(this)">
                     <option value="">Select Part</option>
                     <?php
-                    $stmt = $pdo->prepare("SELECT PartID, PartDesc, SellPrice, Stock FROM Parts ORDER BY SellPrice ASC");
+                    $stmt = $pdo->prepare("SELECT p.PartID, p.PartDesc, p.SellPrice, p.Stock, p.DateCreated, s.Name as SupplierName 
+                                           FROM Parts p 
+                                           LEFT JOIN Suppliers s ON p.SupplierID = s.SupplierID 
+                                           ORDER BY p.SellPrice ASC");
                     $stmt->execute();
                     while ($row = $stmt->fetch()) {
                         $disabled = ($row['Stock'] <= 0) ? 'disabled' : '';
-                        echo "<option value='" . $row['PartID'] . "' data-stock='" . $row['Stock'] . "' data-price='" . $row['SellPrice'] . "' " . $disabled . ">" . 
-                             htmlspecialchars($row['PartDesc']) . " (Stock: " . $row['Stock'] . ")" . ($row['Stock'] <= 0 ? ' - Out of Stock' : '') . "</option>";
+                        echo "<option value='" . $row['PartID'] . "' 
+                            data-stock='" . $row['Stock'] . "' 
+                            data-price='" . $row['SellPrice'] . "' 
+                            data-date-created='" . $row['DateCreated'] . "' 
+                            data-supplier='" . htmlspecialchars($row['SupplierName']) . "' " . 
+                            $disabled . ">" . 
+                            htmlspecialchars($row['PartDesc']) . " (Stock: " . $row['Stock'] . ")" . ($row['Stock'] <= 0 ? ' - Out of Stock' : '') . "</option>";
                     }
                     ?>
                 </select>
