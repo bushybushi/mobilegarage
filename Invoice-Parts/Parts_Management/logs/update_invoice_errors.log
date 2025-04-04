@@ -1,0 +1,620 @@
+[2025-03-22 00:52:56] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 00:52:56] POST data: {"invoice_id":"40","InvoiceID":"40","invoiceNr":"55","dateCreated":"0009-09-09","supplier":"Jorgos","supplierID":"29","original_supplier_phone":"9789002","original_supplier_email":"","supplierPhone":"9789002","supplierEmail":"","vat":"7.00","total":"700.00","partDesc":["bob","tires"],"piecesPurch":["8","7"],"pricePerPiece":["99.00","8.00"],"priceBulk":["0.00",""],"sellingPrice":["76.00","9.00"]}
+[2025-03-22 00:52:56] FILES data: {"invoicePhoto":{"name":"DSC03257-2.jpg","type":"image\/jpeg","tmp_name":"C:\\xampp\\tmp\\phpC279.tmp","error":0,"size":2752683}}
+[2025-03-22 01:31:24] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 01:31:24] POST data: {"invoice_id":"41","InvoiceID":"41","invoiceNr":"1","dateCreated":"2024-10-13","supplier":"111","supplierID":"32","original_supplier_phone":"11","original_supplier_email":"","supplierPhone":"11","supplierEmail":"","vat":"11.00","total":"11.00","partDesc":["1"],"piecesPurch":["1"],"pricePerPiece":["2.00"],"priceBulk":["0.00"],"sellingPrice":["2.00"]}
+[2025-03-22 01:31:24] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 01:31:43] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 01:31:43] POST data: {"invoice_id":"39","InvoiceID":"39","invoiceNr":"123","dateCreated":"2020-12-10","supplier":"Jorgos","supplierID":"29","original_supplier_phone":"9789002","original_supplier_email":"","supplierPhone":"9789002","supplierEmail":"","vat":"7.00","total":"7000.00","partDesc":["bob"],"piecesPurch":["99"],"pricePerPiece":["3.00"],"priceBulk":[""],"sellingPrice":["4.00"]}
+[2025-03-22 01:31:43] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 01:32:46] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 01:32:46] POST data: {"invoice_id":"40","InvoiceID":"40","invoiceNr":"55","dateCreated":"2008-12-12","supplier":"Jorgos","supplierID":"29","original_supplier_phone":"9789002","original_supplier_email":"","supplierPhone":"9789002","supplierEmail":"","vat":"7.00","total":"700.00","partDesc":["bob","tires"],"piecesPurch":["8","77"],"pricePerPiece":["99.00","8.00"],"priceBulk":["0.00","7.00"],"sellingPrice":["76.00","9.00"]}
+[2025-03-22 01:32:46] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 14:48:52] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 14:48:52] POST data: {"invoice_id":"40","InvoiceID":"40","invoiceNr":"55","dateCreated":"2008-12-12","supplier":"Jorgos","supplierID":"29","original_supplier_phone":"9789002","original_supplier_email":"","supplierPhone":"9789002","supplierEmail":"","vat":"7.00","total":"700.00","partDesc":["bob","tires"],"piecesPurch":["8","77"],"pricePerPiece":["99.00","8.00"],"priceBulk":["0.00","7.00"],"sellingPrice":["76.00","9.00"]}
+[2025-03-22 14:48:52] FILES data: {"invoicePhoto":{"name":"DSC03257-2.jpg","type":"image\/jpeg","tmp_name":"C:\\xampp\\tmp\\php11F4.tmp","error":0,"size":2752683}}
+[2025-03-22 14:49:37] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 14:49:37] POST data: {"invoice_id":"40","InvoiceID":"40","invoiceNr":"55","dateCreated":"2008-12-12","supplier":"Pampos","supplierID":"30","original_supplier_phone":"9789002","original_supplier_email":"","supplierPhone":"378833","supplierEmail":"","vat":"7.00","total":"700.00","partDesc":["bob","tires"],"piecesPurch":["8","77"],"pricePerPiece":["99.00","8.00"],"priceBulk":["0.00","7.00"],"sellingPrice":["76.00","9.00"]}
+[2025-03-22 14:49:37] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 14:49:37] Error updating invoice: File upload failed: No file was uploaded
+[2025-03-22 14:50:03] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 14:50:03] POST data: {"invoice_id":"40","InvoiceID":"40","invoiceNr":"55","dateCreated":"2008-12-12","supplier":"Pampos","supplierID":"30","original_supplier_phone":"9789002","original_supplier_email":"","supplierPhone":"378833","supplierEmail":"","vat":"7.00","total":"700.00","partDesc":["bob","tires"],"piecesPurch":["8","77"],"pricePerPiece":["99.00","8.00"],"priceBulk":["0.00","7.00"],"sellingPrice":["76.00","9.00"]}
+[2025-03-22 14:50:03] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 14:50:03] Error updating invoice: File upload failed: No file was uploaded
+[2025-03-22 14:50:36] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 14:50:36] POST data: {"invoice_id":"40","InvoiceID":"40","invoiceNr":"55","dateCreated":"2008-12-12","supplier":"Pampos","supplierID":"30","original_supplier_phone":"9789002","original_supplier_email":"","supplierPhone":"378833","supplierEmail":"","vat":"7.00","total":"700.00","partDesc":["bob","tires"],"piecesPurch":["8","77"],"pricePerPiece":["99.00","8.00"],"priceBulk":["0.00","7.00"],"sellingPrice":["76.00","9.00"]}
+[2025-03-22 14:50:36] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 15:01:42] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 15:01:42] POST data: {"invoice_id":"42","InvoiceID":"42","invoiceNr":"1","dateCreated":"2024-12-13","supplier":"Pampos","supplierID":"30","original_supplier_phone":"378833","original_supplier_email":"","supplierPhone":"378833","supplierEmail":"","vat":"2.00","total":"2000.00","partDesc":["Air Filter","Tires"],"piecesPurch":["4","10"],"pricePerPiece":["40.00","50"],"priceBulk":["0.00",""],"sellingPrice":["50.00","60"]}
+[2025-03-22 15:01:42] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 15:02:26] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 15:02:26] POST data: {"invoice_id":"42","InvoiceID":"42","invoiceNr":"1","dateCreated":"2024-12-13","supplier":"Pampos","supplierID":"30","original_supplier_phone":"378833","original_supplier_email":"","supplierPhone":"378833","supplierEmail":"","vat":"2.00","total":"2000.00","partDesc":["Air Filter","Tires"],"piecesPurch":["4","10"],"pricePerPiece":["40.00","50.00"],"priceBulk":["0.00",""],"sellingPrice":["50.00","60.00"]}
+[2025-03-22 15:02:26] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 15:10:08] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 15:10:08] POST data: {"invoice_id":"42","InvoiceID":"42","invoiceNr":"1","dateCreated":"2024-12-13","supplier":"Pampos","supplierID":"30","original_supplier_phone":"378833","original_supplier_email":"","supplierPhone":"378833","supplierEmail":"","vat":"2.00","total":"2000.00","partId":["48","49"],"partDesc":["Air Filter","Tires"],"piecesPurch":["4","10"],"pricePerPiece":["40.00","50.00"],"priceBulk":["0.00",""],"sellingPrice":["50.00","60.00"]}
+[2025-03-22 15:10:08] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 15:11:48] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 15:11:48] POST data: {"invoice_id":"43","InvoiceID":"43","invoiceNr":"123","dateCreated":"2020-12-13","supplier":"Pampos","supplierID":"30","original_supplier_phone":"378833","original_supplier_email":"","supplierPhone":"378833","supplierEmail":"","vat":"2.00","total":"3000.00","partId":["50"],"partDesc":["Air Filter"],"piecesPurch":["20"],"pricePerPiece":["40.00"],"priceBulk":["2.00"],"sellingPrice":["50.00"]}
+[2025-03-22 15:11:48] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 15:12:10] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 15:12:10] POST data: {"invoice_id":"43","InvoiceID":"43","invoiceNr":"123","dateCreated":"2020-12-13","supplier":"Pampos","supplierID":"30","original_supplier_phone":"378833","original_supplier_email":"","supplierPhone":"378833","supplierEmail":"","vat":"2.00","total":"3000.00","partId":["50","temp_1742652728384"],"partDesc":["Air Filter","Tires"],"piecesPurch":["20","3"],"pricePerPiece":["40.00","40"],"priceBulk":["2.00","1"],"sellingPrice":["50.00","20"]}
+[2025-03-22 15:12:10] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 15:26:54] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 15:26:54] POST data: {"invoice_id":"43","InvoiceID":"43","invoiceNr":"123","dateCreated":"2020-12-13","supplier":"Pampos","supplierID":"30","original_supplier_phone":"378833","original_supplier_email":"","supplierPhone":"378833","supplierEmail":"","vat":"2.00","total":"3000.00","partId":["50","51"],"partDesc":["Air Filter","Tires"],"piecesPurch":["20","3"],"pricePerPiece":["40.00","40.00"],"priceBulk":["2.00","1.00"],"sellingPrice":["50.00","20.00"]}
+[2025-03-22 15:26:54] FILES data: {"invoicePhoto":{"name":"1 (5).jpg","type":"image\/jpeg","tmp_name":"C:\\xampp\\tmp\\phpE4C1.tmp","error":0,"size":2814499}}
+[2025-03-22 16:17:19] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 16:17:19] POST data: {"invoice_id":"44","InvoiceID":"44","invoiceNr":"22","dateCreated":"2025-10-20","supplier":"Antrina","supplierID":"33","original_supplier_phone":"","original_supplier_email":"antriana@gmail.com","supplierPhone":"","supplierEmail":"antriana@gmail.com","vat":"2.00","total":"3200.00","partId":["52"],"partDesc":["Air Filter"],"piecesPurch":["9"],"pricePerPiece":["600.00"],"priceBulk":["0.00"],"sellingPrice":["500.00"]}
+[2025-03-22 16:17:19] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 16:17:35] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 16:17:35] POST data: {"invoice_id":"44","InvoiceID":"44","invoiceNr":"22","dateCreated":"2025-10-20","supplier":"","supplierID":"33","original_supplier_phone":"","original_supplier_email":"antriana@gmail.com","supplierPhone":"","supplierEmail":"antriana@gmail.com","vat":"2.00","total":"3200.00","partId":["52"],"partDesc":["Air Filter"],"piecesPurch":["9"],"pricePerPiece":["600.00"],"priceBulk":["0.00"],"sellingPrice":["500.00"]}
+[2025-03-22 16:17:35] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 16:17:46] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 16:17:46] POST data: {"invoice_id":"44","InvoiceID":"44","invoiceNr":"22","dateCreated":"2025-10-20","supplier":"","supplierID":"33","original_supplier_phone":"","original_supplier_email":"antriana@gmail.com","supplierPhone":"","supplierEmail":"antriana@gmail.com","vat":"2.00","total":"3200.00","partId":["52"],"partDesc":["Air Filter"],"piecesPurch":["9"],"pricePerPiece":["600.00"],"priceBulk":["0.00"],"sellingPrice":["500.00"]}
+[2025-03-22 16:17:46] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 16:21:42] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 16:21:42] POST data: {"invoice_id":"44","InvoiceID":"44","invoiceNr":"","dateCreated":"2025-10-20","supplier":"Antrina","supplierID":"33","original_supplier_phone":"","original_supplier_email":"antriana@gmail.com","supplierPhone":"","supplierEmail":"antriana@gmail.com","vat":"2.00","total":"3200.00","partId":["52"],"partDesc":["Air Filter"],"piecesPurch":["9"],"pricePerPiece":["600.00"],"priceBulk":["0.00"],"sellingPrice":["500.00"]}
+[2025-03-22 16:21:42] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 16:21:51] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 16:21:51] POST data: {"invoice_id":"44","InvoiceID":"44","invoiceNr":"0","dateCreated":"2025-10-20","supplier":"","supplierID":"33","original_supplier_phone":"","original_supplier_email":"antriana@gmail.com","supplierPhone":"","supplierEmail":"antriana@gmail.com","vat":"2.00","total":"3200.00","partId":["52"],"partDesc":["Air Filter"],"piecesPurch":["9"],"pricePerPiece":["600.00"],"priceBulk":["0.00"],"sellingPrice":["500.00"]}
+[2025-03-22 16:21:51] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 16:22:04] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 16:22:04] POST data: {"invoice_id":"44","InvoiceID":"44","invoiceNr":"0","dateCreated":"2025-10-20","supplier":"","supplierID":"33","original_supplier_phone":"","original_supplier_email":"antriana@gmail.com","supplierPhone":"","supplierEmail":"antriana@gmail.com","vat":"2.00","total":"3200.00","partId":["52"],"partDesc":["Air Filter"],"piecesPurch":["9"],"pricePerPiece":["600.00"],"priceBulk":["0.00"],"sellingPrice":["500.00"]}
+[2025-03-22 16:22:04] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 16:22:18] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 16:22:18] POST data: {"invoice_id":"44","InvoiceID":"44","invoiceNr":"0","dateCreated":"2025-10-20","supplier":"","supplierID":"33","original_supplier_phone":"","original_supplier_email":"antriana@gmail.com","supplierPhone":"","supplierEmail":"antriana@gmail.com","vat":"2.00","total":"3200.00","partId":["52"],"partDesc":["Air Filter"],"piecesPurch":["9"],"pricePerPiece":["600.00"],"priceBulk":["0.00"],"sellingPrice":["500.00"]}
+[2025-03-22 16:22:18] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 16:25:29] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 16:25:29] POST data: {"invoice_id":"44","InvoiceID":"44","invoiceNr":"","dateCreated":"2025-10-20","supplier":"Antrina","supplierID":"33","original_supplier_phone":"","original_supplier_email":"antriana@gmail.com","supplierPhone":"","supplierEmail":"antriana@gmail.com","vat":"2.00","total":"3200.00","partId":["52"],"partDesc":["Air Filter"],"piecesPurch":["9"],"pricePerPiece":["600.00"],"priceBulk":["0.00"],"sellingPrice":["500.00"]}
+[2025-03-22 16:25:29] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 16:25:35] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 16:25:35] POST data: {"invoice_id":"44","InvoiceID":"44","invoiceNr":"0","dateCreated":"2025-10-20","supplier":"","supplierID":"33","original_supplier_phone":"","original_supplier_email":"antriana@gmail.com","supplierPhone":"","supplierEmail":"antriana@gmail.com","vat":"2.00","total":"3200.00","partId":["52"],"partDesc":["Air Filter"],"piecesPurch":["9"],"pricePerPiece":["600.00"],"priceBulk":["0.00"],"sellingPrice":["500.00"]}
+[2025-03-22 16:25:35] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 16:29:24] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 16:29:24] POST data: {"invoice_id":"44","InvoiceID":"44","invoiceNr":"0","dateCreated":"2025-10-20","supplier":"","supplierID":"33","original_supplier_phone":"","original_supplier_email":"antriana@gmail.com","supplierPhone":"","supplierEmail":"antriana@gmail.com","vat":"2.00","total":"3200.00","partId":["52"],"partDesc":["Air Filter"],"piecesPurch":["9"],"pricePerPiece":["600.00"],"priceBulk":["0.00"],"sellingPrice":["500.00"]}
+[2025-03-22 16:29:24] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 16:29:50] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 16:29:50] POST data: {"invoice_id":"44","InvoiceID":"44","invoiceNr":"0","dateCreated":"2025-10-20","supplier":"Antrina","supplierID":"33","original_supplier_phone":"","original_supplier_email":"antriana@gmail.com","supplierPhone":"","supplierEmail":"antriana@gmail.com","vat":"2.00","total":"3200.00","partId":["52"],"partDesc":["Air Filter"],"piecesPurch":["9"],"pricePerPiece":["600.00"],"priceBulk":["0.00"],"sellingPrice":["500.00"]}
+[2025-03-22 16:29:50] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 16:30:05] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 16:30:05] POST data: {"invoice_id":"44","InvoiceID":"44","invoiceNr":"0","dateCreated":"2025-10-20","supplier":"","supplierID":"33","original_supplier_phone":"","original_supplier_email":"antriana@gmail.com","supplierPhone":"","supplierEmail":"antriana@gmail.com","vat":"","total":"3200.00","partId":["52"],"partDesc":["Air Filter"],"piecesPurch":["9"],"pricePerPiece":["600.00"],"priceBulk":["0.00"],"sellingPrice":["500.00"]}
+[2025-03-22 16:30:05] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 16:32:05] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 16:32:05] POST data: {"invoice_id":"44","InvoiceID":"44","invoiceNr":"0","dateCreated":"2025-10-20","supplier":"","supplierID":"33","original_supplier_phone":"","original_supplier_email":"antriana@gmail.com","supplierPhone":"","supplierEmail":"antriana@gmail.com","vat":"0.00","total":"3200.00"}
+[2025-03-22 16:32:05] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 16:32:22] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 16:32:22] POST data: {"invoice_id":"44","InvoiceID":"44","invoiceNr":"0","dateCreated":"2025-10-20","supplier":"Antrina","supplierID":"33","original_supplier_phone":"","original_supplier_email":"antriana@gmail.com","supplierPhone":"","supplierEmail":"antriana@gmail.com","vat":"","total":""}
+[2025-03-22 16:32:22] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 16:34:35] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 16:34:35] POST data: {"invoice_id":"44","InvoiceID":"44","invoiceNr":"0","dateCreated":"2025-10-20","supplier":"Antrina","supplierID":"33","original_supplier_phone":"","original_supplier_email":"antriana@gmail.com","supplierPhone":"","supplierEmail":"antriana@gmail.com","vat":"8","total":"900"}
+[2025-03-22 16:34:35] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 16:35:07] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 16:35:07] POST data: {"invoice_id":"44","InvoiceID":"44","invoiceNr":"0","dateCreated":"2025-10-20","supplier":"marinos","supplierID":"33","original_supplier_phone":"","original_supplier_email":"antriana@gmail.com","supplierPhone":"","supplierEmail":"antriana@gmail.com","vat":"8.00","total":"900.00"}
+[2025-03-22 16:35:07] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 16:36:15] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 16:36:15] POST data: {"invoice_id":"44","InvoiceID":"44","invoiceNr":"0","dateCreated":"2025-10-20","supplier":"Antrina","supplierID":"33","original_supplier_phone":"","original_supplier_email":"antriana@gmail.com","supplierPhone":"","supplierEmail":"antriana@gmail.com","vat":"8.00","total":"900.00","partId":["52","temp_1742657765447"],"partDesc":["Air Filter","new"],"piecesPurch":["9","8"],"pricePerPiece":["600.00","9"],"priceBulk":["0.00",""],"sellingPrice":["500.00","99"]}
+[2025-03-22 16:36:15] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 16:37:12] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 16:37:12] POST data: {"invoice_id":"45","InvoiceID":"45","invoiceNr":"45","dateCreated":"2025-03-22","supplier":"Momos","supplierID":"34","original_supplier_phone":"982922","original_supplier_email":"","supplierPhone":"982922","supplierEmail":"","vat":"1.00","total":"2000.00"}
+[2025-03-22 16:37:12] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 16:39:19] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 16:39:19] POST data: {"invoice_id":"45","InvoiceID":"45","invoiceNr":"45","dateCreated":"2025-03-22","supplier":"Momos","supplierID":"34","original_supplier_phone":"982922","original_supplier_email":"","supplierPhone":"982922","supplierEmail":"","vat":"1.00","total":"","partId":["53"],"partDesc":["Tires"],"piecesPurch":["6"],"pricePerPiece":["8.00"],"priceBulk":["0.00"],"sellingPrice":["98.00"]}
+[2025-03-22 16:39:19] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 16:41:02] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 16:41:02] POST data: {"invoice_id":"45","InvoiceID":"45","invoiceNr":"45","dateCreated":"2025-03-22","supplier":"Momos","supplierID":"34","original_supplier_phone":"982922","original_supplier_email":"","supplierPhone":"982922","supplierEmail":"","vat":"1.00","total":"","partId":["53"],"partDesc":["tires"],"piecesPurch":["6"],"pricePerPiece":["8.00"],"priceBulk":["0.00"],"sellingPrice":["98.00"]}
+[2025-03-22 16:41:02] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 16:41:11] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 16:41:11] POST data: {"invoice_id":"45","InvoiceID":"45","invoiceNr":"45","dateCreated":"2025-03-22","supplier":"Momos","supplierID":"34","original_supplier_phone":"982922","original_supplier_email":"","supplierPhone":"982922","supplierEmail":"","vat":"1.00","total":"","partId":["53"],"partDesc":["tires"],"piecesPurch":["6"],"pricePerPiece":["8.00"],"priceBulk":["0.00"],"sellingPrice":["98.00"]}
+[2025-03-22 16:41:11] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 16:41:20] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 16:41:20] POST data: {"invoice_id":"45","InvoiceID":"45","invoiceNr":"45","dateCreated":"2025-03-22","supplier":"Momos","supplierID":"34","original_supplier_phone":"982922","original_supplier_email":"","supplierPhone":"982922","supplierEmail":"","vat":"","total":"0.00","partId":["53"],"partDesc":["tires"],"piecesPurch":["6"],"pricePerPiece":["8.00"],"priceBulk":["0.00"],"sellingPrice":["98.00"]}
+[2025-03-22 16:41:20] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 16:43:14] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 16:43:14] POST data: {"invoice_id":"45","InvoiceID":"45","invoiceNr":"45","dateCreated":"2025-03-22","supplier":"Momos","supplierID":"34","original_supplier_phone":"982922","original_supplier_email":"","supplierPhone":"982922","supplierEmail":"","vat":"0.00","total":"0.00","partId":["53"],"partDesc":["tires"],"piecesPurch":["6"],"pricePerPiece":["8.00"],"priceBulk":["0.00"],"sellingPrice":["98.00"]}
+[2025-03-22 16:43:14] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 16:43:22] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 16:43:22] POST data: {"invoice_id":"45","InvoiceID":"45","invoiceNr":"45","dateCreated":"2025-03-22","supplier":"Momos","supplierID":"34","original_supplier_phone":"982922","original_supplier_email":"","supplierPhone":"982922","supplierEmail":"","vat":"","total":"","partId":["53"],"partDesc":["tires"],"piecesPurch":["6"],"pricePerPiece":["8.00"],"priceBulk":["0.00"],"sellingPrice":["98.00"]}
+[2025-03-22 16:43:22] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 16:45:03] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 16:45:03] POST data: {"invoice_id":"45","InvoiceID":"45","invoiceNr":"","dateCreated":"2025-03-22","supplier":"Momos","supplierID":"34","original_supplier_phone":"982922","original_supplier_email":"","supplierPhone":"982922","supplierEmail":"","vat":"0.00","total":"0.00","partId":["53"],"partDesc":["tires"],"piecesPurch":["6"],"pricePerPiece":["8.00"],"priceBulk":["0.00"],"sellingPrice":["98.00"]}
+[2025-03-22 16:45:03] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 16:45:30] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 16:45:30] POST data: {"invoice_id":"45","InvoiceID":"45","invoiceNr":"0","dateCreated":"2025-03-22","supplier":"Momos","supplierID":"34","original_supplier_phone":"982922","original_supplier_email":"","supplierPhone":"982922","supplierEmail":"","vat":"","total":"","partId":["53"],"partDesc":["tires"],"piecesPurch":["6"],"pricePerPiece":["8.00"],"priceBulk":["0.00"],"sellingPrice":["98.00"]}
+[2025-03-22 16:45:30] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 16:49:01] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 16:49:01] POST data: {"invoice_id":"45","InvoiceID":"45","invoiceNr":"0","dateCreated":"2025-03-22","supplier":"Momos","supplierID":"34","original_supplier_phone":"982922","original_supplier_email":"","supplierPhone":"982922","supplierEmail":"","vat":"","total":"0.00","partId":["53"],"partDesc":["tires"],"piecesPurch":["6"],"pricePerPiece":["8.00"],"priceBulk":["0.00"],"sellingPrice":["98.00"]}
+[2025-03-22 16:49:01] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 16:49:13] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 16:49:13] POST data: {"invoice_id":"45","InvoiceID":"45","invoiceNr":"0","dateCreated":"2025-03-22","supplier":"Momos","supplierID":"34","original_supplier_phone":"982922","original_supplier_email":"","supplierPhone":"982922","supplierEmail":"","vat":"","total":"","partId":["53"],"partDesc":["tires"],"piecesPurch":["6"],"pricePerPiece":["8.00"],"priceBulk":["0.00"],"sellingPrice":["98.00"]}
+[2025-03-22 16:49:13] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 16:49:38] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 16:49:38] POST data: {"invoice_id":"45","InvoiceID":"45","invoiceNr":"0","dateCreated":"2025-03-22","supplier":"Momos","supplierID":"34","original_supplier_phone":"982922","original_supplier_email":"","supplierPhone":"982922","supplierEmail":"","vat":"","total":"0.00","partId":["53"],"partDesc":["tires"],"piecesPurch":["6"],"pricePerPiece":["8.00"],"priceBulk":["0.00"],"sellingPrice":["98.00"]}
+[2025-03-22 16:49:38] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 16:52:57] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 16:52:57] POST data: {"invoice_id":"45","InvoiceID":"45","invoiceNr":"0","dateCreated":"2025-03-22","supplier":"Momos","supplierID":"34","original_supplier_phone":"982922","original_supplier_email":"","supplierPhone":"982922","supplierEmail":"","vat":"0.00","total":"","partId":["53"],"partDesc":["tires"],"piecesPurch":["6"],"pricePerPiece":["8.00"],"priceBulk":["0.00"],"sellingPrice":["98.00"]}
+[2025-03-22 16:52:57] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 16:53:22] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 16:53:22] POST data: {"invoice_id":"45","InvoiceID":"45","invoiceNr":"11","dateCreated":"2025-03-22","supplier":"Momos","supplierID":"34","original_supplier_phone":"982922","original_supplier_email":"","supplierPhone":"3783","supplierEmail":"","vat":"","total":"","partId":["53"],"partDesc":["tires"],"piecesPurch":["6"],"pricePerPiece":["8.00"],"priceBulk":["0.00"],"sellingPrice":["98.00"]}
+[2025-03-22 16:53:22] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 16:53:35] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 16:53:35] POST data: {"invoice_id":"45","InvoiceID":"45","invoiceNr":"","dateCreated":"2025-03-22","supplier":"Momos","supplierID":"34","original_supplier_phone":"3783","original_supplier_email":"","supplierPhone":"3783","supplierEmail":"","vat":"0.00","total":"0.00","partId":["53"],"partDesc":["tires"],"piecesPurch":["6"],"pricePerPiece":["8.00"],"priceBulk":["0.00"],"sellingPrice":["98.00"]}
+[2025-03-22 16:53:35] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 16:54:04] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 16:54:04] POST data: {"invoice_id":"45","InvoiceID":"45","invoiceNr":"","dateCreated":"2025-03-22","supplier":"Momos","supplierID":"34","original_supplier_phone":"3783","original_supplier_email":"","supplierPhone":"9399393","supplierEmail":"","vat":"","total":"0.00","partId":["53"],"partDesc":["tires"],"piecesPurch":["6"],"pricePerPiece":["8.00"],"priceBulk":["0.00"],"sellingPrice":["98.00"]}
+[2025-03-22 16:54:04] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 16:54:17] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 16:54:17] POST data: {"invoice_id":"45","InvoiceID":"45","invoiceNr":"0","dateCreated":"2025-03-22","supplier":"Momos","supplierID":"34","original_supplier_phone":"9399393","original_supplier_email":"","supplierPhone":"9399393","supplierEmail":"","vat":"","total":"","partId":["53"],"partDesc":["tires"],"piecesPurch":["6"],"pricePerPiece":["8.00"],"priceBulk":["0.00"],"sellingPrice":["98.00"]}
+[2025-03-22 16:54:17] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 16:55:56] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 16:55:56] POST data: {"invoice_id":"45","InvoiceID":"45","invoiceNr":"","dateCreated":"2025-03-22","supplier":"Momos","supplierID":"34","original_supplier_phone":"9399393","original_supplier_email":"","supplierPhone":"9399393","supplierEmail":"","vat":"0.00","total":"0.00","partId":["53"],"partDesc":["tires"],"piecesPurch":["6"],"pricePerPiece":["8.00"],"priceBulk":["0.00"],"sellingPrice":["98.00"]}
+[2025-03-22 16:55:56] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 16:56:04] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 16:56:04] POST data: {"invoice_id":"45","InvoiceID":"45","invoiceNr":"0","dateCreated":"2025-03-22","supplier":"Momos","supplierID":"34","original_supplier_phone":"9399393","original_supplier_email":"","supplierPhone":"9399393","supplierEmail":"","vat":"","total":"","partId":["53"],"partDesc":["tires"],"piecesPurch":["6"],"pricePerPiece":["8.00"],"priceBulk":["0.00"],"sellingPrice":["98.00"]}
+[2025-03-22 16:56:04] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 16:56:23] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 16:56:23] POST data: {"invoice_id":"45","InvoiceID":"45","invoiceNr":"0","dateCreated":"2025-03-22","supplier":"Momos","supplierID":"34","original_supplier_phone":"9399393","original_supplier_email":"","supplierPhone":"9399393","supplierEmail":"","vat":"0.00","total":"0.00","partId":["53"],"partDesc":["tires"],"piecesPurch":["6"],"pricePerPiece":["8.00"],"priceBulk":["0.00"],"sellingPrice":["98.00"]}
+[2025-03-22 16:56:23] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 16:58:12] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 16:58:12] POST data: {"invoice_id":"45","InvoiceID":"45","invoiceNr":"0","dateCreated":"2025-03-22","supplier":"Momos","supplierID":"34","original_supplier_phone":"9399393","original_supplier_email":"","supplierPhone":"9399393","supplierEmail":"","vat":"","total":"0.00","partId":["53"],"partDesc":["tires"],"piecesPurch":["6"],"pricePerPiece":["8.00"],"priceBulk":["0.00"],"sellingPrice":["98.00"]}
+[2025-03-22 16:58:12] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 17:00:29] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 17:00:29] POST data: {"invoice_id":"45","InvoiceID":"45","invoiceNr":"0","dateCreated":"2025-03-22","supplier":"Momos","supplierID":"34","original_supplier_phone":"9399393","original_supplier_email":"","supplierPhone":"9399393","supplierEmail":"","vat":"","total":"","partId":["53"],"partDesc":["tires"],"piecesPurch":["6"],"pricePerPiece":["8.00"],"priceBulk":["0.00"],"sellingPrice":["98.00"]}
+[2025-03-22 17:00:29] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 17:00:38] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 17:00:38] POST data: {"invoice_id":"45","InvoiceID":"45","invoiceNr":"","dateCreated":"2025-03-22","supplier":"Momos","supplierID":"34","original_supplier_phone":"9399393","original_supplier_email":"","supplierPhone":"9399393","supplierEmail":"","vat":"0.00","total":"0.00","partId":["53"],"partDesc":["tires"],"piecesPurch":["6"],"pricePerPiece":["8.00"],"priceBulk":["0.00"],"sellingPrice":["98.00"]}
+[2025-03-22 17:00:38] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 17:00:47] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 17:00:47] POST data: {"invoice_id":"45","InvoiceID":"45","invoiceNr":"","dateCreated":"2025-03-22","supplier":"Momos","supplierID":"34","original_supplier_phone":"9399393","original_supplier_email":"","supplierPhone":"9399393","supplierEmail":"","vat":"0.00","total":"","partId":["53"],"partDesc":["tires"],"piecesPurch":["6"],"pricePerPiece":["8.00"],"priceBulk":["0.00"],"sellingPrice":["98.00"]}
+[2025-03-22 17:00:47] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 17:03:06] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 17:03:06] POST data: {"invoice_id":"45","InvoiceID":"45","invoiceNr":"","dateCreated":"2025-03-22","supplier":"Momos","supplierID":"34","original_supplier_phone":"9399393","original_supplier_email":"","supplierPhone":"9399393","supplierEmail":"","vat":"0.00","total":"0.00","partId":["53"],"partDesc":["tires"],"piecesPurch":["6"],"pricePerPiece":["8.00"],"priceBulk":["0.00"],"sellingPrice":["98.00"]}
+[2025-03-22 17:03:06] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 17:06:08] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 17:06:08] POST data: {"invoice_id":"45","InvoiceID":"45","invoiceNr":"","dateCreated":"2025-03-22","supplier":"Momos","supplierID":"34","original_supplier_phone":"9399393","original_supplier_email":"","supplierPhone":"9399393","supplierEmail":"","vat":"0.00","total":"0.00","partId":["53"],"partDesc":["tires"],"piecesPurch":["6"],"pricePerPiece":["8.00"],"priceBulk":["0.00"],"sellingPrice":["98.00"]}
+[2025-03-22 17:06:08] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 17:06:22] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 17:06:22] POST data: {"invoice_id":"45","InvoiceID":"45","invoiceNr":"","dateCreated":"2025-03-22","supplier":"Momos","supplierID":"34","original_supplier_phone":"9399393","original_supplier_email":"","supplierPhone":"9399393","supplierEmail":"","vat":"","total":"","partId":["53"],"partDesc":["tires"],"piecesPurch":["6"],"pricePerPiece":["8.00"],"priceBulk":["0.00"],"sellingPrice":["98.00"]}
+[2025-03-22 17:06:22] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 17:09:21] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 17:09:21] POST data: {"invoice_id":"45","InvoiceID":"45","invoiceNr":"0","dateCreated":"2025-03-22","supplier":"Momos","supplierID":"34","original_supplier_phone":"9399393","original_supplier_email":"","supplierPhone":"9399393","supplierEmail":"","vat":"66","total":"","partId":["53"],"partDesc":["tires"],"piecesPurch":["6"],"pricePerPiece":["8.00"],"priceBulk":["0.00"],"sellingPrice":["98.00"]}
+[2025-03-22 17:09:21] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 17:17:22] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 17:17:22] POST data: {"invoice_id":"45","InvoiceID":"45","invoiceNr":"","dateCreated":"2025-03-22","supplier":"Momos","supplierID":"34","original_supplier_phone":"9399393","original_supplier_email":"","supplierPhone":"9399393","supplierEmail":"","vat":"66.00","total":"0.00","parts":[{"partId":"53","partDesc":"tires","piecesPurch":"6","pricePerPiece":"8.00","priceBulk":"0.00","sellingPrice":"98.00"}],"partId":["53"],"partDesc":["tires"],"piecesPurch":["6"],"pricePerPiece":["8.00"],"priceBulk":["0.00"],"sellingPrice":["98.00"]}
+[2025-03-22 17:17:22] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 17:17:29] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 17:17:29] POST data: {"invoice_id":"45","InvoiceID":"45","invoiceNr":"0","dateCreated":"2025-03-22","supplier":"Momos","supplierID":"34","original_supplier_phone":"9399393","original_supplier_email":"","supplierPhone":"9399393","supplierEmail":"","vat":"","total":"0.00","parts":[{"partId":"53","partDesc":"tires","piecesPurch":"6","pricePerPiece":"8.00","priceBulk":"0.00","sellingPrice":"98.00"}],"partId":["53"],"partDesc":["tires"],"piecesPurch":["6"],"pricePerPiece":["8.00"],"priceBulk":["0.00"],"sellingPrice":["98.00"]}
+[2025-03-22 17:17:29] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 17:19:18] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 17:19:18] POST data: {"invoice_id":"45","InvoiceID":"45","invoiceNr":"","dateCreated":"2025-03-22","supplier":"Momos","supplierID":"34","original_supplier_phone":"9399393","original_supplier_email":"","supplierPhone":"9399393","supplierEmail":"","vat":"0.00","total":"0.00","parts":[{"partId":"53","partDesc":"tires","piecesPurch":"6","pricePerPiece":"8.00","priceBulk":"0.00","sellingPrice":"98.00"}],"partId":["53"],"partDesc":["tires"],"piecesPurch":["6"],"pricePerPiece":["8.00"],"priceBulk":["0.00"],"sellingPrice":["98.00"]}
+[2025-03-22 17:19:18] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 17:19:27] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 17:19:27] POST data: {"invoice_id":"45","InvoiceID":"45","invoiceNr":"0","dateCreated":"2025-03-22","supplier":"Momos","supplierID":"34","original_supplier_phone":"9399393","original_supplier_email":"","supplierPhone":"9399393","supplierEmail":"","vat":"","total":"","parts":[{"partId":"53","partDesc":"tires","piecesPurch":"6","pricePerPiece":"8.00","priceBulk":"0.00","sellingPrice":"98.00"}],"partId":["53"],"partDesc":["tires"],"piecesPurch":["6"],"pricePerPiece":["8.00"],"priceBulk":["0.00"],"sellingPrice":["98.00"]}
+[2025-03-22 17:19:27] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 17:21:19] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 17:21:19] POST data: {"invoice_id":"45","InvoiceID":"45","invoiceNr":"0","dateCreated":"2025-03-22","supplier":"Momos","supplierID":"34","original_supplier_phone":"9399393","original_supplier_email":"","supplierPhone":"9399393","supplierEmail":"","vat":"0.00","total":"","partId":["53"],"partDesc":["tires"],"piecesPurch":["6"],"pricePerPiece":["8.00"],"priceBulk":["0.00"],"sellingPrice":["98.00"]}
+[2025-03-22 17:21:19] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 17:21:19] Error updating invoice: Total is required
+Total must be a positive number
+[2025-03-22 17:21:37] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 17:21:37] POST data: {"invoice_id":"45","InvoiceID":"45","invoiceNr":"0","dateCreated":"2025-03-22","supplier":"Momos","supplierID":"34","original_supplier_phone":"9399393","original_supplier_email":"","supplierPhone":"9399393","supplierEmail":"","vat":"","total":"","partId":["53"],"partDesc":["tires"],"piecesPurch":["6"],"pricePerPiece":["8.00"],"priceBulk":["0.00"],"sellingPrice":["98.00"]}
+[2025-03-22 17:21:37] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 17:21:37] Error updating invoice: VAT is required
+Total is required
+VAT must be a number between 0 and 100
+Total must be a positive number
+[2025-03-22 17:24:26] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 17:24:26] POST data: {"invoice_id":"45","InvoiceID":"45","invoiceNr":"0","dateCreated":"2025-03-22","supplier":"Momos","supplierID":"34","original_supplier_phone":"9399393","original_supplier_email":"","supplierPhone":"9399393","supplierEmail":"","vat":"0.00","total":"","partId":["53"],"partDesc":["tires"],"piecesPurch":["6"],"pricePerPiece":["8.00"],"priceBulk":["0.00"],"sellingPrice":["98.00"]}
+[2025-03-22 17:24:26] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 17:24:30] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 17:24:30] POST data: {"invoice_id":"45","InvoiceID":"45","invoiceNr":"","dateCreated":"2025-03-22","supplier":"Momos","supplierID":"34","original_supplier_phone":"9399393","original_supplier_email":"","supplierPhone":"9399393","supplierEmail":"","vat":"0.00","total":"0.00","partId":["53"],"partDesc":["tires"],"piecesPurch":["6"],"pricePerPiece":["8.00"],"priceBulk":["0.00"],"sellingPrice":["98.00"]}
+[2025-03-22 17:24:30] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 17:24:33] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 17:24:33] POST data: {"invoice_id":"45","InvoiceID":"45","invoiceNr":"11","dateCreated":"2025-03-22","supplier":"Momos","supplierID":"34","original_supplier_phone":"9399393","original_supplier_email":"","supplierPhone":"9399393","supplierEmail":"","vat":"0.00","total":"0.00","partId":["53"],"partDesc":["tires"],"piecesPurch":["6"],"pricePerPiece":["8.00"],"priceBulk":["0.00"],"sellingPrice":["98.00"]}
+[2025-03-22 17:24:33] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 17:24:52] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 17:24:52] POST data: {"invoice_id":"45","InvoiceID":"45","invoiceNr":"111","dateCreated":"2025-03-22","supplier":"Momos","supplierID":"34","original_supplier_phone":"9399393","original_supplier_email":"","supplierPhone":"9399393","supplierEmail":"","vat":"11","total":"","partId":["53"],"partDesc":["tires"],"piecesPurch":["6"],"pricePerPiece":["8.00"],"priceBulk":["0.00"],"sellingPrice":["98.00"]}
+[2025-03-22 17:24:52] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 17:25:06] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 17:25:06] POST data: {"invoice_id":"45","InvoiceID":"45","invoiceNr":"1","dateCreated":"2025-03-22","supplier":"Momos","supplierID":"34","original_supplier_phone":"9399393","original_supplier_email":"","supplierPhone":"9399393","supplierEmail":"","vat":"11","total":"111","parts":[{"partId":"53","partDesc":"tires","piecesPurch":"6","pricePerPiece":"8.00","priceBulk":"0.00","sellingPrice":"98.00"}],"partId":["53"],"partDesc":["tires"],"piecesPurch":["6"],"pricePerPiece":["8.00"],"priceBulk":["0.00"],"sellingPrice":["98.00"]}
+[2025-03-22 17:25:06] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 17:27:06] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 17:27:06] POST data: {"invoice_id":"45","InvoiceID":"45","invoiceNr":"0","dateCreated":"2025-03-22","supplier":"Momos","supplierID":"34","original_supplier_phone":"9399393","original_supplier_email":"","supplierPhone":"9399393","supplierEmail":"","vat":"","total":"0.00","partId":["53"],"partDesc":["tires"],"piecesPurch":["6"],"pricePerPiece":["8.00"],"priceBulk":["0.00"],"sellingPrice":["98.00"]}
+[2025-03-22 17:27:06] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 17:27:17] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 17:27:17] POST data: {"invoice_id":"45","InvoiceID":"45","invoiceNr":"1000","dateCreated":"2025-03-22","supplier":"Momos","supplierID":"34","original_supplier_phone":"9399393","original_supplier_email":"","supplierPhone":"9399393","supplierEmail":"","vat":"10","total":"0.00","partId":["53"],"partDesc":["tires"],"piecesPurch":["6"],"pricePerPiece":["8.00"],"priceBulk":["0.00"],"sellingPrice":["98.00"]}
+[2025-03-22 17:27:17] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 17:27:33] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 17:27:33] POST data: {"invoice_id":"45","InvoiceID":"45","invoiceNr":"102","dateCreated":"2025-03-22","supplier":"Momos","supplierID":"34","original_supplier_phone":"9399393","original_supplier_email":"","supplierPhone":"9399393","supplierEmail":"","vat":"1882","total":"181","partId":["53"],"partDesc":["tires"],"piecesPurch":["6"],"pricePerPiece":["8.00"],"priceBulk":["0.00"],"sellingPrice":["98.00"]}
+[2025-03-22 17:27:33] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 17:31:14] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 17:31:14] POST data: {"invoice_id":"45","InvoiceID":"45","invoiceNr":"55","dateCreated":"2025-03-22","supplier":"Momos","supplierID":"34","original_supplier_phone":"9399393","original_supplier_email":"","supplierPhone":"9399393","supplierEmail":"","vat":"0.00","total":"100","parts":[{"partId":"53","partDesc":"tires","piecesPurch":"6","pricePerPiece":"8.00","priceBulk":"0.00","sellingPrice":"98.00"}],"partId":["53"],"partDesc":["tires"],"piecesPurch":["6"],"pricePerPiece":["8.00"],"priceBulk":["0.00"],"sellingPrice":["98.00"]}
+[2025-03-22 17:31:14] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 17:34:22] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 17:34:22] POST data: {"invoice_id":"45","InvoiceID":"45","invoiceNr":"55","dateCreated":"2025-03-22","supplier":"Momos","supplierID":"34","original_supplier_phone":"9399393","original_supplier_email":"","supplierPhone":"9399393","supplierEmail":"","vat":"0.00","total":"100.00","partId":["53"],"partDesc":["tires"],"piecesPurch":["6"],"pricePerPiece":["8.00"],"priceBulk":["0.00"],"sellingPrice":["98.00"]}
+[2025-03-22 17:34:22] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 17:34:29] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 17:34:29] POST data: {"invoice_id":"45","InvoiceID":"45","invoiceNr":"55","dateCreated":"2025-03-22","supplier":"Momos","supplierID":"34","original_supplier_phone":"9399393","original_supplier_email":"","supplierPhone":"9399393","supplierEmail":"","vat":"","total":"100.00","partId":["53"],"partDesc":["tires"],"piecesPurch":["6"],"pricePerPiece":["8.00"],"priceBulk":["0.00"],"sellingPrice":["98.00"]}
+[2025-03-22 17:34:29] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 17:34:48] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 17:34:48] POST data: {"invoice_id":"45","InvoiceID":"45","invoiceNr":"55","dateCreated":"2025-03-22","supplier":"Momos","supplierID":"34","original_supplier_phone":"9399393","original_supplier_email":"","supplierPhone":"9399393","supplierEmail":"","vat":"","total":"100.00","partId":["53"],"partDesc":["tires"],"piecesPurch":["6"],"pricePerPiece":["8.00"],"priceBulk":["888"],"sellingPrice":["98.00"]}
+[2025-03-22 17:34:48] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 17:35:20] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 17:35:20] POST data: {"invoice_id":"45","InvoiceID":"45","invoiceNr":"55","dateCreated":"2025-03-22","supplier":"","supplierID":"34","original_supplier_phone":"9399393","original_supplier_email":"","supplierPhone":"9399393","supplierEmail":"","vat":"0.00","total":"100.00","partId":["53"],"partDesc":["tires"],"piecesPurch":["6"],"pricePerPiece":["8.00"],"priceBulk":["888.00"],"sellingPrice":["98.00"]}
+[2025-03-22 17:35:20] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 17:37:58] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 17:37:58] POST data: {"invoice_id":"45","InvoiceID":"45","invoiceNr":"55","dateCreated":"2025-03-22","supplier":"Momos","supplierID":"34","original_supplier_phone":"9399393","original_supplier_email":"","supplierPhone":"9399393","supplierEmail":"","vat":"","total":"100.00","partId":["53"],"partDesc":["tires"],"piecesPurch":["6"],"pricePerPiece":["8.00"],"priceBulk":["888.00"],"sellingPrice":["98.00"]}
+[2025-03-22 17:37:58] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 17:38:06] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 17:38:06] POST data: {"invoice_id":"45","InvoiceID":"45","invoiceNr":"55","dateCreated":"2025-03-22","supplier":"Momos","supplierID":"34","original_supplier_phone":"9399393","original_supplier_email":"","supplierPhone":"9399393","supplierEmail":"","vat":"","total":"100.00","partId":["53"],"partDesc":["tires"],"piecesPurch":["6"],"pricePerPiece":["8.00"],"priceBulk":["888.00"],"sellingPrice":["98.00"]}
+[2025-03-22 17:38:06] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 17:39:38] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 17:39:38] POST data: {"invoice_id":"45","InvoiceID":"45","invoiceNr":"55","dateCreated":"2025-03-22","supplier":"Momos","supplierID":"34","original_supplier_phone":"9399393","original_supplier_email":"","supplierPhone":"9399393","supplierEmail":"","vat":"","total":"100.00","partId":["53"],"partDesc":["tires"],"piecesPurch":["6"],"pricePerPiece":["8.00"],"priceBulk":["888.00"],"sellingPrice":["98.00"]}
+[2025-03-22 17:39:38] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 17:46:24] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 17:46:24] POST data: {"invoice_id":"45","InvoiceID":"45","invoiceNr":"55","dateCreated":"2025-03-22","supplier":"Momos","supplierID":"34","original_supplier_phone":"9399393","original_supplier_email":"","supplierPhone":"9399393","supplierEmail":"","vat":"","total":"100.00","partId":["53"],"partDesc":["tires"],"piecesPurch":["6"],"pricePerPiece":["8.00"],"priceBulk":["888.00"],"sellingPrice":["98.00"]}
+[2025-03-22 17:46:24] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 17:58:45] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 17:58:45] POST data: {"invoice_id":"45","InvoiceID":"45","invoiceNr":"55999","dateCreated":"2025-03-22","supplier":"Momos","supplierID":"34","original_supplier_phone":"9399393","original_supplier_email":"","supplierPhone":"9399393","supplierEmail":"","vat":"0.00","total":"100.00","partId":["53"],"partDesc":["tires"],"piecesPurch":["6"],"pricePerPiece":["8.00"],"priceBulk":["888.00"],"sellingPrice":["98.00"]}
+[2025-03-22 17:58:45] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 17:58:45] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 17:58:45] POST data: {"invoice_id":"45","InvoiceID":"45","invoiceNr":"55999","dateCreated":"2025-03-22","supplier":"Momos","supplierID":"34","original_supplier_phone":"9399393","original_supplier_email":"","supplierPhone":"9399393","supplierEmail":"","vat":"0.00","total":"100.00","partId":["53"],"partDesc":["tires"],"piecesPurch":["6"],"pricePerPiece":["8.00"],"priceBulk":["888.00"],"sellingPrice":["98.00"]}
+[2025-03-22 17:58:45] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 17:59:04] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 17:59:04] POST data: {"invoice_id":"45","InvoiceID":"45","invoiceNr":"55999","dateCreated":"2025-03-22","supplier":"panikos","supplierID":"29","original_supplier_phone":"9399393","original_supplier_email":"","supplierPhone":"9789002","supplierEmail":"","vat":"0.00","total":"100.00","partId":["53"],"partDesc":["tires"],"piecesPurch":["6"],"pricePerPiece":["8.00"],"priceBulk":["888.00"],"sellingPrice":["98.00"]}
+[2025-03-22 17:59:04] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 17:59:04] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 17:59:04] POST data: {"invoice_id":"45","InvoiceID":"45","invoiceNr":"55999","dateCreated":"2025-03-22","supplier":"panikos","supplierID":"29","original_supplier_phone":"9399393","original_supplier_email":"","supplierPhone":"9789002","supplierEmail":"","vat":"0.00","total":"100.00","partId":["53"],"partDesc":["tires"],"piecesPurch":["6"],"pricePerPiece":["8.00"],"priceBulk":["888.00"],"sellingPrice":["98.00"]}
+[2025-03-22 17:59:04] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 18:01:48] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 18:01:48] POST data: {"invoice_id":"55","InvoiceID":"55","invoiceNr":"23","dateCreated":"0323-02-23","supplier":"mama","supplierID":"41","original_supplier_phone":"22","original_supplier_email":"","supplierPhone":"22","supplierEmail":"","vat":"23.00","total":"23.00","partId":["55"],"partDesc":["3"],"piecesPurch":["4"],"pricePerPiece":["5.00"],"priceBulk":["5.00"],"sellingPrice":["6.00"]}
+[2025-03-22 18:01:48] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 18:02:04] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 18:02:04] POST data: {"invoice_id":"55","InvoiceID":"55","invoiceNr":"23","dateCreated":"0323-02-23","supplier":"mma","supplierID":"44","original_supplier_phone":"22","original_supplier_email":"","supplierPhone":"22","supplierEmail":"","vat":"23.00","total":"23.00","partId":["55"],"partDesc":["3"],"piecesPurch":["4"],"pricePerPiece":["5.00"],"priceBulk":["5.00"],"sellingPrice":["6.00"]}
+[2025-03-22 18:02:04] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 18:04:50] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 18:04:50] POST data: {"invoice_id":"55","InvoiceID":"55","invoiceNr":"23","dateCreated":"0323-02-23","supplier":"mamaam","supplierID":"45","original_supplier_phone":"22","original_supplier_email":"","supplierPhone":"22","supplierEmail":"","vat":"23.00","total":"23.00","partId":["55"],"partDesc":["3"],"piecesPurch":["4"],"pricePerPiece":["5.00"],"priceBulk":["5.00"],"sellingPrice":["6.00"]}
+[2025-03-22 18:04:50] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 18:04:50] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 18:04:50] POST data: {"invoice_id":"55","InvoiceID":"55","invoiceNr":"23","dateCreated":"0323-02-23","supplier":"mamaam","supplierID":"46","original_supplier_phone":"22","original_supplier_email":"","supplierPhone":"22","supplierEmail":"","vat":"23.00","total":"23.00","partId":["55"],"partDesc":["3"],"piecesPurch":["4"],"pricePerPiece":["5.00"],"priceBulk":["5.00"],"sellingPrice":["6.00"]}
+[2025-03-22 18:04:50] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 18:04:57] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 18:04:57] POST data: {"invoice_id":"55","InvoiceID":"55","invoiceNr":"23","dateCreated":"0323-02-23","supplier":"23","supplierID":"39","original_supplier_phone":"22","original_supplier_email":"","supplierPhone":"22","supplierEmail":"","vat":"23.00","total":"23.00","partId":["55"],"partDesc":["3"],"piecesPurch":["4"],"pricePerPiece":["5.00"],"priceBulk":["5.00"],"sellingPrice":["6.00"]}
+[2025-03-22 18:04:57] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 18:04:57] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 18:04:57] POST data: {"invoice_id":"55","InvoiceID":"55","invoiceNr":"23","dateCreated":"0323-02-23","supplier":"23","supplierID":"39","original_supplier_phone":"22","original_supplier_email":"","supplierPhone":"22","supplierEmail":"","vat":"23.00","total":"23.00","partId":["55"],"partDesc":["3"],"piecesPurch":["4"],"pricePerPiece":["5.00"],"priceBulk":["5.00"],"sellingPrice":["6.00"]}
+[2025-03-22 18:04:57] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 18:05:05] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 18:05:05] POST data: {"invoice_id":"55","InvoiceID":"55","invoiceNr":"23","dateCreated":"0323-02-23","supplier":"23","supplierID":"39","original_supplier_phone":"22","original_supplier_email":"","supplierPhone":"22","supplierEmail":"","vat":"","total":"23.00","partId":["55"],"partDesc":["3"],"piecesPurch":["4"],"pricePerPiece":["5.00"],"priceBulk":["5.00"],"sellingPrice":["6.00"]}
+[2025-03-22 18:05:05] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 18:08:17] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 18:08:17] POST data: {"invoice_id":"45","InvoiceID":"45","invoiceNr":"","dateCreated":"2025-03-22","supplier":"Momos","supplierID":"34","original_supplier_phone":"9399393","original_supplier_email":"","supplierPhone":"9399393","supplierEmail":"","vat":"0.00","total":"100.00","partId":["53"],"partDesc":["tires"],"piecesPurch":["6"],"pricePerPiece":["8.00"],"priceBulk":["888.00"],"sellingPrice":["98.00"]}
+[2025-03-22 18:08:17] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 18:08:27] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 18:08:27] POST data: {"invoice_id":"45","InvoiceID":"45","invoiceNr":"0","dateCreated":"2025-03-22","supplier":"Momos","supplierID":"34","original_supplier_phone":"9399393","original_supplier_email":"","supplierPhone":"9399393","supplierEmail":"","vat":"","total":"100.00","partId":["53"],"partDesc":["tires"],"piecesPurch":["6"],"pricePerPiece":["8.00"],"priceBulk":["888.00"],"sellingPrice":["98.00"]}
+[2025-03-22 18:08:27] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 18:10:05] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 18:10:05] POST data: {"invoice_id":"45","InvoiceID":"45","invoiceNr":"","dateCreated":"2025-03-22","supplier":"Momos","supplierID":"34","original_supplier_phone":"9399393","original_supplier_email":"","supplierPhone":"9399393","supplierEmail":"","vat":"0.00","total":"100.00","partId":["53"],"partDesc":["tires"],"piecesPurch":["6"],"pricePerPiece":["8.00"],"priceBulk":["888.00"],"sellingPrice":["98.00"]}
+[2025-03-22 18:10:05] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 18:10:27] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 18:10:27] POST data: {"invoice_id":"45","InvoiceID":"45","invoiceNr":"0","dateCreated":"2025-03-22","supplier":"Momos","supplierID":"34","original_supplier_phone":"9399393","original_supplier_email":"","supplierPhone":"9399393","supplierEmail":"","vat":"","total":"","partId":["53"],"partDesc":["tires"],"piecesPurch":["6"],"pricePerPiece":["8.00"],"priceBulk":["888.00"],"sellingPrice":["98.00"]}
+[2025-03-22 18:10:27] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 18:12:17] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 18:12:17] POST data: {"invoice_id":"45","InvoiceID":"45","invoiceNr":"","dateCreated":"2025-03-22","supplier":"Momos","supplierID":"34","original_supplier_phone":"9399393","original_supplier_email":"","supplierPhone":"9399393","supplierEmail":"","vat":"0.00","total":"0.00","partId":["53"],"partDesc":["tires"],"piecesPurch":["6"],"pricePerPiece":["8.00"],"priceBulk":["888.00"],"sellingPrice":["98.00"]}
+[2025-03-22 18:12:17] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 18:12:33] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 18:12:33] POST data: {"invoice_id":"45","InvoiceID":"45","invoiceNr":"0","dateCreated":"2025-03-22","supplier":"hh","supplierID":"48","original_supplier_phone":"9399393","original_supplier_email":"","supplierPhone":"9399393","supplierEmail":"","vat":"0.00","total":"0.00","partId":["53"],"partDesc":["tires"],"piecesPurch":["6"],"pricePerPiece":["8.00"],"priceBulk":["888.00"],"sellingPrice":["98.00"]}
+[2025-03-22 18:12:33] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 18:13:14] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 18:13:14] POST data: {"invoice_id":"45","InvoiceID":"45","invoiceNr":"0","dateCreated":"2025-03-22","supplier":"Momos","supplierID":"34","original_supplier_phone":"9399393","original_supplier_email":"","supplierPhone":"9399393","supplierEmail":"","vat":"0.00","total":"0.00","partId":["53"],"partDesc":["tires"],"piecesPurch":["6"],"pricePerPiece":["8.00"],"priceBulk":["888.00"],"sellingPrice":["98.00"]}
+[2025-03-22 18:13:14] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 18:16:12] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 18:16:12] POST data: {"invoice_id":"45","InvoiceID":"45","invoiceNr":"0","dateCreated":"2025-03-22","supplier":"adios","supplierID":"49","original_supplier_phone":"9399393","original_supplier_email":"","supplierPhone":"9399393","supplierEmail":"","vat":"22","total":"233","partId":["53"],"partDesc":["jj"],"piecesPurch":["6"],"pricePerPiece":["8.00"],"priceBulk":["888.00"],"sellingPrice":["98.00"]}
+[2025-03-22 18:16:12] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 18:16:16] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 18:16:16] POST data: {"invoice_id":"45","InvoiceID":"45","invoiceNr":"0","dateCreated":"2025-03-22","supplier":"adios","supplierID":"50","original_supplier_phone":"9399393","original_supplier_email":"","supplierPhone":"9399393","supplierEmail":"","vat":"22","total":"233","partId":["53"],"partDesc":["jj"],"piecesPurch":["6"],"pricePerPiece":["8.00"],"priceBulk":["888.00"],"sellingPrice":["98.00"]}
+[2025-03-22 18:16:16] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 18:16:24] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 18:16:24] POST data: {"invoice_id":"45","InvoiceID":"45","invoiceNr":"11","dateCreated":"2025-03-22","supplier":"adios","supplierID":"51","original_supplier_phone":"9399393","original_supplier_email":"","supplierPhone":"9399393","supplierEmail":"","vat":"22","total":"233","partId":["53"],"partDesc":["jj"],"piecesPurch":["6"],"pricePerPiece":["8.00"],"priceBulk":["888.00"],"sellingPrice":["98.00"]}
+[2025-03-22 18:16:24] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 18:16:29] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 18:16:29] POST data: {"invoice_id":"45","InvoiceID":"45","invoiceNr":"11","dateCreated":"2025-03-22","supplier":"adios","supplierID":"52","original_supplier_phone":"9399393","original_supplier_email":"","supplierPhone":"22","supplierEmail":"","vat":"22","total":"233","partId":["53"],"partDesc":["jj"],"piecesPurch":["6"],"pricePerPiece":["8.00"],"priceBulk":["888.00"],"sellingPrice":["98.00"]}
+[2025-03-22 18:16:29] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 18:16:33] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 18:16:33] POST data: {"invoice_id":"45","InvoiceID":"45","invoiceNr":"11","dateCreated":"2025-03-22","supplier":"adios","supplierID":"53","original_supplier_phone":"9399393","original_supplier_email":"","supplierPhone":"22","supplierEmail":"","vat":"22","total":"233","partId":["53"],"partDesc":["jj"],"piecesPurch":["6"],"pricePerPiece":["8.00"],"priceBulk":["888.00"],"sellingPrice":["98.00"]}
+[2025-03-22 18:16:33] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 18:18:13] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 18:18:13] POST data: {"invoice_id":"45","InvoiceID":"45","invoiceNr":"0","dateCreated":"2025-03-22","supplier":"mia","supplierID":"54","original_supplier_phone":"9399393","original_supplier_email":"","supplierPhone":"9399393","supplierEmail":"","vat":"12","total":"22","partId":["53"],"partDesc":["jj"],"piecesPurch":["6"],"pricePerPiece":["8.00"],"priceBulk":["888.00"],"sellingPrice":["98.00"]}
+[2025-03-22 18:18:13] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 18:19:38] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 18:19:38] POST data: {"invoice_id":"45","InvoiceID":"45","invoiceNr":"0","dateCreated":"2025-03-22","supplier":"Momos","supplierID":"34","original_supplier_phone":"9399393","original_supplier_email":"","supplierPhone":"9399393","supplierEmail":"","vat":"0.00","total":"999","partId":["53"],"partDesc":["jj"],"piecesPurch":["6"],"pricePerPiece":["8.00"],"priceBulk":["888.00"],"sellingPrice":["98.00"]}
+[2025-03-22 18:19:38] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 18:21:29] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 18:21:29] POST data: {"invoice_id":"45","InvoiceID":"45","invoiceNr":"0","dateCreated":"2025-03-22","supplier":"anna","supplierID":"34","original_supplier_phone":"9399393","original_supplier_email":"","supplierPhone":"9399393","supplierEmail":"","vat":"22","total":"22","parts":"[{\"partId\":53,\"partDesc\":\"jj\",\"piecesPurch\":6,\"pricePerPiece\":\"8.00\",\"priceBulk\":\"888.00\",\"sellingPrice\":\"98.00\"}]"}
+[2025-03-22 18:21:29] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 18:21:29] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 18:21:29] POST data: {"invoice_id":"45","InvoiceID":"45","invoiceNr":"0","dateCreated":"2025-03-22","supplier":"anna","supplierID":"55","original_supplier_phone":"9399393","original_supplier_email":"","supplierPhone":"9399393","supplierEmail":"","vat":"22","total":"22","partId":["53"],"partDesc":["jj"],"piecesPurch":["6"],"pricePerPiece":["8.00"],"priceBulk":["888.00"],"sellingPrice":["98.00"]}
+[2025-03-22 18:21:29] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 18:21:43] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 18:21:43] POST data: {"invoice_id":"45","InvoiceID":"45","invoiceNr":"0","dateCreated":"2025-03-22","supplier":"anna","supplierID":"55","original_supplier_phone":"9399393","original_supplier_email":"","supplierPhone":"9399393","supplierEmail":"","vat":"22","total":"22","parts":"[{\"partId\":53,\"partDesc\":\"jj\",\"piecesPurch\":6,\"pricePerPiece\":\"8.00\",\"priceBulk\":\"888.00\",\"sellingPrice\":\"98.00\"}]"}
+[2025-03-22 18:21:43] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 18:21:43] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 18:21:43] POST data: {"invoice_id":"45","InvoiceID":"45","invoiceNr":"0","dateCreated":"2025-03-22","supplier":"anna","supplierID":"56","original_supplier_phone":"9399393","original_supplier_email":"","supplierPhone":"9399393","supplierEmail":"","vat":"22","total":"22","partId":["53"],"partDesc":["jj"],"piecesPurch":["6"],"pricePerPiece":["8.00"],"priceBulk":["888.00"],"sellingPrice":["98.00"]}
+[2025-03-22 18:21:43] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 18:23:51] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 18:23:51] POST data: {"invoice_id":"45","InvoiceID":"45","invoiceNr":"0","dateCreated":"2025-03-22","supplier":"new","supplierID":"34","original_supplier_phone":"9399393","original_supplier_email":"","supplierPhone":"9399393","supplierEmail":"","vat":"0.00","total":"0.00","parts":"[{\"partId\":53,\"partDesc\":\"jj\",\"piecesPurch\":6,\"pricePerPiece\":\"8.00\",\"priceBulk\":\"888.00\",\"sellingPrice\":\"98.00\"}]"}
+[2025-03-22 18:23:51] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 18:24:02] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 18:24:02] POST data: {"invoice_id":"45","InvoiceID":"45","invoiceNr":"0","dateCreated":"2025-03-22","supplier":"new","supplierID":"34","original_supplier_phone":"9399393","original_supplier_email":"","supplierPhone":"9399393","supplierEmail":"","vat":"8","total":"99","parts":"[{\"partId\":53,\"partDesc\":\"jj\",\"piecesPurch\":6,\"pricePerPiece\":\"8.00\",\"priceBulk\":\"888.00\",\"sellingPrice\":\"98.00\"}]"}
+[2025-03-22 18:24:02] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 18:24:04] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 18:24:04] POST data: {"invoice_id":"45","InvoiceID":"45","invoiceNr":"0","dateCreated":"2025-03-22","supplier":"new","supplierID":"34","original_supplier_phone":"9399393","original_supplier_email":"","supplierPhone":"9399393","supplierEmail":"","vat":"8","total":"99","parts":"[{\"partId\":53,\"partDesc\":\"jj\",\"piecesPurch\":6,\"pricePerPiece\":\"8.00\",\"priceBulk\":\"888.00\",\"sellingPrice\":\"98.00\"}]"}
+[2025-03-22 18:24:04] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 18:24:11] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 18:24:11] POST data: {"invoice_id":"45","InvoiceID":"45","invoiceNr":"0","dateCreated":"2025-03-22","supplier":"new","supplierID":"34","original_supplier_phone":"9399393","original_supplier_email":"","supplierPhone":"9399393","supplierEmail":"","vat":"8","total":"99","parts":"[{\"partId\":53,\"partDesc\":\"jj\",\"piecesPurch\":6,\"pricePerPiece\":\"8.00\",\"priceBulk\":\"888.00\",\"sellingPrice\":\"98.00\"}]"}
+[2025-03-22 18:24:11] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 18:24:51] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 18:24:51] POST data: {"invoice_id":"45","InvoiceID":"45","invoiceNr":"566","dateCreated":"2025-03-22","supplier":"new","supplierID":"34","original_supplier_phone":"9399393","original_supplier_email":"","supplierPhone":"9399393","supplierEmail":"","vat":"8","total":"99","parts":"[{\"partId\":53,\"partDesc\":\"jj\",\"piecesPurch\":6,\"pricePerPiece\":\"8.00\",\"priceBulk\":\"888.00\",\"sellingPrice\":\"98.00\"}]"}
+[2025-03-22 18:24:51] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 18:24:53] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 18:24:53] POST data: {"invoice_id":"45","InvoiceID":"45","invoiceNr":"566","dateCreated":"2025-03-22","supplier":"new","supplierID":"34","original_supplier_phone":"9399393","original_supplier_email":"","supplierPhone":"9399393","supplierEmail":"","vat":"8","total":"99","parts":"[{\"partId\":53,\"partDesc\":\"jj\",\"piecesPurch\":6,\"pricePerPiece\":\"8.00\",\"priceBulk\":\"888.00\",\"sellingPrice\":\"98.00\"}]"}
+[2025-03-22 18:24:53] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 18:25:47] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 18:25:47] POST data: {"invoice_id":"45","InvoiceID":"45","invoiceNr":"0","dateCreated":"2025-03-22","supplier":"new","supplierID":"34","original_supplier_phone":"9399393","original_supplier_email":"","supplierPhone":"9399393","supplierEmail":"","vat":"0.00","total":"0.00","parts":"[{\"partId\":53,\"partDesc\":\"jj\",\"piecesPurch\":6,\"pricePerPiece\":\"8.00\",\"priceBulk\":\"888.00\",\"sellingPrice\":\"98.00\"}]"}
+[2025-03-22 18:25:47] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 18:26:25] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 18:26:25] POST data: {"invoice_id":"45","InvoiceID":"45","invoiceNr":"0","dateCreated":"2025-03-22","supplier":"new","supplierID":"34","original_supplier_phone":"9399393","original_supplier_email":"","supplierPhone":"9399393","supplierEmail":"","vat":"99","total":"0.00","parts":"[{\"partId\":53,\"partDesc\":\"jj\",\"piecesPurch\":6,\"pricePerPiece\":\"8.00\",\"priceBulk\":\"888.00\",\"sellingPrice\":\"98.00\"}]"}
+[2025-03-22 18:26:25] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 18:29:58] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 18:29:58] POST data: {"invoice_id":"45","InvoiceID":"45","invoiceNr":"111","dateCreated":"2025-03-22","supplier":"new","supplierID":"34","original_supplier_phone":"9399393","original_supplier_email":"","supplierPhone":"9399393","supplierEmail":"","vat":"0.00","total":"0.00","parts":"[{\"partId\":53,\"partDesc\":\"jj\",\"piecesPurch\":6,\"pricePerPiece\":\"8.00\",\"priceBulk\":\"888.00\",\"sellingPrice\":\"98.00\"}]"}
+[2025-03-22 18:29:58] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 18:30:00] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 18:30:00] POST data: {"invoice_id":"45","InvoiceID":"45","invoiceNr":"111","dateCreated":"2025-03-22","supplier":"new","supplierID":"34","original_supplier_phone":"9399393","original_supplier_email":"","supplierPhone":"9399393","supplierEmail":"","vat":"0.00","total":"0.00","parts":"[{\"partId\":53,\"partDesc\":\"jj\",\"piecesPurch\":6,\"pricePerPiece\":\"8.00\",\"priceBulk\":\"888.00\",\"sellingPrice\":\"98.00\"}]"}
+[2025-03-22 18:30:00] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 18:32:32] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 18:32:32] POST data: {"invoice_id":"45","InvoiceID":"45","invoiceNr":"0","dateCreated":"2025-03-22","supplier":"Momos","supplierID":"34","original_supplier_phone":"9399393","original_supplier_email":"","supplierPhone":"9399393","supplierEmail":"","vat":"0.00","total":"0.00","parts":"[{\"partId\":53,\"partDesc\":\"jj\",\"piecesPurch\":6,\"pricePerPiece\":\"8.00\",\"priceBulk\":\"888.00\",\"sellingPrice\":\"98.00\"}]"}
+[2025-03-22 18:32:32] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 18:32:41] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 18:32:41] POST data: {"invoice_id":"45","InvoiceID":"45","invoiceNr":"0","dateCreated":"2025-03-22","supplier":"Momos","supplierID":"34","original_supplier_phone":"9399393","original_supplier_email":"","supplierPhone":"9399393","supplierEmail":"","vat":"0.00","total":"0.00","parts":"[{\"partId\":53,\"partDesc\":\"jjoo\",\"piecesPurch\":6,\"pricePerPiece\":\"8.00\",\"priceBulk\":\"888.00\",\"sellingPrice\":\"98.00\"}]"}
+[2025-03-22 18:32:41] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 18:32:50] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 18:32:50] POST data: {"invoice_id":"45","InvoiceID":"45","invoiceNr":"0","dateCreated":"2025-03-22","supplier":"Momos","supplierID":"34","original_supplier_phone":"9399393","original_supplier_email":"","supplierPhone":"9399393","supplierEmail":"","vat":"77","total":"88","parts":"[{\"partId\":53,\"partDesc\":\"jjoo\",\"piecesPurch\":6,\"pricePerPiece\":\"8.00\",\"priceBulk\":\"888.00\",\"sellingPrice\":\"98.00\"}]"}
+[2025-03-22 18:32:50] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 18:32:58] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 18:32:58] POST data: {"invoice_id":"45","InvoiceID":"45","invoiceNr":"0","dateCreated":"2025-03-22","supplier":"new","supplierID":"34","original_supplier_phone":"9399393","original_supplier_email":"","supplierPhone":"9399393","supplierEmail":"","vat":"77","total":"88","parts":"[{\"partId\":53,\"partDesc\":\"jjoo\",\"piecesPurch\":6,\"pricePerPiece\":\"8.00\",\"priceBulk\":\"888.00\",\"sellingPrice\":\"98.00\"}]"}
+[2025-03-22 18:32:58] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 18:33:00] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 18:33:00] POST data: {"invoice_id":"45","InvoiceID":"45","invoiceNr":"0","dateCreated":"2025-03-22","supplier":"new","supplierID":"34","original_supplier_phone":"9399393","original_supplier_email":"","supplierPhone":"9399393","supplierEmail":"","vat":"77","total":"88","parts":"[{\"partId\":53,\"partDesc\":\"jjoo\",\"piecesPurch\":6,\"pricePerPiece\":\"8.00\",\"priceBulk\":\"888.00\",\"sellingPrice\":\"98.00\"}]"}
+[2025-03-22 18:33:00] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 18:33:02] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 18:33:02] POST data: {"invoice_id":"45","InvoiceID":"45","invoiceNr":"0","dateCreated":"2025-03-22","supplier":"new","supplierID":"34","original_supplier_phone":"9399393","original_supplier_email":"","supplierPhone":"9399393","supplierEmail":"","vat":"77","total":"88","parts":"[{\"partId\":53,\"partDesc\":\"jjoo\",\"piecesPurch\":6,\"pricePerPiece\":\"8.00\",\"priceBulk\":\"888.00\",\"sellingPrice\":\"98.00\"}]"}
+[2025-03-22 18:33:02] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 18:33:30] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 18:33:30] POST data: {"invoice_id":"45","InvoiceID":"45","invoiceNr":"0","dateCreated":"2025-03-22","supplier":"new","supplierID":"34","original_supplier_phone":"9399393","original_supplier_email":"","supplierPhone":"9399393","supplierEmail":"","vat":"77","total":"88","parts":"[{\"partId\":53,\"partDesc\":\"jjoo\",\"piecesPurch\":6,\"pricePerPiece\":\"8.00\",\"priceBulk\":\"888.00\",\"sellingPrice\":\"98.00\"},{\"partId\":\"temp_1742664785698\",\"partDesc\":55,\"piecesPurch\":13,\"pricePerPiece\":3,\"priceBulk\":3,\"sellingPrice\":3}]"}
+[2025-03-22 18:33:30] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 18:40:22] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 18:40:22] POST data: {"invoice_id":"45","InvoiceID":"45","invoiceNr":"0","dateCreated":"2025-03-22","supplier":"Momos","supplierID":"34","original_supplier_phone":"9399393","original_supplier_email":"","supplierPhone":"9399393","supplierEmail":"","vat":"","total":"0.00"}
+[2025-03-22 18:40:22] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 18:40:22] Error updating invoice: All required fields must be filled out
+[2025-03-22 18:43:06] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 18:43:06] POST data: {"invoice_id":"58","InvoiceID":"58","invoiceNr":"997","dateCreated":"2002-10-20","supplier":"","supplierID":"29","original_supplier_phone":"9789002","original_supplier_email":"","supplierPhone":"9789002","supplierEmail":"","vat":"3.00","total":"3333.00"}
+[2025-03-22 18:43:06] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 18:43:19] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 18:43:19] POST data: {"invoice_id":"58","InvoiceID":"58","invoiceNr":"997","dateCreated":"2002-10-20","supplier":"","supplierID":"29","original_supplier_phone":"9789002","original_supplier_email":"","supplierPhone":"","supplierEmail":"","vat":"3.00","total":"3333.00"}
+[2025-03-22 18:43:19] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 18:43:46] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 18:43:46] POST data: {"invoice_id":"58","InvoiceID":"58","invoiceNr":"997","dateCreated":"2002-10-20","supplier":"Jorgos","supplierID":"29","original_supplier_phone":"","original_supplier_email":"","supplierPhone":"","supplierEmail":"","vat":"99","total":"3333.00","parts":"[{\"partId\":58,\"partDesc\":\"Air Filter\",\"piecesPurch\":69,\"pricePerPiece\":\"68.00\",\"priceBulk\":\"\",\"sellingPrice\":\"67.00\"}]"}
+[2025-03-22 18:43:46] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 18:43:50] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 18:43:50] POST data: {"invoice_id":"58","InvoiceID":"58","invoiceNr":"997","dateCreated":"2002-10-20","supplier":"Jorgos","supplierID":"29","original_supplier_phone":"","original_supplier_email":"","supplierPhone":"999","supplierEmail":"","vat":"99","total":"3333.00","parts":"[{\"partId\":58,\"partDesc\":\"Air Filter\",\"piecesPurch\":69,\"pricePerPiece\":\"68.00\",\"priceBulk\":\"\",\"sellingPrice\":\"67.00\"}]"}
+[2025-03-22 18:43:50] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 18:46:19] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 18:46:19] POST data: {"invoice_id":"58","InvoiceID":"58","invoiceNr":"997","dateCreated":"2002-10-20","supplier":"momoo","supplierID":"","original_supplier_phone":"","original_supplier_email":"","supplierPhone":"9898","supplierEmail":"","vat":"3.00","total":"3333.00","parts":"[{\"partId\":58,\"partDesc\":\"Air Filter\",\"piecesPurch\":69,\"pricePerPiece\":\"68.00\",\"priceBulk\":\"\",\"sellingPrice\":\"67.00\"}]"}
+[2025-03-22 18:46:19] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 18:46:27] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 18:46:27] POST data: {"invoice_id":"58","InvoiceID":"58","invoiceNr":"997","dateCreated":"2002-10-20","supplier":"momoo","supplierID":"","original_supplier_phone":"","original_supplier_email":"","supplierPhone":"9898","supplierEmail":"","vat":"3.00","total":"3333.00","parts":"[{\"partId\":58,\"partDesc\":\"Air Filter\",\"piecesPurch\":69,\"pricePerPiece\":\"68.00\",\"priceBulk\":\"\",\"sellingPrice\":\"67.00\"}]"}
+[2025-03-22 18:46:27] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 18:48:00] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 18:48:00] POST data: {"invoice_id":"58","InvoiceID":"58","invoiceNr":"997","dateCreated":"2002-10-20","supplier":"mom","supplierID":"29","original_supplier_phone":"","original_supplier_email":"","supplierPhone":"","supplierEmail":"","vat":"3.00","total":"3333.00"}
+[2025-03-22 18:48:00] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 18:49:09] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 18:49:09] POST data: {"invoice_id":"58","InvoiceID":"58","invoiceNr":"997","dateCreated":"2002-10-20","supplier":"kjj","supplierID":"","original_supplier_phone":"","original_supplier_email":"","supplierPhone":"232323","supplierEmail":"","vat":"3.00","total":"3333.00","parts":"[{\"partId\":58,\"partDesc\":\"Air Filter\",\"piecesPurch\":69,\"pricePerPiece\":\"68.00\",\"priceBulk\":\"\",\"sellingPrice\":\"67.00\"}]"}
+[2025-03-22 18:49:09] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 18:49:50] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 18:49:50] POST data: {"invoice_id":"58","InvoiceID":"58","invoiceNr":"997","dateCreated":"2002-10-20","supplier":"nn","supplierID":"29","original_supplier_phone":"","original_supplier_email":"","supplierPhone":"","supplierEmail":"","vat":"3.00","total":"3333.00"}
+[2025-03-22 18:49:50] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 18:51:18] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 18:51:18] POST data: {"invoice_id":"58","InvoiceID":"58","invoiceNr":"997","dateCreated":"2002-10-20","supplier":"hhh","supplierID":"","original_supplier_phone":"","original_supplier_email":"","supplierPhone":"6767","supplierEmail":"","vat":"3.00","total":"3333.00","parts":"[{\"partId\":58,\"partDesc\":\"Air Filter\",\"piecesPurch\":69,\"pricePerPiece\":\"68.00\",\"priceBulk\":\"\",\"sellingPrice\":\"67.00\"}]"}
+[2025-03-22 18:51:18] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 18:51:37] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 18:51:37] POST data: {"invoice_id":"58","InvoiceID":"58","invoiceNr":"997","dateCreated":"2002-10-20","supplier":"hhh","supplierID":"","original_supplier_phone":"","original_supplier_email":"","supplierPhone":"6767","supplierEmail":"","vat":"3.00","total":"3333.00","parts":"[{\"partId\":58,\"partDesc\":\"Air Filter\",\"piecesPurch\":696,\"pricePerPiece\":\"68.00\",\"priceBulk\":0,\"sellingPrice\":\"67.00\"},{\"partId\":\"temp_1742665889812\",\"partDesc\":2,\"piecesPurch\":2,\"pricePerPiece\":2,\"priceBulk\":2,\"sellingPrice\":2}]"}
+[2025-03-22 18:51:37] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 18:52:03] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 18:52:03] POST data: {"invoice_id":"58","InvoiceID":"58","invoiceNr":"997","dateCreated":"2002-10-20","supplier":"Pampos","supplierID":"30","original_supplier_phone":"","original_supplier_email":"","supplierPhone":"378833","supplierEmail":"","vat":"3.00","total":"3333.00","parts":"[{\"partId\":58,\"partDesc\":\"Air Filter\",\"piecesPurch\":696,\"pricePerPiece\":\"68.00\",\"priceBulk\":0,\"sellingPrice\":\"67.00\"},{\"partId\":\"temp_1742665889812\",\"partDesc\":2,\"piecesPurch\":2,\"pricePerPiece\":2,\"priceBulk\":2,\"sellingPrice\":2}]"}
+[2025-03-22 18:52:03] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 18:53:59] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 18:53:59] POST data: {"invoice_id":"58","InvoiceID":"58","invoiceNr":"997","dateCreated":"2002-10-20","supplier":"Pampos","supplierID":"30","original_supplier_phone":"","original_supplier_email":"","supplierPhone":"378833","supplierEmail":"","vat":"3.00","total":"3333.00","parts":"[{\"partId\":58,\"partDesc\":\"Air Filter\",\"piecesPurch\":696,\"pricePerPiece\":\"68.00\",\"priceBulk\":0,\"sellingPrice\":\"67.00\"},{\"partId\":\"temp_1742665889812\",\"partDesc\":2,\"piecesPurch\":2,\"pricePerPiece\":2,\"priceBulk\":2,\"sellingPrice\":2}]"}
+[2025-03-22 18:53:59] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 18:54:11] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 18:54:11] POST data: {"invoice_id":"58","InvoiceID":"58","invoiceNr":"997","dateCreated":"2002-10-20","supplier":"Jorgos","supplierID":"29","original_supplier_phone":"","original_supplier_email":"","supplierPhone":"","supplierEmail":"","vat":"3.00","total":"3333.00"}
+[2025-03-22 18:54:11] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 18:55:24] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 18:55:24] POST data: {"invoice_id":"58","InvoiceID":"58","invoiceNr":"99799","dateCreated":"2002-10-20","supplier":"Jorgos","supplierID":"29","original_supplier_phone":"","original_supplier_email":"","supplierPhone":"","supplierEmail":"","vat":"3.00","total":"3333.00","parts":"[{\"partId\":58,\"partDesc\":\"Air Filter\",\"piecesPurch\":69,\"pricePerPiece\":\"68.00\",\"priceBulk\":\"\",\"sellingPrice\":\"67.00\"}]"}
+[2025-03-22 18:55:24] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 18:55:54] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 18:55:54] POST data: {"invoice_id":"45","InvoiceID":"45","invoiceNr":"0","dateCreated":"2025-03-22","supplier":"pp","supplierID":"","original_supplier_phone":"9399393","original_supplier_email":"","supplierPhone":"7373","supplierEmail":"","vat":"3","total":"333","parts":"[{\"partId\":53,\"partDesc\":\"jj\",\"piecesPurch\":6,\"pricePerPiece\":\"8.00\",\"priceBulk\":\"888.00\",\"sellingPrice\":\"98.00\"}]"}
+[2025-03-22 18:55:54] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 18:56:25] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 18:56:25] POST data: {"invoice_id":"45","InvoiceID":"45","invoiceNr":"0","dateCreated":"2025-03-22","supplier":"Momos","supplierID":"34","original_supplier_phone":"9399393","original_supplier_email":"","supplierPhone":"9399393","supplierEmail":"","vat":"0.00","total":"0.00"}
+[2025-03-22 18:56:25] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 18:56:25] Error updating invoice: All required fields must be filled out
+[2025-03-22 18:56:37] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 18:56:37] POST data: {"invoice_id":"45","InvoiceID":"45","invoiceNr":"0","dateCreated":"2025-03-22","supplier":"Momos","supplierID":"34","original_supplier_phone":"9399393","original_supplier_email":"","supplierPhone":"9399393","supplierEmail":"","vat":"11","total":"0.00"}
+[2025-03-22 18:56:37] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 18:56:37] Error updating invoice: All required fields must be filled out
+[2025-03-22 18:57:38] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 18:57:38] POST data: {"invoice_id":"45","InvoiceID":"45","invoiceNr":"0","dateCreated":"2025-03-22","supplier":"Momos","supplierID":"34","original_supplier_phone":"9399393","original_supplier_email":"","supplierPhone":"9399393","supplierEmail":"","vat":"0.00","total":"0.00","parts":"[{\"partId\":53,\"partDesc\":\"jj\",\"piecesPurch\":6,\"pricePerPiece\":\"8.00\",\"priceBulk\":\"888.00\",\"sellingPrice\":\"98.00\"}]"}
+[2025-03-22 18:57:38] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 18:59:24] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 18:59:24] POST data: {"invoice_id":"45","InvoiceID":"45","invoiceNr":"0","dateCreated":"2025-03-22","supplier":"Pampos","supplierID":"30","original_supplier_phone":"9399393","original_supplier_email":"","supplierPhone":"378833","supplierEmail":"","vat":"0.00","total":"0.00","parts":"[{\"partId\":53,\"partDesc\":\"jj\",\"piecesPurch\":633,\"pricePerPiece\":\"8.00\",\"priceBulk\":\"888.00\",\"sellingPrice\":\"98.00\"}]"}
+[2025-03-22 18:59:24] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 18:59:32] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 18:59:32] POST data: {"invoice_id":"45","InvoiceID":"45","invoiceNr":"0","dateCreated":"2025-03-22","supplier":"Pampos","supplierID":"30","original_supplier_phone":"9399393","original_supplier_email":"","supplierPhone":"378833","supplierEmail":"","vat":"0.00","total":"0.00","parts":"[{\"partId\":53,\"partDesc\":\"jj\",\"piecesPurch\":633,\"pricePerPiece\":\"8.00\",\"priceBulk\":\"888.00\",\"sellingPrice\":\"98.00\"}]"}
+[2025-03-22 18:59:32] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 18:59:47] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 18:59:47] POST data: {"invoice_id":"45","InvoiceID":"45","invoiceNr":"0","dateCreated":"2025-03-22","supplier":"Pampos","supplierID":"30","original_supplier_phone":"9399393","original_supplier_email":"","supplierPhone":"378833","supplierEmail":"","vat":"0.00","total":"0.00","parts":"[{\"partId\":53,\"partDesc\":\"jj\",\"piecesPurch\":633,\"pricePerPiece\":\"8.00\",\"priceBulk\":\"888.00\",\"sellingPrice\":\"98.00\"},{\"partId\":\"temp_1742666377629\",\"partDesc\":5,\"piecesPurch\":55,\"pricePerPiece\":5,\"priceBulk\":5,\"sellingPrice\":5}]"}
+[2025-03-22 18:59:47] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 18:59:57] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 18:59:57] POST data: {"invoice_id":"45","InvoiceID":"45","invoiceNr":"898","dateCreated":"2025-03-22","supplier":"Pampos","supplierID":"30","original_supplier_phone":"9399393","original_supplier_email":"","supplierPhone":"378833","supplierEmail":"","vat":"0.00","total":"0.00","parts":"[{\"partId\":53,\"partDesc\":\"jj\",\"piecesPurch\":633,\"pricePerPiece\":\"8.00\",\"priceBulk\":\"888.00\",\"sellingPrice\":\"98.00\"},{\"partId\":\"temp_1742666377629\",\"partDesc\":5,\"piecesPurch\":55,\"pricePerPiece\":5,\"priceBulk\":5,\"sellingPrice\":5}]"}
+[2025-03-22 18:59:57] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 19:04:28] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 19:04:28] POST data: {"invoice_id":"45","InvoiceID":"45","invoiceNr":"8888","dateCreated":"2025-03-22","supplier":"Momos","supplierID":"34","original_supplier_phone":"9399393","original_supplier_email":"","supplierPhone":"9399393","supplierEmail":"","vat":"0.00","total":"0.00","parts":"[{\"partId\":53,\"partDesc\":\"jj\",\"piecesPurch\":6,\"pricePerPiece\":\"8.00\",\"priceBulk\":\"888.00\",\"sellingPrice\":\"98.00\"}]"}
+[2025-03-22 19:04:28] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 19:06:30] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 19:06:30] POST data: {"invoice_id":"45","InvoiceID":"45","invoiceNr":"0","dateCreated":"2025-03-22","supplier":"Momos","supplierID":"34","original_supplier_phone":"9399393","original_supplier_email":"","supplierPhone":"9399393","supplierEmail":"","vat":"888","total":"0.00","parts":"[{\"partId\":53,\"partDesc\":\"jj\",\"piecesPurch\":6,\"pricePerPiece\":\"8.00\",\"priceBulk\":\"888.00\",\"sellingPrice\":\"98.00\"}]"}
+[2025-03-22 19:06:30] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 19:06:39] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 19:06:39] POST data: {"invoice_id":"45","InvoiceID":"45","invoiceNr":"0","dateCreated":"2025-03-22","supplier":"Momos","supplierID":"34","original_supplier_phone":"9399393","original_supplier_email":"","supplierPhone":"9399393","supplierEmail":"","vat":"888","total":"99","parts":"[{\"partId\":53,\"partDesc\":\"jj\",\"piecesPurch\":6,\"pricePerPiece\":\"8.00\",\"priceBulk\":\"888.00\",\"sellingPrice\":\"98.00\"}]"}
+[2025-03-22 19:06:39] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 19:08:24] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 19:08:24] POST data: {"invoice_id":"45","InvoiceID":"45","invoiceNr":"0","dateCreated":"2025-03-22","supplier":"Momos","supplierID":"34","original_supplier_phone":"9399393","original_supplier_email":"","supplierPhone":"9399393","supplierEmail":"","vat":"8888","total":"99","parts":"[{\"partId\":53,\"partDesc\":\"jj99\",\"piecesPurch\":6,\"pricePerPiece\":\"8.00\",\"priceBulk\":\"888.00\",\"sellingPrice\":\"98.00\"}]"}
+[2025-03-22 19:08:24] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 19:08:32] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 19:08:32] POST data: {"invoice_id":"45","InvoiceID":"45","invoiceNr":"99","dateCreated":"2025-03-22","supplier":"Momos","supplierID":"34","original_supplier_phone":"9399393","original_supplier_email":"","supplierPhone":"9399393","supplierEmail":"","vat":"8888.00","total":"99.00","parts":"[{\"partId\":53,\"partDesc\":\"jj99\",\"piecesPurch\":6,\"pricePerPiece\":\"8.00\",\"priceBulk\":\"888.00\",\"sellingPrice\":\"98.00\"}]"}
+[2025-03-22 19:08:32] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 19:09:16] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 19:09:16] POST data: {"invoice_id":"45","InvoiceID":"45","invoiceNr":"99","dateCreated":"2025-03-22","supplier":"Pampos","supplierID":"30","original_supplier_phone":"9399393","original_supplier_email":"","supplierPhone":"378833","supplierEmail":"","vat":"88","total":"888","parts":"[{\"partId\":\"temp_1742666936516\",\"partDesc\":\"meow\",\"piecesPurch\":3,\"pricePerPiece\":3,\"priceBulk\":4,\"sellingPrice\":5}]"}
+[2025-03-22 19:09:16] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 19:10:15] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 19:10:15] POST data: {"invoice_id":"45","InvoiceID":"45","invoiceNr":"998899","dateCreated":"2025-03-22","supplier":"Pampos","supplierID":"30","original_supplier_phone":"378833","original_supplier_email":"","supplierPhone":"378833","supplierEmail":"","vat":"88.00","total":"888.00","parts":"[{\"partId\":59,\"partDesc\":\"meow\",\"piecesPurch\":3,\"pricePerPiece\":\"3.00\",\"priceBulk\":\"4.00\",\"sellingPrice\":\"5.00\"}]"}
+[2025-03-22 19:10:15] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 19:15:23] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 19:15:23] POST data: {"invoice_id":"59","InvoiceID":"59","invoiceNr":"123","dateCreated":"2020-03-12","supplier":"Jorgos","supplierID":"","original_supplier_phone":"278892","original_supplier_email":"","supplierPhone":"46747477","supplierEmail":"","vat":"20.00","total":"2999.00","parts":"[{\"partId\":60,\"partDesc\":\"Air Filter\",\"piecesPurch\":2,\"pricePerPiece\":\"30.00\",\"priceBulk\":\"3.00\",\"sellingPrice\":\"40.00\"},{\"partId\":\"temp_1742667294455\",\"partDesc\":\"tires\",\"piecesPurch\":8,\"pricePerPiece\":99,\"priceBulk\":9,\"sellingPrice\":100}]"}
+[2025-03-22 19:15:23] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 19:18:35] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 19:18:35] POST data: {"invoice_id":"60","InvoiceID":"60","invoiceNr":"229","dateCreated":"2024-02-20","supplier":"Pampos","supplierID":"57","original_supplier_phone":"278892","original_supplier_email":"g@yahoo.com","supplierPhone":"278892","supplierEmail":"g@yahoo.com","vat":"2.00","total":"2.00","parts":"[{\"partId\":62,\"partDesc\":\"tires\",\"piecesPurch\":222,\"pricePerPiece\":\"2.00\",\"priceBulk\":\"\",\"sellingPrice\":\"3.00\"},{\"partId\":\"temp_1742667509186\",\"partDesc\":3,\"piecesPurch\":33,\"pricePerPiece\":3,\"priceBulk\":3,\"sellingPrice\":3}]"}
+[2025-03-22 19:18:35] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 19:20:41] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 19:20:41] POST data: {"invoice_id":"60","InvoiceID":"60","invoiceNr":"229","dateCreated":"2024-02-20","supplier":"Jorgos","supplierID":"58","original_supplier_phone":"278892","original_supplier_email":"g@yahoo.com","supplierPhone":"46747477","supplierEmail":"","vat":"2.00","total":"2.00","parts":"[{\"partId\":63,\"partDesc\":3,\"piecesPurch\":33,\"pricePerPiece\":\"3.00\",\"priceBulk\":\"3.00\",\"sellingPrice\":\"3.00\"},{\"partId\":62,\"partDesc\":\"tires\",\"piecesPurch\":222,\"pricePerPiece\":\"2.00\",\"priceBulk\":\"0.00\",\"sellingPrice\":\"3.00\"}]"}
+[2025-03-22 19:20:41] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 19:22:29] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 19:22:29] POST data: {"invoice_id":"61","InvoiceID":"61","invoiceNr":"11","dateCreated":"2020-11-11","supplier":"Jorgos","supplierID":"58","original_supplier_phone":"278892","original_supplier_email":"g@yahoo.com","supplierPhone":"46747477","supplierEmail":"","vat":"11.00","total":"1111.00","parts":"[{\"partId\":64,\"partDesc\":1,\"piecesPurch\":2,\"pricePerPiece\":\"3.00\",\"priceBulk\":\"\",\"sellingPrice\":\"4.00\"}]"}
+[2025-03-22 19:22:29] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 19:22:53] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 19:22:53] POST data: {"invoice_id":"61","InvoiceID":"61","invoiceNr":"11","dateCreated":"2020-11-11","supplier":"Pampos","supplierID":"57","original_supplier_phone":"278892","original_supplier_email":"g@yahoo.com","supplierPhone":"278892","supplierEmail":"g@yahoo.com","vat":"11.00","total":"1111.00","parts":"[{\"partId\":64,\"partDesc\":1,\"piecesPurch\":2,\"pricePerPiece\":\"3.00\",\"priceBulk\":\"0.00\",\"sellingPrice\":\"4.00\"},{\"partId\":\"temp_1742667766577\",\"partDesc\":2,\"piecesPurch\":3,\"pricePerPiece\":4,\"priceBulk\":5,\"sellingPrice\":6}]"}
+[2025-03-22 19:22:53] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-22 19:25:21] === START PROCESSING UPDATE INVOICE ===
+[2025-03-22 19:25:21] POST data: {"invoice_id":"61","InvoiceID":"61","invoiceNr":"11","dateCreated":"2020-11-11","supplier":"Pampos","supplierID":"57","original_supplier_phone":"278892","original_supplier_email":"g@yahoo.com","supplierPhone":"278892","supplierEmail":"g@yahoo.com","vat":"11.00","total":"1111.00","parts":"[{\"partId\":64,\"partDesc\":1,\"piecesPurch\":2,\"pricePerPiece\":\"3.00\",\"priceBulk\":\"0.00\",\"sellingPrice\":\"4.00\"},{\"partId\":65,\"partDesc\":2,\"piecesPurch\":3,\"pricePerPiece\":\"4.00\",\"priceBulk\":\"5.00\",\"sellingPrice\":\"6.00\"},{\"partId\":\"temp_1742667913926\",\"partDesc\":3,\"piecesPurch\":4,\"pricePerPiece\":4,\"priceBulk\":4,\"sellingPrice\":4}]"}
+[2025-03-22 19:25:21] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-24 12:39:55] === START PROCESSING UPDATE INVOICE ===
+[2025-03-24 12:39:55] POST data: {"invoice_id":"61","InvoiceID":"61","invoiceNr":"18","dateCreated":"2020-11-11","supplier":"Pampos","supplierID":"57","original_supplier_phone":"278892","original_supplier_email":"g@yahoo.com","supplierPhone":"278892","supplierEmail":"g@yahoo.com","vat":"11.00","total":"1111.00","parts":"[{\"partId\":64,\"partDesc\":1,\"piecesPurch\":2,\"pricePerPiece\":\"3.00\",\"priceBulk\":\"0.00\",\"sellingPrice\":\"4.00\"},{\"partId\":65,\"partDesc\":2,\"piecesPurch\":3,\"pricePerPiece\":\"4.00\",\"priceBulk\":\"5.00\",\"sellingPrice\":\"6.00\"},{\"partId\":66,\"partDesc\":3,\"piecesPurch\":4,\"pricePerPiece\":\"4.00\",\"priceBulk\":\"4.00\",\"sellingPrice\":\"4.00\"}]"}
+[2025-03-24 12:39:55] FILES data: {"invoicePhoto":{"name":"","type":"","tmp_name":"","error":4,"size":0}}
+[2025-03-24 23:29:44] === START PROCESSING UPDATE INVOICE ===
+[2025-03-24 23:29:44] POST data: {"invoice_id":"61","InvoiceID":"61","invoiceNr":"18","dateCreated":"2020-11-11","supplier":"marinos","supplierID":"","original_supplier_phone":"278892","original_supplier_email":"g@yahoo.com","supplierPhone":"7878787","supplierEmail":"","vat":"11.00","total":"1111.00","parts":"[{\"partId\":64,\"partDesc\":1,\"piecesPurch\":2,\"pricePerPiece\":\"3.00\",\"priceBulk\":\"0.00\",\"sellingPrice\":\"4.00\"},{\"partId\":65,\"partDesc\":2,\"piecesPurch\":3,\"pricePerPiece\":\"4.00\",\"priceBulk\":\"5.00\",\"sellingPrice\":\"6.00\"},{\"partId\":66,\"partDesc\":3,\"piecesPurch\":4,\"pricePerPiece\":\"4.00\",\"priceBulk\":\"4.00\",\"sellingPrice\":\"4.00\"}]"}
+[2025-03-24 23:29:44] FILES data: []
+[2025-03-24 23:42:08] === START PROCESSING UPDATE INVOICE ===
+[2025-03-24 23:42:08] POST data: {"invoice_id":"62","InvoiceID":"62","invoiceNr":"11","dateCreated":"2024-10-20","supplier":"Jorgos","supplierID":"58","original_supplier_phone":"9898989","original_supplier_email":"","supplierPhone":"9898989","supplierEmail":"","vat":"3.00","total":"3000.00","parts":"[{\"partId\":67,\"partDesc\":\"Air Filter\",\"piecesPurch\":55,\"pricePerPiece\":\"30.00\",\"priceBulk\":0,\"sellingPrice\":\"40.00\"}]"}
+[2025-03-24 23:42:08] FILES data: []
+[2025-03-24 23:42:39] === START PROCESSING UPDATE INVOICE ===
+[2025-03-24 23:42:39] POST data: {"invoice_id":"64","InvoiceID":"64","invoiceNr":"88888","dateCreated":"2025-03-25","supplier":"Jorgos","supplierID":"58","original_supplier_phone":"9898989","original_supplier_email":"","supplierPhone":"","supplierEmail":"","vat":"45.00","total":"100.00","parts":"[{\"partId\":70,\"partDesc\":\"Air Filter\",\"piecesPurch\":76,\"pricePerPiece\":\"99.00\",\"priceBulk\":\"\",\"sellingPrice\":\"9.00\"}]"}
+[2025-03-24 23:42:39] FILES data: []
+[2025-03-24 23:42:52] === START PROCESSING UPDATE INVOICE ===
+[2025-03-24 23:42:52] POST data: {"invoice_id":"64","InvoiceID":"64","invoiceNr":"88888","dateCreated":"2025-03-25","supplier":"Jorgos","supplierID":"58","original_supplier_phone":"","original_supplier_email":"","supplierPhone":"87877877","supplierEmail":"","vat":"45.00","total":"100.00","parts":"[{\"partId\":70,\"partDesc\":\"Air Filter\",\"piecesPurch\":76,\"pricePerPiece\":\"99.00\",\"priceBulk\":\"0.00\",\"sellingPrice\":\"9.00\"}]"}
+[2025-03-24 23:42:52] FILES data: []
+[2025-03-24 23:43:26] === START PROCESSING UPDATE INVOICE ===
+[2025-03-24 23:43:26] POST data: {"invoice_id":"64","InvoiceID":"64","invoiceNr":"88888","dateCreated":"2025-03-25","supplier":"Markos","supplierID":"","original_supplier_phone":"87877877","original_supplier_email":"","supplierPhone":"949494","supplierEmail":"","vat":"1","total":"22222","parts":"[{\"partId\":70,\"partDesc\":\"Air Filter\",\"piecesPurch\":76,\"pricePerPiece\":\"99.00\",\"priceBulk\":\"0.00\",\"sellingPrice\":\"9.00\"}]"}
+[2025-03-24 23:43:26] FILES data: []
+[2025-03-24 23:43:44] === START PROCESSING UPDATE INVOICE ===
+[2025-03-24 23:43:44] POST data: {"invoice_id":"64","InvoiceID":"64","invoiceNr":"88888","dateCreated":"2025-03-25","supplier":"Markos","supplierID":"60","original_supplier_phone":"87877877","original_supplier_email":"","supplierPhone":"949494","supplierEmail":"","vat":"1.00","total":"22222.00","parts":"[{\"partId\":70,\"partDesc\":\"Air Filter\",\"piecesPurch\":76,\"pricePerPiece\":\"99.00\",\"priceBulk\":\"0.00\",\"sellingPrice\":\"9.00\"}]"}
+[2025-03-24 23:43:44] FILES data: []
+[2025-03-24 23:44:12] === START PROCESSING UPDATE INVOICE ===
+[2025-03-24 23:44:12] POST data: {"invoice_id":"61","InvoiceID":"61","invoiceNr":"18","dateCreated":"2020-11-11","supplier":"Jorgos","supplierID":"58","original_supplier_phone":"278892","original_supplier_email":"g@yahoo.com","supplierPhone":"87877877","supplierEmail":"","vat":"11.00","total":"1111.00","parts":"[{\"partId\":64,\"partDesc\":1,\"piecesPurch\":2,\"pricePerPiece\":\"3.00\",\"priceBulk\":\"0.00\",\"sellingPrice\":\"4.00\"},{\"partId\":65,\"partDesc\":2,\"piecesPurch\":3,\"pricePerPiece\":\"4.00\",\"priceBulk\":\"5.00\",\"sellingPrice\":\"6.00\"},{\"partId\":66,\"partDesc\":3,\"piecesPurch\":4,\"pricePerPiece\":\"4.00\",\"priceBulk\":\"4.00\",\"sellingPrice\":\"4.00\"}]"}
+[2025-03-24 23:44:12] FILES data: []
+[2025-03-24 23:44:54] === START PROCESSING UPDATE INVOICE ===
+[2025-03-24 23:44:54] POST data: {"invoice_id":"64","InvoiceID":"64","invoiceNr":"88888","dateCreated":"2025-03-25","supplier":"Jorgos","supplierID":"58","original_supplier_phone":"87877877","original_supplier_email":"","supplierPhone":"888888","supplierEmail":"","vat":"88","total":"8888","parts":"[{\"partId\":70,\"partDesc\":\"Air Filter\",\"piecesPurch\":76,\"pricePerPiece\":\"99.00\",\"priceBulk\":\"0.00\",\"sellingPrice\":\"9.00\"}]"}
+[2025-03-24 23:44:54] FILES data: []
+[2025-03-24 23:45:16] === START PROCESSING UPDATE INVOICE ===
+[2025-03-24 23:45:16] POST data: {"invoice_id":"64","InvoiceID":"64","invoiceNr":"88888","dateCreated":"2025-03-25","supplier":"Jorgos","supplierID":"58","original_supplier_phone":"888888","original_supplier_email":"","supplierPhone":"888888","supplierEmail":"","vat":"88.00","total":"8888.00","parts":"[{\"partId\":70,\"partDesc\":\"Air Filter\",\"piecesPurch\":76,\"pricePerPiece\":\"99.00\",\"priceBulk\":\"0.00\",\"sellingPrice\":\"9.00\"},{\"partId\":\"temp_1742856307411\",\"partDesc\":888,\"piecesPurch\":888,\"pricePerPiece\":888,\"priceBulk\":0,\"sellingPrice\":888}]"}
+[2025-03-24 23:45:16] FILES data: []
+[2025-03-24 23:47:59] === START PROCESSING UPDATE INVOICE ===
+[2025-03-24 23:47:59] POST data: {"invoice_id":"62","InvoiceID":"62","invoiceNr":"11","dateCreated":"2024-10-20","supplier":"Markos","supplierID":"60","original_supplier_phone":"888888","original_supplier_email":"","supplierPhone":"949494","supplierEmail":"","vat":"3.00","total":"3000.00","parts":"[{\"partId\":67,\"partDesc\":\"Air Filter\",\"piecesPurch\":55,\"pricePerPiece\":\"30.00\",\"priceBulk\":\"0.00\",\"sellingPrice\":\"40.00\"}]"}
+[2025-03-24 23:47:59] FILES data: []
+[2025-03-24 23:48:11] === START PROCESSING UPDATE INVOICE ===
+[2025-03-24 23:48:11] POST data: {"invoice_id":"62","InvoiceID":"62","invoiceNr":"11","dateCreated":"2024-10-20","supplier":"Markos","supplierID":"60","original_supplier_phone":"888888","original_supplier_email":"","supplierPhone":"949494","supplierEmail":"","vat":"3.00","total":"3000.00","parts":"[{\"partId\":67,\"partDesc\":\"Air Filter\",\"piecesPurch\":55,\"pricePerPiece\":\"30.00\",\"priceBulk\":\"0.00\",\"sellingPrice\":\"40.00\"}]"}
+[2025-03-24 23:48:11] FILES data: []
+[2025-03-24 23:48:30] === START PROCESSING UPDATE INVOICE ===
+[2025-03-24 23:48:30] POST data: {"invoice_id":"62","InvoiceID":"62","invoiceNr":"11","dateCreated":"2024-10-20","supplier":"marinos","supplierID":"59","original_supplier_phone":"888888","original_supplier_email":"","supplierPhone":"7878787","supplierEmail":"","vat":"3.00","total":"3000.00","parts":"[{\"partId\":67,\"partDesc\":\"Air Filter\",\"piecesPurch\":55,\"pricePerPiece\":\"30.00\",\"priceBulk\":\"0.00\",\"sellingPrice\":\"40.00\"}]"}
+[2025-03-24 23:48:30] FILES data: []
+[2025-03-24 23:51:11] === START PROCESSING UPDATE INVOICE ===
+[2025-03-24 23:51:11] POST data: {"invoice_id":"62","InvoiceID":"62","invoiceNr":"11","dateCreated":"2024-10-20","supplier":"marinos","supplierID":"59","original_supplier_phone":"888888","original_supplier_email":"","supplierPhone":"7878787","supplierEmail":"","vat":"3.00","total":"3000.00","parts":"[{\"partId\":67,\"partDesc\":\"Air Filter\",\"piecesPurch\":55,\"pricePerPiece\":\"30.00\",\"priceBulk\":\"0.00\",\"sellingPrice\":\"40.00\"}]"}
+[2025-03-24 23:51:11] FILES data: []
+[2025-03-24 23:51:21] === START PROCESSING UPDATE INVOICE ===
+[2025-03-24 23:51:21] POST data: {"invoice_id":"62","InvoiceID":"62","invoiceNr":"11","dateCreated":"2024-10-20","supplier":"marinos","supplierID":"59","original_supplier_phone":"7878787","original_supplier_email":"","supplierPhone":"","supplierEmail":"","vat":"3.00","total":"3000.00","parts":"[{\"partId\":67,\"partDesc\":\"Air Filter\",\"piecesPurch\":55,\"pricePerPiece\":\"30.00\",\"priceBulk\":\"0.00\",\"sellingPrice\":\"40.00\"}]"}
+[2025-03-24 23:51:21] FILES data: []
+[2025-03-24 23:54:31] === START PROCESSING UPDATE INVOICE ===
+[2025-03-24 23:54:31] POST data: {"invoice_id":"61","InvoiceID":"61","invoiceNr":"18","dateCreated":"2020-11-11","supplier":"Pampos","supplierID":"57","original_supplier_phone":"278892","original_supplier_email":"g@yahoo.com","supplierPhone":"","supplierEmail":"djne@wjs.com","vat":"11.00","total":"1111.00","parts":"[{\"partId\":64,\"partDesc\":1,\"piecesPurch\":2,\"pricePerPiece\":\"3.00\",\"priceBulk\":\"0.00\",\"sellingPrice\":\"4.00\"},{\"partId\":65,\"partDesc\":2,\"piecesPurch\":3,\"pricePerPiece\":\"4.00\",\"priceBulk\":\"5.00\",\"sellingPrice\":\"6.00\"},{\"partId\":66,\"partDesc\":3,\"piecesPurch\":4,\"pricePerPiece\":\"4.00\",\"priceBulk\":\"4.00\",\"sellingPrice\":\"4.00\"}]"}
+[2025-03-24 23:54:31] FILES data: []
+[2025-03-24 23:54:44] === START PROCESSING UPDATE INVOICE ===
+[2025-03-24 23:54:44] POST data: {"invoice_id":"62","InvoiceID":"62","invoiceNr":"11","dateCreated":"2024-10-20","supplier":"marinos","supplierID":"59","original_supplier_phone":"","original_supplier_email":"","supplierPhone":"232344","supplierEmail":"","vat":"3.00","total":"3000.00","parts":"[{\"partId\":67,\"partDesc\":\"Air Filter\",\"piecesPurch\":55,\"pricePerPiece\":\"30.00\",\"priceBulk\":\"0.00\",\"sellingPrice\":\"40.00\"}]"}
+[2025-03-24 23:54:44] FILES data: []
+[2025-03-25 00:03:37] === START PROCESSING UPDATE INVOICE ===
+[2025-03-25 00:03:37] POST data: {"invoice_id":"63","InvoiceID":"63","invoiceNr":"12","dateCreated":"2003-12-10","supplier":"Pampos","supplierID":"57","original_supplier_phone":"","original_supplier_email":"djne@wjs.com","supplierPhone":"","supplierEmail":"djne@wjs.com","vat":"4.00","total":"800.00","parts":"[{\"partId\":68,\"partDesc\":\"Air Filter\",\"piecesPurch\":7,\"pricePerPiece\":\"200.00\",\"priceBulk\":\"\",\"sellingPrice\":\"300.00\"},{\"partId\":69,\"partDesc\":\"Tires\",\"piecesPurch\":2,\"pricePerPiece\":\"300.00\",\"priceBulk\":\"\",\"sellingPrice\":\"400.00\"}]"}
+[2025-03-25 00:03:37] FILES data: []
+[2025-03-25 00:07:39] === START PROCESSING UPDATE INVOICE ===
+[2025-03-25 00:07:39] POST data: {"invoice_id":"63","InvoiceID":"63","invoiceNr":"12","dateCreated":"2003-12-10","supplier":"Pampos","supplierID":"57","original_supplier_phone":"","original_supplier_email":"djne@wjs.com","supplierPhone":"","supplierEmail":"djne@wjs.com","vat":"4.00","total":"800.00","parts":"[{\"partId\":68,\"partDesc\":\"Air Filter\",\"piecesPurch\":7,\"pricePerPiece\":\"200.00\",\"priceBulk\":\"0.00\",\"sellingPrice\":\"300.00\"},{\"partId\":69,\"partDesc\":\"Tires\",\"piecesPurch\":2,\"pricePerPiece\":\"300.00\",\"priceBulk\":\"0.00\",\"sellingPrice\":\"400.00\"}]"}
+[2025-03-25 00:07:39] FILES data: []
+[2025-03-25 00:12:45] === START PROCESSING UPDATE INVOICE ===
+[2025-03-25 00:12:45] POST data: {"invoice_id":"61","InvoiceID":"61","invoiceNr":"18","dateCreated":"2020-11-11","supplier":"Pampos","supplierID":"57","original_supplier_phone":"","original_supplier_email":"djne@wjs.com","supplierPhone":"","supplierEmail":"djne@wjs.com","vat":"11.00","total":"1111.00","parts":"[{\"partId\":64,\"partDesc\":1,\"piecesPurch\":2,\"pricePerPiece\":\"3.00\",\"priceBulk\":\"0.00\",\"sellingPrice\":\"4.00\"},{\"partId\":65,\"partDesc\":2,\"piecesPurch\":3,\"pricePerPiece\":\"4.00\",\"priceBulk\":\"5.00\",\"sellingPrice\":\"6.00\"},{\"partId\":66,\"partDesc\":34,\"piecesPurch\":4,\"pricePerPiece\":\"4.00\",\"priceBulk\":\"4.00\",\"sellingPrice\":\"4.00\"}]"}
+[2025-03-25 00:12:45] FILES data: []
+[2025-03-25 00:14:33] === START PROCESSING UPDATE INVOICE ===
+[2025-03-25 00:14:33] POST data: {"invoice_id":"61","InvoiceID":"61","invoiceNr":"18","dateCreated":"2020-11-11","supplier":"Pampos","supplierID":"57","original_supplier_phone":"","original_supplier_email":"djne@wjs.com","supplierPhone":"","supplierEmail":"djne@wjs.com","vat":"11.00","total":"1111.00","parts":"[{\"partId\":64,\"partDesc\":1,\"piecesPurch\":2,\"pricePerPiece\":\"3.00\",\"priceBulk\":\"0.00\",\"sellingPrice\":\"4.00\"},{\"partId\":65,\"partDesc\":2,\"piecesPurch\":3,\"pricePerPiece\":\"4.00\",\"priceBulk\":\"5.00\",\"sellingPrice\":\"6.00\"},{\"partId\":66,\"partDesc\":34,\"piecesPurch\":4,\"pricePerPiece\":\"4.00\",\"priceBulk\":\"4.00\",\"sellingPrice\":\"4.00\"}]"}
+[2025-03-25 00:14:33] FILES data: []
+[2025-03-25 00:22:06] === START PROCESSING UPDATE INVOICE ===
+[2025-03-25 00:22:06] POST data: {"invoice_id":"63","InvoiceID":"63","invoiceNr":"12","dateCreated":"2003-12-10","supplier":"Pampos","supplierID":"57","original_supplier_phone":"","original_supplier_email":"djne@wjs.com","supplierPhone":"","supplierEmail":"djne@wjs.com","vat":"4.00","total":"800.00","parts":"[{\"partId\":68,\"partDesc\":\"Air Filter\",\"piecesPurch\":7,\"pricePerPiece\":\"200.00\",\"priceBulk\":\"0.00\",\"sellingPrice\":\"300.00\"},{\"partId\":69,\"partDesc\":\"Tires\",\"piecesPurch\":20,\"pricePerPiece\":99,\"priceBulk\":0,\"sellingPrice\":\"400.00\"}]"}
+[2025-03-25 00:22:06] FILES data: []
+[2025-03-25 20:06:53] === START PROCESSING UPDATE INVOICE ===
+[2025-03-25 20:06:53] POST data: {"invoice_id":"2","InvoiceID":"2","invoiceNr":"2","dateCreated":"2025-03-27","supplier":"Pampos xaralampou","supplierID":"2","original_supplier_phone":"66526356526","original_supplier_email":"","supplierPhone":"66526356526","supplierEmail":"","vat":"2.00","total":"400.00","parts":"[{\"partId\":3,\"partDesc\":2,\"piecesPurch\":2,\"pricePerPiece\":\"2.00\",\"priceBulk\":\"\",\"sellingPrice\":\"2.00\"},{\"partId\":4,\"partDesc\":\"Air Filter\",\"piecesPurch\":3,\"pricePerPiece\":\"4.00\",\"priceBulk\":\"\",\"sellingPrice\":\"5.00\"}]"}
+[2025-03-25 20:06:53] FILES data: []
+[2025-03-25 20:09:25] === START PROCESSING UPDATE INVOICE ===
+[2025-03-25 20:09:25] POST data: {"invoice_id":"2","InvoiceID":"2","invoiceNr":"2","dateCreated":"2025-03-27","supplier":"Pampos xaralampou","supplierID":"2","original_supplier_phone":"66526356526","original_supplier_email":"","supplierPhone":"66526356526","supplierEmail":"","vat":"2.00","total":"400.00","parts":"[{\"partId\":3,\"partDesc\":2,\"piecesPurch\":2,\"pricePerPiece\":\"2.00\",\"priceBulk\":\"0.00\",\"sellingPrice\":\"2.00\"},{\"partId\":4,\"partDesc\":\"Air Filter\",\"piecesPurch\":3,\"pricePerPiece\":\"4.00\",\"priceBulk\":\"0.00\",\"sellingPrice\":\"5.00\"}]"}
+[2025-03-25 20:09:25] FILES data: []
+[2025-03-25 20:09:47] === START PROCESSING UPDATE INVOICE ===
+[2025-03-25 20:09:47] POST data: {"invoice_id":"2","InvoiceID":"2","invoiceNr":"2","dateCreated":"2025-03-28","supplier":"Pampos xaralampou","supplierID":"2","original_supplier_phone":"66526356526","original_supplier_email":"","supplierPhone":"66526356526","supplierEmail":"","vat":"2.00","total":"400.00","parts":"[{\"partId\":3,\"partDesc\":2,\"piecesPurch\":2,\"pricePerPiece\":\"2.00\",\"priceBulk\":\"0.00\",\"sellingPrice\":\"2.00\"},{\"partId\":4,\"partDesc\":\"Air Filter\",\"piecesPurch\":3,\"pricePerPiece\":\"4.00\",\"priceBulk\":\"0.00\",\"sellingPrice\":\"5.00\"}]"}
+[2025-03-25 20:09:47] FILES data: []
+[2025-03-25 20:11:43] === START PROCESSING UPDATE INVOICE ===
+[2025-03-25 20:11:43] POST data: {"invoice_id":"2","InvoiceID":"2","invoiceNr":"2","dateCreated":"2025-03-27","supplier":"Pampos xaralampou","supplierID":"2","original_supplier_phone":"66526356526","original_supplier_email":"","supplierPhone":"66526356526","supplierEmail":"","vat":"2.00","total":"400.00","parts":"[{\"partId\":3,\"partDesc\":2,\"piecesPurch\":2,\"pricePerPiece\":\"2.00\",\"priceBulk\":\"0.00\",\"sellingPrice\":\"2.00\"},{\"partId\":4,\"partDesc\":\"Air Filter\",\"piecesPurch\":3,\"pricePerPiece\":\"4.00\",\"priceBulk\":\"0.00\",\"sellingPrice\":\"5.00\"}]"}
+[2025-03-25 20:11:43] FILES data: []
+[2025-03-25 20:39:41] === START PROCESSING UPDATE INVOICE ===
+[2025-03-25 20:39:41] POST data: {"invoice_id":"2","InvoiceID":"2","invoiceNr":"2","dateCreated":"2025-03-27","supplier":"Pampos xaralampou","supplierID":"2","original_supplier_phone":"66526356526","original_supplier_email":"","supplierPhone":"66526356526","supplierEmail":"","vat":"2.00","total":"400.00","parts":"[{\"partId\":3,\"partDesc\":2,\"piecesPurch\":2,\"pricePerPiece\":\"2.00\",\"priceBulk\":\"0.00\",\"sellingPrice\":\"2.00\"},{\"partId\":4,\"partDesc\":\"Air Filter\",\"piecesPurch\":3,\"pricePerPiece\":\"4.00\",\"priceBulk\":\"0.00\",\"sellingPrice\":\"5.00\"},{\"partId\":\"temp_1742931554585\",\"partDesc\":4,\"piecesPurch\":4,\"pricePerPiece\":3,\"priceBulk\":0,\"sellingPrice\":5}]"}
+[2025-03-25 20:39:41] FILES data: []
+[2025-03-25 20:45:09] === START PROCESSING UPDATE INVOICE ===
+[2025-03-25 20:45:09] POST data: {"invoice_id":"2","InvoiceID":"2","invoiceNr":"2","dateCreated":"2025-03-27","supplier":"Pampos xaralampou","supplierID":"2","original_supplier_phone":"66526356526","original_supplier_email":"","supplierPhone":"66526356526","supplierEmail":"","vat":"2.00","total":"400.00"}
+[2025-03-25 20:45:09] FILES data: []
+[2025-03-25 20:45:17] === START PROCESSING UPDATE INVOICE ===
+[2025-03-25 20:45:17] POST data: {"invoice_id":"2","InvoiceID":"2","invoiceNr":"2","dateCreated":"2025-03-27","supplier":"Pampos xaralampou","supplierID":"2","original_supplier_phone":"66526356526","original_supplier_email":"","supplierPhone":"66526356526","supplierEmail":"","vat":"2.00","total":"400.00"}
+[2025-03-25 20:45:17] FILES data: []
+[2025-03-25 20:45:32] === START PROCESSING UPDATE INVOICE ===
+[2025-03-25 20:45:32] POST data: {"invoice_id":"2","InvoiceID":"2","invoiceNr":"2","dateCreated":"2025-03-27","supplier":"Pampos xaralampou","supplierID":"2","original_supplier_phone":"66526356526","original_supplier_email":"","supplierPhone":"66526356526","supplierEmail":"","vat":"2.00","total":"400.00"}
+[2025-03-25 20:45:32] FILES data: []
+[2025-03-25 20:45:38] === START PROCESSING UPDATE INVOICE ===
+[2025-03-25 20:45:38] POST data: {"invoice_id":"2","InvoiceID":"2","invoiceNr":"2","dateCreated":"2025-03-27","supplier":"Pampos xaralampou","supplierID":"2","original_supplier_phone":"66526356526","original_supplier_email":"","supplierPhone":"66526356526","supplierEmail":"","vat":"2.00","total":"400.00","parts":"[{\"partId\":3,\"partDesc\":2,\"piecesPurch\":2,\"pricePerPiece\":\"2.00\",\"priceBulk\":\"0.00\",\"sellingPrice\":\"2.00\"},{\"partId\":6,\"partDesc\":4,\"piecesPurch\":4,\"pricePerPiece\":\"3.00\",\"priceBulk\":\"0.00\",\"sellingPrice\":\"5.00\"},{\"partId\":4,\"partDesc\":\"Air Filter\",\"piecesPurch\":3,\"pricePerPiece\":\"4.00\",\"priceBulk\":\"0.00\",\"sellingPrice\":\"5.00\"}]"}
+[2025-03-25 20:45:38] FILES data: []
+[2025-03-25 20:49:47] === START PROCESSING UPDATE INVOICE ===
+[2025-03-25 20:49:47] POST data: {"invoice_id":"2","InvoiceID":"2","invoiceNr":"2","dateCreated":"2025-03-27","supplier":"Pampos xaralampou","supplierID":"2","original_supplier_phone":"66526356526","original_supplier_email":"","supplierPhone":"66526356526","supplierEmail":"","vat":"2.00","total":"400.00","parts":"[{\"partId\":3,\"partDesc\":2,\"piecesPurch\":2,\"pricePerPiece\":\"2.00\",\"priceBulk\":\"0.00\",\"sellingPrice\":\"2.00\"},{\"partId\":6,\"partDesc\":4,\"piecesPurch\":4,\"pricePerPiece\":\"3.00\",\"priceBulk\":\"0.00\",\"sellingPrice\":\"5.00\"},{\"partId\":4,\"partDesc\":\"Air Filter\",\"piecesPurch\":3,\"pricePerPiece\":\"4.00\",\"priceBulk\":\"0.00\",\"sellingPrice\":\"5.00\"}]"}
+[2025-03-25 20:49:47] FILES data: []
+[2025-03-25 21:06:12] === START PROCESSING UPDATE INVOICE ===
+[2025-03-25 21:06:12] POST data: {"invoice_id":"1","InvoiceID":"1","invoiceNr":"1","dateCreated":"2025-03-25","supplier":"Jorgos Xidias","supplierID":"1","original_supplier_phone":"9019919","original_supplier_email":"","supplierPhone":"9019919","supplierEmail":"","vat":"2.00","total":"2000.00"}
+[2025-03-25 21:06:12] FILES data: []
+[2025-03-25 21:15:00] === START PROCESSING UPDATE INVOICE ===
+[2025-03-25 21:15:00] POST data: {"invoice_id":"2","InvoiceID":"2","invoiceNr":"2","dateCreated":"2025-03-27","supplier":"Pampos xaralampou","supplierID":"2","original_supplier_phone":"66526356526","original_supplier_email":"","supplierPhone":"66526356526","supplierEmail":"","vat":"2.00","total":"400.00","parts":"[{\"partId\":3,\"partDesc\":2,\"piecesPurch\":2,\"pricePerPiece\":\"2.00\",\"priceBulk\":\"0.00\",\"sellingPrice\":\"2.00\"},{\"partId\":6,\"partDesc\":4,\"piecesPurch\":4,\"pricePerPiece\":\"3.00\",\"priceBulk\":\"0.00\",\"sellingPrice\":\"5.00\"},{\"partId\":4,\"partDesc\":\"Air Filter\",\"piecesPurch\":3,\"pricePerPiece\":\"4.00\",\"priceBulk\":\"0.00\",\"sellingPrice\":\"5.00\"}]"}
+[2025-03-25 21:15:00] FILES data: []
+[2025-03-25 21:17:42] === START PROCESSING UPDATE INVOICE ===
+[2025-03-25 21:17:42] POST data: {"invoice_id":"2","InvoiceID":"2","invoiceNr":"2","dateCreated":"2025-03-27","supplier":"Pampos xaralampou","supplierID":"2","original_supplier_phone":"66526356526","original_supplier_email":"","supplierPhone":"66526356526","supplierEmail":"","vat":"2.00","total":"400.00","parts":"[{\"partId\":3,\"partDesc\":2,\"piecesPurch\":2,\"pricePerPiece\":\"2.00\",\"priceBulk\":\"0.00\",\"sellingPrice\":\"2.00\"},{\"partId\":6,\"partDesc\":4,\"piecesPurch\":4,\"pricePerPiece\":\"3.00\",\"priceBulk\":\"0.00\",\"sellingPrice\":\"5.00\"},{\"partId\":4,\"partDesc\":\"Air Filter\",\"piecesPurch\":3,\"pricePerPiece\":\"4.00\",\"priceBulk\":\"0.00\",\"sellingPrice\":\"5.00\"}]"}
+[2025-03-25 21:17:42] FILES data: []
+[2025-03-25 21:18:03] === START PROCESSING UPDATE INVOICE ===
+[2025-03-25 21:18:03] POST data: {"invoice_id":"2","InvoiceID":"2","invoiceNr":"2","dateCreated":"2025-03-27","supplier":"Pampos xaralampou","supplierID":"2","original_supplier_phone":"66526356526","original_supplier_email":"","supplierPhone":"66526356526","supplierEmail":"","vat":"2.00","total":"400.00","parts":"[{\"partId\":6,\"partDesc\":4,\"piecesPurch\":4,\"pricePerPiece\":\"3.00\",\"priceBulk\":\"0.00\",\"sellingPrice\":\"5.00\"}]"}
+[2025-03-25 21:18:03] FILES data: []
+[2025-03-25 21:55:01] === START PROCESSING UPDATE INVOICE ===
+[2025-03-25 21:55:01] POST data: {"invoice_id":"6","InvoiceID":"6","invoiceNr":"3","dateCreated":"2025-03-29","supplier":"Jorgos Xidias","supplierID":"1","original_supplier_phone":"9019919","original_supplier_email":"djne@wjs.com","supplierPhone":"9019919","supplierEmail":"djne@wjs.com","vat":"3.00","total":"800.00","parts":"[{\"partId\":10,\"partDesc\":\"lights\",\"piecesPurch\":3,\"pricePerPiece\":\"400.00\",\"priceBulk\":\"\",\"sellingPrice\":\"500.00\"}]"}
+[2025-03-25 21:55:01] FILES data: []
+[2025-03-25 21:58:15] === START PROCESSING UPDATE INVOICE ===
+[2025-03-25 21:58:15] POST data: {"invoice_id":"4","InvoiceID":"4","invoiceNr":"1","dateCreated":"2025-04-01","supplier":"Pampos xaralampou","supplierID":"2","original_supplier_phone":"66526356526","original_supplier_email":"","supplierPhone":"66526356526","supplierEmail":"","vat":"3.00","total":"300.00","parts":"[{\"partId\":7,\"partDesc\":\"Air Filter\",\"piecesPurch\":30,\"pricePerPiece\":\"400.00\",\"priceBulk\":\"\",\"sellingPrice\":\"500.00\"}]"}
+[2025-03-25 21:58:15] FILES data: []

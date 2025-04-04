@@ -1,0 +1,150 @@
+/* CODE CREATED BY JORGOS XIDIAS AND TEAM
+  AI HAS BEEN USED TO BEAUTIFY AND ADD COMMENTS*/
+
+/* Print Styles - These styles are only applied when printing */
+@media print {
+    /* Reset all elements to be visible with white background and black text */
+    * {
+        visibility: visible !important;
+        background: white !important;
+        color: black !important;
+    }
+    
+    /* Hide elements that shouldn't appear in the printed version */
+    .back-arrow, 
+    .print-btn,
+    .invoice-actions,
+    button,
+    .alert {
+        display: none !important;
+    }
+    
+    /* Make the form container take up the full page width when printing */
+    .form-container {
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 20px !important;
+        box-shadow: none !important;
+    }
+
+    /* Ensure the invoice form is visible when printing */
+    #invoiceForm {
+        display: block !important;
+        visibility: visible !important;
+    }
+    
+    /* Style form groups to align labels and inputs nicely */
+    .form-group {
+        margin-bottom: 10px !important;
+        display: flex !important;
+        align-items: center !important;
+    }
+    
+    /* Make form labels bold and properly spaced */
+    .form-group label {
+        width: 200px !important;
+        font-weight: bold !important;
+        margin-right: 15px !important;
+    }
+    
+    /* Remove borders and spacing from form inputs */
+    .form-control {
+        border: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        background: none !important;
+        color: black !important;
+    }
+
+    /* Style section headers with bottom border */
+    .section-header {
+        border-bottom: 1px solid black !important;
+        padding: 10px 0 !important;
+        margin: 20px 0 10px 0 !important;
+        background: none !important;
+    }
+
+    /* Hide icons in section headers when printing */
+    .section-header i {
+        display: none !important;
+    }
+
+    /* Make section header text bold */
+    .section-header span {
+        font-weight: bold !important;
+        font-size: 16px !important;
+    }
+
+    /* Add spacing above parts list */
+    .parts-list {
+        margin-top: 20px !important;
+    }
+
+    /* Style individual part items */
+    .part-item {
+        padding: 10px 0 !important;
+        border-bottom: 1px solid #ddd !important;
+        margin-bottom: 10px !important;
+    }
+
+    /* Layout for part header (contains part name and quantity) */
+    .part-header {
+        display: flex !important;
+        justify-content: space-between !important;
+        margin-bottom: 5px !important;
+    }
+
+    /* Make part description text bold */
+    .part-desc {
+        font-weight: bold !important;
+    }
+
+    /* Remove background from pieces count */
+    .part-pieces {
+        background: none !important;
+    }
+
+    /* Layout for part pricing information */
+    .part-pricing {
+        display: flex !important;
+        gap: 20px !important;
+    }
+
+    /* Style price items (unit price, bulk price, etc) */
+    .price-item {
+        color: black !important;
+    }
+
+    /* Hide icons in price items when printing */
+    .price-item i {
+        display: none !important;
+    }
+
+    /* Style photo preview section */
+    #photoPreview {
+        margin: 20px 0 !important;
+        text-align: center !important;
+    }
+
+    /* Make preview images fit within page width */
+    #previewImage {
+        max-width: 100% !important;
+        height: auto !important;
+    }
+
+    /* Ensure all content sections are visible */
+    .supplier-section,
+    .parts-section,
+    .part-info,
+    .part-pricing {
+        display: block !important;
+        visibility: visible !important;
+    }
+
+    /* Style page title */
+    h2 {
+        font-size: 24px !important;
+        margin-bottom: 20px !important;
+        text-align: left !important;
+    }
+} 
