@@ -26,7 +26,7 @@ switch ($action) {
         if ($user) {
             $_SESSION['user'] = $user;
             $_SESSION['message'] = 'Login successful!';
-            header('Location: dashboard.php');                  //CHANGE THE FILE NAME TO HOMEPAGE
+            header('Location: dashboard.php');
             exit;
         } else {
             $_SESSION['error'] = 'Invalid username/email or password';
@@ -42,25 +42,31 @@ switch ($action) {
         exit;
         break;
 
-    /*case 'forgot-password':
-        $email = $_POST['email'] ?? '';
+    case 'forgot-password':
+        $identifier = $_POST['identifier'] ?? '';
+        $questionId = $_POST['security_question_id'] ?? '';
+        $answer = $_POST['security_answer'] ?? '';
         
-        if (empty($email)) {
-            $_SESSION['error'] = 'Please enter your email address';
+        if (empty($identifier) || empty($questionId) || empty($answer)) {
+            $_SESSION['error'] = 'Please fill in all fields';
             header('Location: index.php?page=forgot-password');
             exit;
         }
 
-        $token = $model->createResetToken($email);
+        $user = $model->validateSecurityAnswer($identifier, $questionId, $answer);
         
-        if ($token) {
-            
-            $_SESSION['message'] = 'Password reset link: ' . 
-                'http://' . $_SERVER['HTTP_HOST'] . 
-                dirname($_SERVER['PHP_SELF']) . 
-                '/index.php?page=reset-password&token=' . $token;
+        if ($user) {
+            $token = $model->createResetToken($identifier);
+            if ($token) {
+                $_SESSION['message'] = 'Password reset link: ' . 
+                    'http://' . $_SERVER['HTTP_HOST'] . 
+                    dirname($_SERVER['PHP_SELF']) . 
+                    '/index.php?page=reset-password&token=' . $token;
+            } else {
+                $_SESSION['error'] = 'Failed to create reset token. Please try again.';
+            }
         } else {
-            $_SESSION['message'] = 'If an account exists with this email, you will receive password reset instructions.';
+            $_SESSION['error'] = 'Invalid security question answer.';
         }
         
         header('Location: index.php?page=forgot-password');
@@ -108,7 +114,43 @@ switch ($action) {
             header('Location: index.php?page=forgot-password');
             exit;
         }
-        break;*/
+        break;
+
+    case 'register':
+        $username = $_POST['username'] ?? '';
+        $email = $_POST['email'] ?? '';
+        $password = $_POST['password'] ?? '';
+        $confirmPassword = $_POST['confirm_password'] ?? '';
+        $questionId = $_POST['security_question_id'] ?? '';
+        $answer = $_POST['security_answer'] ?? '';
+
+        if (empty($username) || empty($email) || empty($password) || empty($confirmPassword) || empty($questionId) || empty($answer)) {
+            $_SESSION['error'] = 'Please fill in all fields';
+            header('Location: index.php?page=register');
+            exit;
+        }
+
+        if ($password !== $confirmPassword) {
+            $_SESSION['error'] = 'Passwords do not match';
+            header('Location: index.php?page=register');
+            exit;
+        }
+
+        if (strlen($password) < 8) {
+            $_SESSION['error'] = 'Password must be at least 8 characters long';
+            header('Location: index.php?page=register');
+            exit;
+        }
+
+        if ($model->registerUser($username, $email, $password, $questionId, $answer)) {
+            $_SESSION['message'] = 'Registration successful! You can now login.';
+            header('Location: index.php');
+        } else {
+            $_SESSION['error'] = 'Username or email already exists';
+            header('Location: index.php?page=register');
+        }
+        exit;
+        break;
 
     default:
         header('Location: index.php');
