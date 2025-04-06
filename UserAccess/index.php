@@ -45,6 +45,14 @@ switch ($page) {
         $view->showResetPasswordForm($token);
         break;
 
+    case 'register':
+        if ($isLoggedIn) {
+            header('Location: index.php?page=dashboard');
+            exit;
+        }
+        $view->showRegistrationForm();
+        break;
+
     default:
         if ($isLoggedIn) {
             header('Location: index.php?page=dashboard');
