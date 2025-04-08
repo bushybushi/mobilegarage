@@ -214,23 +214,76 @@ $ExpensesPer = number_format((($ExpensesCWeek - $ExpensesLWeek)/$ExpensesLWeek) 
 
     </div>
 </div>
+<?php 
+$sql = "SELECT 
+    DATE_FORMAT(data.MonthDate, '%b') AS Month,
+    COALESCE(i.TotalIncome, 0) AS Income,
+    COALESCE(e.TotalExpenses, 0) AS Expenses
+FROM (
+    SELECT DISTINCT DATE_FORMAT(j.DateFinish, '%Y-%m-01') AS MonthDate
+    FROM JobCards j
+    WHERE j.DateFinish >= DATE_FORMAT(NOW(), '%Y-01-01')
+    
+    UNION
+    
+    SELECT DISTINCT DATE_FORMAT(p.DateCreated, '%Y-%m-01') AS MonthDate
+    FROM Parts p
+    WHERE p.DateCreated >= DATE_FORMAT(NOW(), '%Y-01-01')
+) AS data
 
+LEFT JOIN (
+    SELECT 
+        DATE_FORMAT(j.DateFinish, '%Y-%m-01') AS MonthDate,
+        SUM(i.Total) AS TotalIncome
+    FROM JobCards j
+    LEFT JOIN Invoicejob ij ON j.JobID = ij.JobID
+    LEFT JOIN Invoices i ON ij.InvoiceID = i.InvoiceID
+    WHERE j.DateFinish >= DATE_FORMAT(NOW(), '%Y-01-01')
+    GROUP BY MonthDate
+) AS i ON i.MonthDate = data.MonthDate
+
+LEFT JOIN (
+    SELECT 
+        DATE_FORMAT(p.DateCreated, '%Y-%m-01') AS MonthDate,
+        SUM(p.PiecesPurch * p.PricePerPiece) AS TotalExpenses
+    FROM Parts p
+    WHERE p.DateCreated >= DATE_FORMAT(NOW(), '%Y-01-01')
+    GROUP BY MonthDate
+) AS e ON e.MonthDate = data.MonthDate
+
+ORDER BY data.MonthDate ASC;";
+
+$stmt = $pdo->prepare($sql);
+$stmt->execute();
+$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+$months = [];
+$incomes = [];
+$expenses = [];
+
+foreach ($result as $row) {
+    $months[] = $row['Month'];
+    $incomes[] = (float) $row['Income'];
+	$expenses[] = $row['Expenses'];
+}
+
+?>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
   const ctx = document.getElementById('incomeChart');
   new Chart(ctx, {
     type: 'bar',
     data: {
-      labels: ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'],
+      labels: <?php echo json_encode($months); ?>,
       datasets: [
         {
           label: 'Income',
-          data: [15, 35, 25, 30, 20, 18, 35, 27, 33, 22, 30, 19],
+          data: <?php echo json_encode($incomes); ?>,
           backgroundColor: '#3366ff'
         },
         {
           label: 'Expenses',
-          data: [12, 20, 18, 22, 15, 14, 18, 16, 20, 15, 19, 13],
+          data: <?php echo json_encode($expenses); ?>,
           backgroundColor: '#ff9966'
         }
       ]
