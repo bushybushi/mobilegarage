@@ -159,7 +159,7 @@ foreach ($result as $row) {
         background-color: #0056b3; /* Darker blue on hover */
     }
 
-    #printButton {
+    #PartsprintButton {
         background-color: #28a745; /* Bootstrap success green */
         color: white;
         border: none;
@@ -168,10 +168,36 @@ foreach ($result as $row) {
         cursor: pointer;
     }
 
-    #printButton:hover {
+    #PartsprintButton:hover {
         background-color: #218838; /* Darker green on hover */
     }
+    
+    /* Back arrow styles */
+    .back-arrow {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        font-size: 24px;
+        color: black;
+        cursor: pointer;
+        z-index: 1000;
+        background-color: rgba(255, 255, 255, 0.7);
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        transition: all 0.3s ease;
+    }
+    
+    .back-arrow:hover {
+        background-color: rgba(255, 255, 255, 0.9);
+        transform: scale(1.1);
+    }
 
+    /* Print styles */
     @media print {
         body * {
             visibility: hidden;
@@ -223,31 +249,6 @@ foreach ($result as $row) {
         height: 0;
         border: none;
     }
-    
-    /* Back arrow styles */
-    .back-arrow {
-        position: fixed;
-        top: 20px;
-        left: 20px;
-        font-size: 24px;
-        color: black;
-        cursor: pointer;
-        z-index: 1000;
-        background-color: rgba(255, 255, 255, 0.7);
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-        transition: all 0.3s ease;
-    }
-    
-    .back-arrow:hover {
-        background-color: rgba(255, 255, 255, 0.9);
-        transform: scale(1.1);
-    }
 </style>
 
 <!DOCTYPE html>
@@ -290,7 +291,7 @@ foreach ($result as $row) {
                         <input type="date" id="endDate" name="endDate" class="form-control" value="<?php echo $endDate; ?>" required>
                     </div>
                     <button type="button" id="filterButton" class="btn">Filter</button>
-                    <button type="button" id="printButton" class="btn ml-2">Print</button> <!-- Print button -->
+                    <button type="button" id="PartsprintButton" class="btn ml-2">Print</button>
                 </div>
             </div>
 
@@ -348,9 +349,9 @@ foreach ($result as $row) {
     });
 
     // Print functionality
-    document.getElementById('printButton').addEventListener('click', function() {
+    document.getElementById('PartsprintButton').addEventListener('click', function() {
         const tableRows = document.querySelectorAll('#PartsTable tbody tr');
-        let totalCost = 0;
+        let totalCosts = 0;
         
         // Create the print content
         let printContent = `
@@ -387,7 +388,7 @@ foreach ($result as $row) {
                     th {
                         background-color: #f8f9fa;
                     }
-                    .total-profit {
+                    .total-costs {
                         text-align: right;
                         font-weight: bold;
                         margin-top: 20px;
@@ -410,7 +411,7 @@ foreach ($result as $row) {
                         <tr>
                             <th>Part</th>
                             <th>Supplier</th>
-                            <th>DateCreated</th>
+                            <th>Date Created</th>
                             <th>Expenses</th>
                         </tr>
                     </thead>
@@ -423,20 +424,22 @@ foreach ($result as $row) {
             // Skip the first cell (icon) and add the rest
             for (let i = 1; i < cells.length; i++) {
                 printContent += `<td>${cells[i].textContent}</td>`;
+                
+                // Add to total costs if it's the expenses column
+                if (i === 4) {
+                    const expense = parseFloat(cells[i].textContent.replace(/[^0-9.-]+/g, '')) || 0;
+                    totalCosts += expense;
+                }
             }
             printContent += '</tr>';
-            
-            // Add to total profit
-            const expenses = parseFloat(cells[4].textContent) || 0;
-            totalCost += expenses;
         });
 
         // Complete the HTML content
         printContent += `
                     </tbody>
                 </table>
-                <div class="total-profit">
-                    Total Costs: ${totalCost.toFixed(2)}
+                <div class="total-costs">
+                    Total Costs: ${totalCosts.toFixed(2)}
                 </div>
             </body>
             </html>`;
