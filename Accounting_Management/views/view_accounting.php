@@ -118,8 +118,9 @@ $stmt->bindParam(':endDate', $endDate);
 $stmt->execute();
 $ExpensesLWeek = $stmt->fetchColumn() ?? 0;
 
-$IncomePer = number_format((($IncomeCWeek - $IncomeLWeek)/$IncomeLWeek) * 100,2);
-$ExpensesPer = number_format((($ExpensesCWeek - $ExpensesLWeek)/$ExpensesLWeek) * 100,2);
+// Calculate percentage changes with checks for division by zero
+$IncomePer = $IncomeLWeek != 0 ? number_format((($IncomeCWeek - $IncomeLWeek)/$IncomeLWeek) * 100, 2) : ($IncomeCWeek > 0 ? 100 : 0);
+$ExpensesPer = $ExpensesLWeek != 0 ? number_format((($ExpensesCWeek - $ExpensesLWeek)/$ExpensesLWeek) * 100, 2) : ($ExpensesCWeek > 0 ? 100 : 0);
 ?>
 
 
@@ -205,10 +206,10 @@ $ExpensesPer = number_format((($ExpensesCWeek - $ExpensesLWeek)/$ExpensesLWeek) 
       <div class="card-custom">
         <canvas id="incomeChart"></canvas>
         <div class="d-flex justify-content-between mt-4">
-          <button class="btn btn-outline-primary btn-custom">Job Cards - Details</button>
-          <button class="btn btn-outline-primary btn-custom">Parts - Details</button>
-          <button class="btn btn-outline-primary btn-custom">Extra Expenses</button>
-          <button class="btn btn-outline-primary btn-custom">Print Finances</button>
+          <button class="btn btn-outline-primary btn-custom" onclick="window.location.href='view_job_cards.php'">Job Cards - Details</button>
+          <button class="btn btn-outline-primary btn-custom" onclick="window.location.href='view_parts.php'">Parts - Details</button>
+          <button class="btn btn-outline-primary btn-custom" onclick="window.location.href='extra_expenses_main.php'">Extra Expenses</button>
+          <button class="btn btn-outline-primary btn-custom" onclick="printFinances()">Print Finances</button>
         </div>
       </div>
 
@@ -264,7 +265,7 @@ $expenses = [];
 foreach ($result as $row) {
     $months[] = $row['Month'];
     $incomes[] = (float) $row['Income'];
-	$expenses[] = $row['Expenses'];
+	  $expenses[] = $row['Expenses'];
 }
 
 ?>
@@ -297,6 +298,26 @@ foreach ($result as $row) {
       }
     }
   });
+
+  // Function to open print_finances.php in an iframe and trigger print dialog
+  function printFinances() {
+    // Create a hidden iframe
+    const iframe = document.createElement('iframe');
+    iframe.style.display = 'none';
+    iframe.src = 'print_finances.php';
+    document.body.appendChild(iframe);
+    
+    // Wait for iframe to load before triggering print
+    iframe.onload = function() {
+      // Trigger print dialog
+      iframe.contentWindow.print();
+      
+      // Remove iframe after printing (or if user cancels)
+      setTimeout(function() {
+        document.body.removeChild(iframe);
+      }, 1000);
+    };
+  }
 </script>
 </body>
 </html>

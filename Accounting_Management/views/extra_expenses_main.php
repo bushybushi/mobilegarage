@@ -69,6 +69,204 @@ if (isset($_SESSION['message'])) {
 }
 ?>
 
+<style>
+    .popup-container {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #2196f3;
+        padding: 20px;
+        border-radius: 15px;
+        text-align: center;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        color: white;
+        font-size: 18px;
+        width: 300px;
+        z-index: 1000;
+        animation: fadeIn 0.5s ease-in-out;
+    }
+
+    .popup-content p {
+        margin: 0;
+        font-weight: bold;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translate(-50%, -55%); }
+        to { opacity: 1; transform: translate(-50%, -50%); }
+    }
+
+    @keyframes fadeOut {
+        from { opacity: 1; transform: translate(-50%, -50%); }
+        to { opacity: 0; transform: translate(-50%, -55%); }
+    }
+    
+    /* Table styles */
+    .table {
+        border-collapse: separate;
+        border-spacing: 0;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    
+    .table thead th {
+        background-color: #f8f9fa;
+        border-bottom: 2px solid #dee2e6;
+        padding: 12px 15px;
+        font-weight: 600;
+        color: #495057;
+    }
+    
+    .table tbody tr {
+        cursor: pointer;
+        transition: background-color 0.2s;
+    }
+    
+    .table tbody tr:hover {
+        background-color: #f1f8ff;
+    }
+    
+    .table td {
+        padding: 12px 15px;
+        vertical-align: middle;
+    }
+    
+    .table td:first-child {
+        width: 40px;
+        text-align: center;
+    }
+    
+    .table td:first-child i {
+        color: #6c757d;
+        font-size: 1.2rem;
+    }
+    
+    .badge {
+        padding: 6px 10px;
+        font-weight: 500;
+        border-radius: 4px;
+    }
+    
+    .badge-success {
+        background-color: #28a745;
+    }
+    
+    .badge-warning {
+        background-color: #ffc107;
+        color: #212529;
+    }
+    
+    .badge-secondary {
+        background-color: #6c757d;
+    }
+
+    /* Custom button styles */
+    #filterButton {
+        background-color: #007bff; /* Bootstrap primary blue */
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    #filterButton:hover {
+        background-color: #0056b3; /* Darker blue on hover */
+    }
+
+    #printButton {
+        background-color: #28a745; /* Bootstrap success green */
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    #printButton:hover {
+        background-color: #218838; /* Darker green on hover */
+    }
+
+    @media print {
+        body * {
+            visibility: hidden;
+        }
+        .print-section, .print-section * {
+            visibility: visible;
+        }
+        .print-section {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            background: white;
+        }
+        .no-print {
+            display: none;
+        }
+    }
+
+    .print-section {
+        display: none;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        background: white;
+        z-index: 9999;
+        padding: 20px;
+        overflow: auto;
+        pointer-events: none;
+    }
+
+    @media screen {
+        .print-section {
+            pointer-events: none;
+        }
+        .print-section * {
+            pointer-events: none;
+        }
+    }
+
+    #printFrame {
+        display: none;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 0;
+        height: 0;
+        border: none;
+    }
+    
+    /* Back arrow styles */
+    .back-arrow {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        font-size: 24px;
+        color: black;
+        cursor: pointer;
+        z-index: 1000;
+        background-color: rgba(255, 255, 255, 0.7);
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        transition: all 0.3s ease;
+    }
+    
+    .back-arrow:hover {
+        background-color: rgba(255, 255, 255, 0.9);
+        transform: scale(1.1);
+    }
+</style>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -80,14 +278,22 @@ if (isset($_SESSION['message'])) {
     <!-- CSS and JavaScript dependencies -->
     <link rel="stylesheet" href="../assets/styles.css">
     <link href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="../assets/scripts.js"></script>
+    <script src="../assets/scripts.js" defer></script>
 </head>
 
 <body>
+    <!-- Back arrow to return to accounting view -->
+    <div class="back-arrow" onclick="window.location.href='view_accounting.php'">
+        <i class="fas fa-arrow-left" style="font-size: 24px; color: black;"></i>
+    </div>
+    
+    <!-- Add iframe for printing -->
+    <iframe id="printFrame"></iframe>
+
     <!-- Main Content Container -->
     <div class="pc-container3">
         <div class="form-container">

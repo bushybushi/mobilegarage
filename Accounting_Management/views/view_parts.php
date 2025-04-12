@@ -223,6 +223,31 @@ foreach ($result as $row) {
         height: 0;
         border: none;
     }
+    
+    /* Back arrow styles */
+    .back-arrow {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        font-size: 24px;
+        color: black;
+        cursor: pointer;
+        z-index: 1000;
+        background-color: rgba(255, 255, 255, 0.7);
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        transition: all 0.3s ease;
+    }
+    
+    .back-arrow:hover {
+        background-color: rgba(255, 255, 255, 0.9);
+        transform: scale(1.1);
+    }
 </style>
 
 <!DOCTYPE html>
@@ -234,13 +259,18 @@ foreach ($result as $row) {
     
     <link rel="stylesheet" href="../assets/styles.css">
     <link href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
     <script src="../assets/scripts.js" defer></script>
 </head>
 
 <body>
+    <!-- Back arrow to return to accounting view -->
+    <div class="back-arrow" onclick="window.location.href='view_accounting.php'">
+        <i class="fas fa-arrow-left" style="font-size: 24px; color: black;"></i>
+    </div>
+    
     <!-- Add iframe for printing -->
     <iframe id="printFrame"></iframe>
 
