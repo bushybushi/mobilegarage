@@ -36,13 +36,11 @@ class JobCard {
         $this->photo = $data['photos'] ?? null;
         $this->licensePlate = $data['registration'] ?? null;
         
-        // Handle parts data - ensure it's always an array
+        // Handle parts data
         if (isset($data['parts'])) {
             if (is_string($data['parts'])) {
-                // If it's a JSON string, decode it
                 $decodedParts = json_decode($data['parts'], true);
                 if (is_array($decodedParts)) {
-                    // Extract part IDs if it's in the format [{id: ..., name: ..., price: ...}]
                     if (!empty($decodedParts) && isset($decodedParts[0]['id'])) {
                         $this->parts = array_column($decodedParts, 'id');
                         $this->partPrices = array_column($decodedParts, 'price');
@@ -54,23 +52,170 @@ class JobCard {
                     $this->parts = [];
                 }
             } else {
-                // If it's already an array, use it directly
                 $this->parts = $data['parts'];
             }
         } else {
             $this->parts = [];
         }
         
-        // Handle part prices
         $this->partPrices = $data['partPrices'] ?? [];
-        
-        // Handle part quantities
         $this->partQuantities = $data['partQuantities'] ?? array_fill(0, count($this->parts), 1);
-        
         $this->totalCosts = $data['totalCosts'] ?? 0;
     }
 
-    public function save() {
+    // Getters
+    public function getJobId(): mixed { return $this->jobId; }
+    public function getCustomerId(): mixed { return $this->customerId; }
+    public function getLocation(): mixed { return $this->location; }
+    public function getDateCall(): mixed { return $this->dateCall; }
+    public function getJobDesc(): mixed { return $this->jobDesc; }
+    public function getJobReport(): mixed { return $this->jobReport; }
+    public function getDateStart(): mixed { return $this->dateStart; }
+    public function getDateFinish(): mixed { return $this->dateFinish; }
+    public function getRides(): mixed { return $this->rides; }
+    public function getDriveCosts(): mixed { return $this->driveCosts; }
+    public function getAdditionalCost(): mixed { return $this->additionalCost; }
+    public function getPhoto(): mixed { return $this->photo; }
+    public function getLicensePlate(): mixed { return $this->licensePlate; }
+    public function getParts(): array { return $this->parts; }
+    public function getPartPrices(): array { return $this->partPrices; }
+    public function getPartQuantities(): array { return $this->partQuantities; }
+    public function getTotalCosts(): mixed { return $this->totalCosts; }
+
+    // Setters
+    public function setJobId($jobId): void { $this->jobId = $jobId; }
+    public function setCustomerId($customerId): void { $this->customerId = $customerId; }
+    public function setLocation($location): void { $this->location = $location; }
+    public function setDateCall($dateCall): void { $this->dateCall = $dateCall; }
+    public function setJobDesc($jobDesc): void { $this->jobDesc = $jobDesc; }
+    public function setJobReport($jobReport): void { $this->jobReport = $jobReport; }
+    public function setDateStart($dateStart): void { $this->dateStart = $dateStart; }
+    public function setDateFinish($dateFinish): void { $this->dateFinish = $dateFinish; }
+    public function setRides($rides): void { $this->rides = $rides; }
+    public function setDriveCosts($driveCosts): void { $this->driveCosts = $driveCosts; }
+    public function setAdditionalCost($additionalCost): void { $this->additionalCost = $additionalCost; }
+    public function setPhoto($photo): void { $this->photo = $photo; }
+    public function setLicensePlate($licensePlate): void { $this->licensePlate = $licensePlate; }
+    public function setParts($parts): void { $this->parts = $parts; }
+    public function setPartPrices($partPrices): void { $this->partPrices = $partPrices; }
+    public function setPartQuantities($partQuantities): void { $this->partQuantities = $partQuantities; }
+    public function setTotalCosts($totalCosts): void { $this->totalCosts = $totalCosts; }
+
+    // Add new method to get customer suggestions
+    public static function getCustomerSuggestions($searchTerm) {
+        global $pdo;
+        try {
+            $sql = "SELECT CustomerID, FirstName, LastName, Phone, Email 
+                    FROM Customers 
+                    WHERE CONCAT(FirstName, ' ', LastName) LIKE :search 
+                    ORDER BY FirstName ASC 
+                    LIMIT 10";
+            $stmt = $pdo->prepare($sql);
+            $stmt->execute(['search' => '%' . $searchTerm . '%']);
+            return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        } catch (PDOException $e) {
+            error_log("Error in getCustomerSuggestions: " . $e->getMessage());
+            return false;
+        }
+    }
+
+    // Add new method to update customer
+    public static function updateCustomer($customerID, $firstName, $lastName, $phone, $email) {
+        global $pdo;
+        try {
+            $sql = "UPDATE Customers 
+                    SET FirstName = ?, LastName = ?, Phone = ?, Email = ?
+                    WHERE CustomerID = ?";
+            $stmt = $pdo->prepare($sql);
+            return $stmt->execute([$firstName, $lastName, $phone, $email, $customerID]);
+        } catch (PDOException $e) {
+            error_log("Error in updateCustomer: " . $e->getMessage());
+            return false;
+        }
+    }
+
+    // Method to get all job cards with basic information
+    public static function getAllJobCards() {
+        try {
+            $pdo = require '../config/db_connection.php';
+            
+            $sql = "
+                SELECT j.*, c.FirstName, c.LastName, c.Phone, c.Email, 
+                       car.LicenseNr as LicensePlate
+                FROM JobCards j
+                LEFT JOIN Customers c ON j.CustomerID = c.CustomerID
+                LEFT JOIN JobCar car ON j.JobID = car.JobID
+                ORDER BY j.DateCall DESC
+            ";
+            $stmt = $pdo->query($sql);
+            return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        } catch (PDOException $e) {
+            error_log("Database error in getAllJobCards: " . $e->getMessage());
+            return false;
+        }
+    }
+
+    // Method to get a single job card with all its details
+    public static function getJobCardById($id) {
+        try {
+            $pdo = require '../config/db_connection.php';
+            
+            // Get job card details
+            $sql = "SELECT j.*, c.FirstName, c.LastName, c.Phone, c.Email, 
+                           car.LicenseNr as LicensePlate
+                    FROM JobCards j
+                    LEFT JOIN Customers c ON j.CustomerID = c.CustomerID
+                    LEFT JOIN JobCar car ON j.JobID = car.JobID
+                    WHERE j.JobID = ?";
+            
+            $stmt = $pdo->prepare($sql);
+            $stmt->execute([$id]);
+            $jobCard = $stmt->fetch(PDO::FETCH_ASSOC);
+            
+            if (!$jobCard) {
+                error_log("No job card found with ID: " . $id);
+                return null;
+            }
+            
+            // Get parts for this job card
+            $partsSql = "SELECT p.*, jp.PiecesSold, jp.PricePerPiece 
+                        FROM Parts p 
+                        JOIN JobCardParts jp ON p.PartID = jp.PartID 
+                        WHERE jp.JobID = ?";
+            
+            $partsStmt = $pdo->prepare($partsSql);
+            $partsStmt->execute([$id]);
+            $partsList = $partsStmt->fetchAll(PDO::FETCH_ASSOC);
+            
+            // Add parts to the job card data
+            $jobCard['parts'] = $partsList;
+            
+            return $jobCard;
+            
+        } catch (PDOException $e) {
+            error_log("Error fetching job card: " . $e->getMessage());
+            return null;
+        }
+    }
+
+    // Add new method to get part suggestions
+    public static function getPartSuggestions($searchTerm) {
+        global $pdo;
+        try {
+            $sql = "SELECT DISTINCT PartDesc 
+                    FROM Parts 
+                    WHERE PartDesc LIKE :search 
+                    ORDER BY PartDesc ASC 
+                    LIMIT 10";
+            $stmt = $pdo->prepare($sql);
+            $stmt->execute(['search' => '%' . $searchTerm . '%']);
+            return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        } catch (PDOException $e) {
+            return false;
+        }
+    }
+
+    public function save(): bool {
         global $pdo;
         try {
             $pdo->beginTransaction();
@@ -133,21 +278,7 @@ class JobCard {
         }
     }
 
-    public static function getById($jobId) {
-        global $pdo;
-        
-        $sql = "SELECT j.*, c.LicenseNr 
-                FROM JobCards j 
-                LEFT JOIN JobCar c ON j.JobID = c.JobID 
-                WHERE j.JobID = ?";
-        
-        $stmt = $pdo->prepare($sql);
-        $stmt->execute([$jobId]);
-        
-        return $stmt->fetch(PDO::FETCH_ASSOC);
-    }
-
-    public static function update($jobId, $data) {
+    public static function update($jobId, $data): bool {
         global $pdo;
         try {
             $pdo->beginTransaction();
@@ -269,7 +400,7 @@ class JobCard {
         }
     }
 
-    public static function delete($jobId) {
+    public static function delete($jobId): bool {
         global $pdo;
         try {
             $pdo->beginTransaction();
@@ -336,5 +467,98 @@ class JobCard {
             throw $e;
         }
     }
+}
+
+// Handle AJAX requests
+if (isset($_POST['query']) && !isset($_POST['dateCall'])) {
+    $searchTerm = $_POST['query'];
+    $customers = JobCard::getCustomerSuggestions($searchTerm);
+    
+    if ($customers === false) {
+        echo '<div class="error">Error fetching customers</div>';
+    } else if (empty($customers)) {
+        echo '';
+    } else {
+        foreach ($customers as $customer) {
+            echo '<div class="customer-option" 
+                       data-id="' . htmlspecialchars($customer['CustomerID']) . '"
+                       data-phone="' . htmlspecialchars($customer['Phone'] ?? '') . '"
+                       data-email="' . htmlspecialchars($customer['Email'] ?? '') . '">' 
+                       . htmlspecialchars($customer['FirstName'] . ' ' . $customer['LastName']) . 
+                  '</div>';
+        }
+    }
+    exit;
+}
+
+if (isset($_POST['action']) && $_POST['action'] === 'create_customer') {
+    try {
+        $pdo = require '../config/db_connection.php';
+        
+        if (empty($_POST['firstName']) || empty($_POST['lastName'])) {
+            throw new Exception("Customer name is required");
+        }
+        
+        if (empty($_POST['phone']) && empty($_POST['email'])) {
+            throw new Exception("Either phone or email is required for new customers");
+        }
+        
+        $stmt = $pdo->prepare("INSERT INTO Customers (FirstName, LastName, Phone, Email) VALUES (?, ?, ?, ?)");
+        $stmt->execute([
+            $_POST['firstName'],
+            $_POST['lastName'],
+            $_POST['phone'] ?? null,
+            $_POST['email'] ?? null
+        ]);
+        
+        $customerID = $pdo->lastInsertId();
+        
+        header('Content-Type: application/json');
+        echo json_encode([
+            'status' => 'success',
+            'customerID' => $customerID,
+            'message' => 'Customer created successfully'
+        ]);
+    } catch (Exception $e) {
+        header('Content-Type: application/json');
+        echo json_encode([
+            'status' => 'error',
+            'message' => $e->getMessage()
+        ]);
+    }
+    exit;
+}
+
+if (isset($_POST['part_query'])) {
+    $searchTerm = $_POST['part_query'];
+    $parts = JobCard::getPartSuggestions($searchTerm);
+    
+    if ($parts === false) {
+        echo '<div class="error">Error fetching parts</div>';
+    } else if (empty($parts)) {
+        echo '';
+    } else {
+        foreach ($parts as $part) {
+            echo '<div class="part-option">' . htmlspecialchars($part['PartDesc']) . '</div>';
+        }
+    }
+    exit;
+}
+
+if (isset($_POST['customerID']) && isset($_POST['firstName']) && isset($_POST['lastName']) && (isset($_POST['phone']) || isset($_POST['email']))) {
+    $result = JobCard::updateCustomer(
+        $_POST['customerID'],
+        $_POST['firstName'],
+        $_POST['lastName'],
+        $_POST['phone'] ?? '',
+        $_POST['email'] ?? ''
+    );
+    
+    header('Content-Type: application/json');
+    echo json_encode([
+        'status' => $result ? 'success' : 'error',
+        'message' => $result ? 'Customer updated successfully' : 'Failed to update customer'
+    ]);
+    exit;
 }
 ?> 
