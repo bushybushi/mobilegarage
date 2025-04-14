@@ -3,35 +3,36 @@
 require_once '../config/db_connection.php';
 require_once '../includes/sanitize_inputs.php';
 
-// Get current month's data
-$FDayCMonth = new DateTime();
-$FDayCMonth->modify('first day of this month');
+// Get month and year from query parameters
+$month = isset($_GET['month']) ? (int)$_GET['month'] : date('m');
+$year = isset($_GET['year']) ? (int)$_GET['year'] : date('Y');
 
-$LDayCMonth = new DateTime();
-$LDayCMonth->modify('last day of this month');
+// Adjust start and end dates based on selected month and year
+$startDate = "$year-$month-01";
+$endDate = date("Y-m-t", strtotime($startDate));
 
-$startDate = $FDayCMonth->format("Y-m-d");
-$endDate = $LDayCMonth->format("Y-m-d");
-
-// Get current month's income
+// Fetch income and expenses for the selected month
 $sql = "SELECT COALESCE(SUM(i.Total), 0) AS TotalIncome
         FROM JobCards j
         LEFT JOIN Invoicejob ij ON j.JobID = ij.JobID
         LEFT JOIN Invoices i ON ij.InvoiceID = i.InvoiceID
-        WHERE DATE_FORMAT(j.DateStart, '%Y-%m') = DATE_FORMAT(NOW(), '%Y-%m')";
+        WHERE j.DateFinish BETWEEN :startDate AND :endDate";
 $stmt = $pdo->prepare($sql);
+$stmt->bindParam(':startDate', $startDate);
+$stmt->bindParam(':endDate', $endDate);
 $stmt->execute();
 $IncomeCMonth = $stmt->fetchColumn() ?? 0;
 
-// Get current month's expenses
 $sql = "SELECT COALESCE(SUM(PiecesPurch * PricePerPiece), 0) AS TotalExpenses
         FROM Parts
-        WHERE DATE_FORMAT(DateCreated, '%Y-%m') = DATE_FORMAT(NOW(), '%Y-%m')";
+        WHERE DateCreated BETWEEN :startDate AND :endDate";
 $stmt = $pdo->prepare($sql);
+$stmt->bindParam(':startDate', $startDate);
+$stmt->bindParam(':endDate', $endDate);
 $stmt->execute();
 $ExpensesCMonth = $stmt->fetchColumn() ?? 0;
 
-// Calculate current month's profit
+// Calculate profit
 $ProfitCMonth = $IncomeCMonth - $ExpensesCMonth;
 
 // Get current week's income
@@ -374,4 +375,4 @@ $reportDate = $currentDate->format("d/m/Y");
     </div>
   </div>
 </body>
-</html> 
+</html>

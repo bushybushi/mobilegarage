@@ -14,11 +14,11 @@ $LDayCMonth->modify('last day of this month');
 $startDate = $FDayCMonth->format("Y-m-d");
 $endDate = $LDayCMonth->format("Y-m-d");
 $sql = "SELECT SUM(i.Total) as Income
-		FROM JobCards j
-		LEFT JOIN Invoicejob ij ON j.JobID = ij.JobID
-		LEFT JOIN Invoices i ON ij.InvoiceID = i.InvoiceID
-		
-		WHERE j.DateFinish BETWEEN :startDate AND :endDate";
+        FROM JobCards j
+        LEFT JOIN Invoicejob ij ON j.JobID = ij.JobID
+        LEFT JOIN Invoices i ON ij.InvoiceID = i.InvoiceID
+        
+        WHERE j.DateFinish BETWEEN :startDate AND :endDate";
 
 $stmt = $pdo->prepare($sql);
 $stmt->bindParam(':startDate', $startDate);
@@ -29,7 +29,7 @@ $IncomeCMonth = $stmt->fetchColumn() ?? 0;
 //Finds expenses based on this month
 $sql = "SELECT (SELECT SUM(p.PiecesPurch * p.PricePerPiece)) as Expenses
         FROM Parts p
-		WHERE DateCreated BETWEEN :startDate AND :endDate";
+        WHERE DateCreated BETWEEN :startDate AND :endDate";
 
 $stmt = $pdo->prepare($sql);
 $stmt->bindParam(':startDate', $startDate);
@@ -40,89 +40,9 @@ $ExpensesCMonth = $stmt->fetchColumn() ?? 0;
 //Calculates profit of this month
 $ProfitCMonth = $IncomeCMonth - $ExpensesCMonth;
 
-
-
-
-
-//Finds monday and sunday of current and last weeks
-$FDayCWeek = new DateTime();
-$FDayCWeek->modify('monday this week');
-
-$LDayCWeek = new DateTime();
-$LDayCWeek->modify('sunday this week');
-
-$FDayLWeek = new DateTime();
-$FDayLWeek->modify('monday last week');
-
-$LDayLWeek = new DateTime();
-$LDayLWeek->modify('sunday last week');
-
-//Associate startDate and endDate as current week for SQL query
-$startDate = $FDayCWeek->format("Y-m-d");
-$endDate = $LDayCWeek->format("Y-m-d");
-
-//Finds current week's income
-$sql = "SELECT SUM(i.Total) as Income
-		FROM JobCards j
-		LEFT JOIN Invoicejob ij ON j.JobID = ij.JobID
-		LEFT JOIN Invoices i ON ij.InvoiceID = i.InvoiceID
-		
-		WHERE j.DateFinish BETWEEN :startDate AND :endDate";
-
-$stmt = $pdo->prepare($sql);
-$stmt->bindParam(':startDate', $startDate);
-$stmt->bindParam(':endDate', $endDate);
-$stmt->execute();
-$IncomeCWeek = $stmt->fetchColumn() ?? 0;
-
-
-//Finds current week's expenses
-$sql = "SELECT (SELECT SUM(p.PiecesPurch * p.PricePerPiece)) as Expenses
-        FROM Parts p
-		WHERE DateCreated BETWEEN :startDate AND :endDate";
-
-$stmt = $pdo->prepare($sql);
-$stmt->bindParam(':startDate', $startDate);
-$stmt->bindParam(':endDate', $endDate);
-$stmt->execute();
-$ExpensesCWeek = $stmt->fetchColumn() ?? 0;
-
-
-//Associate startDate and endDate as last week for SQL query
-$startDate = $FDayLWeek->format("Y-m-d");
-$endDate = $LDayLWeek->format("Y-m-d");
-
-//Finds last week's income
-$sql = "SELECT SUM(i.Total) as Income
-		FROM JobCards j
-		LEFT JOIN Invoicejob ij ON j.JobID = ij.JobID
-		LEFT JOIN Invoices i ON ij.InvoiceID = i.InvoiceID
-		
-		WHERE j.DateFinish BETWEEN :startDate AND :endDate";
-
-$stmt = $pdo->prepare($sql);
-$stmt->bindParam(':startDate', $startDate);
-$stmt->bindParam(':endDate', $endDate);
-$stmt->execute();
-$IncomeLWeek = $stmt->fetchColumn() ?? 0;
-
-
-//Finds current week's expenses
-$sql = "SELECT (SELECT SUM(p.PiecesPurch * p.PricePerPiece)) as Expenses
-        FROM Parts p
-		WHERE DateCreated BETWEEN :startDate AND :endDate";
-
-$stmt = $pdo->prepare($sql);
-$stmt->bindParam(':startDate', $startDate);
-$stmt->bindParam(':endDate', $endDate);
-$stmt->execute();
-$ExpensesLWeek = $stmt->fetchColumn() ?? 0;
-
 // Calculate percentage changes with checks for division by zero
-$IncomePer = $IncomeLWeek != 0 ? number_format((($IncomeCWeek - $IncomeLWeek)/$IncomeLWeek) * 100, 2) : ($IncomeCWeek > 0 ? 100 : 0);
-$ExpensesPer = $ExpensesLWeek != 0 ? number_format((($ExpensesCWeek - $ExpensesLWeek)/$ExpensesLWeek) * 100, 2) : ($ExpensesCWeek > 0 ? 100 : 0);
+$IncomePer = $IncomeCMonth != 0 ? number_format((($IncomeCMonth - $ExpensesCMonth) / $IncomeCMonth) * 100, 2) : 0;
 ?>
-
 
 <html lang="en">
 <head>
@@ -171,48 +91,55 @@ $ExpensesPer = $ExpensesLWeek != 0 ? number_format((($ExpensesCWeek - $ExpensesL
 <div class="container-fluid">
     <!-- Main Content -->
     <div class="row g-4 mb-4">
-  <!-- Current Month's Income -->
-  <div class="col-md-4">
-    <div class="card-custom">
-      <h6>Current Month's Income</h6>
-      <h3>€<?php echo $IncomeCMonth; ?></h3>
-      <small class="text-muted"><?php echo $IncomePer; ?>% from last week</small>
-    </div>
-  </div>
-
-  <!-- Current Month's Expenses -->
-  <div class="col-md-4">
-    <div class="card-custom">
-      <h6>Current Month's Expenses</h6>
-      <h3>€<?php echo $ExpensesCMonth; ?></h3>
-      <small class="text-muted"><?php echo $ExpensesPer; ?>% from last week</small>
-    </div>
-  </div>
-
-  <!-- Current Month's Profit -->
-  <div class="col-md-4">
-    <div class="card-custom">
-      <h6>Current Month's Profit</h6>
-		<?php
-		$profitClass = $ProfitCMonth < 0 ? 'text-danger' : 'text-success';
-		?>
-      <h3 class="<?php echo $profitClass?>">€<?php echo number_format($ProfitCMonth, 2); ?></h3>
-      <small class="text-muted">Calculated from income - expenses</small>
-    </div>
-  </div>
-</div>
-
-      <!-- Bar Chart -->
-      <div class="card-custom">
-        <canvas id="incomeChart"></canvas>
-        <div class="d-flex justify-content-between mt-4">
-          <button class="btn btn-outline-primary btn-custom" onclick="window.location.href='view_job_cards.php'">Job Cards - Details</button>
-          <button class="btn btn-outline-primary btn-custom" onclick="window.location.href='view_parts.php'">Parts - Details</button>
-          <button class="btn btn-outline-primary btn-custom" onclick="window.location.href='extra_expenses_main.php'">Extra Expenses</button>
-          <button class="btn btn-outline-primary btn-custom" onclick="printFinances()">Print Finances</button>
+      <!-- Current Month's Income -->
+      <div class="col-md-4">
+        <div class="card-custom">
+          <h6>Current Month's Income</h6>
+          <h3>€<?php echo $IncomeCMonth; ?></h3>
+          <small class="text-muted"><?php echo $IncomePer; ?>% from last month</small>
         </div>
       </div>
 
+      <!-- Current Month's Expenses -->
+      <div class="col-md-4">
+        <div class="card-custom">
+          <h6>Current Month's Expenses</h6>
+          <h3>€<?php echo $ExpensesCMonth; ?></h3>
+        </div>
+      </div>
+
+      <!-- Current Month's Profit -->
+      <div class="col-md-4">
+        <div class="card-custom">
+          <h6>Current Month's Profit</h6>
+          <h3 class="<?php echo $ProfitCMonth < 0 ? 'text-danger' : 'text-success'; ?>">€<?php echo number_format($ProfitCMonth, 2); ?></h3>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bar Chart -->
+    <div class="card-custom">
+      <canvas id="incomeChart"></canvas>
+      <div class="d-flex justify-content-between mt-4">
+        <button class="btn btn-outline-primary btn-custom" onclick="window.location.href='view_job_cards.php'">Job Cards - Details</button>
+        <button class="btn btn-outline-primary btn-custom" onclick="window.location.href='view_parts.php'">Parts - Details</button>
+        <button class="btn btn-outline-primary btn-custom" onclick="window.location.href='extra_expenses_main.php'">Extra Expenses</button>
+        
+        <!-- Dropdowns for selecting month and year -->
+        <div class="d-flex align-items-center">
+          <select id="printMonth" class="form-select me-2">
+            <?php for ($m = 1; $m <= 12; $m++): ?>
+              <option value="<?php echo $m; ?>"><?php echo date('F', mktime(0, 0, 0, $m, 1)); ?></option>
+            <?php endfor; ?>
+          </select>
+          <select id="printYear" class="form-select me-2">
+            <?php for ($y = date('Y') - 5; $y <= date('Y'); $y++): ?>
+              <option value="<?php echo $y; ?>"><?php echo $y; ?></option>
+            <?php endfor; ?>
+          </select>
+          <button class="btn btn-outline-primary btn-custom" onclick="printFinances()">Print Finances</button>
+        </div>
+      </div>
     </div>
 </div>
 <?php 
@@ -299,19 +226,21 @@ foreach ($result as $row) {
     }
   });
 
-  // Function to open print_finances.php in an iframe and trigger print dialog
+  // Function to open print_finances.php with selected month and year
   function printFinances() {
+    const month = document.getElementById('printMonth').value;
+    const year = document.getElementById('printYear').value;
+
     // Create a hidden iframe
     const iframe = document.createElement('iframe');
     iframe.style.display = 'none';
-    iframe.src = 'print_finances.php';
+    iframe.src = `print_finances.php?month=${month}&year=${year}`;
     document.body.appendChild(iframe);
-    
+
     // Wait for iframe to load before triggering print
     iframe.onload = function() {
-      // Trigger print dialog
       iframe.contentWindow.print();
-      
+
       // Remove iframe after printing (or if user cancels)
       setTimeout(function() {
         document.body.removeChild(iframe);
