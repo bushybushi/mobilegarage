@@ -1,0 +1,114 @@
+===========================================================
+   SYSTEM HELP FILE - MOBILE GARAGE SYSTEM
+===========================================================
+
+Version: 1.0  
+Last Updated: April 2025
+
+-----------------------------------------------------------
+DESCRIPTION
+-----------------------------------------------------------
+This system is designed to manage jobs, parts, customers, 
+invoices, and vehicles efficiently for a repair/service 
+business.
+
+-----------------------------------------------------------
+TABLE OF CONTENTS
+-----------------------------------------------------------
+1. User Access
+2. Jobs Management
+3. Parts Management
+4. Customer Management
+5. Accounting Management
+6. User Management
+7. Invoice Management
+8. Cars Management
+
+-----------------------------------------------------------
+1. USER ACCESS
+-----------------------------------------------------------
+- Login: Access the system using valid credentials.
+- Forgot Password: Recover password via security questions.
+- Logout: Securely exit the system.
+
+-----------------------------------------------------------
+2. JOBS MANAGEMENT
+-----------------------------------------------------------
+- Add a New Job Card: Create and register a new job card.
+- Print Job Card List: Print selected job cards.
+- Edit Job Card: Modify existing job card data.
+- Delete Job Card: Remove job cards from the system.
+- Search Job Card: Locate job cards using keywords.
+- Print Job Card: Print an individual job card.
+
+-----------------------------------------------------------
+3. PARTS MANAGEMENT
+-----------------------------------------------------------
+- Add New Part: Register a new part in inventory.
+- Print Part List: Print selected parts.
+- Edit Part: Modify part details.
+- Delete Part: Remove a part from inventory.
+- Search Part: Locate parts using keywords.
+- Print Part: Print individual part details.
+
+-----------------------------------------------------------
+4. CUSTOMER MANAGEMENT
+-----------------------------------------------------------
+- Add New Customer: Register a new customer.
+- Print Customer List: Print selected customer.
+- Edit Customer: Modify customer information.
+- Delete Customer: Remove a customer from the database.
+- Search Customer: Find customers using keywords.
+- Print Customer: Print an individual customer profile.
+
+-----------------------------------------------------------
+5. ACCOUNTING MANAGEMENT
+-----------------------------------------------------------
+- View Job Cards – Details: Review detailed job financials.
+- View Parts – Details: Review part-related expenses.
+- View Invoices: See a list of generated invoices.
+- Create Report for Finances: Generate a full finance summary.
+- Create Report for List of Job Card Finances (Monthly/Yearly)
+- Create Report for Single Job Card Finances
+- Create Report for List of Part Finances (Monthly/Yearly)
+- Create Report for Single Part Finances
+- Create Report for Finances By Month
+- Create Report for Finances By Year
+- Create Report for Part Finances By Month
+- Create Report for Part Finances By Year
+
+-----------------------------------------------------------
+6. USER MANAGEMENT
+-----------------------------------------------------------
+- Add New User: Create a new system user.
+- Edit User: Modify user credentials or details.
+- Search User: Locate users using name or ID.
+- Delete User: Remove users from the system.
+
+-----------------------------------------------------------
+7. INVOICE MANAGEMENT
+-----------------------------------------------------------
+- Add Invoice: Create and save a new invoice.
+- Print Invoice List: Print selected invoices.
+- Edit Invoice: Update invoice information.
+- Delete Invoice: Remove invoices from the system.
+- Search Invoices: Find invoices using keywords.
+- Print Invoice: Print specific invoice details.
+
+-----------------------------------------------------------
+8. CARS MANAGEMENT
+-----------------------------------------------------------
+- Add Car: Register a customer's car.
+- Edit Car: Update vehicle information.
+- Delete Car: Remove a car entry.
+- Print Car: Generate a printout of car data.
+- Search Car: Search for cars using keywords.
+
+-----------------------------------------------------------
+SUPPORT
+-----------------------------------------------------------
+For technical support or issues, please contact: ?? 
+
+
+-----------------------------------------------------------
+END OF HELP FILE
