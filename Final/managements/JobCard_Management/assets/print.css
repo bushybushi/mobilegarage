@@ -1,0 +1,104 @@
+/* Print Styles - These styles are only applied when printing */
+@media print {
+    /* Reset all elements to be visible with white background and black text */
+    * {
+        visibility: visible !important;
+        background: white !important;
+        color: black !important;
+    }
+    
+    /* Hide elements that shouldn't appear in the printed version */
+    .back-arrow, 
+    .print-btn,
+    .job-actions,
+    button,
+    .alert {
+        display: none !important;
+    }
+    
+    /* Make the form container take up the full page width when printing */
+    .form-container {
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 20px !important;
+        box-shadow: none !important;
+    }
+
+    /* Ensure the job card form is visible when printing */
+    #jobCardForm {
+        display: block !important;
+        visibility: visible !important;
+    }
+    
+    /* Style form groups to align labels and inputs nicely */
+    .form-group {
+        margin-bottom: 10px !important;
+        display: flex !important;
+        align-items: center !important;
+    }
+    
+    /* Make form labels bold and properly spaced */
+    .form-group label {
+        width: 200px !important;
+        font-weight: bold !important;
+        margin-right: 15px !important;
+    }
+    
+    /* Remove borders and spacing from form inputs */
+    .form-control {
+        border: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        background: none !important;
+        color: black !important;
+    }
+
+    /* Style section headers with bottom border */
+    .section-header {
+        border-bottom: 1px solid black !important;
+        padding: 10px 0 !important;
+        margin: 20px 0 10px 0 !important;
+        background: none !important;
+    }
+
+    /* Style tables for printing */
+    table {
+        width: 100% !important;
+        border-collapse: collapse !important;
+        margin-bottom: 20px !important;
+    }
+
+    th, td {
+        border: 1px solid black !important;
+        padding: 8px !important;
+        text-align: left !important;
+    }
+
+    th {
+        background-color: #f2f2f2 !important;
+        font-weight: bold !important;
+    }
+
+    /* Style status indicators */
+    .status-open {
+        color: #28a745 !important;
+        font-weight: bold !important;
+    }
+
+    .status-closed {
+        color: #dc3545 !important;
+        font-weight: bold !important;
+    }
+
+    /* Style totals section */
+    .totals {
+        margin-top: 20px !important;
+        padding-top: 10px !important;
+        border-top: 1px solid black !important;
+    }
+
+    .total-row {
+        font-weight: bold !important;
+        font-size: 1.1em !important;
+    }
+} 

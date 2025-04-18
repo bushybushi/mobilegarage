@@ -1,0 +1,604 @@
+[09-Apr-2025 18:06:22 UTC] UPDATE INVOICE POST DATA: Array
+(
+    [invoice_id] => 22
+    [InvoiceID] => 22
+    [invoiceNr] => 54453
+    [dateCreated] => 2025-04-03
+    [supplier] => sdh
+    [supplierID] => 15
+    [original_supplier_phone] => 52644
+    [original_supplier_email] => jj22@email.com
+    [supplierPhone] => 52644
+    [supplierEmail] => jj22@email.com
+    [vat] => 19.00
+    [total] => 100.00
+    [parts] => [{"partId":23,"partDesc":"etstt","piecesPurch":"5","pricePerPiece":"754.00","priceBulk":"45.00 selling price","sellingPrice":"45.00"},{"partId":"temp_1744221956539","partDesc":"hjgfd","piecesPurch":"6","pricePerPiece":"45.00","priceBulk":"55.00 selling price","sellingPrice":"55.00"}]
+)
+
+[09-Apr-2025 18:06:22 UTC] FILES: Array
+(
+)
+
+[09-Apr-2025 18:06:42 UTC] UPDATE INVOICE POST DATA: Array
+(
+    [invoice_id] => 22
+    [InvoiceID] => 22
+    [invoiceNr] => 54453
+    [dateCreated] => 2025-04-03
+    [supplier] => sdh
+    [supplierID] => 15
+    [original_supplier_phone] => 52644
+    [original_supplier_email] => jj22@email.com
+    [supplierPhone] => 52644
+    [supplierEmail] => jj22@email.com
+    [vat] => 19.00
+    [total] => 100.00
+)
+
+[09-Apr-2025 18:06:42 UTC] FILES: Array
+(
+)
+
+[09-Apr-2025 18:06:42 UTC] PHP Warning:  Undefined array key "parts" in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Invoice_Management/controllers/update_invoice_controller.php on line 153
+[09-Apr-2025 18:06:42 UTC] PHP Deprecated:  json_decode(): Passing null to parameter #1 ($json) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Invoice_Management/controllers/update_invoice_controller.php on line 153
+[09-Apr-2025 18:19:29 UTC] UPDATE INVOICE POST DATA: Array
+(
+    [invoice_id] => 22
+    [InvoiceID] => 22
+    [invoiceNr] => 54453
+    [dateCreated] => 2025-04-03
+    [supplier] => sdh
+    [supplierID] => 15
+    [original_supplier_phone] => 52644
+    [original_supplier_email] => jj22@email.com
+    [supplierPhone] => 52644
+    [supplierEmail] => jj22@email.com
+    [vat] => 19.00
+    [total] => 100.00
+    [parts] => [{"partId":23,"partDesc":"etstt","piecesPurch":"4","pricePerPiece":"754.00","priceBulk":"45.00 selling price","sellingPrice":"45.00"},{"partId":24,"partDesc":"hjgfd","piecesPurch":"6","pricePerPiece":"45.00","priceBulk":"55.00","sellingPrice":"55.00"}]
+)
+
+[09-Apr-2025 18:19:29 UTC] FILES: Array
+(
+)
+
+[09-Apr-2025 18:20:52 UTC] Delete part request: {"partId":"24"}
+[09-Apr-2025 18:20:52 UTC] Original part ID: 24
+[09-Apr-2025 18:20:52 UTC] Processing delete for part ID: 24
+[09-Apr-2025 18:20:52 UTC] PDO Error: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'webvaria_MobileGarageLarnaca.JobCardParts' doesn't exist
+[09-Apr-2025 18:20:52 UTC] Exception: Database error: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'webvaria_MobileGarageLarnaca.JobCardParts' doesn't exist
+[09-Apr-2025 18:20:55 UTC] UPDATE INVOICE POST DATA: Array
+(
+    [invoice_id] => 22
+    [InvoiceID] => 22
+    [invoiceNr] => 54453
+    [dateCreated] => 2025-04-03
+    [supplier] => sdh
+    [supplierID] => 15
+    [original_supplier_phone] => 52644
+    [original_supplier_email] => jj22@email.com
+    [supplierPhone] => 52644
+    [supplierEmail] => jj22@email.com
+    [vat] => 19.00
+    [total] => 100.00
+)
+
+[09-Apr-2025 18:20:55 UTC] FILES: Array
+(
+)
+
+[09-Apr-2025 18:20:55 UTC] PHP Warning:  Undefined array key "parts" in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Invoice_Management/controllers/update_invoice_controller.php on line 153
+[09-Apr-2025 18:20:55 UTC] PHP Deprecated:  json_decode(): Passing null to parameter #1 ($json) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Invoice_Management/controllers/update_invoice_controller.php on line 153
+[09-Apr-2025 18:26:12 UTC] Received POST data: Array
+(
+    [invoiceNr] => fdzsh
+    [dateCreated] => 2025-04-11
+    [supplier] => dfgh
+    [supplierID] => 16
+    [supplierPhone] => 654322
+    [supplierEmail] => aaaa@aaa.com
+    [vat] => 19
+    [total] => 20
+    [partDesc] => Array
+        (
+            [0] => partpartpart
+        )
+
+    [piecesPurch] => Array
+        (
+            [0] => 20
+        )
+
+    [pricePerPiece] => Array
+        (
+            [0] => 2
+        )
+
+    [sellingPrice] => Array
+        (
+            [0] => 3
+        )
+
+    [parts] => [{"partDesc":"partpartpart","piecesPurch":"20","pricePerPiece":"2","sellingPrice":"3"}]
+)
+
+[09-Apr-2025 18:26:12 UTC] Received FILES data: Array
+(
+)
+
+[10-Apr-2025 14:04:35 UTC] Received POST data: Array
+(
+    [invoiceNr] => 123456
+    [dateCreated] => 2025-04-10
+    [supplier] => Stavros
+    [supplierID] => 21
+    [supplierPhone] => 99112266
+    [supplierEmail] => test_email@gmail.com
+    [vat] => 13
+    [total] => 100
+    [partDesc] => Array
+        (
+            [0] => Oil
+        )
+
+    [piecesPurch] => Array
+        (
+            [0] => 10
+        )
+
+    [pricePerPiece] => Array
+        (
+            [0] => 5
+        )
+
+    [sellingPrice] => Array
+        (
+            [0] => 10
+        )
+
+    [parts] => [{"partDesc":"Oil","piecesPurch":"10","pricePerPiece":"5","sellingPrice":"10"}]
+)
+
+[10-Apr-2025 14:04:35 UTC] Received FILES data: Array
+(
+)
+
+[13-Apr-2025 21:44:39 UTC] UPDATE INVOICE POST DATA: Array
+(
+    [invoice_id] => 26
+    [InvoiceID] => 26
+    [invoiceNr] => 123456
+    [dateCreated] => 2025-04-10
+    [supplier] => Stavros
+    [supplierID] => 21
+    [original_supplier_phone] => 99112266
+    [original_supplier_email] => test_email@gmail.com
+    [supplierPhone] => 99112266
+    [supplierEmail] => test_email@gmail.com
+    [vat] => 13.00
+    [total] => 100.00
+    [parts] => [{"partId":29,"partDesc":"Oil","piecesPurch":"10","pricePerPiece":"5.00","priceBulk":"10.00","sellingPrice":"10.00"},{"partId":38,"partDesc":"sparks","piecesPurch":"10","pricePerPiece":"5.00","priceBulk":"10.00","sellingPrice":"10.00"}]
+)
+
+[13-Apr-2025 21:44:39 UTC] FILES: Array
+(
+)
+
+[14-Apr-2025 14:00:42 UTC] Error deleting invoice: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`webvaria_MobileGarageLarnaca`.`invoicejob`, CONSTRAINT `invoicejob_ibfk_2` FOREIGN KEY (`InvoiceID`) REFERENCES `invoices` (`InvoiceID`))
+[14-Apr-2025 14:00:58 UTC] Error deleting invoice: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`webvaria_MobileGarageLarnaca`.`invoicejob`, CONSTRAINT `invoicejob_ibfk_2` FOREIGN KEY (`InvoiceID`) REFERENCES `invoices` (`InvoiceID`))
+[14-Apr-2025 14:01:32 UTC] Error deleting invoice: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`webvaria_MobileGarageLarnaca`.`invoicejob`, CONSTRAINT `invoicejob_ibfk_2` FOREIGN KEY (`InvoiceID`) REFERENCES `invoices` (`InvoiceID`))
+[14-Apr-2025 14:01:39 UTC] Error deleting invoice: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`webvaria_MobileGarageLarnaca`.`invoicejob`, CONSTRAINT `invoicejob_ibfk_2` FOREIGN KEY (`InvoiceID`) REFERENCES `invoices` (`InvoiceID`))
+[14-Apr-2025 14:15:32 UTC] UPDATE INVOICE POST DATA: Array
+(
+    [invoice_id] => 36
+    [InvoiceID] => 36
+    [invoiceNr] => 1
+    [dateCreated] => 2025-04-13
+    [supplier] => Antonela
+    [supplierID] => 20
+    [original_supplier_phone] => 
+    [original_supplier_email] => 
+    [supplierPhone] => 99112233
+    [supplierEmail] => test_email@gmail.com
+    [vat] => 0.00
+    [total] => 20.00
+    [parts] => [{"partId":"temp_1744640114856","partDesc":"air filter","piecesPurch":"3","pricePerPiece":"44.00","priceBulk":"56.00 selling price","sellingPrice":"56.00"}]
+)
+
+[14-Apr-2025 14:15:32 UTC] FILES: Array
+(
+)
+
+[17-Apr-2025 16:17:01 UTC] Received POST data: Array
+(
+    [invoiceNr] => 100
+    [dateCreated] => 2025-04-01
+    [supplier] => Supplier1
+    [supplierID] => 33
+    [supplierPhone] => 12345678
+    [supplierEmail] => supplier1@email.com
+    [vat] => 19
+    [total] => 20
+    [partDesc] => Array
+        (
+            [0] => Part1
+        )
+
+    [piecesPurch] => Array
+        (
+            [0] => 5
+        )
+
+    [pricePerPiece] => Array
+        (
+            [0] => 6
+        )
+
+    [sellingPrice] => Array
+        (
+            [0] => 8
+        )
+
+    [parts] => [{"partDesc":"Part1","piecesPurch":"5","pricePerPiece":"6","sellingPrice":"8"}]
+)
+
+[17-Apr-2025 16:17:01 UTC] Received FILES data: Array
+(
+)
+
+[17-Apr-2025 16:17:51 UTC] Received POST data: Array
+(
+    [invoiceNr] => 101
+    [dateCreated] => 2025-04-02
+    [supplier] => Supplier2
+    [supplierID] => 34
+    [supplierPhone] => 87654321
+    [supplierEmail] => supplier2@email.com
+    [vat] => 19
+    [total] => 20
+    [partDesc] => Array
+        (
+            [0] => Part2
+        )
+
+    [piecesPurch] => Array
+        (
+            [0] => 5
+        )
+
+    [pricePerPiece] => Array
+        (
+            [0] => 6
+        )
+
+    [sellingPrice] => Array
+        (
+            [0] => 8
+        )
+
+    [parts] => [{"partDesc":"Part2","piecesPurch":"5","pricePerPiece":"6","sellingPrice":"8"}]
+)
+
+[17-Apr-2025 16:17:51 UTC] Received FILES data: Array
+(
+)
+
+[17-Apr-2025 16:18:39 UTC] Received POST data: Array
+(
+    [invoiceNr] => 103
+    [dateCreated] => 2025-04-03
+    [supplier] => Supplier3
+    [supplierID] => 35
+    [supplierPhone] => 1122334455
+    [supplierEmail] => supplier3@email.com
+    [vat] => 19
+    [total] => 20
+    [partDesc] => Array
+        (
+            [0] => Part3
+        )
+
+    [piecesPurch] => Array
+        (
+            [0] => 5
+        )
+
+    [pricePerPiece] => Array
+        (
+            [0] => 6
+        )
+
+    [sellingPrice] => Array
+        (
+            [0] => 10
+        )
+
+    [parts] => [{"partDesc":"Part3","piecesPurch":"5","pricePerPiece":"6","sellingPrice":"10"}]
+)
+
+[17-Apr-2025 16:18:39 UTC] Received FILES data: Array
+(
+)
+
+[17-Apr-2025 16:19:42 UTC] Received POST data: Array
+(
+    [invoiceNr] => 104
+    [dateCreated] => 2025-04-04
+    [supplier] => Supplier 4
+    [supplierID] => 36
+    [supplierPhone] => 111222333
+    [supplierEmail] => supplier4@email.com
+    [vat] => 19
+    [total] => 20
+    [partDesc] => Array
+        (
+            [0] => Part4
+        )
+
+    [piecesPurch] => Array
+        (
+            [0] => 5
+        )
+
+    [pricePerPiece] => Array
+        (
+            [0] => 6
+        )
+
+    [sellingPrice] => Array
+        (
+            [0] => 15
+        )
+
+    [parts] => [{"partDesc":"Part4","piecesPurch":"5","pricePerPiece":"6","sellingPrice":"15"}]
+)
+
+[17-Apr-2025 16:19:42 UTC] Received FILES data: Array
+(
+)
+
+[17-Apr-2025 16:20:35 UTC] Received POST data: Array
+(
+    [invoiceNr] => 105
+    [dateCreated] => 2025-04-05
+    [supplier] => Supplier5
+    [supplierID] => 37
+    [supplierPhone] => 222333444
+    [supplierEmail] => supplier5@email.com
+    [vat] => 19
+    [total] => 20
+    [partDesc] => Array
+        (
+            [0] => Part5
+        )
+
+    [piecesPurch] => Array
+        (
+            [0] => 5
+        )
+
+    [pricePerPiece] => Array
+        (
+            [0] => 6
+        )
+
+    [sellingPrice] => Array
+        (
+            [0] => 9
+        )
+
+    [parts] => [{"partDesc":"Part5","piecesPurch":"5","pricePerPiece":"6","sellingPrice":"9"}]
+)
+
+[17-Apr-2025 16:20:35 UTC] Received FILES data: Array
+(
+)
+
+[17-Apr-2025 16:22:20 UTC] Received POST data: Array
+(
+    [invoiceNr] => 106
+    [dateCreated] => 2025-04-05
+    [supplier] => Supplier6
+    [supplierID] => 38
+    [supplierPhone] => 333444555
+    [supplierEmail] => supplier6@email.com
+    [vat] => 19
+    [total] => 20
+    [partDesc] => Array
+        (
+            [0] => Part6
+        )
+
+    [piecesPurch] => Array
+        (
+            [0] => 5
+        )
+
+    [pricePerPiece] => Array
+        (
+            [0] => 6
+        )
+
+    [sellingPrice] => Array
+        (
+            [0] => 18
+        )
+
+    [parts] => [{"partDesc":"Part6","piecesPurch":"5","pricePerPiece":"6","sellingPrice":"18"}]
+)
+
+[17-Apr-2025 16:22:20 UTC] Received FILES data: Array
+(
+)
+
+[17-Apr-2025 16:23:53 UTC] Received POST data: Array
+(
+    [invoiceNr] => 107
+    [dateCreated] => 2025-04-04
+    [supplier] => Supplier7
+    [supplierID] => 39
+    [supplierPhone] => 55444666
+    [supplierEmail] => supplier7@email.com
+    [vat] => 19
+    [total] => 20
+    [partDesc] => Array
+        (
+            [0] => Part 7
+        )
+
+    [piecesPurch] => Array
+        (
+            [0] => 5
+        )
+
+    [pricePerPiece] => Array
+        (
+            [0] => 6
+        )
+
+    [sellingPrice] => Array
+        (
+            [0] => 100
+        )
+
+    [parts] => [{"partDesc":"Part 7","piecesPurch":"5","pricePerPiece":"6","sellingPrice":"100"}]
+)
+
+[17-Apr-2025 16:23:53 UTC] Received FILES data: Array
+(
+)
+
+[17-Apr-2025 16:24:42 UTC] Received POST data: Array
+(
+    [invoiceNr] => 108
+    [dateCreated] => 2025-04-10
+    [supplier] => Supplier8
+    [supplierID] => 40
+    [supplierPhone] => 777888999
+    [supplierEmail] => supplier8@email.com
+    [vat] => 19
+    [total] => 20
+    [partDesc] => Array
+        (
+            [0] => Part8
+        )
+
+    [piecesPurch] => Array
+        (
+            [0] => 5
+        )
+
+    [pricePerPiece] => Array
+        (
+            [0] => 6
+        )
+
+    [sellingPrice] => Array
+        (
+            [0] => 112
+        )
+
+    [parts] => [{"partDesc":"Part8","piecesPurch":"5","pricePerPiece":"6","sellingPrice":"112"}]
+)
+
+[17-Apr-2025 16:24:42 UTC] Received FILES data: Array
+(
+)
+
+[17-Apr-2025 16:25:42 UTC] Received POST data: Array
+(
+    [invoiceNr] => 109
+    [dateCreated] => 2025-04-03
+    [supplier] => Supplier9
+    [supplierID] => 41
+    [supplierPhone] => 667777222
+    [supplierEmail] => supplier9@email.com
+    [vat] => 19
+    [total] => 20
+    [partDesc] => Array
+        (
+            [0] => Part9
+        )
+
+    [piecesPurch] => Array
+        (
+            [0] => 5
+        )
+
+    [pricePerPiece] => Array
+        (
+            [0] => 6
+        )
+
+    [sellingPrice] => Array
+        (
+            [0] => 20
+        )
+
+    [parts] => [{"partDesc":"Part9","piecesPurch":"5","pricePerPiece":"6","sellingPrice":"20"}]
+)
+
+[17-Apr-2025 16:25:42 UTC] Received FILES data: Array
+(
+)
+
+[17-Apr-2025 16:26:26 UTC] Received POST data: Array
+(
+    [invoiceNr] => 110
+    [dateCreated] => 2025-04-08
+    [supplier] => Supplier10
+    [supplierID] => 42
+    [supplierPhone] => 986677576
+    [supplierEmail] => supplier10@email.com
+    [vat] => 19
+    [total] => 20
+    [partDesc] => Array
+        (
+            [0] => Part10
+        )
+
+    [piecesPurch] => Array
+        (
+            [0] => 5
+        )
+
+    [pricePerPiece] => Array
+        (
+            [0] => 6
+        )
+
+    [sellingPrice] => Array
+        (
+            [0] => 20
+        )
+
+    [parts] => [{"partDesc":"Part10","piecesPurch":"5","pricePerPiece":"6","sellingPrice":"20"}]
+)
+
+[17-Apr-2025 16:26:26 UTC] Received FILES data: Array
+(
+)
+
+[18-Apr-2025 14:26:35 UTC] Error deleting invoice: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`webvaria_MobileGarageLarnaca`.`invoicejob`, CONSTRAINT `invoicejob_ibfk_2` FOREIGN KEY (`InvoiceID`) REFERENCES `invoices` (`InvoiceID`))
+[18-Apr-2025 14:26:54 UTC] Error deleting invoice: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`webvaria_MobileGarageLarnaca`.`invoicejob`, CONSTRAINT `invoicejob_ibfk_2` FOREIGN KEY (`InvoiceID`) REFERENCES `invoices` (`InvoiceID`))
+[18-Apr-2025 15:34:53 UTC] UPDATE INVOICE POST DATA: Array
+(
+    [invoice_id] => 74
+    [InvoiceID] => 74
+    [invoiceNr] => 108
+    [dateCreated] => 2025-04-10
+    [supplier] => Supplier8
+    [supplierID] => 40
+    [original_supplier_phone] => 777888999
+    [original_supplier_email] => supplier8@email.com
+    [supplierPhone] => 777888999
+    [supplierEmail] => supplier8@email.com
+    [vat] => 19.00
+    [total] => 20.00
+    [parts] => [{"partId":62,"partDesc":"Part8","piecesPurch":"5","pricePerPiece":"6.00","priceBulk":"112.00 selling price","sellingPrice":"112.00"}]
+)
+
+[18-Apr-2025 15:34:53 UTC] FILES: Array
+(
+)
+

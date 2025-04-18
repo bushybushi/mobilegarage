@@ -1,0 +1,51 @@
+[2025-04-09 01:08:36] === START PROCESSING UPDATE INVOICE ===
+[2025-04-09 01:08:36] POST data: {"invoice_id":"10","InvoiceID":"10","invoiceNr":"9789078","dateCreated":"2025-04-02","supplier":"Supplier2","supplierID":"9","original_supplier_phone":"9991113","original_supplier_email":"testemail2@email.com","supplierPhone":"9991113","supplierEmail":"testemail2@email.com","vat":"20.00","total":"20.00","parts":"[{\"partId\":16,\"partDesc\":\"testpart7\",\"piecesPurch\":\"2\",\"pricePerPiece\":\"4.00\",\"priceBulk\":\"9.60\",\"sellingPrice\":\"8.00\"}]"}
+[2025-04-09 01:08:36] FILES data: []
+[2025-04-11 12:20:29] === START PROCESSING UPDATE INVOICE ===
+[2025-04-11 12:20:29] POST data: {"invoice_id":"24","InvoiceID":"24","invoiceNr":"1","dateCreated":"2025-04-09","supplier":"<br \/><b>Warning<\/b>:  Undefined array key ","supplierID":"<br \/>\r\n<b>Warning<\/b>:  Undefined array key ","original_supplier_phone":"","original_supplier_email":"","supplierPhone":"2","supplierEmail":"","vat":"0.00","total":"33.00","parts":"[{\"partId\":\"temp_1744373952549\",\"partDesc\":\"d\",\"piecesPurch\":\"2\",\"pricePerPiece\":\"2.00\",\"priceBulk\":\"2.00 selling price\",\"sellingPrice\":\"2.00\"},{\"partId\":\"temp_1744374006276\",\"partDesc\":\"d\",\"piecesPurch\":\"1\",\"pricePerPiece\":\"1.00\",\"priceBulk\":\"11.00 selling price\",\"sellingPrice\":\"11.00\"}]"}
+[2025-04-11 12:20:29] FILES data: []
+[2025-04-11 12:20:29] All tables in database 'webvaria_MobileGarageLarnaca': addresses, carassoc, cars, customers, emails, invoicejob, invoices, jobcar, jobcardparts, jobcards, parts, partssupply, partsupplier, password_reset_tokens, phonenumbers, security_questions, suppliers, users
+[2025-04-11 12:20:29] Tables matching 'invoices' (case-insensitive): invoices
+[2025-04-11 12:20:29] Current user permissions: GRANT USAGE ON *.* TO `webvaria_MobileGarageLarnaca`@`localhost` IDENTIFIED BY PASSWORD '*C52C5D8974707A75DBCF108105E165C7F1646E23', GRANT ALL PRIVILEGES ON `webvaria\_MobileGarageLarnaca`.* TO `webvaria_MobileGarageLarnaca`@`localhost`
+[2025-04-11 12:20:29] Table 'Invoices' exists in database 'webvaria_MobileGarageLarnaca'
+[2025-04-11 12:20:29] Database connection established successfully to database: webvaria_MobileGarageLarnaca
+[2025-04-12 07:09:40] === START PROCESSING UPDATE INVOICE ===
+[2025-04-12 07:09:40] POST data: {"invoice_id":"26","InvoiceID":"26","invoiceNr":"123456","dateCreated":"2025-04-10","supplier":"Stavros","supplierID":"21","original_supplier_phone":"99112266","original_supplier_email":"test_email@gmail.com","supplierPhone":"99112266","supplierEmail":"test_email@gmail.com","vat":"13.00","total":"100.00","parts":"[{\"partId\":29,\"partDesc\":\"Oil\",\"piecesPurch\":\"10\",\"pricePerPiece\":\"5.00\",\"priceBulk\":\"10.00 selling price\",\"sellingPrice\":\"10.00\"},{\"partId\":\"temp_1744441727921\",\"partDesc\":\"sparks\",\"piecesPurch\":\"10\",\"pricePerPiece\":\"5.00\",\"priceBulk\":\"10.00 selling price\",\"sellingPrice\":\"10.00\"}]"}
+[2025-04-12 07:09:40] FILES data: []
+[2025-04-12 07:09:40] All tables in database 'webvaria_MobileGarageLarnaca': addresses, carassoc, cars, customers, emails, invoicejob, invoices, jobcar, jobcardparts, jobcards, parts, partssupply, partsupplier, password_reset_tokens, phonenumbers, security_questions, suppliers, users
+[2025-04-12 07:09:40] Tables matching 'invoices' (case-insensitive): invoices
+[2025-04-12 07:09:40] Current user permissions: GRANT USAGE ON *.* TO `webvaria_MobileGarageLarnaca`@`localhost` IDENTIFIED BY PASSWORD '*C52C5D8974707A75DBCF108105E165C7F1646E23', GRANT ALL PRIVILEGES ON `webvaria\_MobileGarageLarnaca`.* TO `webvaria_MobileGarageLarnaca`@`localhost`
+[2025-04-12 07:09:40] Table 'Invoices' exists in database 'webvaria_MobileGarageLarnaca'
+[2025-04-12 07:09:40] Database connection established successfully to database: webvaria_MobileGarageLarnaca
+[2025-04-13 21:44:39] === START PROCESSING UPDATE INVOICE ===
+[2025-04-13 21:44:39] POST data: {"invoice_id":"26","InvoiceID":"26","invoiceNr":"123456","dateCreated":"2025-04-10","supplier":"Stavros","supplierID":"21","original_supplier_phone":"99112266","original_supplier_email":"test_email@gmail.com","supplierPhone":"99112266","supplierEmail":"test_email@gmail.com","vat":"13.00","total":"100.00","parts":"[{\"partId\":29,\"partDesc\":\"Oil\",\"piecesPurch\":\"10\",\"pricePerPiece\":\"5.00\",\"priceBulk\":\"10.00\",\"sellingPrice\":\"10.00\"},{\"partId\":38,\"partDesc\":\"sparks\",\"piecesPurch\":\"10\",\"pricePerPiece\":\"5.00\",\"priceBulk\":\"10.00\",\"sellingPrice\":\"10.00\"}]"}
+[2025-04-13 21:44:39] FILES data: []
+[2025-04-13 21:44:39] All tables in database 'webvaria_MobileGarageLarnaca': addresses, carassoc, cars, customers, emails, invoicejob, invoices, jobcar, jobcardparts, jobcards, parts, partssupply, partsupplier, password_reset_tokens, phonenumbers, security_questions, suppliers, users
+[2025-04-13 21:44:39] Tables matching 'invoices' (case-insensitive): invoices
+[2025-04-13 21:44:39] Current user permissions: GRANT USAGE ON *.* TO `webvaria_MobileGarageLarnaca`@`localhost` IDENTIFIED BY PASSWORD '*C52C5D8974707A75DBCF108105E165C7F1646E23', GRANT ALL PRIVILEGES ON `webvaria\_MobileGarageLarnaca`.* TO `webvaria_MobileGarageLarnaca`@`localhost`
+[2025-04-13 21:44:39] Table 'Invoices' exists in database 'webvaria_MobileGarageLarnaca'
+[2025-04-13 21:44:39] Database connection established successfully to database: webvaria_MobileGarageLarnaca
+[2025-04-14 14:15:32] === START PROCESSING UPDATE INVOICE ===
+[2025-04-14 14:15:32] POST data: {"invoice_id":"36","InvoiceID":"36","invoiceNr":"1","dateCreated":"2025-04-13","supplier":"Antonela","supplierID":"20","original_supplier_phone":"","original_supplier_email":"","supplierPhone":"99112233","supplierEmail":"test_email@gmail.com","vat":"0.00","total":"20.00","parts":"[{\"partId\":\"temp_1744640114856\",\"partDesc\":\"air filter\",\"piecesPurch\":\"3\",\"pricePerPiece\":\"44.00\",\"priceBulk\":\"56.00 selling price\",\"sellingPrice\":\"56.00\"}]"}
+[2025-04-14 14:15:32] FILES data: []
+[2025-04-14 14:15:32] All tables in database 'webvaria_MobileGarageLarnaca': addresses, carassoc, cars, customers, emails, extraexpenses, invoicejob, invoices, jobcar, jobcardparts, jobcards, parts, partssupply, partsupplier, password_reset_tokens, phonenumbers, security_questions, suppliers, users
+[2025-04-14 14:15:32] Tables matching 'invoices' (case-insensitive): invoices
+[2025-04-14 14:15:32] Current user permissions: GRANT USAGE ON *.* TO `webvaria_MobileGarageLarnaca`@`localhost` IDENTIFIED BY PASSWORD '*C52C5D8974707A75DBCF108105E165C7F1646E23', GRANT ALL PRIVILEGES ON `webvaria\_MobileGarageLarnaca`.* TO `webvaria_MobileGarageLarnaca`@`localhost`
+[2025-04-14 14:15:32] Table 'Invoices' exists in database 'webvaria_MobileGarageLarnaca'
+[2025-04-14 14:15:32] Database connection established successfully to database: webvaria_MobileGarageLarnaca
+[2025-04-17 12:59:05] === START PROCESSING UPDATE INVOICE ===
+[2025-04-17 12:59:05] POST data: {"invoice_id":"63","InvoiceID":"63","invoiceNr":"122","dateCreated":"2025-04-01","supplier":"Testsupl","supplierID":"31","original_supplier_phone":"00998877","original_supplier_email":"testsup1@email.com","supplierPhone":"00998877","supplierEmail":"testsup1@email.com","vat":"19.00","total":"50.00","parts":"[{\"partId\":52,\"partDesc\":\"TestPart1\",\"piecesPurch\":\"5\",\"pricePerPiece\":\"7.00\",\"priceBulk\":\"8.00\",\"sellingPrice\":\"8.00\"},{\"partId\":\"\",\"partDesc\":\"TestPart3\",\"piecesPurch\":\"3\",\"pricePerPiece\":\"2.00\",\"priceBulk\":\"1.00 selling price\",\"sellingPrice\":\"1.00\"}]"}
+[2025-04-17 12:59:05] FILES data: []
+[2025-04-17 12:59:05] All tables in database 'webvaria_MobileGarageLarnaca': addresses, carassoc, cars, customers, emails, extraexpenses, invoicejob, invoices, jobcar, jobcardparts, jobcards, parts, partssupply, partsupplier, password_reset_tokens, phonenumbers, security_questions, suppliers, users
+[2025-04-17 12:59:05] Tables matching 'invoices' (case-insensitive): invoices
+[2025-04-17 12:59:05] Current user permissions: GRANT USAGE ON *.* TO `webvaria_MobileGarageLarnaca`@`localhost` IDENTIFIED BY PASSWORD '*C52C5D8974707A75DBCF108105E165C7F1646E23', GRANT ALL PRIVILEGES ON `webvaria\_MobileGarageLarnaca`.* TO `webvaria_MobileGarageLarnaca`@`localhost`
+[2025-04-17 12:59:05] Table 'Invoices' exists in database 'webvaria_MobileGarageLarnaca'
+[2025-04-17 12:59:05] Database connection established successfully to database: webvaria_MobileGarageLarnaca
+[2025-04-18 15:34:53] === START PROCESSING UPDATE INVOICE ===
+[2025-04-18 15:34:53] POST data: {"invoice_id":"74","InvoiceID":"74","invoiceNr":"108","dateCreated":"2025-04-10","supplier":"Supplier8","supplierID":"40","original_supplier_phone":"777888999","original_supplier_email":"supplier8@email.com","supplierPhone":"777888999","supplierEmail":"supplier8@email.com","vat":"19.00","total":"20.00","parts":"[{\"partId\":62,\"partDesc\":\"Part8\",\"piecesPurch\":\"5\",\"pricePerPiece\":\"6.00\",\"priceBulk\":\"112.00 selling price\",\"sellingPrice\":\"112.00\"}]"}
+[2025-04-18 15:34:53] FILES data: []
+[2025-04-18 15:34:53] All tables in database 'webvaria_MobileGarageLarnaca': addresses, carassoc, cars, customers, emails, extraexpenses, invoicejob, invoices, jobcar, jobcardparts, jobcards, parts, partssupply, partsupplier, password_reset_tokens, phonenumbers, security_questions, suppliers, users
+[2025-04-18 15:34:53] Tables matching 'invoices' (case-insensitive): invoices
+[2025-04-18 15:34:53] Current user permissions: GRANT USAGE ON *.* TO `webvaria_MobileGarageLarnaca`@`localhost` IDENTIFIED BY PASSWORD '*C52C5D8974707A75DBCF108105E165C7F1646E23', GRANT ALL PRIVILEGES ON `webvaria\_MobileGarageLarnaca`.* TO `webvaria_MobileGarageLarnaca`@`localhost`
+[2025-04-18 15:34:53] Table 'Invoices' exists in database 'webvaria_MobileGarageLarnaca'
+[2025-04-18 15:34:53] Database connection established successfully to database: webvaria_MobileGarageLarnaca
