@@ -1,0 +1,323 @@
+/* Import Google Font - Plus Jakarta Sans */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+/* Base styles */
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 400;
+}
+
+#printModal .modal-content  {
+  font-size: 14px!important;
+}
+
+.modal-title {
+   font-weight: 700!important;
+}
+
+.title-container h2 {
+    color: #333;
+    font-weight: 600;
+}
+
+/* First Time Password Container */
+.firsttimepass-container {
+  max-width: 40rem;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 2rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+}
+
+/* Main Form Container */
+.form-container {
+    padding: 2rem;
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 376px) {
+    .form-container {
+      padding: 1rem;
+    }
+  }
+
+/* Top Navigation Bar */
+.top-container {
+    padding: 1rem;
+    background-image: url('Cover.png');
+    background-position: top;
+    background-repeat: no-repeat, repeat;
+    border-radius: 1rem 1rem 0 0;
+    margin-bottom: 2rem;
+    font-weight: 600;
+    color: #333;
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+/* Table Styles */
+.table{
+  padding-left: 2rem;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+}
+
+/* Title Container */
+.title-container{
+  padding-left: 2rem;
+  padding: 1rem;
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+/* Button Styles */
+.btn{
+  font-weight: 500;
+  border-radius: 1rem!important;
+  font-size: 0.9rem!important;
+  padding: 0.5rem 1rem!important;
+}
+
+/* Edit User Form */
+.edituserform{
+  padding: 2rem;
+  max-width: 1080px;
+}
+
+/* Button Group Container */
+.btngroup .btn{
+  text-align: center;
+  min-width: 100px;
+}
+
+/* Back Arrow Link */
+.back-arrow {
+    color: #333;
+    font-size: 16px;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+/* Back Arrow Hover Effect */
+.back-arrow:hover {
+    color: #007bff;
+    text-decoration: none;
+}
+
+/* Form Label Styles */
+label {
+    font-weight: 500;
+    color: #555;
+}
+
+/* Popup/Notification Styles */
+/* Popup container styling */
+.popup-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+    animation: slideIn 0.5s ease-out;
+}
+
+
+.modal-content {
+  border-radius: 1rem!important;
+}
+
+.error, .no-results {
+    padding: 8px;
+    color: #666;
+    font-style: italic;
+}
+
+.part-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    margin-bottom: 10px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    border: 1px solid #dee2e6;
+}
+
+.part-info {
+    flex-grow: 1;
+}
+
+.part-desc {
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.part-details {
+    display: flex;
+    gap: 20px;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.remove-part {
+    margin-left: 10px;
+}
+
+.modal-content {
+    border-radius: 10px;
+}
+
+.modal-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+    border-radius: 10px 10px 0 0;
+}
+
+.modal-footer {
+    background-color: #f8f9fa;
+    border-top: 1px solid #dee2e6;
+    border-radius: 0 0 10px 10px;
+}
+
+#successAlert {
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border: none;
+    background-color: #d4edda;
+    color: #155724;
+    padding: 15px 20px;
+}
+
+#successAlert .close {
+    color: #155724;
+    opacity: 0.5;
+    text-shadow: none;
+}
+
+#successAlert .close:hover {
+    opacity: 1;
+}
+
+#successAlert i {
+    font-size: 1.2rem;
+}
+
+#successAlert.show {
+    display: block !important;
+}
+
+.car-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    margin-bottom: 10px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    border: 1px solid #dee2e6;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.car-row:hover {
+    background-color: #e9ecef;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.car-info {
+    flex-grow: 1;
+}
+
+.car-desc {
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.car-details {
+    display: flex;
+    gap: 20px;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.remove-car {
+    margin-left: 10px;
+}
+
+.modal-lg {
+    max-width: 800px;
+}
+
+.modal-content {
+    border: none;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.modal-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+    padding: 1rem 1.5rem;
+}
+
+.modal-body {
+    padding: 1.5rem;
+}
+
+.modal-footer {
+    background-color: #f8f9fa;
+    border-top: 1px solid #dee2e6;
+    padding: 1rem 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1.25rem;
+}
+
+.form-group label {
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.form-control {
+    border-radius: 0.375rem;
+    border: 1px solid #ced4da;
+    padding: 0.5rem 0.75rem;
+}
+
+.form-control:focus {
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* Section Header Styles */
+.section-header {
+    background: #f8f9fa;
+    padding: 12px 20px;
+    margin: 25px 0 20px 0;
+    color: #495057;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #dee2e6;
+}
+
+.section-header i {
+    margin-right: 12px;
+    font-size: 1.1rem;
+    color: #6c757d;
+}
+
+.section-header span {
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+}

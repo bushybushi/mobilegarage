@@ -1,0 +1,225 @@
+COMMAND:
+/usr/bin/mysqldump -h localhost -u webvaria_MobileGarageLarnaca -pvn{2i1;BA}@s webvaria_MobileGarageLarnaca > ../backup/db_backup_2025-04-15_13-20-46.sql
+
+OUTPUT:
+
+
+RETURN CODE:
+127
+
+COMMAND:
+/bin/mysqldump -h localhost -u webvaria_MobileGarageLarnaca -pvn{2i1;BA}@s webvaria_MobileGarageLarnaca > ../backup/db_backup_2025-04-15_13-22-14.sql
+
+OUTPUT:
+
+
+RETURN CODE:
+127
+
+COMMAND:
+/bin/mysqldump -h localhost -u webvaria_MobileGarageLarnaca -pvn{2i1;BA}@s webvaria_MobileGarageLarnaca > ../backup/db_backup_2025-04-15_13-22-35.sql
+
+OUTPUT:
+
+
+RETURN CODE:
+127
+
+COMMAND:
+/bin/mysqldump -h localhost -u webvaria_MobileGarageLarnaca -pvn{2i1;BA}@s webvaria_MobileGarageLarnaca > ../backup/db_backup_2025-04-15_13-23-27.sql
+
+OUTPUT:
+
+
+RETURN CODE:
+127
+
+COMMAND:
+/bin/mysqldump -h localhost -u webvaria_MobileGarageLarnaca -pvn{2i1;BA}@s webvaria_MobileGarageLarnaca > ../backup/db_backup_2025-04-15_13-23-41.sql
+
+OUTPUT:
+
+
+RETURN CODE:
+127
+
+COMMAND:
+/bin/mysqldump -uwebvaria_MobileGarageLarnaca --password='vn{2i1;BA}@s'  > ../backup/db_backup_2025-04-15_13-31-37.sql
+
+OUTPUT:
+
+
+RETURN CODE:
+1
+
+COMMAND:
+/bin/mysqldump -uwebvaria_MobileGarageLarnaca --password='vn{2i1;BA}@s'  > ../backup/db_backup_2025-04-15_13-32-13.sql
+
+OUTPUT:
+
+
+RETURN CODE:
+1
+
+COMMAND:
+/bin/mysqldump -uwebvaria_MobileGarageLarnaca --password='vn{2i1;BA}@s' webvaria_MobileGarageLarnaca > ../backup/db_backup_2025-04-15_13-32-38.sql
+
+OUTPUT:
+
+
+RETURN CODE:
+0
+
+COMMAND:
+/bin/mysqldump -uwebvaria_MobileGarageLarnaca --password='vn{2i1;BA}@s' webvaria_MobileGarageLarnaca > ../backup/db_backup_2025-04-15_13-40-34.sql
+
+OUTPUT:
+
+
+RETURN CODE:
+0
+
+RESTORE COMMAND:
+/usr/bin/mysql -uwebvaria_MobileGarageLarnaca --password='vn{2i1;BA}@s' webvaria_MobileGarageLarnaca < '../backup/db_backup_2025-04-15_13-40-34.sql'
+
+RESTORE OUTPUT:
+
+
+RESTORE RETURN CODE:
+0
+
+RESTORE COMMAND:
+/usr/bin/mysql -uwebvaria_MobileGarageLarnaca --password='vn{2i1;BA}@s' webvaria_MobileGarageLarnaca < '../backup/db_backup_2025-04-15_13-40-34.sql'
+
+RESTORE OUTPUT:
+
+
+RESTORE RETURN CODE:
+0
+
+COMMAND:
+/bin/mysqldump -uwebvaria_MobileGarageLarnaca --password='vn{2i1;BA}@s' webvaria_MobileGarageLarnaca > ../backup/db_backup_2025-04-15_13-48-59.sql
+
+OUTPUT:
+
+
+RETURN CODE:
+0
+
+RESTORE COMMAND:
+/usr/bin/mysql -uwebvaria_MobileGarageLarnaca --password='vn{2i1;BA}@s' webvaria_MobileGarageLarnaca < '../backup/db_backup_2025-04-15_13-48-59.sql'
+
+RESTORE OUTPUT:
+
+
+RESTORE RETURN CODE:
+0
+
+COMMAND:
+/bin/mysqldump -uwebvaria_MobileGarageLarnaca --password='vn{2i1;BA}@s' webvaria_MobileGarageLarnaca > ../backup/db_backup_2025-04-15_13-52-45.sql
+
+OUTPUT:
+
+
+RETURN CODE:
+0
+
+RESTORE COMMAND:
+/usr/bin/mysql -uwebvaria_MobileGarageLarnaca --password='vn{2i1;BA}@s' webvaria_MobileGarageLarnaca < '../backup/db_backup_2025-04-15_13-52-45.sql'
+
+RESTORE OUTPUT:
+
+
+RESTORE RETURN CODE:
+0
+
+COMMAND:
+/bin/mysqldump -uwebvaria_MobileGarageLarnaca --password='vn{2i1;BA}@s' webvaria_MobileGarageLarnaca > ../backup/db_backup_2025-04-15_13-54-19.sql
+
+OUTPUT:
+
+
+RETURN CODE:
+0
+
+RESTORE COMMAND:
+/usr/bin/mysql -uwebvaria_MobileGarageLarnaca --password='vn{2i1;BA}@s' webvaria_MobileGarageLarnaca < '../backup/db_backup_2025-04-15_13-54-19.sql'
+
+RESTORE OUTPUT:
+
+
+RESTORE RETURN CODE:
+0
+
+COMMAND:
+/bin/mysqldump -uwebvaria_MobileGarageLarnaca --password='vn{2i1;BA}@s' webvaria_MobileGarageLarnaca > ../backup/db_backup_2025-04-15_20-23-26.sql
+
+COMMAND:
+/bin/mysqldump -uwebvaria_MobileGarageLarnaca --password='vn{2i1;BA}@s' webvaria_MobileGarageLarnaca > ../backup/db_backup_2025-04-15_20-23-26.sql
+
+OUTPUT:
+
+
+RETURN CODE:
+0
+
+OUTPUT:
+
+
+RETURN CODE:
+0
+
+RESTORE COMMAND:
+/usr/bin/mysql -uwebvaria_MobileGarageLarnaca --password='vn{2i1;BA}@s' webvaria_MobileGarageLarnaca < '../backup/db_backup_2025-04-15_20-23-26.sql'
+
+RESTORE COMMAND:
+/usr/bin/mysql -uwebvaria_MobileGarageLarnaca --password='vn{2i1;BA}@s' webvaria_MobileGarageLarnaca < '../backup/db_backup_2025-04-15_20-23-26.sql'
+
+RESTORE OUTPUT:
+--------------
+CREATE TABLE `addresses` (
+  `CustomerID` int(11) NOT NULL,
+  `Address` varchar(60) NOT NULL,
+  KEY `CustomerID` (`CustomerID`),
+  CONSTRAINT `addresses_ibfk_1` FOREIGN KEY (`CustomerID`) REFERENCES `customers` (`CustomerID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci
+--------------
+
+ERROR 1050 (42S01) at line 26: Table 'addresses' already exists
+
+RESTORE RETURN CODE:
+1
+
+RESTORE OUTPUT:
+
+
+RESTORE RETURN CODE:
+0
+
+RESTORE COMMAND:
+/usr/bin/mysql -uwebvaria_MobileGarageLarnaca --password='vn{2i1;BA}@s' webvaria_MobileGarageLarnaca < '../backup/db_backup_2025-04-15_20-23-26.sql'
+
+RESTORE COMMAND:
+/usr/bin/mysql -uwebvaria_MobileGarageLarnaca --password='vn{2i1;BA}@s' webvaria_MobileGarageLarnaca < '../backup/db_backup_2025-04-15_20-23-26.sql'
+
+RESTORE OUTPUT:
+--------------
+CREATE TABLE `addresses` (
+  `CustomerID` int(11) NOT NULL,
+  `Address` varchar(60) NOT NULL,
+  KEY `CustomerID` (`CustomerID`),
+  CONSTRAINT `addresses_ibfk_1` FOREIGN KEY (`CustomerID`) REFERENCES `customers` (`CustomerID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci
+--------------
+
+ERROR 1050 (42S01) at line 26: Table 'addresses' already exists
+
+RESTORE RETURN CODE:
+1
+
+RESTORE OUTPUT:
+
+
+RESTORE RETURN CODE:
+0
+

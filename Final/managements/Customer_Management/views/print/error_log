@@ -1,0 +1,20 @@
+[09-Apr-2025 12:07:02 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'webvaria_MobileGarageLarnaca.CarAssoc' doesn't exist in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Customer_Management/views/print/PrintCustomerView.php:44
+Stack trace:
+#0 /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Customer_Management/views/print/PrintCustomerView.php(44): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Customer_Management/views/print/PrintCustomerView.php on line 44
+[09-Apr-2025 12:11:38 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'webvaria_MobileGarageLarnaca.CarAssoc' doesn't exist in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Customer_Management/views/print/PrintCustomerView.php:44
+Stack trace:
+#0 /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Customer_Management/views/print/PrintCustomerView.php(44): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Customer_Management/views/print/PrintCustomerView.php on line 44
+[09-Apr-2025 13:02:21 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'webvaria_MobileGarageLarnaca.CarAssoc' doesn't exist in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Customer_Management/views/print/PrintCustomerView.php:44
+Stack trace:
+#0 /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Customer_Management/views/print/PrintCustomerView.php(44): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Customer_Management/views/print/PrintCustomerView.php on line 44
+[15-Apr-2025 22:41:25 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'webvaria_MobileGarageLarnaca.CarAssoc' doesn't exist in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Customer_Management/views/print/PrintCustomerView.php:44
+Stack trace:
+#0 /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Customer_Management/views/print/PrintCustomerView.php(44): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Customer_Management/views/print/PrintCustomerView.php on line 44

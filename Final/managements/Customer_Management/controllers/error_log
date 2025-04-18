@@ -1,0 +1,33 @@
+[10-Apr-2025 14:00:26 UTC] Error fetching job cards: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'j.JobDate' in 'SELECT'
+[10-Apr-2025 14:00:50 UTC] Error fetching job cards: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'j.JobDate' in 'SELECT'
+[10-Apr-2025 14:01:01 UTC] Error fetching job cards: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'j.JobDate' in 'SELECT'
+[10-Apr-2025 14:14:08 UTC] Error fetching job cards: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'j.JobDate' in 'SELECT'
+[10-Apr-2025 14:15:56 UTC] Error fetching job cards: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'j.JobDate' in 'SELECT'
+[10-Apr-2025 14:16:05 UTC] Error fetching job cards: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'j.JobDate' in 'SELECT'
+[10-Apr-2025 14:16:52 UTC] Error fetching job cards: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'j.JobDate' in 'SELECT'
+[10-Apr-2025 14:18:53 UTC] Error fetching job cards: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'j.JobDate' in 'SELECT'
+[10-Apr-2025 14:19:34 UTC] Error fetching job cards: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'j.JobDate' in 'SELECT'
+[10-Apr-2025 14:19:39 UTC] Error fetching job cards: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'j.JobDate' in 'SELECT'
+[10-Apr-2025 14:19:45 UTC] Error fetching job cards: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'j.JobDate' in 'SELECT'
+[10-Apr-2025 14:19:47 UTC] Error fetching job cards: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'j.JobDate' in 'SELECT'
+[10-Apr-2025 14:19:49 UTC] Error fetching job cards: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'j.JobDate' in 'SELECT'
+[10-Apr-2025 14:19:50 UTC] Error fetching job cards: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'j.JobDate' in 'SELECT'
+[10-Apr-2025 14:21:01 UTC] Error fetching job cards: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'j.JobDate' in 'SELECT'
+[10-Apr-2025 14:21:55 UTC] Error fetching job cards: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'j.JobDate' in 'SELECT'
+[10-Apr-2025 14:22:12 UTC] Error fetching job cards: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'j.JobDate' in 'SELECT'
+[10-Apr-2025 14:24:06 UTC] Error fetching job cards: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'j.JobDate' in 'SELECT'
+[10-Apr-2025 19:56:05 UTC] Attempting to add car with license plate: sdjgd
+[10-Apr-2025 19:56:05 UTC] Found 0 existing cars with license plate: sdjgd
+[10-Apr-2025 19:56:05 UTC] Found 0 existing associations with license plate: sdjgd
+[10-Apr-2025 19:56:05 UTC] Car addition response: {"success":true,"message":"Car added successfully","licenseNr":"sdjgd"}
+[10-Apr-2025 19:58:00 UTC] Delete customer request - ID: 5, deleteCars: true, deleteJobCards: true
+[12-Apr-2025 19:15:23 UTC] Car addition error: Customer ID is required
+[12-Apr-2025 19:19:00 UTC] Attempting to add car with license plate: s
+[12-Apr-2025 19:19:00 UTC] Found 0 existing cars with license plate: s
+[12-Apr-2025 19:19:00 UTC] Found 0 existing associations with license plate: s
+[12-Apr-2025 19:19:00 UTC] Car addition response: {"success":true,"message":"Car added successfully","licenseNr":"s"}
+[13-Apr-2025 21:34:36 UTC] Attempting to add car with license plate: a
+[13-Apr-2025 21:34:36 UTC] Found 0 existing cars with license plate: a
+[13-Apr-2025 21:34:36 UTC] Found 0 existing associations with license plate: a
+[13-Apr-2025 21:34:36 UTC] Car addition response: {"success":true,"message":"Car added successfully","licenseNr":"a"}
+[18-Apr-2025 19:54:58 UTC] Delete customer request - ID: 72, deleteCars: false, deleteJobCards: false
