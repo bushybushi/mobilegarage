@@ -1,0 +1,266 @@
+[09-Apr-2025 18:21:37 UTC] Database connection established successfully
+[09-Apr-2025 18:21:37 UTC] Database connection established successfully
+[09-Apr-2025 18:21:37 UTC] Part data fetched: {"PartID":16,"SupplierID":9,"PartDesc":"testpart7","PriceBulk":"9.60","SellPrice":"8.00","PiecesPurch":2,"PricePerPiece":"4.00","Vat":"20.00","DateCreated":"2025-04-02","Sold":1,"Stock":2,"SupplierName":"Supplier2","SupplierPhone":"9991113","SupplierEmail":"testemail2@email.com"}
+[09-Apr-2025 18:28:38 UTC] Database connection established successfully
+[09-Apr-2025 18:28:38 UTC] Database connection established successfully
+[09-Apr-2025 18:28:38 UTC] Part data fetched: {"PartID":16,"SupplierID":9,"PartDesc":"testpart7","PriceBulk":"9.60","SellPrice":"8.00","PiecesPurch":2,"PricePerPiece":"4.00","Vat":"20.00","DateCreated":"2025-04-02","Sold":1,"Stock":2,"SupplierName":"Supplier2","SupplierPhone":"9991113","SupplierEmail":"testemail2@email.com"}
+[09-Apr-2025 18:28:38 UTC] Error updating part: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`webvaria_MobileGarageLarnaca`.`parts`, CONSTRAINT `parts_ibfk_1` FOREIGN KEY (`SupplierID`) REFERENCES `suppliers` (`SupplierID`))
+[09-Apr-2025 18:31:17 UTC] Received POST data: Array
+(
+    [supplier] => saasds
+    [supplierID] => 
+    [supplierPhone] => 254323
+    [supplierEmail] => dfg@email.com
+    [dateCreated] => 2025-04-02
+    [parts] => [{"partDesc":"tdvsvfs","piecesPurch":"4","pricePerPiece":"5","priceBulk":"23.80","sellingPrice":"7","vat":"19"}]
+)
+
+[09-Apr-2025 18:31:17 UTC] Received FILES data: Array
+(
+)
+
+[09-Apr-2025 18:31:17 UTC] Database connection established successfully
+[09-Apr-2025 18:31:17 UTC] Database connection established successfully
+[09-Apr-2025 18:31:17 UTC] Database connection established successfully
+[09-Apr-2025 18:31:17 UTC] Error in add_parts_controller.php: Error processing supplier information: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'webvaria_MobileGarageLarnaca.Suppliers' doesn't exist
+[09-Apr-2025 18:31:17 UTC] Stack trace: #0 {main}
+[09-Apr-2025 18:35:10 UTC] Received POST data: Array
+(
+    [supplier] => noinea
+    [supplierID] => 
+    [supplierPhone] => 90809
+    [supplierEmail] => ppop@hello.com
+    [dateCreated] => 2025-04-02
+    [parts] => [{"partDesc":"oiadsw","piecesPurch":"5","pricePerPiece":"6","priceBulk":"35.70","sellingPrice":"8","vat":"19"}]
+)
+
+[09-Apr-2025 18:35:10 UTC] Received FILES data: Array
+(
+)
+
+[09-Apr-2025 18:35:10 UTC] Database connection established successfully
+[09-Apr-2025 18:35:10 UTC] Database connection established successfully
+[09-Apr-2025 18:35:10 UTC] Database connection established successfully
+[09-Apr-2025 18:35:10 UTC] Decoded parts data: Array
+(
+    [0] => Array
+        (
+            [partDesc] => oiadsw
+            [piecesPurch] => 5
+            [pricePerPiece] => 6
+            [priceBulk] => 35.70
+            [sellingPrice] => 8
+            [vat] => 19
+        )
+
+)
+
+[09-Apr-2025 18:35:10 UTC] Error in add_parts_controller.php: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'webvaria_MobileGarageLarnaca.Parts' doesn't exist
+[09-Apr-2025 18:35:10 UTC] Stack trace: #0 /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/controllers/add_parts_controller.php(94): PDO->prepare('INSERT INTO Par...')
+#1 {main}
+[09-Apr-2025 18:37:43 UTC] Received POST data: Array
+(
+    [supplier] => kuy
+    [supplierID] => 
+    [supplierPhone] => 756
+    [supplierEmail] => dty@email.com
+    [dateCreated] => 2025-04-02
+    [parts] => [{"partDesc":"sdzfgb","piecesPurch":"4","pricePerPiece":"5","priceBulk":"23.80","sellingPrice":"5","vat":"19"}]
+)
+
+[09-Apr-2025 18:37:43 UTC] Received FILES data: Array
+(
+)
+
+[09-Apr-2025 18:37:43 UTC] Database connection established successfully
+[09-Apr-2025 18:37:43 UTC] Database connection established successfully
+[09-Apr-2025 18:37:43 UTC] Database connection established successfully
+[09-Apr-2025 18:37:43 UTC] Decoded parts data: Array
+(
+    [0] => Array
+        (
+            [partDesc] => sdzfgb
+            [piecesPurch] => 4
+            [pricePerPiece] => 5
+            [priceBulk] => 23.80
+            [sellingPrice] => 5
+            [vat] => 19
+        )
+
+)
+
+[09-Apr-2025 18:38:02 UTC] Database connection established successfully
+[09-Apr-2025 18:38:02 UTC] Database connection established successfully
+[09-Apr-2025 18:38:02 UTC] Part data fetched: {"PartID":26,"SupplierID":18,"PartDesc":"sdzfgb","PriceBulk":"23.80","SellPrice":"5.00","PiecesPurch":4,"PricePerPiece":"5.00","Vat":"19.00","DateCreated":"2025-04-02","Sold":0,"Stock":4,"SupplierName":"kuy","SupplierPhone":"756","SupplierEmail":"dty@email.com"}
+[09-Apr-2025 18:38:02 UTC] Error updating part: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`webvaria_MobileGarageLarnaca`.`parts`, CONSTRAINT `parts_ibfk_1` FOREIGN KEY (`SupplierID`) REFERENCES `suppliers` (`SupplierID`))
+[09-Apr-2025 18:40:39 UTC] Received POST data: Array
+(
+    [supplier] => sdbg
+    [supplierID] => 
+    [supplierPhone] => 34232
+    [supplierEmail] => gdf@ee.com
+    [dateCreated] => 2025-04-02
+    [parts] => [{"partDesc":"sdaa","piecesPurch":"4","pricePerPiece":"7","priceBulk":"33.32","sellingPrice":"8","vat":"19"}]
+)
+
+[09-Apr-2025 18:40:39 UTC] Received FILES data: Array
+(
+)
+
+[09-Apr-2025 18:40:39 UTC] Database connection established successfully
+[09-Apr-2025 18:40:39 UTC] Database connection established successfully
+[09-Apr-2025 18:40:39 UTC] Database connection established successfully
+[09-Apr-2025 18:40:39 UTC] Decoded parts data: Array
+(
+    [0] => Array
+        (
+            [partDesc] => sdaa
+            [piecesPurch] => 4
+            [pricePerPiece] => 7
+            [priceBulk] => 33.32
+            [sellingPrice] => 8
+            [vat] => 19
+        )
+
+)
+
+[09-Apr-2025 18:41:56 UTC] Database connection established successfully
+[09-Apr-2025 18:41:56 UTC] Database connection established successfully
+[09-Apr-2025 18:41:56 UTC] Part data fetched: {"PartID":27,"SupplierID":19,"PartDesc":"sdaa","PriceBulk":"33.32","SellPrice":"8.00","PiecesPurch":4,"PricePerPiece":"7.00","Vat":"19.00","DateCreated":"2025-04-02","Sold":0,"Stock":4,"SupplierName":"sdbg","SupplierPhone":"34232","SupplierEmail":"gdf@ee.com"}
+[09-Apr-2025 18:41:56 UTC] Error updating part: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`webvaria_MobileGarageLarnaca`.`parts`, CONSTRAINT `parts_ibfk_1` FOREIGN KEY (`SupplierID`) REFERENCES `suppliers` (`SupplierID`))
+[09-Apr-2025 18:42:01 UTC] Database connection established successfully
+[09-Apr-2025 18:42:01 UTC] Database connection established successfully
+[09-Apr-2025 18:42:01 UTC] Part data fetched: {"PartID":27,"SupplierID":19,"PartDesc":"sdaa","PriceBulk":"33.32","SellPrice":"8.00","PiecesPurch":4,"PricePerPiece":"7.00","Vat":"19.00","DateCreated":"2025-04-02","Sold":0,"Stock":4,"SupplierName":"sdbg","SupplierPhone":"34232","SupplierEmail":"gdf@ee.com"}
+[09-Apr-2025 18:42:01 UTC] Error updating part: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`webvaria_MobileGarageLarnaca`.`parts`, CONSTRAINT `parts_ibfk_1` FOREIGN KEY (`SupplierID`) REFERENCES `suppliers` (`SupplierID`))
+[09-Apr-2025 18:43:12 UTC] Database connection established successfully
+[09-Apr-2025 18:43:12 UTC] Database connection established successfully
+[09-Apr-2025 18:43:12 UTC] Part data fetched: {"PartID":27,"SupplierID":19,"PartDesc":"sdaa","PriceBulk":"33.32","SellPrice":"8.00","PiecesPurch":4,"PricePerPiece":"7.00","Vat":"19.00","DateCreated":"2025-04-02","Sold":0,"Stock":4,"SupplierName":"sdbg","SupplierPhone":"34232","SupplierEmail":"gdf@ee.com"}
+[09-Apr-2025 18:43:21 UTC] Database connection established successfully
+[09-Apr-2025 18:43:21 UTC] Database connection established successfully
+[09-Apr-2025 18:43:21 UTC] Part data fetched: {"PartID":27,"SupplierID":19,"PartDesc":"sdaa","PriceBulk":"33.32","SellPrice":"8.00","PiecesPurch":4,"PricePerPiece":"7.00","Vat":"19.00","DateCreated":"2025-04-02","Sold":0,"Stock":4,"SupplierName":"sdbg","SupplierPhone":"34232","SupplierEmail":"gdf@ee.com"}
+[09-Apr-2025 18:43:27 UTC] Database connection established successfully
+[09-Apr-2025 18:43:27 UTC] Delete part request received: {"partId":"27"}
+[09-Apr-2025 18:43:27 UTC] Database connection established successfully
+[09-Apr-2025 18:58:20 UTC] Database connection established successfully
+[09-Apr-2025 18:58:20 UTC] Database connection established successfully
+[09-Apr-2025 18:58:20 UTC] Part data fetched: {"PartID":26,"SupplierID":18,"PartDesc":"sdzfgb","PriceBulk":"23.80","SellPrice":"5.00","PiecesPurch":4,"PricePerPiece":"5.00","Vat":"19.00","DateCreated":"2025-04-02","Sold":0,"Stock":4,"SupplierName":"kuy","SupplierPhone":"756","SupplierEmail":"dty@email.com"}
+[10-Apr-2025 13:54:32 UTC] Received POST data: Array
+(
+    [supplier] => Antonela
+    [supplierID] => 
+    [supplierPhone] => 99112233
+    [supplierEmail] => test_email@gmail.com
+    [dateCreated] => 2025-04-10
+    [parts] => [{"partDesc":"Air Filter","piecesPurch":"20","pricePerPiece":"25","priceBulk":"595.00","sellingPrice":"35","vat":"19"}]
+)
+
+[10-Apr-2025 13:54:32 UTC] Received FILES data: Array
+(
+)
+
+[10-Apr-2025 13:54:32 UTC] Database connection established successfully
+[10-Apr-2025 13:54:32 UTC] Database connection established successfully
+[10-Apr-2025 13:54:32 UTC] Database connection established successfully
+[10-Apr-2025 13:54:32 UTC] Decoded parts data: Array
+(
+    [0] => Array
+        (
+            [partDesc] => Air Filter
+            [piecesPurch] => 20
+            [pricePerPiece] => 25
+            [priceBulk] => 595.00
+            [sellingPrice] => 35
+            [vat] => 19
+        )
+
+)
+
+[10-Apr-2025 14:22:32 UTC] Database connection established successfully
+[10-Apr-2025 14:22:32 UTC] Database connection established successfully
+[10-Apr-2025 14:22:32 UTC] Part data fetched: {"PartID":25,"SupplierID":16,"PartDesc":"partpartpart","PriceBulk":null,"SellPrice":"3.00","PiecesPurch":20,"PricePerPiece":"2.00","Vat":"19.00","DateCreated":"2025-04-11","Sold":0,"Stock":20,"SupplierName":"dfgh","SupplierPhone":"654322","SupplierEmail":"aaaa@aaa.com"}
+[14-Apr-2025 10:53:19 UTC] Database connection established successfully
+[14-Apr-2025 10:53:19 UTC] Database connection established successfully
+[14-Apr-2025 10:53:19 UTC] Part data fetched: {"PartID":39,"SupplierID":25,"PartDesc":"Wheels","PriceBulk":"297.50","SellPrice":"30.00","PiecesPurch":10,"PricePerPiece":"25.00","Vat":"19.00","DateCreated":"2025-04-14","Sold":0,"Stock":10,"SupplierName":"Antonis","SupplierPhone":"99665582","SupplierEmail":"test@gmail.com"}
+[14-Apr-2025 15:33:12 UTC] Received POST data: Array
+(
+    [supplier] => Pampo
+    [supplierID] => 
+    [supplierPhone] => 1223434
+    [supplierEmail] => 
+    [dateCreated] => 2025-04-14
+    [parts] => [{"partDesc":"filter","piecesPurch":"10","pricePerPiece":"20","priceBulk":"238.00","sellingPrice":"30","vat":"19"}]
+)
+
+[14-Apr-2025 15:33:12 UTC] Received FILES data: Array
+(
+)
+
+[14-Apr-2025 15:33:12 UTC] Database connection established successfully
+[14-Apr-2025 15:33:12 UTC] Database connection established successfully
+[14-Apr-2025 15:33:12 UTC] Database connection established successfully
+[14-Apr-2025 15:33:12 UTC] Decoded parts data: Array
+(
+    [0] => Array
+        (
+            [partDesc] => filter
+            [piecesPurch] => 10
+            [pricePerPiece] => 20
+            [priceBulk] => 238.00
+            [sellingPrice] => 30
+            [vat] => 19
+        )
+
+)
+
+[14-Apr-2025 15:37:35 UTC] Database connection established successfully
+[14-Apr-2025 15:37:35 UTC] Database connection established successfully
+[14-Apr-2025 15:37:35 UTC] Part data fetched: {"PartID":41,"SupplierID":26,"PartDesc":"filter","PriceBulk":"238.00","SellPrice":"30.00","PiecesPurch":10,"PricePerPiece":"20.00","Vat":"19.00","DateCreated":"2025-04-14","Sold":0,"Stock":10,"SupplierName":"Pampo","SupplierPhone":"1223434","SupplierEmail":""}
+[14-Apr-2025 15:37:44 UTC] Database connection established successfully
+[14-Apr-2025 15:37:44 UTC] Delete part request received: {"partId":"41"}
+[14-Apr-2025 15:37:44 UTC] Database connection established successfully
+[14-Apr-2025 15:41:38 UTC] Received POST data: Array
+(
+    [supplier] => Pampo
+    [supplierID] => 26
+    [supplierPhone] => 1223434
+    [supplierEmail] => 
+    [dateCreated] => 2025-04-21
+    [parts] => [{"partDesc":"filter","piecesPurch":"333","pricePerPiece":"33","priceBulk":"13076.91","sellingPrice":"44","vat":"19"}]
+)
+
+[14-Apr-2025 15:41:38 UTC] Received FILES data: Array
+(
+)
+
+[14-Apr-2025 15:41:38 UTC] Database connection established successfully
+[14-Apr-2025 15:41:38 UTC] Database connection established successfully
+[14-Apr-2025 15:41:38 UTC] Database connection established successfully
+[14-Apr-2025 15:41:38 UTC] Decoded parts data: Array
+(
+    [0] => Array
+        (
+            [partDesc] => filter
+            [piecesPurch] => 333
+            [pricePerPiece] => 33
+            [priceBulk] => 13076.91
+            [sellingPrice] => 44
+            [vat] => 19
+        )
+
+)
+
+[16-Apr-2025 16:22:38 UTC] Database connection established successfully
+[16-Apr-2025 16:22:38 UTC] Database connection established successfully
+[16-Apr-2025 16:22:38 UTC] Part data fetched: {"PartID":49,"SupplierID":30,"PartDesc":"partfortest","PriceBulk":null,"SellPrice":"6.00","PiecesPurch":10,"PricePerPiece":"5.00","Vat":"19.00","DateCreated":"2025-04-09","Sold":0,"Stock":10,"SupplierName":"Supplier20","SupplierPhone":"00998877","SupplierEmail":"emailsup@email.com"}
+[16-Apr-2025 20:10:41 UTC] Database connection established successfully
+[16-Apr-2025 20:10:41 UTC] Database connection established successfully
+[16-Apr-2025 20:10:41 UTC] Part data fetched: {"PartID":50,"SupplierID":31,"PartDesc":"TestPart1","PriceBulk":null,"SellPrice":"8.00","PiecesPurch":2,"PricePerPiece":"7.00","Vat":"19.00","DateCreated":"2025-04-03","Sold":0,"Stock":2,"SupplierName":"Testsupl","SupplierPhone":"00998877","SupplierEmail":"testsup@email.com"}
+[16-Apr-2025 20:11:03 UTC] Database connection established successfully
+[16-Apr-2025 20:11:03 UTC] Database connection established successfully
+[16-Apr-2025 20:11:03 UTC] Part data fetched: {"PartID":51,"SupplierID":31,"PartDesc":"TestPart1","PriceBulk":null,"SellPrice":"10.00","PiecesPurch":2,"PricePerPiece":"9.00","Vat":"19.00","DateCreated":"2025-02-06","Sold":0,"Stock":2,"SupplierName":"Testsupl","SupplierPhone":"00998877","SupplierEmail":"testsup@email.com"}
+[16-Apr-2025 20:11:28 UTC] Database connection established successfully
+[16-Apr-2025 20:11:28 UTC] Database connection established successfully
+[16-Apr-2025 20:11:28 UTC] Part data fetched: {"PartID":51,"SupplierID":31,"PartDesc":"TestPart1","PriceBulk":"21.42","SellPrice":"10.00","PiecesPurch":2,"PricePerPiece":"9.00","Vat":"19.00","DateCreated":"2025-02-06","Sold":0,"Stock":2,"SupplierName":"Testsupl","SupplierPhone":"00998877","SupplierEmail":"testsup1@email.com"}
+[17-Apr-2025 14:51:20 UTC] Database connection established successfully
+[17-Apr-2025 14:51:20 UTC] Database connection established successfully
+[17-Apr-2025 14:51:20 UTC] Part data fetched: {"PartID":52,"SupplierID":31,"PartDesc":"TestPart1","PriceBulk":"8.00","SellPrice":"8.00","PiecesPurch":5,"PricePerPiece":"7.00","Vat":"19.00","DateCreated":"2025-04-01","Sold":1,"Stock":4,"SupplierName":"Testsupl","SupplierPhone":"00998877","SupplierEmail":"testsup1@email.com"}

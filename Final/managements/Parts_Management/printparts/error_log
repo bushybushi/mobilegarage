@@ -1,0 +1,270 @@
+[09-Apr-2025 18:21:20 UTC] Database connection established successfully
+[09-Apr-2025 18:21:20 UTC] Database connection established successfully
+[09-Apr-2025 18:21:26 UTC] Database connection established successfully
+[09-Apr-2025 18:21:26 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'webvaria_MobileGarageLarnaca.Parts' doesn't exist in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/printparts/PrintPartsList.php:27
+Stack trace:
+#0 /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/printparts/PrintPartsList.php(27): PDO->prepare('SELECT DISTINCT...')
+#1 {main}
+  thrown in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/printparts/PrintPartsList.php on line 27
+[09-Apr-2025 18:41:28 UTC] Database connection established successfully
+[09-Apr-2025 18:41:28 UTC] Database connection established successfully
+[09-Apr-2025 18:41:34 UTC] Database connection established successfully
+[09-Apr-2025 18:41:34 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'webvaria_MobileGarageLarnaca.Parts' doesn't exist in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/printparts/PrintSelectedParts.php:42
+Stack trace:
+#0 /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/printparts/PrintSelectedParts.php(42): PDO->prepare('SELECT DISTINCT...')
+#1 {main}
+  thrown in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/printparts/PrintSelectedParts.php on line 42
+[09-Apr-2025 18:51:10 UTC] Database connection established successfully
+[09-Apr-2025 18:51:10 UTC] Database connection established successfully
+[09-Apr-2025 18:52:04 UTC] Database connection established successfully
+[09-Apr-2025 18:52:04 UTC] Database connection established successfully
+[09-Apr-2025 20:17:02 UTC] Database connection established successfully
+[09-Apr-2025 20:17:02 UTC] Database connection established successfully
+[09-Apr-2025 20:18:35 UTC] Database connection established successfully
+[09-Apr-2025 20:18:35 UTC] Database connection established successfully
+[09-Apr-2025 20:18:47 UTC] Database connection established successfully
+[09-Apr-2025 20:18:47 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'webvaria_MobileGarageLarnaca.Parts' doesn't exist in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/printparts/PrintPartsList.php:27
+Stack trace:
+#0 /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/printparts/PrintPartsList.php(27): PDO->prepare('SELECT DISTINCT...')
+#1 {main}
+  thrown in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/printparts/PrintPartsList.php on line 27
+[09-Apr-2025 20:32:58 UTC] Database connection established successfully
+[09-Apr-2025 20:32:58 UTC] Database connection established successfully
+[10-Apr-2025 21:05:57 UTC] Database connection established successfully
+[10-Apr-2025 21:05:57 UTC] Database connection established successfully
+[10-Apr-2025 21:05:59 UTC] Database connection established successfully
+[10-Apr-2025 21:05:59 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'webvaria_MobileGarageLarnaca.Parts' doesn't exist in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/printparts/PrintPartsList.php:27
+Stack trace:
+#0 /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/printparts/PrintPartsList.php(27): PDO->prepare('SELECT DISTINCT...')
+#1 {main}
+  thrown in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/printparts/PrintPartsList.php on line 27
+[10-Apr-2025 21:06:14 UTC] Database connection established successfully
+[10-Apr-2025 21:06:14 UTC] Database connection established successfully
+[10-Apr-2025 21:06:15 UTC] Database connection established successfully
+[10-Apr-2025 21:06:15 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'webvaria_MobileGarageLarnaca.Parts' doesn't exist in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/printparts/PrintPartsList.php:27
+Stack trace:
+#0 /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/printparts/PrintPartsList.php(27): PDO->prepare('SELECT DISTINCT...')
+#1 {main}
+  thrown in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/printparts/PrintPartsList.php on line 27
+[10-Apr-2025 21:06:20 UTC] Database connection established successfully
+[10-Apr-2025 21:06:20 UTC] Database connection established successfully
+[10-Apr-2025 21:06:33 UTC] Database connection established successfully
+[10-Apr-2025 21:06:33 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'webvaria_MobileGarageLarnaca.Parts' doesn't exist in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/printparts/PrintSelectedParts.php:42
+Stack trace:
+#0 /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/printparts/PrintSelectedParts.php(42): PDO->prepare('SELECT DISTINCT...')
+#1 {main}
+  thrown in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/printparts/PrintSelectedParts.php on line 42
+[10-Apr-2025 21:18:39 UTC] Database connection established successfully
+[10-Apr-2025 21:18:39 UTC] Database connection established successfully
+[10-Apr-2025 21:18:41 UTC] Database connection established successfully
+[10-Apr-2025 21:18:41 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'webvaria_MobileGarageLarnaca.Parts' doesn't exist in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/printparts/PrintPartsList.php:27
+Stack trace:
+#0 /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/printparts/PrintPartsList.php(27): PDO->prepare('SELECT DISTINCT...')
+#1 {main}
+  thrown in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/printparts/PrintPartsList.php on line 27
+[10-Apr-2025 21:33:02 UTC] Database connection established successfully
+[10-Apr-2025 21:33:02 UTC] Database connection established successfully
+[10-Apr-2025 21:35:11 UTC] Database connection established successfully
+[10-Apr-2025 21:35:11 UTC] Database connection established successfully
+[14-Apr-2025 14:07:38 UTC] Database connection established successfully
+[14-Apr-2025 14:07:38 UTC] Database connection established successfully
+[14-Apr-2025 14:08:37 UTC] Database connection established successfully
+[14-Apr-2025 14:08:37 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'webvaria_MobileGarageLarnaca.Parts' doesn't exist in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/printparts/PrintSelectedParts.php:42
+Stack trace:
+#0 /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/printparts/PrintSelectedParts.php(42): PDO->prepare('SELECT DISTINCT...')
+#1 {main}
+  thrown in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/printparts/PrintSelectedParts.php on line 42
+[14-Apr-2025 14:08:54 UTC] Database connection established successfully
+[14-Apr-2025 14:08:54 UTC] Database connection established successfully
+[14-Apr-2025 14:09:02 UTC] Database connection established successfully
+[14-Apr-2025 14:09:02 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'webvaria_MobileGarageLarnaca.Parts' doesn't exist in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/printparts/PrintSelectedParts.php:42
+Stack trace:
+#0 /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/printparts/PrintSelectedParts.php(42): PDO->prepare('SELECT DISTINCT...')
+#1 {main}
+  thrown in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/printparts/PrintSelectedParts.php on line 42
+[14-Apr-2025 14:09:11 UTC] Database connection established successfully
+[14-Apr-2025 14:09:11 UTC] Database connection established successfully
+[14-Apr-2025 14:09:13 UTC] Database connection established successfully
+[14-Apr-2025 14:09:13 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'webvaria_MobileGarageLarnaca.Parts' doesn't exist in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/printparts/PrintSelectedParts.php:42
+Stack trace:
+#0 /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/printparts/PrintSelectedParts.php(42): PDO->prepare('SELECT DISTINCT...')
+#1 {main}
+  thrown in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/printparts/PrintSelectedParts.php on line 42
+[14-Apr-2025 14:09:18 UTC] Database connection established successfully
+[14-Apr-2025 14:09:18 UTC] Database connection established successfully
+[14-Apr-2025 14:09:19 UTC] Database connection established successfully
+[14-Apr-2025 14:09:19 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'webvaria_MobileGarageLarnaca.Parts' doesn't exist in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/printparts/PrintPartsList.php:27
+Stack trace:
+#0 /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/printparts/PrintPartsList.php(27): PDO->prepare('SELECT DISTINCT...')
+#1 {main}
+  thrown in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/printparts/PrintPartsList.php on line 27
+[14-Apr-2025 14:09:22 UTC] Database connection established successfully
+[14-Apr-2025 14:09:22 UTC] Database connection established successfully
+[14-Apr-2025 14:12:09 UTC] Database connection established successfully
+[14-Apr-2025 14:12:09 UTC] Database connection established successfully
+[14-Apr-2025 14:12:23 UTC] Database connection established successfully
+[14-Apr-2025 14:12:23 UTC] Database connection established successfully
+[14-Apr-2025 14:12:24 UTC] Database connection established successfully
+[14-Apr-2025 14:12:24 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'webvaria_MobileGarageLarnaca.Parts' doesn't exist in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/printparts/PrintPartsList.php:27
+Stack trace:
+#0 /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/printparts/PrintPartsList.php(27): PDO->prepare('SELECT DISTINCT...')
+#1 {main}
+  thrown in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/printparts/PrintPartsList.php on line 27
+[14-Apr-2025 14:44:36 UTC] Database connection established successfully
+[14-Apr-2025 14:44:36 UTC] Database connection established successfully
+[14-Apr-2025 14:49:44 UTC] Database connection established successfully
+[14-Apr-2025 14:49:44 UTC] Database connection established successfully
+[14-Apr-2025 14:49:45 UTC] Database connection established successfully
+[14-Apr-2025 14:49:45 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'webvaria_MobileGarageLarnaca.Parts' doesn't exist in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/printparts/PrintPartsList.php:27
+Stack trace:
+#0 /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/printparts/PrintPartsList.php(27): PDO->prepare('SELECT DISTINCT...')
+#1 {main}
+  thrown in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/printparts/PrintPartsList.php on line 27
+[14-Apr-2025 14:49:54 UTC] Database connection established successfully
+[14-Apr-2025 14:49:54 UTC] Database connection established successfully
+[14-Apr-2025 15:07:03 UTC] Database connection established successfully
+[14-Apr-2025 15:07:03 UTC] Database connection established successfully
+[14-Apr-2025 15:07:04 UTC] Database connection established successfully
+[14-Apr-2025 15:07:04 UTC] Database connection established successfully
+[14-Apr-2025 15:33:20 UTC] Database connection established successfully
+[14-Apr-2025 15:33:20 UTC] Database connection established successfully
+[14-Apr-2025 15:33:40 UTC] Database connection established successfully
+[14-Apr-2025 15:33:40 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'webvaria_MobileGarageLarnaca.Parts' doesn't exist in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/printparts/PrintPartsList.php:27
+Stack trace:
+#0 /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/printparts/PrintPartsList.php(27): PDO->prepare('SELECT DISTINCT...')
+#1 {main}
+  thrown in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/printparts/PrintPartsList.php on line 27
+[15-Apr-2025 06:58:28 UTC] Database connection established successfully
+[15-Apr-2025 06:58:28 UTC] Database connection established successfully
+[15-Apr-2025 06:58:30 UTC] Database connection established successfully
+[15-Apr-2025 06:58:30 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'webvaria_MobileGarageLarnaca.Parts' doesn't exist in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/printparts/PrintPartsList.php:27
+Stack trace:
+#0 /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/printparts/PrintPartsList.php(27): PDO->prepare('SELECT DISTINCT...')
+#1 {main}
+  thrown in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/printparts/PrintPartsList.php on line 27
+[15-Apr-2025 14:29:36 UTC] Database connection established successfully
+[15-Apr-2025 14:29:36 UTC] Database connection established successfully
+[15-Apr-2025 14:29:38 UTC] Database connection established successfully
+[15-Apr-2025 14:29:38 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'webvaria_MobileGarageLarnaca.Parts' doesn't exist in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/printparts/PrintPartsList.php:27
+Stack trace:
+#0 /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/printparts/PrintPartsList.php(27): PDO->prepare('SELECT DISTINCT...')
+#1 {main}
+  thrown in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/printparts/PrintPartsList.php on line 27
+[15-Apr-2025 19:50:00 UTC] Database connection established successfully
+[15-Apr-2025 19:50:00 UTC] Database connection established successfully
+[15-Apr-2025 19:50:02 UTC] Database connection established successfully
+[15-Apr-2025 19:50:02 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'webvaria_MobileGarageLarnaca.Parts' doesn't exist in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/printparts/PrintPartsList.php:27
+Stack trace:
+#0 /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/printparts/PrintPartsList.php(27): PDO->prepare('SELECT DISTINCT...')
+#1 {main}
+  thrown in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/printparts/PrintPartsList.php on line 27
+[15-Apr-2025 20:22:43 UTC] Database connection established successfully
+[15-Apr-2025 20:22:43 UTC] Database connection established successfully
+[15-Apr-2025 20:57:43 UTC] Database connection established successfully
+[15-Apr-2025 20:57:43 UTC] Database connection established successfully
+[15-Apr-2025 21:01:38 UTC] Database connection established successfully
+[15-Apr-2025 21:01:38 UTC] Database connection established successfully
+[15-Apr-2025 22:00:37 UTC] Database connection established successfully
+[15-Apr-2025 22:00:37 UTC] Database connection established successfully
+[15-Apr-2025 22:00:39 UTC] Database connection established successfully
+[15-Apr-2025 22:00:39 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'webvaria_MobileGarageLarnaca.Parts' doesn't exist in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/printparts/PrintPartsList.php:27
+Stack trace:
+#0 /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/printparts/PrintPartsList.php(27): PDO->prepare('SELECT DISTINCT...')
+#1 {main}
+  thrown in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/printparts/PrintPartsList.php on line 27
+[15-Apr-2025 22:00:42 UTC] Database connection established successfully
+[15-Apr-2025 22:00:42 UTC] Database connection established successfully
+[15-Apr-2025 22:00:44 UTC] Database connection established successfully
+[15-Apr-2025 22:00:44 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'webvaria_MobileGarageLarnaca.Parts' doesn't exist in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/printparts/PrintSelectedParts.php:42
+Stack trace:
+#0 /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/printparts/PrintSelectedParts.php(42): PDO->prepare('SELECT DISTINCT...')
+#1 {main}
+  thrown in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/printparts/PrintSelectedParts.php on line 42
+[16-Apr-2025 20:12:40 UTC] Database connection established successfully
+[16-Apr-2025 20:12:40 UTC] Database connection established successfully
+[17-Apr-2025 23:52:20 UTC] Database connection established successfully
+[17-Apr-2025 23:55:47 UTC] Database connection established successfully
+[17-Apr-2025 23:56:51 UTC] Database connection established successfully
+[17-Apr-2025 23:56:58 UTC] Database connection established successfully
+[17-Apr-2025 23:57:10 UTC] Database connection established successfully
+[18-Apr-2025 00:01:59 UTC] Database connection established successfully
+[18-Apr-2025 00:02:21 UTC] Database connection established successfully
+[18-Apr-2025 00:03:08 UTC] Database connection established successfully
+[18-Apr-2025 00:03:13 UTC] Database connection established successfully
+[18-Apr-2025 07:58:24 UTC] Database connection established successfully
+[18-Apr-2025 08:00:33 UTC] Database connection established successfully
+[18-Apr-2025 08:03:21 UTC] Database connection established successfully
+[18-Apr-2025 08:04:04 UTC] Database connection established successfully
+[18-Apr-2025 08:04:29 UTC] Database connection established successfully
+[18-Apr-2025 08:05:08 UTC] Database connection established successfully
+[18-Apr-2025 08:05:14 UTC] Database connection established successfully
+[18-Apr-2025 08:07:58 UTC] Database connection established successfully
+[18-Apr-2025 08:08:14 UTC] Database connection established successfully
+[18-Apr-2025 08:08:23 UTC] Database connection established successfully
+[18-Apr-2025 08:10:55 UTC] Database connection established successfully
+[18-Apr-2025 08:11:07 UTC] Database connection established successfully
+[18-Apr-2025 09:13:51 UTC] Database connection established successfully
+[18-Apr-2025 09:17:40 UTC] Database connection established successfully
+[18-Apr-2025 09:19:08 UTC] Database connection established successfully
+[18-Apr-2025 09:21:49 UTC] Database connection established successfully
+[18-Apr-2025 09:21:53 UTC] Database connection established successfully
+[18-Apr-2025 09:27:41 UTC] Database connection established successfully
+[18-Apr-2025 09:27:45 UTC] Database connection established successfully
+[18-Apr-2025 09:27:50 UTC] Database connection established successfully
+[18-Apr-2025 09:30:15 UTC] Database connection established successfully
+[18-Apr-2025 09:31:26 UTC] Database connection established successfully
+[18-Apr-2025 09:31:50 UTC] Database connection established successfully
+[18-Apr-2025 09:32:50 UTC] Database connection established successfully
+[18-Apr-2025 09:33:52 UTC] Database connection established successfully
+[18-Apr-2025 09:34:53 UTC] Database connection established successfully
+[18-Apr-2025 09:35:07 UTC] Database connection established successfully
+[18-Apr-2025 09:37:32 UTC] Database connection established successfully
+[18-Apr-2025 09:37:39 UTC] Database connection established successfully
+[18-Apr-2025 09:38:18 UTC] Database connection established successfully
+[18-Apr-2025 09:38:36 UTC] Database connection established successfully
+[18-Apr-2025 09:38:55 UTC] Database connection established successfully
+[18-Apr-2025 09:45:37 UTC] Database connection established successfully
+[18-Apr-2025 09:45:42 UTC] Database connection established successfully
+[18-Apr-2025 09:53:01 UTC] Database connection established successfully
+[18-Apr-2025 09:54:22 UTC] Database connection established successfully
+[18-Apr-2025 09:54:26 UTC] Database connection established successfully
+[18-Apr-2025 10:04:12 UTC] Database connection established successfully
+[18-Apr-2025 10:04:56 UTC] Database connection established successfully
+[18-Apr-2025 10:05:32 UTC] Database connection established successfully
+[18-Apr-2025 10:11:23 UTC] Database connection established successfully
+[18-Apr-2025 10:11:36 UTC] Database connection established successfully
+[18-Apr-2025 10:11:45 UTC] Database connection established successfully
+[18-Apr-2025 10:11:50 UTC] Database connection established successfully
+[18-Apr-2025 10:13:48 UTC] Database connection established successfully
+[18-Apr-2025 10:14:06 UTC] Database connection established successfully
+[18-Apr-2025 10:14:35 UTC] Database connection established successfully
+[18-Apr-2025 10:18:11 UTC] Database connection established successfully
+[18-Apr-2025 10:20:58 UTC] Database connection established successfully
+[18-Apr-2025 10:22:20 UTC] Database connection established successfully
+[18-Apr-2025 10:25:16 UTC] Database connection established successfully
+[18-Apr-2025 10:26:56 UTC] Database connection established successfully
+[18-Apr-2025 10:27:03 UTC] Database connection established successfully
+[18-Apr-2025 10:27:11 UTC] Database connection established successfully
+[18-Apr-2025 10:27:18 UTC] Database connection established successfully
+[18-Apr-2025 10:27:25 UTC] Database connection established successfully
+[18-Apr-2025 10:27:52 UTC] Database connection established successfully
+[18-Apr-2025 10:28:32 UTC] Database connection established successfully
+[18-Apr-2025 10:28:41 UTC] Database connection established successfully
+[18-Apr-2025 10:33:21 UTC] Database connection established successfully
+[18-Apr-2025 10:33:24 UTC] Database connection established successfully
+[18-Apr-2025 12:38:23 UTC] Database connection established successfully
+[18-Apr-2025 12:38:24 UTC] Database connection established successfully
+[18-Apr-2025 15:52:01 UTC] Database connection established successfully
+[18-Apr-2025 15:52:03 UTC] Database connection established successfully
+[18-Apr-2025 15:53:56 UTC] Database connection established successfully
+[18-Apr-2025 15:54:15 UTC] Database connection established successfully
+[18-Apr-2025 15:54:25 UTC] Database connection established successfully
+[18-Apr-2025 15:54:26 UTC] Database connection established successfully
+[18-Apr-2025 15:59:21 UTC] Database connection established successfully
+[18-Apr-2025 15:59:23 UTC] Database connection established successfully
+[18-Apr-2025 19:56:54 UTC] Database connection established successfully
+[18-Apr-2025 19:57:02 UTC] Database connection established successfully
+[18-Apr-2025 19:57:08 UTC] Database connection established successfully
+[18-Apr-2025 19:57:09 UTC] Database connection established successfully
+[18-Apr-2025 19:57:31 UTC] Database connection established successfully
+[18-Apr-2025 19:57:34 UTC] Database connection established successfully

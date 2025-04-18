@@ -1,0 +1,232 @@
+/* Import the Plus Jakarta Sans font family with various weights for consistent typography */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+/* CODE CREATED BY JORGOS XIDIAS AND TEAM
+  AI HAS BEEN USED TO BEAUTIFY AND ADD COMMENTS*/
+
+/* Set the default font family and weight for the entire application */
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 400;
+}
+
+#printModal .modal-content  {
+  font-size: 14px!important;
+}
+
+.modal-title {
+   font-weight: 700!important;
+}
+
+.modal-content{
+  border-radius: 1rem!important;
+}
+
+.title-container h2 {
+  color: #333;
+  font-weight: 600;
+}
+
+/* Main form container with consistent padding and shadow for depth */
+.form-container {
+    padding: 2rem;
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 376px) {
+  .form-container {
+    padding: 1rem;
+  }
+}
+
+/* Header container with background image and text styling */
+.top-container {
+    padding: 1rem;
+    background-image: url('Cover.png');
+    background-position: top;
+    background-repeat: no-repeat, repeat;
+    border-radius: 1rem 1rem 0 0;
+    margin-bottom: 2rem;
+    font-weight: 600;
+    color: #333;
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+/* Table container with consistent padding and shadow */
+.table{
+  padding: 2rem;
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+}
+
+/* Title container with consistent styling and spacing */
+.title-container{
+  padding: 1rem;
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+/* Button styling within title container */
+.title-container .btn {
+  min-width: 100px;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+}
+
+/* Dropdown toggle button styling */
+.title-container .dropdown-toggle {
+  min-width: 150px;
+}
+
+/* Title text styling */
+.title-container h2 {
+  color: #333;
+  font-weight: 600;
+}
+
+/* Subtitle text styling */
+.title-container small {
+  font-size: 0.85rem;
+}
+
+/* Global button styling with consistent border radius */
+.btn{
+  font-weight: 500;
+  border-radius: 1rem!important;
+  font-size: 14px!important;
+}
+
+/* Button group container with flex layout and spacing */
+.btngroup{
+  
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+  padding: 1rem;
+}
+
+/* Form styling within button group */
+.btngroup form {
+    display: inline-flex;
+}
+
+/* Bottom button styling with larger padding and rounded corners */
+.bottombtn {
+    border-radius: 2rem;
+    padding: 0.7rem 2rem;
+}
+
+/* Button Group Container */
+.btngroup .btn{
+  text-align: center;
+  min-width: 100px;
+}
+
+/* Top button styling with consistent padding and font size */
+.topbtn {
+    border-radius: 2rem;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+}
+
+/* Back arrow link styling with hover effect */
+.back-arrow {
+    color: #333;
+    font-size: 16px;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+/* Back arrow hover state with background and color change */
+.back-arrow:hover {
+    text-decoration: none;
+    color: #007bff;
+}
+
+/* Label text styling with medium font weight */
+label {
+    font-weight: 500;
+}
+
+/* Table header styling with light background and border */
+.table thead th {
+    background-color: #ffffff;
+    border-bottom: 2px solid #dee2e6;
+    font-weight: 600;
+    color: #495057;
+}
+
+/* Table row hover effect */
+.table tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+/* Table cell vertical alignment */
+.table td {
+    vertical-align: middle;
+}
+
+/* Action button styling with consistent width and spacing */
+.action-btn {
+    width: 140px;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    margin: 0 5px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Responsive table container with bottom margin */
+.table-responsive {
+    margin-bottom: 20px;
+}
+
+/* Print button styling with circular shape and hover effect */
+.print-btn {
+    font-size: 1.2rem;
+    color: #6c757d;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+/* Print button hover state */
+.print-btn:hover {
+    background-color: #f8f9fa;
+    color: #007bff;
+    text-decoration: none;
+}
+
+/* Invoice photo container with border and padding */
+.invoice-photo-container {
+    border: 1px solid #dee2e6;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    background-color: #f8f9fa;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Invoice photo image styling with max dimensions and shadow */
+.invoice-photo-container img {
+    max-width: 100%;
+    max-height: 400px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+
+
