@@ -110,7 +110,7 @@ $userData = $stmt->fetch(PDO::FETCH_ASSOC);
             <!-- Action buttons -->
             <div class="btngroup text-center mt-4">
                 <button class="btn btn-primary" onclick="loadEditForm('<?php echo $username; ?>')" title="Edit User">Edit <i class="fas fa-edit"></i></button>
-                <button type="button" class="btn btn-danger" onclick="confirmDelete()" title="Delete User">Delete <i class="fas fa-trash"></i></button>
+                <button type="button" class="btn btn-danger" onclick="confirmDelete('<?php echo $username; ?>')" title="Delete User">Delete <i class="fas fa-trash"></i></button>
             </div>
         <?php else: ?>
             <!-- Show message if user not found -->
@@ -141,26 +141,30 @@ $userData = $stmt->fetch(PDO::FETCH_ASSOC);
 
 <script>
     // Function to show delete confirmation modal
-    function confirmDelete() {
+    function confirmDelete(username) {
+        $('#deleteModalMessage').text('Are you sure you want to delete user: ' + username + '?');
+        $('#confirmDeleteBtn').data('username', username);
         $('#deleteModal').modal('show');
     }
 
     // Handle delete confirmation
     $(document).ready(function() {
         $('#confirmDeleteBtn').click(function() {
-            const username = $('#usernameField').val();
+            const username = $(this).data('username');
             
             $.ajax({
                 url: '../controllers/delete_user_controller.php',
                 type: 'POST',
                 data: {
-                    username: username
+                    username: username,
+                    action: 'delete'
                 },
+                dataType: 'json',
                 success: function(response) {
                     if (response.success) {
                         showMessage(response.message, 'success');
                         setTimeout(function() {
-                            window.location.href = response.redirect;
+                            window.location.href = 'user_main.php';
                         }, 1500);
                     } else {
                         showMessage(response.message, 'error');

@@ -73,7 +73,7 @@ $security_questions = $stmt->fetchAll(PDO::FETCH_ASSOC);
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="passwrd">Password</label>
-                            <input type="password" id="passwrd" name="passwrd" class="form-control" value="********">
+                            <input type="password" id="passwrd" name="passwrd" class="form-control" value="********" disabled>
                             <a href="javascript:void(0);" onclick="enablePasswordReset()">Reset Password</a>
                         </div>
                     </div>
@@ -113,8 +113,8 @@ $security_questions = $stmt->fetchAll(PDO::FETCH_ASSOC);
                         <div class="form-group">
                             <label for="admin">Admin Status</label>
                             <select class="form-control" name="admin" required>
-                                <option value="0" <?php echo $userData['admin'] == 0 ? 'selected' : ''; ?>>User</option>
-                                <option value="1" <?php echo $userData['admin'] == 1 ? 'selected' : ''; ?>>Admin</option>
+                                <option value="0" <?php echo $userData['admin'] == 0 ? 'selected' : ''; ?>>No</option>
+                                <option value="1" <?php echo $userData['admin'] == 1 ? 'selected' : ''; ?>>Yes</option>
                             </select>
                         </div>
                     </div>

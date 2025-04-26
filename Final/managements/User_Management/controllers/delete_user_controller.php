@@ -4,33 +4,43 @@
 
 	header('Content-Type: application/json');
 
+	// Get the username from POST data
+	$username = $_POST['username'] ?? '';
+	
+	// Validate username
+	if (empty($username)) {
+		echo json_encode([
+			'success' => false,
+			'message' => 'Username is required'
+		]);
+		exit;
+	}
+
 	try {
-		// Get the username from POST data
-		$username = $_POST['username'] ?? '';
-		
-		if (empty($username)) {
-			throw new Exception('Username is required');
-		}
-		
-		// Create userManagement instance with the username
+		// Create userManagement instance
 		$userMang = new userManagement();
+		
+		// Set the input data
 		$userMang->sInput = [
 			'username' => $username,
 			'action' => 'delete'
 		];
 		
-		// Delete the user
+		// Attempt to delete the user
 		$result = $userMang->Delete();
 		
 		if ($result) {
 			echo json_encode([
 				'success' => true,
-				'message' => 'User deleted successfully',
-				'redirect' => 'user_main.php'
+				'message' => 'User deleted successfully'
 			]);
 		} else {
-			throw new Exception('Failed to delete user');
+			echo json_encode([
+				'success' => false,
+				'message' => 'Failed to delete user'
+			]);
 		}
+		
 	} catch (Exception $e) {
 		echo json_encode([
 			'success' => false,

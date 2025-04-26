@@ -80,8 +80,8 @@ protectAdminPage(); // This ensures only admins can access this section
                 <div class="form-group">
                     <label for="admin">Admin</label>
                     <select id="admin" name="admin" class="form-control" required>
-                        <option value="no">No</option>
-                        <option value="yes">Yes</option>
+                        <option value="0">No</option>
+                        <option value="1">Yes</option>
                     </select>
                 </div>
             </div>

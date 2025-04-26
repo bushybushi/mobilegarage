@@ -71,13 +71,11 @@ class userManagement {
 
             // Create user object based on action
             if (isset($this->sInput['action']) && $this->sInput['action'] === 'delete') {
-                // For delete action, only username is needed
-                if (isset($this->sInput['username'])) {
+                // For delete action, only create user object if username is provided
+                if (isset($this->sInput['username']) && !empty($this->sInput['username'])) {
                     $this->user = new user($this->sInput['username']);
-                } else {
-                    throw new Exception('Username is required for delete action');
                 }
-            } else if (isset($this->sInput['username'])) {
+            } else if (isset($this->sInput['username']) && !empty($this->sInput['username'])) {
                 // For other actions, create user with all provided data
                 $this->user = new user(
                     $this->sInput['username'],
@@ -148,8 +146,8 @@ class userManagement {
             // Start database transaction
             $pdo->beginTransaction();
 
-            // Convert admin status to 1/0
-            $adminStatus = ($this->user->getAdmin() === 'yes') ? 1 : 0;
+            // Get admin status directly since it's already 0/1
+            $adminStatus = $this->user->getAdmin();
 
             // Update user's email and admin status
             $userSql = "UPDATE users SET email = ?, admin = ? WHERE username = ?";
@@ -184,11 +182,21 @@ class userManagement {
      */
     function Delete() {
         global $pdo;
+        
+        // Check if user object exists
+        if (!isset($this->user) || empty($this->user->getUsername())) {
+            return false;
+        }
+        
         try {
             // Start database transaction
             $pdo->beginTransaction();
 
-            // Delete user record
+            // First delete related password reset tokens
+            $stmt = $pdo->prepare("DELETE FROM password_reset_tokens WHERE user_id = ?");
+            $stmt->execute([$this->user->getUsername()]);
+
+            // Then delete the user record
             $stmt = $pdo->prepare("DELETE FROM users WHERE username = ?");
             $result = $stmt->execute([$this->user->getUsername()]);
 
@@ -199,7 +207,7 @@ class userManagement {
         } catch (PDOException $e) {
             // Undo changes if error occurs
             $pdo->rollBack();
-            throw new Exception("Error deleting user: " . $e->getMessage());
+            return false;
         }
     }
 
