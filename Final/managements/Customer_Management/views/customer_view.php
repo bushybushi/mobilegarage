@@ -361,9 +361,8 @@ if ($customer) {
                 foreach ($cars as $car) {
                     echo '<div class="info-view-row car-row" id="car-' . htmlspecialchars($car['LicenseNr']) . '" data-license="' . htmlspecialchars($car['LicenseNr']) . '">';
                     echo '<div class="info-view-info">';
-                    echo '<div class="info-view-desc">' . htmlspecialchars($car['Brand']) . ' ' . htmlspecialchars($car['Model']) . '</div>';
-                    echo '<div class="info-view-details">';
-                    echo '<span>License: ' . htmlspecialchars($car['LicenseNr']) . '</span>';
+                    echo '<div class="info-view-desc">' . htmlspecialchars($car['Brand']) . ' ' . htmlspecialchars($car['Model']) .' (' . htmlspecialchars($car['LicenseNr']) . ')</div>';
+                    echo '<div class="info-view-details d-flex flex-column flex-md-row gap-2">';
                     echo '<span>VIN: ' . htmlspecialchars($car['VIN']) . '</span>';
                     echo '<span>Fuel: ' . htmlspecialchars($car['Fuel']) . '</span>';
                     echo '<span>Engine: ' . htmlspecialchars($car['Engine']) . '</span>';

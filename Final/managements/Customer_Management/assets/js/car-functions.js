@@ -491,26 +491,27 @@ function saveNewCar() {
         // Handle add customer form case
         // Create new car row
         const carRow = document.createElement('div');
-        carRow.className = 'car-row';
+        carRow.className = 'car-row d-flex flex-column gap-2 flex-md-row justify-content-between align-items-start align-items-md-center p-3"';
         carRow.id = `car-${licenseNr}`;
         carRow.setAttribute('data-license', licenseNr);
         carRow.innerHTML = `
-            <div class="car-info">
-                <div class="car-desc">${brand} ${model} (${licenseNr})</div>
-                <div class="car-details">
-                    <span>VIN: ${vin || 'N/A'}</span>
-                    <span>Fuel: ${fuel || 'N/A'}</span>
-                    <span>Engine: ${engine || 'N/A'}</span>
+            <div class="car-info flex-grow-1 mb-2 mb-md-0">
+                <div class="car-desc">ert t (t)</div>
+                <div class="car-details d-flex flex-column flex-md-row gap-2">
+                    <span>VIN: t</span>
+                    <span>Fuel: t</span>
+                    <span>Engine: t</span>
                 </div>
             </div>
-            <div class="car-actions">
-                <button type="button" onclick="editCar('${licenseNr}')" class="btn btn-sm btn-primary edit-car">
+            <div class="car-actions d-flex justify-content-end align-self-end">
+                <button type="button" onclick="editCar('t')" class="btn btn-sm btn-primary edit-car">
                     <i class="fas fa-edit"></i>
                 </button>
-                <button type="button" onclick="removeTemporaryCar('${licenseNr}')" class="btn btn-sm btn-danger remove-car">
+                <button type="button" onclick="removeTemporaryCar('t')" class="btn btn-sm btn-danger remove-car">
                     <i class="fas fa-trash"></i>
                 </button>
             </div>
+        </div>
         `;
         
         // Add the new car row to the container
@@ -581,26 +582,27 @@ function saveNewCar() {
             if (data.success) {
                 // Create new car row
                 const carRow = document.createElement('div');
-                carRow.className = 'car-row';
+                carRow.className = 'car-row d-flex flex-column gap-2 flex-md-row justify-content-between align-items-start align-items-md-center p-3"';
                 carRow.id = `car-${licenseNr}`;
                 carRow.setAttribute('data-license', licenseNr);
                 carRow.innerHTML = `
-                    <div class="car-info">
-                        <div class="car-desc">${brand} ${model} (${licenseNr})</div>
-                        <div class="car-details">
-                            <span>VIN: ${vin || 'N/A'}</span>
-                            <span>Fuel: ${fuel || 'N/A'}</span>
-                            <span>Engine: ${engine || 'N/A'}</span>
-                        </div>
-                    </div>
-                    <div class="car-actions">
-                        <button type="button" onclick="editCar('${licenseNr}')" class="btn btn-sm btn-primary edit-car">
-                            <i class="fas fa-edit"></i>
-                        </button>
-                        <button type="button" onclick="deleteCar('${licenseNr}')" class="btn btn-sm btn-danger remove-car">
-                            <i class="fas fa-trash"></i>
-                        </button>
-                    </div>
+                    <div class="car-info flex-grow-1 mb-2 mb-md-0">
+                <div class="car-desc">ert t (t)</div>
+                <div class="car-details d-flex flex-column flex-md-row gap-2">
+                    <span>VIN: t</span>
+                    <span>Fuel: t</span>
+                    <span>Engine: t</span>
+                </div>
+            </div>
+            <div class="car-actions d-flex justify-content-end align-self-end">
+                <button type="button" onclick="editCar('t')" class="btn btn-sm btn-primary edit-car">
+                    <i class="fas fa-edit"></i>
+                </button>
+                <button type="button" onclick="removeTemporaryCar('t')" class="btn btn-sm btn-danger remove-car">
+                    <i class="fas fa-trash"></i>
+                </button>
+            </div>
+        </div>
                 `;
                 
                 // Add the new car row to the container

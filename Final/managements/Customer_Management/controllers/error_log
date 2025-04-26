@@ -31,3 +31,10 @@
 [13-Apr-2025 21:34:36 UTC] Found 0 existing associations with license plate: a
 [13-Apr-2025 21:34:36 UTC] Car addition response: {"success":true,"message":"Car added successfully","licenseNr":"a"}
 [18-Apr-2025 19:54:58 UTC] Delete customer request - ID: 72, deleteCars: false, deleteJobCards: false
+[21-Apr-2025 18:35:20 UTC] Delete customer request - ID: 63, deleteCars: true, deleteJobCards: true
+[22-Apr-2025 09:36:41 UTC] get_car_details.php called
+[22-Apr-2025 09:36:41 UTC] get_car_details.php called
+[22-Apr-2025 09:36:41 UTC] Received request - License: , Customer ID: 67
+[22-Apr-2025 09:36:41 UTC] Received request - License: EEE668, Customer ID: null
+[22-Apr-2025 09:36:41 UTC] Missing parameters - License: , Customer ID: 67
+[22-Apr-2025 09:36:41 UTC] Database error in get_car_details.php: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'CustomerID' in 'WHERE'

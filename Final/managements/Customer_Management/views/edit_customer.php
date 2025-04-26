@@ -73,7 +73,7 @@ $old_email = $customer->getEmailAddresses();
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             `;
-                            document.querySelector('.form-container').insertBefore(successAlert, document.querySelector('.form-container').firstChild);
+                            document.querySelector('.showmessage').insertBefore(successAlert, document.querySelector('.showmessage').firstChild);
                             successAlert.scrollIntoView({ behavior: 'smooth', block: 'center' });
                             
                             // Redirect after showing the message
@@ -91,7 +91,7 @@ $old_email = $customer->getEmailAddresses();
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             `;
-                            document.querySelector('.form-container').insertBefore(errorAlert, document.querySelector('.form-container').firstChild);
+                            document.querySelector('.showmessage').insertBefore(errorAlert, document.querySelector('.showmessage').firstChild);
                             errorAlert.scrollIntoView({ behavior: 'smooth', block: 'center' });
                         }
                     },
@@ -106,7 +106,7 @@ $old_email = $customer->getEmailAddresses();
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         `;
-                        document.querySelector('.form-container').insertBefore(errorAlert, document.querySelector('.form-container').firstChild);
+                        document.querySelector('.showmessage').insertBefore(errorAlert, document.querySelector('.showmessage').firstChild);
                         errorAlert.scrollIntoView({ behavior: 'smooth', block: 'center' });
                     }
                 });
@@ -129,6 +129,8 @@ $old_email = $customer->getEmailAddresses();
             <h5 class="mb-0"><?php echo htmlspecialchars($old_customer['FirstName']) . ' ' . htmlspecialchars($old_customer['LastName']); ?></h5>
         </div>
     </div>
+
+    <div class="showmessage"></div>
 
     <div class="section-header">
         <i class="fas fa-user"></i>
@@ -296,7 +298,7 @@ $old_email = $customer->getEmailAddresses();
                 <i class="fas fa-car"></i>
                 <span>Associated Cars</span>
             </div>
-            <div class="cars-container">
+            <div class="cars-container d-flex flex-column gap-2">
                 <?php
                 $cars_query = "SELECT c.* FROM cars c 
                                INNER JOIN carassoc ca ON c.LicenseNr = ca.LicenseNr 
@@ -306,18 +308,18 @@ $old_email = $customer->getEmailAddresses();
                 
                 if ($stmt->rowCount() > 0) {
                     while ($car = $stmt->fetch(PDO::FETCH_ASSOC)) {
-                        echo '<div class="car-row" id="car-' . htmlspecialchars($car['LicenseNr']) . '" data-license="' . htmlspecialchars($car['LicenseNr']) . '">';
-                        echo '<div class="car-info">';
-                        echo '<div class="car-desc">' . htmlspecialchars($car['Brand']) . ' ' . htmlspecialchars($car['Model']) . ' (' . htmlspecialchars($car['LicenseNr']) . ')</div>';
-                        echo '<div class="car-details">';
+                        echo '<div class="car-row d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center p-3 border shadow-sm" id="car-' . htmlspecialchars($car['LicenseNr']) . '" data-license="' . htmlspecialchars($car['LicenseNr']) . '">';
+                        echo '<div class="car-info flex-grow-1 mb-2 mb-md-0">';
+                        echo '<div class="car-desc h6 mb-1">' . htmlspecialchars($car['Brand']) . ' ' . htmlspecialchars($car['Model']) . ' (' . htmlspecialchars($car['LicenseNr']) . ')</div>';
+                        echo '<div class="car-details d-flex flex-column flex-md-row gap-2 text-muted small">';
                         echo '<span>VIN: ' . htmlspecialchars($car['VIN']) . '</span>';
                         echo '<span>Fuel: ' . htmlspecialchars($car['Fuel']) . '</span>';
                         echo '<span>Engine: ' . htmlspecialchars($car['Engine']) . '</span>';
                         echo '</div>';
                         echo '</div>';
-                        echo '<div class="car-actions">';
-                        echo '<button type="button" onclick="editCar(\'' . htmlspecialchars($car['LicenseNr']) . '\')" class="btn btn-sm btn-primary edit-car"><i class="fas fa-edit"></i> Edit</button>';
-                        echo '<button type="button" onclick="deleteCar(\'' . htmlspecialchars($car['LicenseNr']) . '\')" class="btn btn-sm btn-danger remove-car"><i class="fas fa-trash"></i> Delete</button>';
+                        echo '<div class="car-actions d-flex justify-content-end align-self-end">';
+                        echo '<button type="button" onclick="editCar(\'' . htmlspecialchars($car['LicenseNr']) . '\')" class="btn btn-sm btn-primary edit-car"><i class="fas fa-edit"></i></button>';
+                        echo '<button type="button" onclick="deleteCar(\'' . htmlspecialchars($car['LicenseNr']) . '\')" class="btn btn-sm btn-danger remove-car"><i class="fas fa-trash"></i></button>';
                         echo '</div>';
                         echo '</div>';
                     }

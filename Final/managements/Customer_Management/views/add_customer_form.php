@@ -95,7 +95,7 @@ require_once '../../UserAccess/protect.php';
             document.querySelectorAll('.alert-danger').forEach(el => el.remove());
             
             // Insert the new error message before the form
-            document.querySelector('.form-container').insertBefore(popup, document.querySelector('form'));
+            document.querySelector('.showmessage').insertBefore(popup, document.querySelector('form'));
             popup.scrollIntoView({ behavior: 'smooth', block: 'center' });
             
             // Auto-dismiss the error message after 5 seconds
@@ -133,6 +133,8 @@ if (isset($_SESSION['error_message'])) {
         <!-- Spacer for alignment -->
         <div style="width: 30px;"></div>
     </div>
+
+    <div class="showmessage"></div>
 
     <!-- Success Message Alert (Hidden by default) -->
     <div id="successAlert" class="alert alert-success alert-dismissible fade" role="alert" style="display: none;">
