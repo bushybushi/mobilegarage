@@ -218,18 +218,16 @@ document.addEventListener('DOMContentLoaded', function() {
       // Handle event click
       eventClick: function(info) {
         const jobId = info.event.extendedProps.jobId;
-        // First check if we're in JobCard_Management
-        if (!window.location.pathname.includes('JobCard_Management')) {
           // If not, navigate to JobCard_Management first
           window.location.href = 'JobCard_Management/views/job_cards_main.php';
           // Store the jobId to load after navigation
           sessionStorage.setItem('pendingJobId', jobId);
-        } else {
+       
           // If already in JobCard_Management, load the view directly
           $.get('JobCard_Management/views/job_card_view.php', { id: jobId }, function(response) {
             $('#dynamicContent').html(response);
           });
-        }
+        
       },
       
       // Add tooltips to events
