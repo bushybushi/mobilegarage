@@ -34,7 +34,7 @@ $stmt->execute([$jobId]);
 $jobCard = $stmt->fetch(PDO::FETCH_ASSOC);
 
 // Get parts used in this job
-$partsSql = "SELECT p.PartDesc, jp.PiecesSold, p.SellPrice as PricePerPiece, p.Vat
+$partsSql = "SELECT p.PartDesc, jp.PiecesSold, jp.PricePerPiece as price, p.Vat
              FROM jobcardparts jp
              JOIN parts p ON jp.PartID = p.PartID
              WHERE jp.JobID = ?";
@@ -48,7 +48,7 @@ $subtotal = 0;
 $totalVat = 0;
 
 foreach ($parts as $part) {
-    $lineTotal = $part['PiecesSold'] * $part['PricePerPiece'];
+    $lineTotal = $part['PiecesSold'] * $part['price'];
     $subtotal += $lineTotal;
     $totalVat += $lineTotal * ($part['Vat'] / 100);
 }
@@ -283,8 +283,6 @@ $totalCost = $total + $jobCard['DriveCosts'];
                 <th>Description</th>
                 <th>Quantity</th>
                 <th>Unit Price</th>
-                <th>VAT %</th>
-                <th class="text-right">Amount</th>
             </tr>
         </thead>
         <tbody>
@@ -292,9 +290,7 @@ $totalCost = $total + $jobCard['DriveCosts'];
                 <tr>
                     <td><?php echo htmlspecialchars($part['PartDesc']); ?></td>
                     <td><?php echo $part['PiecesSold']; ?></td>
-                    <td>€<?php echo number_format($part['PricePerPiece'], 2); ?></td>
-                    <td><?php echo $part['Vat']; ?>%</td>
-                    <td class="text-right">€<?php echo number_format($part['PiecesSold'] * $part['PricePerPiece'], 2); ?></td>
+                    <td>€<?php echo number_format($part['price'], 2); ?></td>
                 </tr>
             <?php endforeach; ?>
             <?php if ($jobCard['DriveCosts'] > 0): ?>
@@ -302,8 +298,6 @@ $totalCost = $total + $jobCard['DriveCosts'];
                     <td>Drive Costs</td>
                     <td>1</td>
                     <td>€<?php echo number_format($jobCard['DriveCosts'], 2); ?></td>
-                    <td>0%</td>
-                    <td class="text-right">€<?php echo number_format($jobCard['DriveCosts'], 2); ?></td>
                 </tr>
             <?php endif; ?>
         </tbody>

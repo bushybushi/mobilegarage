@@ -182,8 +182,8 @@ require_once '../../UserAccess/protect.php';
                                 <button type="button" class="btn btn-primary btn-sm" style="padding: 0.25rem 0.5rem!important; font-size: 0.875rem!important;" onclick="addPartField()">Add Part</button>
                             </div>
                             <div id="partsContainer">
-                                 <div class="input-group mt-2">
-                                    <div class="position-relative" style="flex: 1;">
+                                 <div class="input-group mt-2 d-flex flex-column flex-sm-row">
+                                    <div class="position-relative w-100 mb-2 mb-sm-0" style="flex: 1;">
                                         <input type="text" class="form-control part-search" placeholder="Search part...">
                                         <div class="list-group mt-1"></div>
                                         <div class="input-group-append" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); z-index: 10;">
@@ -192,8 +192,10 @@ require_once '../../UserAccess/protect.php';
                                             </button>
                                         </div>
                                     </div>
-                                    <input type="number" name="partQuantities[]" class="form-control ml-2" min="1" value="1" style="max-width: 80px;" placeholder="Qty">
-                                    <input type="number" name="partPrices[]" class="form-control ml-2" step="0.01" min="0" value="0.00" style="max-width: 100px;" placeholder="Price">
+                                    <div class="d-flex d-sm-inline-flex">
+                                        <input type="number" name="partQuantities[]" class="form-control ml-sm-2" min="1" value="1" style="max-width: 80px;" placeholder="Qty">
+                                        <input type="number" name="partPrices[]" class="form-control ml-2" step="0.01" min="0" value="0.00" style="max-width: 100px;" placeholder="Price">
+                                    </div>
                                     <input type="hidden" name="parts[]" value="">
                                     <select name="parts_select[]" class="form-control part-select" style="display: none;" onchange="updatePartPrice(this)">
                                         <option value="">Select Part</option>

@@ -765,9 +765,9 @@ function addPartField() {
     if (!templateSelect) return;
     
     const newField = document.createElement('div');
-    newField.className = 'input-group mt-2';
+    newField.className = 'input-group mt-2 d-flex flex-column flex-sm-row';
     newField.innerHTML = `
-        <div class="position-relative" style="flex: 1;">
+        <div class="position-relative w-100 mb-2 mb-sm-0" style="flex: 1;">
             <input type="text" class="form-control part-search" placeholder="Search part...">
             <div class="list-group mt-1 position-absolute" style="width: 100%; top: 38px; z-index: 1000;"></div>
             <div class="input-group-append" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); z-index: 10;">
@@ -776,8 +776,10 @@ function addPartField() {
                 </button>
             </div>
         </div>
-        <input type="number" name="partQuantities[]" class="form-control ml-2" min="1" value="1" style="max-width: 80px;" placeholder="Qty" onchange="validateQuantity(this)">
-        <input type="number" name="partPrices[]" class="form-control ml-2" step="0.01" min="0" value="0.00" style="max-width: 100px;" placeholder="Price">
+        <div class="d-flex d-sm-inline-flex">
+            <input type="number" name="partQuantities[]" class="form-control ml-sm-2" min="1" value="1" style="max-width: 80px;" placeholder="Qty" onchange="validateQuantity(this)">
+            <input type="number" name="partPrices[]" class="form-control ml-2" step="0.01" min="0" value="0.00" style="max-width: 100px;" placeholder="Price">
+        </div>
         <input type="hidden" name="parts[]" value="">
         <select name="parts_select[]" class="form-control part-select" style="display: none;" onchange="updatePartPrice(this)">
             ${templateSelect.innerHTML}

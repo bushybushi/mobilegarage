@@ -22,7 +22,7 @@ $stmt->execute();
 $jobCard = $stmt->fetch(PDO::FETCH_ASSOC);
 
 // Get parts used in this job
-$partsSql = "SELECT p.PartID, p.PartDesc, p.SellPrice, jp.PiecesSold
+$partsSql = "SELECT p.PartID, p.PartDesc, jp.PricePerPiece as price, jp.PiecesSold
              FROM jobcardparts jp
              JOIN parts p ON jp.PartID = p.PartID
              WHERE jp.JobID = :jobId
@@ -42,10 +42,10 @@ foreach ($parts as $part) {
     // Debug each part's data
     error_log("Part Details - ID: " . $part['PartID'] . 
               ", Description: " . $part['PartDesc'] . 
-              ", SellPrice: " . $part['SellPrice'] . 
+              ", Price: " . $part['price'] . 
               ", PiecesSold: " . $part['PiecesSold']);
     
-    $price = $part['SellPrice'];
+    $price = $part['price'];
     $quantity = $part['PiecesSold'];
     $totalPartsCost += $price * $quantity;
 }
@@ -72,7 +72,7 @@ $totalCost = $totalPartsCost + ($jobCard['DriveCosts'] ?? 0);
     <style>
         #sticky-customer-header {
             position: fixed;
-            top: 50px; /* Set a fixed top position to appear below the Job Card header */
+            top: 80px; /* Set a fixed top position to appear below the Job Card header */
             left: 50%;
             transform: translateX(-50%);
             width: auto;
@@ -209,7 +209,7 @@ outline: none;
                                             <input type="text" class="form-control" value="<?php echo htmlspecialchars($part['PartDesc']); ?>" readonly>
                                         </div>
                                         <input type="text" class="form-control ml-2" style="max-width: 80px;" value="<?php echo htmlspecialchars($part['PiecesSold']); ?>" readonly>
-                                        <input type="text" class="form-control ml-2" style="max-width: 100px;" value="€<?php echo number_format($part['SellPrice'], 2); ?>" readonly>
+                                        <input type="text" class="form-control ml-2" style="max-width: 100px;" value="€<?php echo number_format($part['price'], 2); ?>" readonly>
                                     </div>
                                     <?php endforeach; ?>
                                     <?php if (empty($parts)): ?>
@@ -228,6 +228,7 @@ outline: none;
                                     <div class="form-group">
                                         <label>Total Costs</label>
                                         <input type="text" class="form-control" value="€<?php echo number_format($totalCost, 2); ?>">
+                                        <small class="form-text text-muted">(excl. VAT)</small>
                                     </div>
                                 </div>
                             </div>

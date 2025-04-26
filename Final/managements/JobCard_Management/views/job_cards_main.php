@@ -93,6 +93,17 @@ if (session_status() === PHP_SESSION_NONE) {
 
 <script>
   $(document).ready(function() {
+    // Check for job card to open from accounting view
+    const jobCardId = sessionStorage.getItem('openJobCardId');
+    if (jobCardId) {
+      // Clear the storage immediately
+      sessionStorage.removeItem('openJobCardId');
+      // Load the job card view
+      $.get('job_card_view.php', { id: jobCardId }, function(response) {
+        $('#dynamicContent').html(response);
+      });
+    }
+
     // Check for pending job view to load
     const pendingJobId = sessionStorage.getItem('pendingJobId');
     if (pendingJobId) {
@@ -217,37 +228,43 @@ if (session_status() === PHP_SESSION_NONE) {
         data-bs-toggle="dropdown"
         href="#"
         role="button"
-        aria-haspopup="false"
+        aria-haspopup="true"
         aria-expanded="false"
       >
         <i class="ti ti-search"></i>
       </a>
-      <div class="dropdown-menu pc-h-dropdown drp-search">
-        <form class="px-3">
+      <div class="dropdown-menu pc-h-dropdown drp-search" style="min-width: 300px;">
+        <form class="px-3" method="GET" action="job_cards_main.php">
           <div class="mb-0 d-flex align-items-center">
             <i data-feather="search"></i>
-            <input type="search" class="form-control border-0 shadow-none" placeholder="Search here . . ." />
+            <input 
+              type="search" 
+              name="filter" 
+              class="form-control border-0 shadow-none" 
+              placeholder="Search here . . ." 
+              value="<?= isset($_GET['filter']) ? htmlspecialchars($_GET['filter']) : '' ?>" 
+              autocomplete="off"
+            />
           </div>
         </form>
       </div>
     </li>
     <li class="pc-h-item d-none d-md-inline-flex">
-    <form class="header-search" method="GET" action="job_cards_main.php"> <!-- Adjust action if needed -->
-    <i data-feather="search" class="icon-search"></i>
-    <input 
-        type="search" 
-        name="filter" 
-        class="form-control" 
-        id="searchInput" 
-        placeholder="Search here" 
-        value="<?= isset($_GET['filter']) ? htmlspecialchars($_GET['filter']) : '' ?>" 
-        autocomplete="off"
-    />
-    <button type="submit" class="btn btn-light-secondary btn-search">
-        <i class="ti ti-adjustments-horizontal"></i>
-    </button>
-</form>
-  
+      <form class="header-search" method="GET" action="job_cards_main.php">
+        <i data-feather="search" class="icon-search"></i>
+        <input 
+          type="search" 
+          name="filter" 
+          class="form-control" 
+          id="searchInput" 
+          placeholder="Search here" 
+          value="<?= isset($_GET['filter']) ? htmlspecialchars($_GET['filter']) : '' ?>" 
+          autocomplete="off"
+        />
+        <button type="submit" class="btn btn-light-secondary btn-search">
+          <i class="ti ti-adjustments-horizontal"></i>
+        </button>
+      </form>
     </li>
   </ul>
 </div>
@@ -1114,6 +1131,22 @@ document.addEventListener('DOMContentLoaded', function() {
 <?php include '../../includes/about_modal.php'; ?>
 
 <?php include '../../includes/backup_modal.php'; ?>
+
+<!-- Add this script at the bottom of the file, before the closing body tag -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize Bootstrap dropdowns
+    var dropdownElementList = [].slice.call(document.querySelectorAll('[data-bs-toggle="dropdown"]'));
+    var dropdownList = dropdownElementList.map(function (dropdownToggleEl) {
+        return new bootstrap.Dropdown(dropdownToggleEl);
+    });
+
+    // Initialize Feather icons
+    if (typeof feather !== 'undefined') {
+        feather.replace();
+    }
+});
+</script>
 
   </body>
   <!-- [Body] end -->

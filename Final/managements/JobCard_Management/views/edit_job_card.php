@@ -20,7 +20,7 @@ $stmt->execute([$jobId]);
 $jobCard = $stmt->fetch();
 
 // Get parts used in this job
-$partsSql = "SELECT p.PartID, p.PartDesc, p.SellPrice, jp.PiecesSold
+$partsSql = "SELECT p.PartID, p.PartDesc, p.SellPrice, jp.PiecesSold, jp.PricePerPiece
              FROM jobcardparts jp
              JOIN parts p ON jp.PartID = p.PartID
              WHERE jp.JobID = ?
@@ -292,6 +292,27 @@ $parts = $partsStmt->fetchAll();
                 $('#dynamicContent').html(response);
             });
         }
+
+        function updatePartPrice(select) {
+            const selectedOption = select.options[select.selectedIndex];
+            const priceInput = select.closest('.input-group').querySelector('input[name="partPrices[]"]');
+            const defaultPrice = selectedOption.getAttribute('data-price');
+            
+            // Only update the price if it hasn't been manually changed
+            if (priceInput.value === '' || priceInput.value === '0.00') {
+                priceInput.value = defaultPrice;
+            }
+            
+            // Update the hidden part ID input
+            const partIdInput = select.closest('.input-group').querySelector('input[name="parts[]"]');
+            partIdInput.value = select.value;
+            
+            // Update the part description input
+            const partDescInput = select.closest('.input-group').querySelector('.part-search');
+            partDescInput.value = selectedOption.text;
+            
+            calculateTotal();
+        }
     </script>
 </head>
 
@@ -433,7 +454,7 @@ $parts = $partsStmt->fetchAll();
                                             </div>
                                         </div>
                                         <input type="number" name="partQuantities[]" class="form-control ml-2" min="1" value="<?php echo htmlspecialchars($part['PiecesSold']); ?>" style="max-width: 80px;" placeholder="Qty">
-                                        <input type="number" name="partPrices[]" class="form-control ml-2" step="0.01" min="0" value="<?php echo htmlspecialchars($part['SellPrice']); ?>" style="max-width: 100px;" placeholder="Price">
+                                        <input type="number" name="partPrices[]" class="form-control ml-2" step="0.01" min="0" value="<?php echo htmlspecialchars($part['PricePerPiece']); ?>" style="max-width: 100px;" placeholder="Price">
                                         <input type="hidden" name="parts[]" value="<?php echo htmlspecialchars($part['PartID']); ?>">
                                         <select name="parts_select[]" class="form-control part-select" style="display: none;" onchange="updatePartPrice(this)">
                                             <option value="">Select Part</option>
@@ -469,7 +490,7 @@ $parts = $partsStmt->fetchAll();
                                 <!-- Total Costs -->
                                 <div class="col-md-4">
                                     <div class="form-group">
-                                        <label for="totalCosts">Total Costs</label>
+                                        <label for="totalCosts">Total Costs </label>
                                         <input type="number" name="totalCosts" id="totalCosts" class="form-control" step="0.01" min="0" 
                                                value="<?php 
                                                     // Calculate total from parts and drive costs
@@ -480,7 +501,9 @@ $parts = $partsStmt->fetchAll();
                                                     $totalCost = $totalPartsCost + $jobCard['DriveCosts'];
                                                     echo htmlspecialchars($totalCost);
                                                ?>" readonly style="background-color: #e9ecef;">
+            <small class="form-text text-muted">(excl. VAT)</small>
                                     </div>
+                                   
                                 </div>
                             </div>
                         </div>

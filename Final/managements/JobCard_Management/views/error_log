@@ -7608,3 +7608,2309 @@ Stack trace:
 [18-Apr-2025 19:55:10 UTC] Part Details - ID: 61, Description: Part 7, SellPrice: 100.00, PiecesSold: 1
 [18-Apr-2025 19:55:10 UTC] Total parts cost calculation: 100
 [18-Apr-2025 19:55:12 UTC] PHP Warning:  Undefined array key "previous_link" in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/JobCard_Management/views/edit_job_card.php on line 312
+[18-Apr-2025 19:58:55 UTC] Parts data for job ID 37: Array
+(
+)
+
+[18-Apr-2025 19:58:55 UTC] Total parts cost calculation: 0
+[18-Apr-2025 19:58:57 UTC] PHP Warning:  Undefined array key "previous_link" in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/JobCard_Management/views/edit_job_card.php on line 312
+[18-Apr-2025 19:59:16 UTC] Parts data for job ID 37: Array
+(
+)
+
+[18-Apr-2025 19:59:16 UTC] Total parts cost calculation: 0
+[18-Apr-2025 20:02:10 UTC] Parts data for job ID 53: Array
+(
+    [0] => Array
+        (
+            [PartID] => 66
+            [PartDesc] => Test
+            [SellPrice] => 25.00
+            [PiecesSold] => 2
+        )
+
+    [1] => Array
+        (
+            [PartID] => 66
+            [PartDesc] => Test
+            [SellPrice] => 25.00
+            [PiecesSold] => 1
+        )
+
+)
+
+[18-Apr-2025 20:02:10 UTC] Part Details - ID: 66, Description: Test, SellPrice: 25.00, PiecesSold: 2
+[18-Apr-2025 20:02:10 UTC] Part Details - ID: 66, Description: Test, SellPrice: 25.00, PiecesSold: 1
+[18-Apr-2025 20:02:10 UTC] Total parts cost calculation: 75
+[18-Apr-2025 20:02:28 UTC] Parts data for job ID 37: Array
+(
+)
+
+[18-Apr-2025 20:02:28 UTC] Total parts cost calculation: 0
+[18-Apr-2025 20:02:35 UTC] Parts data for job ID 44: Array
+(
+    [0] => Array
+        (
+            [PartID] => 57
+            [PartDesc] => Part3
+            [SellPrice] => 10.00
+            [PiecesSold] => 1
+        )
+
+)
+
+[18-Apr-2025 20:02:35 UTC] Part Details - ID: 57, Description: Part3, SellPrice: 10.00, PiecesSold: 1
+[18-Apr-2025 20:02:35 UTC] Total parts cost calculation: 10
+[18-Apr-2025 20:03:22 UTC] Parts data for job ID 37: Array
+(
+)
+
+[18-Apr-2025 20:03:22 UTC] Total parts cost calculation: 0
+[18-Apr-2025 20:03:27 UTC] Parts data for job ID 39: Array
+(
+    [0] => Array
+        (
+            [PartID] => 52
+            [PartDesc] => TestPart1
+            [SellPrice] => 14.00
+            [PiecesSold] => 1
+        )
+
+)
+
+[18-Apr-2025 20:03:27 UTC] Part Details - ID: 52, Description: TestPart1, SellPrice: 14.00, PiecesSold: 1
+[18-Apr-2025 20:03:27 UTC] Total parts cost calculation: 14
+[18-Apr-2025 20:04:43 UTC] Parts data for job ID 45: Array
+(
+    [0] => Array
+        (
+            [PartID] => 58
+            [PartDesc] => Part4
+            [SellPrice] => 15.00
+            [PiecesSold] => 1
+        )
+
+)
+
+[18-Apr-2025 20:04:43 UTC] Part Details - ID: 58, Description: Part4, SellPrice: 15.00, PiecesSold: 1
+[18-Apr-2025 20:04:43 UTC] Total parts cost calculation: 15
+[21-Apr-2025 18:32:53 UTC] Parts data for job ID 37: Array
+(
+)
+
+[21-Apr-2025 18:32:53 UTC] Total parts cost calculation: 0
+[22-Apr-2025 10:27:47 UTC] Parts data for job ID 37: Array
+(
+)
+
+[22-Apr-2025 10:27:47 UTC] Total parts cost calculation: 0
+[22-Apr-2025 10:28:09 UTC] Parts data for job ID 45: Array
+(
+    [0] => Array
+        (
+            [PartID] => 58
+            [PartDesc] => Part4
+            [SellPrice] => 15.00
+            [PiecesSold] => 1
+        )
+
+)
+
+[22-Apr-2025 10:28:09 UTC] Part Details - ID: 58, Description: Part4, SellPrice: 15.00, PiecesSold: 1
+[22-Apr-2025 10:28:09 UTC] Total parts cost calculation: 15
+[22-Apr-2025 10:28:13 UTC] Parts data for job ID 45: Array
+(
+    [0] => Array
+        (
+            [PartID] => 58
+            [PartDesc] => Part4
+            [SellPrice] => 15.00
+            [PiecesSold] => 1
+        )
+
+)
+
+[22-Apr-2025 10:28:13 UTC] Part Details - ID: 58, Description: Part4, SellPrice: 15.00, PiecesSold: 1
+[22-Apr-2025 10:28:13 UTC] Total parts cost calculation: 15
+[22-Apr-2025 10:28:16 UTC] Parts data for job ID 40: Array
+(
+    [0] => Array
+        (
+            [PartID] => 54
+            [PartDesc] => TestPart3
+            [SellPrice] => 1.00
+            [PiecesSold] => 1
+        )
+
+)
+
+[22-Apr-2025 10:28:16 UTC] Part Details - ID: 54, Description: TestPart3, SellPrice: 1.00, PiecesSold: 1
+[22-Apr-2025 10:28:16 UTC] Total parts cost calculation: 1
+[22-Apr-2025 10:28:19 UTC] Parts data for job ID 50: Array
+(
+    [0] => Array
+        (
+            [PartID] => 61
+            [PartDesc] => Part 7
+            [SellPrice] => 100.00
+            [PiecesSold] => 1
+        )
+
+    [1] => Array
+        (
+            [PartID] => 59
+            [PartDesc] => Part5
+            [SellPrice] => 9.00
+            [PiecesSold] => 1
+        )
+
+    [2] => Array
+        (
+            [PartID] => 58
+            [PartDesc] => Part4
+            [SellPrice] => 15.00
+            [PiecesSold] => 1
+        )
+
+    [3] => Array
+        (
+            [PartID] => 64
+            [PartDesc] => Part10
+            [SellPrice] => 20.00
+            [PiecesSold] => 1
+        )
+
+)
+
+[22-Apr-2025 10:28:19 UTC] Part Details - ID: 61, Description: Part 7, SellPrice: 100.00, PiecesSold: 1
+[22-Apr-2025 10:28:19 UTC] Part Details - ID: 59, Description: Part5, SellPrice: 9.00, PiecesSold: 1
+[22-Apr-2025 10:28:19 UTC] Part Details - ID: 58, Description: Part4, SellPrice: 15.00, PiecesSold: 1
+[22-Apr-2025 10:28:19 UTC] Part Details - ID: 64, Description: Part10, SellPrice: 20.00, PiecesSold: 1
+[22-Apr-2025 10:28:19 UTC] Total parts cost calculation: 144
+[22-Apr-2025 10:28:23 UTC] PHP Warning:  Undefined array key "previous_link" in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/JobCard_Management/views/edit_job_card.php on line 312
+[22-Apr-2025 10:28:34 UTC] Parts data for job ID 50: Array
+(
+    [0] => Array
+        (
+            [PartID] => 61
+            [PartDesc] => Part 7
+            [SellPrice] => 100.00
+            [PiecesSold] => 1
+        )
+
+    [1] => Array
+        (
+            [PartID] => 59
+            [PartDesc] => Part5
+            [SellPrice] => 9.00
+            [PiecesSold] => 1
+        )
+
+    [2] => Array
+        (
+            [PartID] => 58
+            [PartDesc] => Part4
+            [SellPrice] => 15.00
+            [PiecesSold] => 1
+        )
+
+    [3] => Array
+        (
+            [PartID] => 64
+            [PartDesc] => Part10
+            [SellPrice] => 20.00
+            [PiecesSold] => 1
+        )
+
+)
+
+[22-Apr-2025 10:28:34 UTC] Part Details - ID: 61, Description: Part 7, SellPrice: 100.00, PiecesSold: 1
+[22-Apr-2025 10:28:34 UTC] Part Details - ID: 59, Description: Part5, SellPrice: 9.00, PiecesSold: 1
+[22-Apr-2025 10:28:34 UTC] Part Details - ID: 58, Description: Part4, SellPrice: 15.00, PiecesSold: 1
+[22-Apr-2025 10:28:34 UTC] Part Details - ID: 64, Description: Part10, SellPrice: 20.00, PiecesSold: 1
+[22-Apr-2025 10:28:34 UTC] Total parts cost calculation: 144
+[22-Apr-2025 10:28:52 UTC] Parts data for job ID 40: Array
+(
+    [0] => Array
+        (
+            [PartID] => 54
+            [PartDesc] => TestPart3
+            [SellPrice] => 1.00
+            [PiecesSold] => 1
+        )
+
+)
+
+[22-Apr-2025 10:28:52 UTC] Part Details - ID: 54, Description: TestPart3, SellPrice: 1.00, PiecesSold: 1
+[22-Apr-2025 10:28:52 UTC] Total parts cost calculation: 1
+[22-Apr-2025 15:31:10 UTC] Parts data for job ID 54: Array
+(
+    [0] => Array
+        (
+            [PartID] => 58
+            [PartDesc] => Part4
+            [SellPrice] => 15.00
+            [PiecesSold] => 1
+        )
+
+)
+
+[22-Apr-2025 15:31:10 UTC] Part Details - ID: 58, Description: Part4, SellPrice: 15.00, PiecesSold: 1
+[22-Apr-2025 15:31:10 UTC] Total parts cost calculation: 15
+[22-Apr-2025 15:31:10 UTC] Parts data for job ID 54: Array
+(
+    [0] => Array
+        (
+            [PartID] => 58
+            [PartDesc] => Part4
+            [SellPrice] => 15.00
+            [PiecesSold] => 1
+        )
+
+)
+
+[22-Apr-2025 15:31:10 UTC] Part Details - ID: 58, Description: Part4, SellPrice: 15.00, PiecesSold: 1
+[22-Apr-2025 15:31:10 UTC] Total parts cost calculation: 15
+[22-Apr-2025 15:34:20 UTC] Parts data for job ID 45: Array
+(
+    [0] => Array
+        (
+            [PartID] => 58
+            [PartDesc] => Part4
+            [SellPrice] => 15.00
+            [PiecesSold] => 1
+        )
+
+)
+
+[22-Apr-2025 15:34:20 UTC] Part Details - ID: 58, Description: Part4, SellPrice: 15.00, PiecesSold: 1
+[22-Apr-2025 15:34:20 UTC] Total parts cost calculation: 15
+[22-Apr-2025 15:34:20 UTC] Parts data for job ID 45: Array
+(
+    [0] => Array
+        (
+            [PartID] => 58
+            [PartDesc] => Part4
+            [SellPrice] => 15.00
+            [PiecesSold] => 1
+        )
+
+)
+
+[22-Apr-2025 15:34:20 UTC] Part Details - ID: 58, Description: Part4, SellPrice: 15.00, PiecesSold: 1
+[22-Apr-2025 15:34:20 UTC] Total parts cost calculation: 15
+[22-Apr-2025 15:34:29 UTC] Parts data for job ID 51: Array
+(
+    [0] => Array
+        (
+            [PartID] => 61
+            [PartDesc] => Part 7
+            [SellPrice] => 100.00
+            [PiecesSold] => 1
+        )
+
+)
+
+[22-Apr-2025 15:34:29 UTC] Part Details - ID: 61, Description: Part 7, SellPrice: 100.00, PiecesSold: 1
+[22-Apr-2025 15:34:29 UTC] Total parts cost calculation: 100
+[22-Apr-2025 15:34:30 UTC] Parts data for job ID 51: Array
+(
+    [0] => Array
+        (
+            [PartID] => 61
+            [PartDesc] => Part 7
+            [SellPrice] => 100.00
+            [PiecesSold] => 1
+        )
+
+)
+
+[22-Apr-2025 15:34:30 UTC] Part Details - ID: 61, Description: Part 7, SellPrice: 100.00, PiecesSold: 1
+[22-Apr-2025 15:34:30 UTC] Total parts cost calculation: 100
+[22-Apr-2025 15:34:44 UTC] Parts data for job ID 36: Array
+(
+    [0] => Array
+        (
+            [PartID] => 53
+            [PartDesc] => TestPart2
+            [SellPrice] => 7.00
+            [PiecesSold] => 1
+        )
+
+)
+
+[22-Apr-2025 15:34:44 UTC] Part Details - ID: 53, Description: TestPart2, SellPrice: 7.00, PiecesSold: 1
+[22-Apr-2025 15:34:44 UTC] Total parts cost calculation: 7
+[22-Apr-2025 15:34:44 UTC] Parts data for job ID 36: Array
+(
+    [0] => Array
+        (
+            [PartID] => 53
+            [PartDesc] => TestPart2
+            [SellPrice] => 7.00
+            [PiecesSold] => 1
+        )
+
+)
+
+[22-Apr-2025 15:34:44 UTC] Part Details - ID: 53, Description: TestPart2, SellPrice: 7.00, PiecesSold: 1
+[22-Apr-2025 15:34:44 UTC] Total parts cost calculation: 7
+[22-Apr-2025 15:34:52 UTC] Parts data for job ID 50: Array
+(
+    [0] => Array
+        (
+            [PartID] => 61
+            [PartDesc] => Part 7
+            [SellPrice] => 100.00
+            [PiecesSold] => 1
+        )
+
+    [1] => Array
+        (
+            [PartID] => 59
+            [PartDesc] => Part5
+            [SellPrice] => 9.00
+            [PiecesSold] => 1
+        )
+
+    [2] => Array
+        (
+            [PartID] => 58
+            [PartDesc] => Part4
+            [SellPrice] => 15.00
+            [PiecesSold] => 1
+        )
+
+    [3] => Array
+        (
+            [PartID] => 64
+            [PartDesc] => Part10
+            [SellPrice] => 20.00
+            [PiecesSold] => 1
+        )
+
+)
+
+[22-Apr-2025 15:34:52 UTC] Part Details - ID: 61, Description: Part 7, SellPrice: 100.00, PiecesSold: 1
+[22-Apr-2025 15:34:52 UTC] Part Details - ID: 59, Description: Part5, SellPrice: 9.00, PiecesSold: 1
+[22-Apr-2025 15:34:52 UTC] Part Details - ID: 58, Description: Part4, SellPrice: 15.00, PiecesSold: 1
+[22-Apr-2025 15:34:52 UTC] Part Details - ID: 64, Description: Part10, SellPrice: 20.00, PiecesSold: 1
+[22-Apr-2025 15:34:52 UTC] Total parts cost calculation: 144
+[22-Apr-2025 15:34:52 UTC] Parts data for job ID 50: Array
+(
+    [0] => Array
+        (
+            [PartID] => 61
+            [PartDesc] => Part 7
+            [SellPrice] => 100.00
+            [PiecesSold] => 1
+        )
+
+    [1] => Array
+        (
+            [PartID] => 59
+            [PartDesc] => Part5
+            [SellPrice] => 9.00
+            [PiecesSold] => 1
+        )
+
+    [2] => Array
+        (
+            [PartID] => 58
+            [PartDesc] => Part4
+            [SellPrice] => 15.00
+            [PiecesSold] => 1
+        )
+
+    [3] => Array
+        (
+            [PartID] => 64
+            [PartDesc] => Part10
+            [SellPrice] => 20.00
+            [PiecesSold] => 1
+        )
+
+)
+
+[22-Apr-2025 15:34:52 UTC] Part Details - ID: 61, Description: Part 7, SellPrice: 100.00, PiecesSold: 1
+[22-Apr-2025 15:34:52 UTC] Part Details - ID: 59, Description: Part5, SellPrice: 9.00, PiecesSold: 1
+[22-Apr-2025 15:34:52 UTC] Part Details - ID: 58, Description: Part4, SellPrice: 15.00, PiecesSold: 1
+[22-Apr-2025 15:34:52 UTC] Part Details - ID: 64, Description: Part10, SellPrice: 20.00, PiecesSold: 1
+[22-Apr-2025 15:34:52 UTC] Total parts cost calculation: 144
+[22-Apr-2025 15:35:02 UTC] Parts data for job ID 49: Array
+(
+    [0] => Array
+        (
+            [PartID] => 62
+            [PartDesc] => Part8
+            [SellPrice] => 112.00
+            [PiecesSold] => 1
+        )
+
+)
+
+[22-Apr-2025 15:35:02 UTC] Part Details - ID: 62, Description: Part8, SellPrice: 112.00, PiecesSold: 1
+[22-Apr-2025 15:35:02 UTC] Total parts cost calculation: 112
+[22-Apr-2025 15:35:02 UTC] Parts data for job ID 49: Array
+(
+    [0] => Array
+        (
+            [PartID] => 62
+            [PartDesc] => Part8
+            [SellPrice] => 112.00
+            [PiecesSold] => 1
+        )
+
+)
+
+[22-Apr-2025 15:35:02 UTC] Part Details - ID: 62, Description: Part8, SellPrice: 112.00, PiecesSold: 1
+[22-Apr-2025 15:35:02 UTC] Total parts cost calculation: 112
+[22-Apr-2025 15:35:09 UTC] Parts data for job ID 46: Array
+(
+    [0] => Array
+        (
+            [PartID] => 59
+            [PartDesc] => Part5
+            [SellPrice] => 9.00
+            [PiecesSold] => 1
+        )
+
+)
+
+[22-Apr-2025 15:35:09 UTC] Part Details - ID: 59, Description: Part5, SellPrice: 9.00, PiecesSold: 1
+[22-Apr-2025 15:35:09 UTC] Total parts cost calculation: 9
+[22-Apr-2025 15:35:09 UTC] Parts data for job ID 46: Array
+(
+    [0] => Array
+        (
+            [PartID] => 59
+            [PartDesc] => Part5
+            [SellPrice] => 9.00
+            [PiecesSold] => 1
+        )
+
+)
+
+[22-Apr-2025 15:35:09 UTC] Part Details - ID: 59, Description: Part5, SellPrice: 9.00, PiecesSold: 1
+[22-Apr-2025 15:35:09 UTC] Total parts cost calculation: 9
+[22-Apr-2025 15:35:15 UTC] Parts data for job ID 39: Array
+(
+    [0] => Array
+        (
+            [PartID] => 52
+            [PartDesc] => TestPart1
+            [SellPrice] => 14.00
+            [PiecesSold] => 1
+        )
+
+)
+
+[22-Apr-2025 15:35:15 UTC] Part Details - ID: 52, Description: TestPart1, SellPrice: 14.00, PiecesSold: 1
+[22-Apr-2025 15:35:15 UTC] Total parts cost calculation: 14
+[22-Apr-2025 15:35:16 UTC] Parts data for job ID 39: Array
+(
+    [0] => Array
+        (
+            [PartID] => 52
+            [PartDesc] => TestPart1
+            [SellPrice] => 14.00
+            [PiecesSold] => 1
+        )
+
+)
+
+[22-Apr-2025 15:35:16 UTC] Part Details - ID: 52, Description: TestPart1, SellPrice: 14.00, PiecesSold: 1
+[22-Apr-2025 15:35:16 UTC] Total parts cost calculation: 14
+[22-Apr-2025 15:35:49 UTC] Parts data for job ID 40: Array
+(
+    [0] => Array
+        (
+            [PartID] => 54
+            [PartDesc] => TestPart3
+            [SellPrice] => 1.00
+            [PiecesSold] => 1
+        )
+
+)
+
+[22-Apr-2025 15:35:49 UTC] Part Details - ID: 54, Description: TestPart3, SellPrice: 1.00, PiecesSold: 1
+[22-Apr-2025 15:35:49 UTC] Total parts cost calculation: 1
+[22-Apr-2025 15:35:50 UTC] Parts data for job ID 40: Array
+(
+    [0] => Array
+        (
+            [PartID] => 54
+            [PartDesc] => TestPart3
+            [SellPrice] => 1.00
+            [PiecesSold] => 1
+        )
+
+)
+
+[22-Apr-2025 15:35:50 UTC] Part Details - ID: 54, Description: TestPart3, SellPrice: 1.00, PiecesSold: 1
+[22-Apr-2025 15:35:50 UTC] Total parts cost calculation: 1
+[22-Apr-2025 15:35:58 UTC] Parts data for job ID 41: Array
+(
+    [0] => Array
+        (
+            [PartID] => 56
+            [PartDesc] => Part2
+            [SellPrice] => 8.00
+            [PiecesSold] => 1
+        )
+
+    [1] => Array
+        (
+            [PartID] => 55
+            [PartDesc] => Part1
+            [SellPrice] => 8.00
+            [PiecesSold] => 1
+        )
+
+    [2] => Array
+        (
+            [PartID] => 55
+            [PartDesc] => Part1
+            [SellPrice] => 8.00
+            [PiecesSold] => 1
+        )
+
+)
+
+[22-Apr-2025 15:35:58 UTC] Part Details - ID: 56, Description: Part2, SellPrice: 8.00, PiecesSold: 1
+[22-Apr-2025 15:35:58 UTC] Part Details - ID: 55, Description: Part1, SellPrice: 8.00, PiecesSold: 1
+[22-Apr-2025 15:35:58 UTC] Part Details - ID: 55, Description: Part1, SellPrice: 8.00, PiecesSold: 1
+[22-Apr-2025 15:35:58 UTC] Total parts cost calculation: 24
+[22-Apr-2025 15:35:58 UTC] Parts data for job ID 41: Array
+(
+    [0] => Array
+        (
+            [PartID] => 56
+            [PartDesc] => Part2
+            [SellPrice] => 8.00
+            [PiecesSold] => 1
+        )
+
+    [1] => Array
+        (
+            [PartID] => 55
+            [PartDesc] => Part1
+            [SellPrice] => 8.00
+            [PiecesSold] => 1
+        )
+
+    [2] => Array
+        (
+            [PartID] => 55
+            [PartDesc] => Part1
+            [SellPrice] => 8.00
+            [PiecesSold] => 1
+        )
+
+)
+
+[22-Apr-2025 15:35:58 UTC] Part Details - ID: 56, Description: Part2, SellPrice: 8.00, PiecesSold: 1
+[22-Apr-2025 15:35:58 UTC] Part Details - ID: 55, Description: Part1, SellPrice: 8.00, PiecesSold: 1
+[22-Apr-2025 15:35:58 UTC] Part Details - ID: 55, Description: Part1, SellPrice: 8.00, PiecesSold: 1
+[22-Apr-2025 15:35:58 UTC] Total parts cost calculation: 24
+[22-Apr-2025 15:38:43 UTC] Parts data for job ID 54: Array
+(
+    [0] => Array
+        (
+            [PartID] => 58
+            [PartDesc] => Part4
+            [SellPrice] => 15.00
+            [PiecesSold] => 1
+        )
+
+)
+
+[22-Apr-2025 15:38:43 UTC] Part Details - ID: 58, Description: Part4, SellPrice: 15.00, PiecesSold: 1
+[22-Apr-2025 15:38:43 UTC] Total parts cost calculation: 15
+[22-Apr-2025 15:40:24 UTC] Parts data for job ID 54: Array
+(
+    [0] => Array
+        (
+            [PartID] => 58
+            [PartDesc] => Part4
+            [SellPrice] => 15.00
+            [PiecesSold] => 1
+        )
+
+)
+
+[22-Apr-2025 15:40:24 UTC] Part Details - ID: 58, Description: Part4, SellPrice: 15.00, PiecesSold: 1
+[22-Apr-2025 15:40:24 UTC] Total parts cost calculation: 15
+[22-Apr-2025 16:59:23 UTC] Parts data for job ID 47: Array
+(
+    [0] => Array
+        (
+            [PartID] => 60
+            [PartDesc] => Part6
+            [SellPrice] => 18.00
+            [PiecesSold] => 1
+        )
+
+)
+
+[22-Apr-2025 16:59:23 UTC] Part Details - ID: 60, Description: Part6, SellPrice: 18.00, PiecesSold: 1
+[22-Apr-2025 16:59:23 UTC] Total parts cost calculation: 18
+[22-Apr-2025 17:40:13 UTC] Parts data for job ID 55: Array
+(
+    [0] => Array
+        (
+            [PartID] => 66
+            [PartDesc] => Test
+            [SellPrice] => 25.00
+            [PiecesSold] => 1
+        )
+
+)
+
+[22-Apr-2025 17:40:13 UTC] Part Details - ID: 66, Description: Test, SellPrice: 25.00, PiecesSold: 1
+[22-Apr-2025 17:40:13 UTC] Total parts cost calculation: 25
+[22-Apr-2025 17:48:41 UTC] Parts data for job ID 55: Array
+(
+    [0] => Array
+        (
+            [PartID] => 66
+            [PartDesc] => Test
+            [SellPrice] => 25.00
+            [PiecesSold] => 1
+        )
+
+)
+
+[22-Apr-2025 17:48:41 UTC] Part Details - ID: 66, Description: Test, SellPrice: 25.00, PiecesSold: 1
+[22-Apr-2025 17:48:41 UTC] Total parts cost calculation: 25
+[22-Apr-2025 20:50:14 UTC] Parts data for job ID 55: Array
+(
+    [0] => Array
+        (
+            [PartID] => 66
+            [PartDesc] => Test
+            [SellPrice] => 25.00
+            [PiecesSold] => 1
+        )
+
+)
+
+[22-Apr-2025 20:50:14 UTC] Part Details - ID: 66, Description: Test, SellPrice: 25.00, PiecesSold: 1
+[22-Apr-2025 20:50:14 UTC] Total parts cost calculation: 25
+[22-Apr-2025 20:50:17 UTC] PHP Warning:  Undefined array key "previous_link" in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/JobCard_Management/views/edit_job_card.php on line 312
+[22-Apr-2025 20:50:21 UTC] Parts data for job ID 55: Array
+(
+    [0] => Array
+        (
+            [PartID] => 66
+            [PartDesc] => Test
+            [SellPrice] => 25.00
+            [PiecesSold] => 1
+        )
+
+)
+
+[22-Apr-2025 20:50:21 UTC] Part Details - ID: 66, Description: Test, SellPrice: 25.00, PiecesSold: 1
+[22-Apr-2025 20:50:21 UTC] Total parts cost calculation: 25
+[22-Apr-2025 20:50:24 UTC] PHP Warning:  Undefined array key "previous_link" in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/JobCard_Management/views/edit_job_card.php on line 312
+[22-Apr-2025 20:50:31 UTC] Parts data for job ID 55: Array
+(
+    [0] => Array
+        (
+            [PartID] => 66
+            [PartDesc] => Test
+            [SellPrice] => 25.00
+            [PiecesSold] => 1
+        )
+
+)
+
+[22-Apr-2025 20:50:31 UTC] Part Details - ID: 66, Description: Test, SellPrice: 25.00, PiecesSold: 1
+[22-Apr-2025 20:50:31 UTC] Total parts cost calculation: 25
+[22-Apr-2025 20:55:14 UTC] Parts data for job ID 55: Array
+(
+    [0] => Array
+        (
+            [PartID] => 66
+            [PartDesc] => Test
+            [SellPrice] => 25.00
+            [PiecesSold] => 1
+        )
+
+)
+
+[22-Apr-2025 20:55:14 UTC] Part Details - ID: 66, Description: Test, SellPrice: 25.00, PiecesSold: 1
+[22-Apr-2025 20:55:14 UTC] Total parts cost calculation: 25
+[22-Apr-2025 20:55:15 UTC] PHP Warning:  Undefined array key "previous_link" in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/JobCard_Management/views/edit_job_card.php on line 333
+[22-Apr-2025 20:55:24 UTC] Parts data for job ID 55: Array
+(
+    [0] => Array
+        (
+            [PartID] => 66
+            [PartDesc] => Test
+            [SellPrice] => 25.00
+            [PiecesSold] => 1
+        )
+
+)
+
+[22-Apr-2025 20:55:24 UTC] Part Details - ID: 66, Description: Test, SellPrice: 25.00, PiecesSold: 1
+[22-Apr-2025 20:55:24 UTC] Total parts cost calculation: 25
+[22-Apr-2025 20:55:27 UTC] PHP Warning:  Undefined array key "previous_link" in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/JobCard_Management/views/edit_job_card.php on line 333
+[22-Apr-2025 20:56:15 UTC] Parts data for job ID 55: Array
+(
+    [0] => Array
+        (
+            [PartID] => 66
+            [PartDesc] => Test
+            [SellPrice] => 25.00
+            [PiecesSold] => 1
+        )
+
+    [1] => Array
+        (
+            [PartID] => 61
+            [PartDesc] => Part 7
+            [SellPrice] => 100.00
+            [PiecesSold] => 1
+        )
+
+)
+
+[22-Apr-2025 20:56:15 UTC] Part Details - ID: 66, Description: Test, SellPrice: 25.00, PiecesSold: 1
+[22-Apr-2025 20:56:15 UTC] Part Details - ID: 61, Description: Part 7, SellPrice: 100.00, PiecesSold: 1
+[22-Apr-2025 20:56:15 UTC] Total parts cost calculation: 125
+[22-Apr-2025 20:56:24 UTC] PHP Warning:  Undefined array key "previous_link" in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/JobCard_Management/views/edit_job_card.php on line 333
+[22-Apr-2025 20:56:28 UTC] Parts data for job ID 55: Array
+(
+    [0] => Array
+        (
+            [PartID] => 66
+            [PartDesc] => Test
+            [SellPrice] => 25.00
+            [PiecesSold] => 1
+        )
+
+    [1] => Array
+        (
+            [PartID] => 61
+            [PartDesc] => Part 7
+            [SellPrice] => 100.00
+            [PiecesSold] => 1
+        )
+
+)
+
+[22-Apr-2025 20:56:28 UTC] Part Details - ID: 66, Description: Test, SellPrice: 25.00, PiecesSold: 1
+[22-Apr-2025 20:56:28 UTC] Part Details - ID: 61, Description: Part 7, SellPrice: 100.00, PiecesSold: 1
+[22-Apr-2025 20:56:28 UTC] Total parts cost calculation: 125
+[22-Apr-2025 20:57:44 UTC] Parts data for job ID 55: Array
+(
+    [0] => Array
+        (
+            [PartID] => 66
+            [PartDesc] => Test
+            [PricePerPiece] => 35.00
+            [PiecesSold] => 1
+        )
+
+    [1] => Array
+        (
+            [PartID] => 61
+            [PartDesc] => Part 7
+            [PricePerPiece] => 110.00
+            [PiecesSold] => 1
+        )
+
+)
+
+[22-Apr-2025 20:57:44 UTC] Part Details - ID: 66, Description: Test, PricePerPiece: 35.00, PiecesSold: 1
+[22-Apr-2025 20:57:44 UTC] Part Details - ID: 61, Description: Part 7, PricePerPiece: 110.00, PiecesSold: 1
+[22-Apr-2025 20:57:44 UTC] Total parts cost calculation: 145
+[22-Apr-2025 20:57:44 UTC] PHP Warning:  Undefined array key "SellPrice" in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/JobCard_Management/views/job_card_view.php on line 212
+[22-Apr-2025 20:57:44 UTC] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/JobCard_Management/views/job_card_view.php on line 212
+[22-Apr-2025 20:57:44 UTC] PHP Warning:  Undefined array key "SellPrice" in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/JobCard_Management/views/job_card_view.php on line 212
+[22-Apr-2025 20:57:44 UTC] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/JobCard_Management/views/job_card_view.php on line 212
+[22-Apr-2025 20:57:48 UTC] Parts data for job ID 47: Array
+(
+    [0] => Array
+        (
+            [PartID] => 60
+            [PartDesc] => Part6
+            [PricePerPiece] => 18.00
+            [PiecesSold] => 1
+        )
+
+)
+
+[22-Apr-2025 20:57:48 UTC] Part Details - ID: 60, Description: Part6, PricePerPiece: 18.00, PiecesSold: 1
+[22-Apr-2025 20:57:48 UTC] Total parts cost calculation: 18
+[22-Apr-2025 20:57:48 UTC] PHP Warning:  Undefined array key "SellPrice" in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/JobCard_Management/views/job_card_view.php on line 212
+[22-Apr-2025 20:57:48 UTC] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/JobCard_Management/views/job_card_view.php on line 212
+[22-Apr-2025 20:57:51 UTC] Parts data for job ID 55: Array
+(
+    [0] => Array
+        (
+            [PartID] => 66
+            [PartDesc] => Test
+            [PricePerPiece] => 35.00
+            [PiecesSold] => 1
+        )
+
+    [1] => Array
+        (
+            [PartID] => 61
+            [PartDesc] => Part 7
+            [PricePerPiece] => 110.00
+            [PiecesSold] => 1
+        )
+
+)
+
+[22-Apr-2025 20:57:51 UTC] Part Details - ID: 66, Description: Test, PricePerPiece: 35.00, PiecesSold: 1
+[22-Apr-2025 20:57:51 UTC] Part Details - ID: 61, Description: Part 7, PricePerPiece: 110.00, PiecesSold: 1
+[22-Apr-2025 20:57:51 UTC] Total parts cost calculation: 145
+[22-Apr-2025 20:57:51 UTC] PHP Warning:  Undefined array key "SellPrice" in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/JobCard_Management/views/job_card_view.php on line 212
+[22-Apr-2025 20:57:51 UTC] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/JobCard_Management/views/job_card_view.php on line 212
+[22-Apr-2025 20:57:51 UTC] PHP Warning:  Undefined array key "SellPrice" in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/JobCard_Management/views/job_card_view.php on line 212
+[22-Apr-2025 20:57:51 UTC] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/JobCard_Management/views/job_card_view.php on line 212
+[22-Apr-2025 20:57:53 UTC] PHP Warning:  Undefined array key "previous_link" in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/JobCard_Management/views/edit_job_card.php on line 333
+[22-Apr-2025 20:57:56 UTC] Parts data for job ID 55: Array
+(
+    [0] => Array
+        (
+            [PartID] => 66
+            [PartDesc] => Test
+            [PricePerPiece] => 35.00
+            [PiecesSold] => 1
+        )
+
+    [1] => Array
+        (
+            [PartID] => 61
+            [PartDesc] => Part 7
+            [PricePerPiece] => 110.00
+            [PiecesSold] => 1
+        )
+
+)
+
+[22-Apr-2025 20:57:56 UTC] Part Details - ID: 66, Description: Test, PricePerPiece: 35.00, PiecesSold: 1
+[22-Apr-2025 20:57:56 UTC] Part Details - ID: 61, Description: Part 7, PricePerPiece: 110.00, PiecesSold: 1
+[22-Apr-2025 20:57:56 UTC] Total parts cost calculation: 145
+[22-Apr-2025 20:57:56 UTC] PHP Warning:  Undefined array key "SellPrice" in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/JobCard_Management/views/job_card_view.php on line 212
+[22-Apr-2025 20:57:56 UTC] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/JobCard_Management/views/job_card_view.php on line 212
+[22-Apr-2025 20:57:56 UTC] PHP Warning:  Undefined array key "SellPrice" in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/JobCard_Management/views/job_card_view.php on line 212
+[22-Apr-2025 20:57:56 UTC] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/JobCard_Management/views/job_card_view.php on line 212
+[22-Apr-2025 20:59:50 UTC] Parts data for job ID 55: Array
+(
+    [0] => Array
+        (
+            [PartID] => 66
+            [PartDesc] => Test
+            [price] => 35.00
+            [PiecesSold] => 1
+        )
+
+    [1] => Array
+        (
+            [PartID] => 61
+            [PartDesc] => Part 7
+            [price] => 110.00
+            [PiecesSold] => 1
+        )
+
+)
+
+[22-Apr-2025 20:59:50 UTC] Part Details - ID: 66, Description: Test, Price: 35.00, PiecesSold: 1
+[22-Apr-2025 20:59:50 UTC] Part Details - ID: 61, Description: Part 7, Price: 110.00, PiecesSold: 1
+[22-Apr-2025 20:59:50 UTC] Total parts cost calculation: 145
+[22-Apr-2025 20:59:52 UTC] PHP Warning:  Undefined array key "previous_link" in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/JobCard_Management/views/edit_job_card.php on line 333
+[22-Apr-2025 21:00:01 UTC] Parts data for job ID 55: Array
+(
+    [0] => Array
+        (
+            [PartID] => 66
+            [PartDesc] => Test
+            [price] => 35.00
+            [PiecesSold] => 1
+        )
+
+    [1] => Array
+        (
+            [PartID] => 61
+            [PartDesc] => Part 7
+            [price] => 120.00
+            [PiecesSold] => 1
+        )
+
+)
+
+[22-Apr-2025 21:00:01 UTC] Part Details - ID: 66, Description: Test, Price: 35.00, PiecesSold: 1
+[22-Apr-2025 21:00:01 UTC] Part Details - ID: 61, Description: Part 7, Price: 120.00, PiecesSold: 1
+[22-Apr-2025 21:00:01 UTC] Total parts cost calculation: 155
+[22-Apr-2025 21:00:14 UTC] Parts data for job ID 47: Array
+(
+    [0] => Array
+        (
+            [PartID] => 60
+            [PartDesc] => Part6
+            [price] => 18.00
+            [PiecesSold] => 1
+        )
+
+)
+
+[22-Apr-2025 21:00:14 UTC] Part Details - ID: 60, Description: Part6, Price: 18.00, PiecesSold: 1
+[22-Apr-2025 21:00:14 UTC] Total parts cost calculation: 18
+[22-Apr-2025 21:00:31 UTC] Parts data for job ID 55: Array
+(
+    [0] => Array
+        (
+            [PartID] => 66
+            [PartDesc] => Test
+            [price] => 35.00
+            [PiecesSold] => 1
+        )
+
+    [1] => Array
+        (
+            [PartID] => 61
+            [PartDesc] => Part 7
+            [price] => 120.00
+            [PiecesSold] => 1
+        )
+
+)
+
+[22-Apr-2025 21:00:31 UTC] Part Details - ID: 66, Description: Test, Price: 35.00, PiecesSold: 1
+[22-Apr-2025 21:00:31 UTC] Part Details - ID: 61, Description: Part 7, Price: 120.00, PiecesSold: 1
+[22-Apr-2025 21:00:31 UTC] Total parts cost calculation: 155
+[22-Apr-2025 21:00:41 UTC] PHP Warning:  Undefined array key "previous_link" in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/JobCard_Management/views/edit_job_card.php on line 333
+[22-Apr-2025 21:00:46 UTC] Parts data for job ID 55: Array
+(
+    [0] => Array
+        (
+            [PartID] => 66
+            [PartDesc] => Test
+            [price] => 35.00
+            [PiecesSold] => 1
+        )
+
+    [1] => Array
+        (
+            [PartID] => 61
+            [PartDesc] => Part 7
+            [price] => 120.00
+            [PiecesSold] => 1
+        )
+
+)
+
+[22-Apr-2025 21:00:46 UTC] Part Details - ID: 66, Description: Test, Price: 35.00, PiecesSold: 1
+[22-Apr-2025 21:00:46 UTC] Part Details - ID: 61, Description: Part 7, Price: 120.00, PiecesSold: 1
+[22-Apr-2025 21:00:46 UTC] Total parts cost calculation: 155
+[22-Apr-2025 21:00:49 UTC] PHP Warning:  Undefined array key "previous_link" in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/JobCard_Management/views/edit_job_card.php on line 333
+[22-Apr-2025 21:00:51 UTC] Parts data for job ID 55: Array
+(
+    [0] => Array
+        (
+            [PartID] => 66
+            [PartDesc] => Test
+            [price] => 35.00
+            [PiecesSold] => 1
+        )
+
+    [1] => Array
+        (
+            [PartID] => 61
+            [PartDesc] => Part 7
+            [price] => 120.00
+            [PiecesSold] => 1
+        )
+
+)
+
+[22-Apr-2025 21:00:51 UTC] Part Details - ID: 66, Description: Test, Price: 35.00, PiecesSold: 1
+[22-Apr-2025 21:00:51 UTC] Part Details - ID: 61, Description: Part 7, Price: 120.00, PiecesSold: 1
+[22-Apr-2025 21:00:51 UTC] Total parts cost calculation: 155
+[22-Apr-2025 21:00:53 UTC] PHP Warning:  Undefined array key "previous_link" in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/JobCard_Management/views/edit_job_card.php on line 333
+[22-Apr-2025 21:00:55 UTC] Parts data for job ID 55: Array
+(
+    [0] => Array
+        (
+            [PartID] => 66
+            [PartDesc] => Test
+            [price] => 35.00
+            [PiecesSold] => 1
+        )
+
+    [1] => Array
+        (
+            [PartID] => 61
+            [PartDesc] => Part 7
+            [price] => 120.00
+            [PiecesSold] => 1
+        )
+
+)
+
+[22-Apr-2025 21:00:55 UTC] Part Details - ID: 66, Description: Test, Price: 35.00, PiecesSold: 1
+[22-Apr-2025 21:00:55 UTC] Part Details - ID: 61, Description: Part 7, Price: 120.00, PiecesSold: 1
+[22-Apr-2025 21:00:55 UTC] Total parts cost calculation: 155
+[22-Apr-2025 21:00:56 UTC] PHP Warning:  Undefined array key "previous_link" in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/JobCard_Management/views/edit_job_card.php on line 333
+[22-Apr-2025 21:00:57 UTC] Parts data for job ID 55: Array
+(
+    [0] => Array
+        (
+            [PartID] => 66
+            [PartDesc] => Test
+            [price] => 35.00
+            [PiecesSold] => 1
+        )
+
+    [1] => Array
+        (
+            [PartID] => 61
+            [PartDesc] => Part 7
+            [price] => 120.00
+            [PiecesSold] => 1
+        )
+
+)
+
+[22-Apr-2025 21:00:57 UTC] Part Details - ID: 66, Description: Test, Price: 35.00, PiecesSold: 1
+[22-Apr-2025 21:00:57 UTC] Part Details - ID: 61, Description: Part 7, Price: 120.00, PiecesSold: 1
+[22-Apr-2025 21:00:57 UTC] Total parts cost calculation: 155
+[22-Apr-2025 21:02:45 UTC] Parts data for job ID 55: Array
+(
+    [0] => Array
+        (
+            [PartID] => 66
+            [PartDesc] => Test
+            [price] => 35.00
+            [PiecesSold] => 1
+        )
+
+    [1] => Array
+        (
+            [PartID] => 61
+            [PartDesc] => Part 7
+            [price] => 120.00
+            [PiecesSold] => 1
+        )
+
+)
+
+[22-Apr-2025 21:02:45 UTC] Part Details - ID: 66, Description: Test, Price: 35.00, PiecesSold: 1
+[22-Apr-2025 21:02:45 UTC] Part Details - ID: 61, Description: Part 7, Price: 120.00, PiecesSold: 1
+[22-Apr-2025 21:02:45 UTC] Total parts cost calculation: 155
+[22-Apr-2025 21:02:51 UTC] PHP Warning:  Undefined array key "previous_link" in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/JobCard_Management/views/edit_job_card.php on line 333
+[22-Apr-2025 21:02:55 UTC] Parts data for job ID 55: Array
+(
+    [0] => Array
+        (
+            [PartID] => 66
+            [PartDesc] => Test
+            [price] => 35.00
+            [PiecesSold] => 1
+        )
+
+    [1] => Array
+        (
+            [PartID] => 61
+            [PartDesc] => Part 7
+            [price] => 120.00
+            [PiecesSold] => 1
+        )
+
+)
+
+[22-Apr-2025 21:02:55 UTC] Part Details - ID: 66, Description: Test, Price: 35.00, PiecesSold: 1
+[22-Apr-2025 21:02:55 UTC] Part Details - ID: 61, Description: Part 7, Price: 120.00, PiecesSold: 1
+[22-Apr-2025 21:02:55 UTC] Total parts cost calculation: 155
+[22-Apr-2025 21:05:33 UTC] Parts data for job ID 55: Array
+(
+    [0] => Array
+        (
+            [PartID] => 66
+            [PartDesc] => Test
+            [price] => 35.00
+            [PiecesSold] => 1
+        )
+
+    [1] => Array
+        (
+            [PartID] => 61
+            [PartDesc] => Part 7
+            [price] => 120.00
+            [PiecesSold] => 1
+        )
+
+)
+
+[22-Apr-2025 21:05:33 UTC] Part Details - ID: 66, Description: Test, Price: 35.00, PiecesSold: 1
+[22-Apr-2025 21:05:33 UTC] Part Details - ID: 61, Description: Part 7, Price: 120.00, PiecesSold: 1
+[22-Apr-2025 21:05:33 UTC] Total parts cost calculation: 155
+[22-Apr-2025 21:06:46 UTC] Parts data for job ID 55: Array
+(
+    [0] => Array
+        (
+            [PartID] => 66
+            [PartDesc] => Test
+            [price] => 35.00
+            [PiecesSold] => 1
+        )
+
+    [1] => Array
+        (
+            [PartID] => 61
+            [PartDesc] => Part 7
+            [price] => 120.00
+            [PiecesSold] => 1
+        )
+
+)
+
+[22-Apr-2025 21:06:46 UTC] Part Details - ID: 66, Description: Test, Price: 35.00, PiecesSold: 1
+[22-Apr-2025 21:06:46 UTC] Part Details - ID: 61, Description: Part 7, Price: 120.00, PiecesSold: 1
+[22-Apr-2025 21:06:46 UTC] Total parts cost calculation: 155
+[22-Apr-2025 21:07:07 UTC] PHP Warning:  Undefined array key "previous_link" in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/JobCard_Management/views/edit_job_card.php on line 333
+[22-Apr-2025 21:09:02 UTC] Parts data for job ID 55: Array
+(
+    [0] => Array
+        (
+            [PartID] => 66
+            [PartDesc] => Test
+            [price] => 35.00
+            [PiecesSold] => 1
+        )
+
+    [1] => Array
+        (
+            [PartID] => 61
+            [PartDesc] => Part 7
+            [price] => 120.00
+            [PiecesSold] => 1
+        )
+
+)
+
+[22-Apr-2025 21:09:02 UTC] Part Details - ID: 66, Description: Test, Price: 35.00, PiecesSold: 1
+[22-Apr-2025 21:09:02 UTC] Part Details - ID: 61, Description: Part 7, Price: 120.00, PiecesSold: 1
+[22-Apr-2025 21:09:02 UTC] Total parts cost calculation: 155
+[22-Apr-2025 21:09:04 UTC] PHP Warning:  Undefined array key "previous_link" in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/JobCard_Management/views/edit_job_card.php on line 333
+[22-Apr-2025 21:09:15 UTC] Parts data for job ID 55: Array
+(
+    [0] => Array
+        (
+            [PartID] => 66
+            [PartDesc] => Test
+            [price] => 35.00
+            [PiecesSold] => 1
+        )
+
+    [1] => Array
+        (
+            [PartID] => 61
+            [PartDesc] => Part 7
+            [price] => 120.00
+            [PiecesSold] => 1
+        )
+
+)
+
+[22-Apr-2025 21:09:15 UTC] Part Details - ID: 66, Description: Test, Price: 35.00, PiecesSold: 1
+[22-Apr-2025 21:09:15 UTC] Part Details - ID: 61, Description: Part 7, Price: 120.00, PiecesSold: 1
+[22-Apr-2025 21:09:15 UTC] Total parts cost calculation: 155
+[22-Apr-2025 21:09:16 UTC] PHP Warning:  Undefined array key "previous_link" in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/JobCard_Management/views/edit_job_card.php on line 333
+[22-Apr-2025 21:09:58 UTC] Parts data for job ID 55: Array
+(
+    [0] => Array
+        (
+            [PartID] => 66
+            [PartDesc] => Test
+            [price] => 35.00
+            [PiecesSold] => 1
+        )
+
+    [1] => Array
+        (
+            [PartID] => 61
+            [PartDesc] => Part 7
+            [price] => 120.00
+            [PiecesSold] => 1
+        )
+
+)
+
+[22-Apr-2025 21:09:58 UTC] Part Details - ID: 66, Description: Test, Price: 35.00, PiecesSold: 1
+[22-Apr-2025 21:09:58 UTC] Part Details - ID: 61, Description: Part 7, Price: 120.00, PiecesSold: 1
+[22-Apr-2025 21:09:58 UTC] Total parts cost calculation: 155
+[22-Apr-2025 21:10:53 UTC] Parts data for job ID 55: Array
+(
+    [0] => Array
+        (
+            [PartID] => 66
+            [PartDesc] => Test
+            [price] => 35.00
+            [PiecesSold] => 1
+        )
+
+    [1] => Array
+        (
+            [PartID] => 61
+            [PartDesc] => Part 7
+            [price] => 120.00
+            [PiecesSold] => 1
+        )
+
+)
+
+[22-Apr-2025 21:10:53 UTC] Part Details - ID: 66, Description: Test, Price: 35.00, PiecesSold: 1
+[22-Apr-2025 21:10:53 UTC] Part Details - ID: 61, Description: Part 7, Price: 120.00, PiecesSold: 1
+[22-Apr-2025 21:10:53 UTC] Total parts cost calculation: 155
+[22-Apr-2025 21:10:55 UTC] PHP Warning:  Undefined array key "previous_link" in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/JobCard_Management/views/edit_job_card.php on line 333
+[22-Apr-2025 21:11:11 UTC] Parts data for job ID 55: Array
+(
+    [0] => Array
+        (
+            [PartID] => 66
+            [PartDesc] => Test
+            [price] => 35.00
+            [PiecesSold] => 1
+        )
+
+    [1] => Array
+        (
+            [PartID] => 61
+            [PartDesc] => Part 7
+            [price] => 120.00
+            [PiecesSold] => 1
+        )
+
+)
+
+[22-Apr-2025 21:11:11 UTC] Part Details - ID: 66, Description: Test, Price: 35.00, PiecesSold: 1
+[22-Apr-2025 21:11:11 UTC] Part Details - ID: 61, Description: Part 7, Price: 120.00, PiecesSold: 1
+[22-Apr-2025 21:11:11 UTC] Total parts cost calculation: 155
+[22-Apr-2025 21:11:12 UTC] PHP Warning:  Undefined array key "previous_link" in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/JobCard_Management/views/edit_job_card.php on line 333
+[22-Apr-2025 21:11:18 UTC] Parts data for job ID 55: Array
+(
+    [0] => Array
+        (
+            [PartID] => 66
+            [PartDesc] => Test
+            [price] => 35.00
+            [PiecesSold] => 1
+        )
+
+    [1] => Array
+        (
+            [PartID] => 61
+            [PartDesc] => Part 7
+            [price] => 120.00
+            [PiecesSold] => 1
+        )
+
+)
+
+[22-Apr-2025 21:11:18 UTC] Part Details - ID: 66, Description: Test, Price: 35.00, PiecesSold: 1
+[22-Apr-2025 21:11:18 UTC] Part Details - ID: 61, Description: Part 7, Price: 120.00, PiecesSold: 1
+[22-Apr-2025 21:11:18 UTC] Total parts cost calculation: 155
+[22-Apr-2025 21:11:19 UTC] PHP Warning:  Undefined array key "previous_link" in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/JobCard_Management/views/edit_job_card.php on line 333
+[22-Apr-2025 21:11:31 UTC] Parts data for job ID 55: Array
+(
+    [0] => Array
+        (
+            [PartID] => 66
+            [PartDesc] => Test
+            [price] => 35.00
+            [PiecesSold] => 1
+        )
+
+    [1] => Array
+        (
+            [PartID] => 61
+            [PartDesc] => Part 7
+            [price] => 120.00
+            [PiecesSold] => 1
+        )
+
+)
+
+[22-Apr-2025 21:11:31 UTC] Part Details - ID: 66, Description: Test, Price: 35.00, PiecesSold: 1
+[22-Apr-2025 21:11:31 UTC] Part Details - ID: 61, Description: Part 7, Price: 120.00, PiecesSold: 1
+[22-Apr-2025 21:11:31 UTC] Total parts cost calculation: 155
+[22-Apr-2025 21:11:34 UTC] PHP Warning:  Undefined array key "previous_link" in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/JobCard_Management/views/edit_job_card.php on line 333
+[22-Apr-2025 21:12:21 UTC] Parts data for job ID 55: Array
+(
+    [0] => Array
+        (
+            [PartID] => 66
+            [PartDesc] => Test
+            [price] => 35.00
+            [PiecesSold] => 1
+        )
+
+    [1] => Array
+        (
+            [PartID] => 61
+            [PartDesc] => Part 7
+            [price] => 120.00
+            [PiecesSold] => 1
+        )
+
+)
+
+[22-Apr-2025 21:12:21 UTC] Part Details - ID: 66, Description: Test, Price: 35.00, PiecesSold: 1
+[22-Apr-2025 21:12:21 UTC] Part Details - ID: 61, Description: Part 7, Price: 120.00, PiecesSold: 1
+[22-Apr-2025 21:12:21 UTC] Total parts cost calculation: 155
+[22-Apr-2025 21:12:22 UTC] PHP Warning:  Undefined array key "previous_link" in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/JobCard_Management/views/edit_job_card.php on line 333
+[22-Apr-2025 21:12:51 UTC] Parts data for job ID 55: Array
+(
+    [0] => Array
+        (
+            [PartID] => 66
+            [PartDesc] => Test
+            [price] => 35.00
+            [PiecesSold] => 1
+        )
+
+    [1] => Array
+        (
+            [PartID] => 61
+            [PartDesc] => Part 7
+            [price] => 120.00
+            [PiecesSold] => 1
+        )
+
+)
+
+[22-Apr-2025 21:12:51 UTC] Part Details - ID: 66, Description: Test, Price: 35.00, PiecesSold: 1
+[22-Apr-2025 21:12:51 UTC] Part Details - ID: 61, Description: Part 7, Price: 120.00, PiecesSold: 1
+[22-Apr-2025 21:12:51 UTC] Total parts cost calculation: 155
+[22-Apr-2025 21:12:52 UTC] PHP Warning:  Undefined array key "previous_link" in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/JobCard_Management/views/edit_job_card.php on line 333
+[22-Apr-2025 21:13:57 UTC] Parts data for job ID 55: Array
+(
+    [0] => Array
+        (
+            [PartID] => 66
+            [PartDesc] => Test
+            [price] => 35.00
+            [PiecesSold] => 1
+        )
+
+    [1] => Array
+        (
+            [PartID] => 61
+            [PartDesc] => Part 7
+            [price] => 120.00
+            [PiecesSold] => 1
+        )
+
+)
+
+[22-Apr-2025 21:13:57 UTC] Part Details - ID: 66, Description: Test, Price: 35.00, PiecesSold: 1
+[22-Apr-2025 21:13:57 UTC] Part Details - ID: 61, Description: Part 7, Price: 120.00, PiecesSold: 1
+[22-Apr-2025 21:13:57 UTC] Total parts cost calculation: 155
+[22-Apr-2025 21:13:58 UTC] PHP Warning:  Undefined array key "previous_link" in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/JobCard_Management/views/edit_job_card.php on line 333
+[22-Apr-2025 21:13:59 UTC] Parts data for job ID 55: Array
+(
+    [0] => Array
+        (
+            [PartID] => 66
+            [PartDesc] => Test
+            [price] => 35.00
+            [PiecesSold] => 1
+        )
+
+    [1] => Array
+        (
+            [PartID] => 61
+            [PartDesc] => Part 7
+            [price] => 120.00
+            [PiecesSold] => 1
+        )
+
+)
+
+[22-Apr-2025 21:13:59 UTC] Part Details - ID: 66, Description: Test, Price: 35.00, PiecesSold: 1
+[22-Apr-2025 21:13:59 UTC] Part Details - ID: 61, Description: Part 7, Price: 120.00, PiecesSold: 1
+[22-Apr-2025 21:13:59 UTC] Total parts cost calculation: 155
+[22-Apr-2025 21:14:14 UTC] Parts data for job ID 55: Array
+(
+    [0] => Array
+        (
+            [PartID] => 66
+            [PartDesc] => Test
+            [price] => 35.00
+            [PiecesSold] => 1
+        )
+
+    [1] => Array
+        (
+            [PartID] => 61
+            [PartDesc] => Part 7
+            [price] => 120.00
+            [PiecesSold] => 1
+        )
+
+)
+
+[22-Apr-2025 21:14:14 UTC] Part Details - ID: 66, Description: Test, Price: 35.00, PiecesSold: 1
+[22-Apr-2025 21:14:14 UTC] Part Details - ID: 61, Description: Part 7, Price: 120.00, PiecesSold: 1
+[22-Apr-2025 21:14:14 UTC] Total parts cost calculation: 155
+[22-Apr-2025 21:14:16 UTC] PHP Warning:  Undefined array key "previous_link" in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/JobCard_Management/views/edit_job_card.php on line 333
+[22-Apr-2025 21:14:27 UTC] Parts data for job ID 55: Array
+(
+    [0] => Array
+        (
+            [PartID] => 66
+            [PartDesc] => Test
+            [price] => 35.00
+            [PiecesSold] => 1
+        )
+
+    [1] => Array
+        (
+            [PartID] => 61
+            [PartDesc] => Part 7
+            [price] => 120.00
+            [PiecesSold] => 1
+        )
+
+)
+
+[22-Apr-2025 21:14:27 UTC] Part Details - ID: 66, Description: Test, Price: 35.00, PiecesSold: 1
+[22-Apr-2025 21:14:27 UTC] Part Details - ID: 61, Description: Part 7, Price: 120.00, PiecesSold: 1
+[22-Apr-2025 21:14:27 UTC] Total parts cost calculation: 155
+[22-Apr-2025 21:14:30 UTC] Parts data for job ID 47: Array
+(
+    [0] => Array
+        (
+            [PartID] => 60
+            [PartDesc] => Part6
+            [price] => 18.00
+            [PiecesSold] => 1
+        )
+
+)
+
+[22-Apr-2025 21:14:30 UTC] Part Details - ID: 60, Description: Part6, Price: 18.00, PiecesSold: 1
+[22-Apr-2025 21:14:30 UTC] Total parts cost calculation: 18
+[22-Apr-2025 21:15:37 UTC] Parts data for job ID 55: Array
+(
+    [0] => Array
+        (
+            [PartID] => 66
+            [PartDesc] => Test
+            [price] => 35.00
+            [PiecesSold] => 1
+        )
+
+    [1] => Array
+        (
+            [PartID] => 61
+            [PartDesc] => Part 7
+            [price] => 120.00
+            [PiecesSold] => 1
+        )
+
+)
+
+[22-Apr-2025 21:15:37 UTC] Part Details - ID: 66, Description: Test, Price: 35.00, PiecesSold: 1
+[22-Apr-2025 21:15:37 UTC] Part Details - ID: 61, Description: Part 7, Price: 120.00, PiecesSold: 1
+[22-Apr-2025 21:15:37 UTC] Total parts cost calculation: 155
+[22-Apr-2025 21:15:38 UTC] PHP Warning:  Undefined array key "previous_link" in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/JobCard_Management/views/edit_job_card.php on line 333
+[22-Apr-2025 21:15:40 UTC] Parts data for job ID 55: Array
+(
+    [0] => Array
+        (
+            [PartID] => 66
+            [PartDesc] => Test
+            [price] => 35.00
+            [PiecesSold] => 1
+        )
+
+    [1] => Array
+        (
+            [PartID] => 61
+            [PartDesc] => Part 7
+            [price] => 120.00
+            [PiecesSold] => 1
+        )
+
+)
+
+[22-Apr-2025 21:15:40 UTC] Part Details - ID: 66, Description: Test, Price: 35.00, PiecesSold: 1
+[22-Apr-2025 21:15:40 UTC] Part Details - ID: 61, Description: Part 7, Price: 120.00, PiecesSold: 1
+[22-Apr-2025 21:15:40 UTC] Total parts cost calculation: 155
+[22-Apr-2025 21:16:03 UTC] Parts data for job ID 55: Array
+(
+    [0] => Array
+        (
+            [PartID] => 66
+            [PartDesc] => Test
+            [price] => 35.00
+            [PiecesSold] => 1
+        )
+
+    [1] => Array
+        (
+            [PartID] => 61
+            [PartDesc] => Part 7
+            [price] => 120.00
+            [PiecesSold] => 1
+        )
+
+)
+
+[22-Apr-2025 21:16:03 UTC] Part Details - ID: 66, Description: Test, Price: 35.00, PiecesSold: 1
+[22-Apr-2025 21:16:03 UTC] Part Details - ID: 61, Description: Part 7, Price: 120.00, PiecesSold: 1
+[22-Apr-2025 21:16:03 UTC] Total parts cost calculation: 155
+[22-Apr-2025 21:16:04 UTC] PHP Warning:  Undefined array key "previous_link" in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/JobCard_Management/views/edit_job_card.php on line 333
+[22-Apr-2025 21:16:24 UTC] Parts data for job ID 55: Array
+(
+    [0] => Array
+        (
+            [PartID] => 66
+            [PartDesc] => Test
+            [price] => 35.00
+            [PiecesSold] => 1
+        )
+
+    [1] => Array
+        (
+            [PartID] => 61
+            [PartDesc] => Part 7
+            [price] => 120.00
+            [PiecesSold] => 1
+        )
+
+)
+
+[22-Apr-2025 21:16:24 UTC] Part Details - ID: 66, Description: Test, Price: 35.00, PiecesSold: 1
+[22-Apr-2025 21:16:24 UTC] Part Details - ID: 61, Description: Part 7, Price: 120.00, PiecesSold: 1
+[22-Apr-2025 21:16:24 UTC] Total parts cost calculation: 155
+[22-Apr-2025 21:16:25 UTC] PHP Warning:  Undefined array key "previous_link" in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/JobCard_Management/views/edit_job_card.php on line 333
+[22-Apr-2025 21:16:32 UTC] Parts data for job ID 55: Array
+(
+    [0] => Array
+        (
+            [PartID] => 66
+            [PartDesc] => Test
+            [price] => 35.00
+            [PiecesSold] => 1
+        )
+
+    [1] => Array
+        (
+            [PartID] => 61
+            [PartDesc] => Part 7
+            [price] => 120.00
+            [PiecesSold] => 1
+        )
+
+)
+
+[22-Apr-2025 21:16:32 UTC] Part Details - ID: 66, Description: Test, Price: 35.00, PiecesSold: 1
+[22-Apr-2025 21:16:32 UTC] Part Details - ID: 61, Description: Part 7, Price: 120.00, PiecesSold: 1
+[22-Apr-2025 21:16:32 UTC] Total parts cost calculation: 155
+[22-Apr-2025 21:16:58 UTC] Parts data for job ID 55: Array
+(
+    [0] => Array
+        (
+            [PartID] => 66
+            [PartDesc] => Test
+            [price] => 35.00
+            [PiecesSold] => 1
+        )
+
+    [1] => Array
+        (
+            [PartID] => 61
+            [PartDesc] => Part 7
+            [price] => 120.00
+            [PiecesSold] => 1
+        )
+
+)
+
+[22-Apr-2025 21:16:58 UTC] Part Details - ID: 66, Description: Test, Price: 35.00, PiecesSold: 1
+[22-Apr-2025 21:16:58 UTC] Part Details - ID: 61, Description: Part 7, Price: 120.00, PiecesSold: 1
+[22-Apr-2025 21:16:58 UTC] Total parts cost calculation: 155
+[22-Apr-2025 21:17:09 UTC] Parts data for job ID 47: Array
+(
+    [0] => Array
+        (
+            [PartID] => 60
+            [PartDesc] => Part6
+            [price] => 18.00
+            [PiecesSold] => 1
+        )
+
+)
+
+[22-Apr-2025 21:17:09 UTC] Part Details - ID: 60, Description: Part6, Price: 18.00, PiecesSold: 1
+[22-Apr-2025 21:17:09 UTC] Total parts cost calculation: 18
+[22-Apr-2025 21:17:24 UTC] Parts data for job ID 55: Array
+(
+    [0] => Array
+        (
+            [PartID] => 66
+            [PartDesc] => Test
+            [price] => 35.00
+            [PiecesSold] => 1
+        )
+
+    [1] => Array
+        (
+            [PartID] => 61
+            [PartDesc] => Part 7
+            [price] => 120.00
+            [PiecesSold] => 1
+        )
+
+)
+
+[22-Apr-2025 21:17:24 UTC] Part Details - ID: 66, Description: Test, Price: 35.00, PiecesSold: 1
+[22-Apr-2025 21:17:24 UTC] Part Details - ID: 61, Description: Part 7, Price: 120.00, PiecesSold: 1
+[22-Apr-2025 21:17:24 UTC] Total parts cost calculation: 155
+[22-Apr-2025 21:17:53 UTC] Parts data for job ID 55: Array
+(
+    [0] => Array
+        (
+            [PartID] => 66
+            [PartDesc] => Test
+            [price] => 35.00
+            [PiecesSold] => 1
+        )
+
+    [1] => Array
+        (
+            [PartID] => 61
+            [PartDesc] => Part 7
+            [price] => 120.00
+            [PiecesSold] => 1
+        )
+
+)
+
+[22-Apr-2025 21:17:53 UTC] Part Details - ID: 66, Description: Test, Price: 35.00, PiecesSold: 1
+[22-Apr-2025 21:17:53 UTC] Part Details - ID: 61, Description: Part 7, Price: 120.00, PiecesSold: 1
+[22-Apr-2025 21:17:53 UTC] Total parts cost calculation: 155
+[22-Apr-2025 21:24:00 UTC] Parts data for job ID 55: Array
+(
+    [0] => Array
+        (
+            [PartID] => 66
+            [PartDesc] => Test
+            [price] => 35.00
+            [PiecesSold] => 1
+        )
+
+    [1] => Array
+        (
+            [PartID] => 61
+            [PartDesc] => Part 7
+            [price] => 120.00
+            [PiecesSold] => 1
+        )
+
+)
+
+[22-Apr-2025 21:24:00 UTC] Part Details - ID: 66, Description: Test, Price: 35.00, PiecesSold: 1
+[22-Apr-2025 21:24:00 UTC] Part Details - ID: 61, Description: Part 7, Price: 120.00, PiecesSold: 1
+[22-Apr-2025 21:24:00 UTC] Total parts cost calculation: 155
+[22-Apr-2025 22:08:00 UTC] Parts data for job ID 55: Array
+(
+    [0] => Array
+        (
+            [PartID] => 66
+            [PartDesc] => Test
+            [price] => 35.00
+            [PiecesSold] => 1
+        )
+
+    [1] => Array
+        (
+            [PartID] => 61
+            [PartDesc] => Part 7
+            [price] => 120.00
+            [PiecesSold] => 1
+        )
+
+)
+
+[22-Apr-2025 22:08:00 UTC] Part Details - ID: 66, Description: Test, Price: 35.00, PiecesSold: 1
+[22-Apr-2025 22:08:00 UTC] Part Details - ID: 61, Description: Part 7, Price: 120.00, PiecesSold: 1
+[22-Apr-2025 22:08:00 UTC] Total parts cost calculation: 155
+[22-Apr-2025 22:27:30 UTC] Parts data for job ID 55: Array
+(
+    [0] => Array
+        (
+            [PartID] => 66
+            [PartDesc] => Test
+            [price] => 35.00
+            [PiecesSold] => 1
+        )
+
+    [1] => Array
+        (
+            [PartID] => 61
+            [PartDesc] => Part 7
+            [price] => 120.00
+            [PiecesSold] => 1
+        )
+
+)
+
+[22-Apr-2025 22:27:30 UTC] Part Details - ID: 66, Description: Test, Price: 35.00, PiecesSold: 1
+[22-Apr-2025 22:27:30 UTC] Part Details - ID: 61, Description: Part 7, Price: 120.00, PiecesSold: 1
+[22-Apr-2025 22:27:30 UTC] Total parts cost calculation: 155
+[22-Apr-2025 22:27:31 UTC] PHP Warning:  Undefined array key "previous_link" in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/JobCard_Management/views/edit_job_card.php on line 333
+[22-Apr-2025 22:28:16 UTC] Parts data for job ID 55: Array
+(
+    [0] => Array
+        (
+            [PartID] => 66
+            [PartDesc] => Test
+            [price] => 35.00
+            [PiecesSold] => 1
+        )
+
+    [1] => Array
+        (
+            [PartID] => 61
+            [PartDesc] => Part 7
+            [price] => 120.00
+            [PiecesSold] => 1
+        )
+
+    [2] => Array
+        (
+            [PartID] => 63
+            [PartDesc] => Part9
+            [price] => 20.00
+            [PiecesSold] => 1
+        )
+
+)
+
+[22-Apr-2025 22:28:16 UTC] Part Details - ID: 66, Description: Test, Price: 35.00, PiecesSold: 1
+[22-Apr-2025 22:28:16 UTC] Part Details - ID: 61, Description: Part 7, Price: 120.00, PiecesSold: 1
+[22-Apr-2025 22:28:16 UTC] Part Details - ID: 63, Description: Part9, Price: 20.00, PiecesSold: 1
+[22-Apr-2025 22:28:16 UTC] Total parts cost calculation: 175
+[22-Apr-2025 22:29:10 UTC] PHP Warning:  Undefined array key "previous_link" in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/JobCard_Management/views/edit_job_card.php on line 333
+[22-Apr-2025 22:29:20 UTC] Parts data for job ID 55: Array
+(
+    [0] => Array
+        (
+            [PartID] => 66
+            [PartDesc] => Test
+            [price] => 35.00
+            [PiecesSold] => 1
+        )
+
+    [1] => Array
+        (
+            [PartID] => 61
+            [PartDesc] => Part 7
+            [price] => 120.00
+            [PiecesSold] => 1
+        )
+
+    [2] => Array
+        (
+            [PartID] => 63
+            [PartDesc] => Part9
+            [price] => 20.00
+            [PiecesSold] => 1
+        )
+
+)
+
+[22-Apr-2025 22:29:20 UTC] Part Details - ID: 66, Description: Test, Price: 35.00, PiecesSold: 1
+[22-Apr-2025 22:29:20 UTC] Part Details - ID: 61, Description: Part 7, Price: 120.00, PiecesSold: 1
+[22-Apr-2025 22:29:20 UTC] Part Details - ID: 63, Description: Part9, Price: 20.00, PiecesSold: 1
+[22-Apr-2025 22:29:20 UTC] Total parts cost calculation: 175
+[22-Apr-2025 22:29:28 UTC] PHP Warning:  Undefined array key "previous_link" in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/JobCard_Management/views/edit_job_card.php on line 333
+[22-Apr-2025 22:29:35 UTC] Parts data for job ID 55: Array
+(
+    [0] => Array
+        (
+            [PartID] => 66
+            [PartDesc] => Test
+            [price] => 35.00
+            [PiecesSold] => 1
+        )
+
+    [1] => Array
+        (
+            [PartID] => 61
+            [PartDesc] => Part 7
+            [price] => 120.00
+            [PiecesSold] => 1
+        )
+
+    [2] => Array
+        (
+            [PartID] => 63
+            [PartDesc] => Part9
+            [price] => 21.00
+            [PiecesSold] => 1
+        )
+
+)
+
+[22-Apr-2025 22:29:35 UTC] Part Details - ID: 66, Description: Test, Price: 35.00, PiecesSold: 1
+[22-Apr-2025 22:29:35 UTC] Part Details - ID: 61, Description: Part 7, Price: 120.00, PiecesSold: 1
+[22-Apr-2025 22:29:35 UTC] Part Details - ID: 63, Description: Part9, Price: 21.00, PiecesSold: 1
+[22-Apr-2025 22:29:35 UTC] Total parts cost calculation: 176
+[22-Apr-2025 22:29:52 UTC] PHP Warning:  Undefined array key "previous_link" in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/JobCard_Management/views/edit_job_card.php on line 333
+[22-Apr-2025 22:30:13 UTC] Parts data for job ID 55: Array
+(
+    [0] => Array
+        (
+            [PartID] => 66
+            [PartDesc] => Test
+            [price] => 35.00
+            [PiecesSold] => 1
+        )
+
+    [1] => Array
+        (
+            [PartID] => 61
+            [PartDesc] => Part 7
+            [price] => 120.00
+            [PiecesSold] => 1
+        )
+
+    [2] => Array
+        (
+            [PartID] => 63
+            [PartDesc] => Part9
+            [price] => 21.00
+            [PiecesSold] => 1
+        )
+
+)
+
+[22-Apr-2025 22:30:13 UTC] Part Details - ID: 66, Description: Test, Price: 35.00, PiecesSold: 1
+[22-Apr-2025 22:30:13 UTC] Part Details - ID: 61, Description: Part 7, Price: 120.00, PiecesSold: 1
+[22-Apr-2025 22:30:13 UTC] Part Details - ID: 63, Description: Part9, Price: 21.00, PiecesSold: 1
+[22-Apr-2025 22:30:13 UTC] Total parts cost calculation: 176
+[22-Apr-2025 22:32:47 UTC] Parts data for job ID 55: Array
+(
+    [0] => Array
+        (
+            [PartID] => 66
+            [PartDesc] => Test
+            [price] => 35.00
+            [PiecesSold] => 1
+        )
+
+    [1] => Array
+        (
+            [PartID] => 61
+            [PartDesc] => Part 7
+            [price] => 120.00
+            [PiecesSold] => 1
+        )
+
+    [2] => Array
+        (
+            [PartID] => 63
+            [PartDesc] => Part9
+            [price] => 21.00
+            [PiecesSold] => 1
+        )
+
+)
+
+[22-Apr-2025 22:32:47 UTC] Part Details - ID: 66, Description: Test, Price: 35.00, PiecesSold: 1
+[22-Apr-2025 22:32:47 UTC] Part Details - ID: 61, Description: Part 7, Price: 120.00, PiecesSold: 1
+[22-Apr-2025 22:32:47 UTC] Part Details - ID: 63, Description: Part9, Price: 21.00, PiecesSold: 1
+[22-Apr-2025 22:32:47 UTC] Total parts cost calculation: 176
+[22-Apr-2025 22:32:52 UTC] PHP Warning:  Undefined array key "previous_link" in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/JobCard_Management/views/edit_job_card.php on line 333
+[22-Apr-2025 22:32:54 UTC] Parts data for job ID 55: Array
+(
+    [0] => Array
+        (
+            [PartID] => 66
+            [PartDesc] => Test
+            [price] => 35.00
+            [PiecesSold] => 1
+        )
+
+    [1] => Array
+        (
+            [PartID] => 61
+            [PartDesc] => Part 7
+            [price] => 120.00
+            [PiecesSold] => 1
+        )
+
+    [2] => Array
+        (
+            [PartID] => 63
+            [PartDesc] => Part9
+            [price] => 21.00
+            [PiecesSold] => 1
+        )
+
+)
+
+[22-Apr-2025 22:32:54 UTC] Part Details - ID: 66, Description: Test, Price: 35.00, PiecesSold: 1
+[22-Apr-2025 22:32:54 UTC] Part Details - ID: 61, Description: Part 7, Price: 120.00, PiecesSold: 1
+[22-Apr-2025 22:32:54 UTC] Part Details - ID: 63, Description: Part9, Price: 21.00, PiecesSold: 1
+[22-Apr-2025 22:32:54 UTC] Total parts cost calculation: 176
+[22-Apr-2025 22:47:04 UTC] Parts data for job ID 55: Array
+(
+    [0] => Array
+        (
+            [PartID] => 66
+            [PartDesc] => Test
+            [price] => 35.00
+            [PiecesSold] => 1
+        )
+
+    [1] => Array
+        (
+            [PartID] => 61
+            [PartDesc] => Part 7
+            [price] => 120.00
+            [PiecesSold] => 1
+        )
+
+    [2] => Array
+        (
+            [PartID] => 63
+            [PartDesc] => Part9
+            [price] => 21.00
+            [PiecesSold] => 1
+        )
+
+)
+
+[22-Apr-2025 22:47:04 UTC] Part Details - ID: 66, Description: Test, Price: 35.00, PiecesSold: 1
+[22-Apr-2025 22:47:04 UTC] Part Details - ID: 61, Description: Part 7, Price: 120.00, PiecesSold: 1
+[22-Apr-2025 22:47:04 UTC] Part Details - ID: 63, Description: Part9, Price: 21.00, PiecesSold: 1
+[22-Apr-2025 22:47:04 UTC] Total parts cost calculation: 176
+[22-Apr-2025 22:47:05 UTC] Parts data for job ID 55: Array
+(
+    [0] => Array
+        (
+            [PartID] => 66
+            [PartDesc] => Test
+            [price] => 35.00
+            [PiecesSold] => 1
+        )
+
+    [1] => Array
+        (
+            [PartID] => 61
+            [PartDesc] => Part 7
+            [price] => 120.00
+            [PiecesSold] => 1
+        )
+
+    [2] => Array
+        (
+            [PartID] => 63
+            [PartDesc] => Part9
+            [price] => 21.00
+            [PiecesSold] => 1
+        )
+
+)
+
+[22-Apr-2025 22:47:05 UTC] Part Details - ID: 66, Description: Test, Price: 35.00, PiecesSold: 1
+[22-Apr-2025 22:47:05 UTC] Part Details - ID: 61, Description: Part 7, Price: 120.00, PiecesSold: 1
+[22-Apr-2025 22:47:05 UTC] Part Details - ID: 63, Description: Part9, Price: 21.00, PiecesSold: 1
+[22-Apr-2025 22:47:05 UTC] Total parts cost calculation: 176
+[22-Apr-2025 22:49:08 UTC] Parts data for job ID 55: Array
+(
+    [0] => Array
+        (
+            [PartID] => 66
+            [PartDesc] => Test
+            [price] => 35.00
+            [PiecesSold] => 1
+        )
+
+    [1] => Array
+        (
+            [PartID] => 61
+            [PartDesc] => Part 7
+            [price] => 120.00
+            [PiecesSold] => 1
+        )
+
+    [2] => Array
+        (
+            [PartID] => 63
+            [PartDesc] => Part9
+            [price] => 21.00
+            [PiecesSold] => 1
+        )
+
+)
+
+[22-Apr-2025 22:49:08 UTC] Part Details - ID: 66, Description: Test, Price: 35.00, PiecesSold: 1
+[22-Apr-2025 22:49:08 UTC] Part Details - ID: 61, Description: Part 7, Price: 120.00, PiecesSold: 1
+[22-Apr-2025 22:49:08 UTC] Part Details - ID: 63, Description: Part9, Price: 21.00, PiecesSold: 1
+[22-Apr-2025 22:49:08 UTC] Total parts cost calculation: 176
+[22-Apr-2025 22:49:36 UTC] Parts data for job ID 55: Array
+(
+    [0] => Array
+        (
+            [PartID] => 66
+            [PartDesc] => Test
+            [price] => 35.00
+            [PiecesSold] => 1
+        )
+
+    [1] => Array
+        (
+            [PartID] => 61
+            [PartDesc] => Part 7
+            [price] => 120.00
+            [PiecesSold] => 1
+        )
+
+    [2] => Array
+        (
+            [PartID] => 63
+            [PartDesc] => Part9
+            [price] => 21.00
+            [PiecesSold] => 1
+        )
+
+)
+
+[22-Apr-2025 22:49:36 UTC] Part Details - ID: 66, Description: Test, Price: 35.00, PiecesSold: 1
+[22-Apr-2025 22:49:36 UTC] Part Details - ID: 61, Description: Part 7, Price: 120.00, PiecesSold: 1
+[22-Apr-2025 22:49:36 UTC] Part Details - ID: 63, Description: Part9, Price: 21.00, PiecesSold: 1
+[22-Apr-2025 22:49:36 UTC] Total parts cost calculation: 176
+[23-Apr-2025 11:46:19 UTC] Parts data for job ID 55: Array
+(
+    [0] => Array
+        (
+            [PartID] => 66
+            [PartDesc] => Test
+            [price] => 35.00
+            [PiecesSold] => 1
+        )
+
+    [1] => Array
+        (
+            [PartID] => 61
+            [PartDesc] => Part 7
+            [price] => 120.00
+            [PiecesSold] => 1
+        )
+
+    [2] => Array
+        (
+            [PartID] => 63
+            [PartDesc] => Part9
+            [price] => 21.00
+            [PiecesSold] => 1
+        )
+
+)
+
+[23-Apr-2025 11:46:19 UTC] Part Details - ID: 66, Description: Test, Price: 35.00, PiecesSold: 1
+[23-Apr-2025 11:46:19 UTC] Part Details - ID: 61, Description: Part 7, Price: 120.00, PiecesSold: 1
+[23-Apr-2025 11:46:19 UTC] Part Details - ID: 63, Description: Part9, Price: 21.00, PiecesSold: 1
+[23-Apr-2025 11:46:19 UTC] Total parts cost calculation: 176
+[23-Apr-2025 11:46:25 UTC] Parts data for job ID 55: Array
+(
+    [0] => Array
+        (
+            [PartID] => 66
+            [PartDesc] => Test
+            [price] => 35.00
+            [PiecesSold] => 1
+        )
+
+    [1] => Array
+        (
+            [PartID] => 61
+            [PartDesc] => Part 7
+            [price] => 120.00
+            [PiecesSold] => 1
+        )
+
+    [2] => Array
+        (
+            [PartID] => 63
+            [PartDesc] => Part9
+            [price] => 21.00
+            [PiecesSold] => 1
+        )
+
+)
+
+[23-Apr-2025 11:46:25 UTC] Part Details - ID: 66, Description: Test, Price: 35.00, PiecesSold: 1
+[23-Apr-2025 11:46:25 UTC] Part Details - ID: 61, Description: Part 7, Price: 120.00, PiecesSold: 1
+[23-Apr-2025 11:46:25 UTC] Part Details - ID: 63, Description: Part9, Price: 21.00, PiecesSold: 1
+[23-Apr-2025 11:46:25 UTC] Total parts cost calculation: 176
+[23-Apr-2025 11:46:38 UTC] Parts data for job ID 55: Array
+(
+    [0] => Array
+        (
+            [PartID] => 66
+            [PartDesc] => Test
+            [price] => 35.00
+            [PiecesSold] => 1
+        )
+
+    [1] => Array
+        (
+            [PartID] => 61
+            [PartDesc] => Part 7
+            [price] => 120.00
+            [PiecesSold] => 1
+        )
+
+    [2] => Array
+        (
+            [PartID] => 63
+            [PartDesc] => Part9
+            [price] => 21.00
+            [PiecesSold] => 1
+        )
+
+)
+
+[23-Apr-2025 11:46:38 UTC] Part Details - ID: 66, Description: Test, Price: 35.00, PiecesSold: 1
+[23-Apr-2025 11:46:38 UTC] Part Details - ID: 61, Description: Part 7, Price: 120.00, PiecesSold: 1
+[23-Apr-2025 11:46:38 UTC] Part Details - ID: 63, Description: Part9, Price: 21.00, PiecesSold: 1
+[23-Apr-2025 11:46:38 UTC] Total parts cost calculation: 176
+[23-Apr-2025 11:47:07 UTC] Parts data for job ID 55: Array
+(
+    [0] => Array
+        (
+            [PartID] => 66
+            [PartDesc] => Test
+            [price] => 35.00
+            [PiecesSold] => 1
+        )
+
+    [1] => Array
+        (
+            [PartID] => 61
+            [PartDesc] => Part 7
+            [price] => 120.00
+            [PiecesSold] => 1
+        )
+
+    [2] => Array
+        (
+            [PartID] => 63
+            [PartDesc] => Part9
+            [price] => 21.00
+            [PiecesSold] => 1
+        )
+
+)
+
+[23-Apr-2025 11:47:07 UTC] Part Details - ID: 66, Description: Test, Price: 35.00, PiecesSold: 1
+[23-Apr-2025 11:47:07 UTC] Part Details - ID: 61, Description: Part 7, Price: 120.00, PiecesSold: 1
+[23-Apr-2025 11:47:07 UTC] Part Details - ID: 63, Description: Part9, Price: 21.00, PiecesSold: 1
+[23-Apr-2025 11:47:07 UTC] Total parts cost calculation: 176
+[23-Apr-2025 11:55:05 UTC] Parts data for job ID 55: Array
+(
+    [0] => Array
+        (
+            [PartID] => 66
+            [PartDesc] => Test
+            [price] => 35.00
+            [PiecesSold] => 1
+        )
+
+    [1] => Array
+        (
+            [PartID] => 61
+            [PartDesc] => Part 7
+            [price] => 120.00
+            [PiecesSold] => 1
+        )
+
+    [2] => Array
+        (
+            [PartID] => 63
+            [PartDesc] => Part9
+            [price] => 21.00
+            [PiecesSold] => 1
+        )
+
+)
+
+[23-Apr-2025 11:55:05 UTC] Part Details - ID: 66, Description: Test, Price: 35.00, PiecesSold: 1
+[23-Apr-2025 11:55:05 UTC] Part Details - ID: 61, Description: Part 7, Price: 120.00, PiecesSold: 1
+[23-Apr-2025 11:55:05 UTC] Part Details - ID: 63, Description: Part9, Price: 21.00, PiecesSold: 1
+[23-Apr-2025 11:55:05 UTC] Total parts cost calculation: 176
+[23-Apr-2025 11:55:16 UTC] Parts data for job ID 54: Array
+(
+    [0] => Array
+        (
+            [PartID] => 58
+            [PartDesc] => Part4
+            [price] => 15.00
+            [PiecesSold] => 1
+        )
+
+)
+
+[23-Apr-2025 11:55:16 UTC] Part Details - ID: 58, Description: Part4, Price: 15.00, PiecesSold: 1
+[23-Apr-2025 11:55:16 UTC] Total parts cost calculation: 15
+[23-Apr-2025 11:56:53 UTC] Parts data for job ID 55: Array
+(
+    [0] => Array
+        (
+            [PartID] => 66
+            [PartDesc] => Test
+            [price] => 35.00
+            [PiecesSold] => 1
+        )
+
+    [1] => Array
+        (
+            [PartID] => 61
+            [PartDesc] => Part 7
+            [price] => 120.00
+            [PiecesSold] => 1
+        )
+
+    [2] => Array
+        (
+            [PartID] => 63
+            [PartDesc] => Part9
+            [price] => 21.00
+            [PiecesSold] => 1
+        )
+
+)
+
+[23-Apr-2025 11:56:53 UTC] Part Details - ID: 66, Description: Test, Price: 35.00, PiecesSold: 1
+[23-Apr-2025 11:56:53 UTC] Part Details - ID: 61, Description: Part 7, Price: 120.00, PiecesSold: 1
+[23-Apr-2025 11:56:53 UTC] Part Details - ID: 63, Description: Part9, Price: 21.00, PiecesSold: 1
+[23-Apr-2025 11:56:53 UTC] Total parts cost calculation: 176
+[23-Apr-2025 12:02:35 UTC] Parts data for job ID 54: Array
+(
+    [0] => Array
+        (
+            [PartID] => 58
+            [PartDesc] => Part4
+            [price] => 15.00
+            [PiecesSold] => 1
+        )
+
+)
+
+[23-Apr-2025 12:02:35 UTC] Part Details - ID: 58, Description: Part4, Price: 15.00, PiecesSold: 1
+[23-Apr-2025 12:02:35 UTC] Total parts cost calculation: 15
