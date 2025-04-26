@@ -524,17 +524,45 @@ require_once '../config/db_connection.php';
                         $startDate = $FDayCWeek->format("Y-m-d H:i:s");
                         $endDate = $LDayCWeek->format("Y-m-d H:i:s");
 
-                        $sql = "SELECT COALESCE(SUM(i.Total), 0) as Income
+                        // Get all job cards finished in current week
+                        $sql = "SELECT j.JobID, j.DriveCosts
                                 FROM jobcards j
-                                INNER JOIN invoicejob ij ON j.JobID = ij.JobID
-                                INNER JOIN invoices i ON ij.InvoiceID = i.InvoiceID
                                 WHERE j.DateFinish BETWEEN :startDate AND :endDate";
 
                         $stmt = $pdo->prepare($sql);
                         $stmt->bindParam(':startDate', $startDate);
                         $stmt->bindParam(':endDate', $endDate);
                         $stmt->execute();
-                        $IncomeCWeek = $stmt->fetchColumn();
+                        $jobCards = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+                        $IncomeCWeek = 0;
+                        foreach ($jobCards as $jobCard) {
+                            // Get parts for this job card
+                            $partsSql = "SELECT p.PartDesc, jp.PiecesSold, p.SellPrice, p.Vat
+                                       FROM jobcardparts jp
+                                       JOIN parts p ON jp.PartID = p.PartID
+                                       WHERE jp.JobID = :jobId";
+                            
+                            $partsStmt = $pdo->prepare($partsSql);
+                            $partsStmt->bindParam(':jobId', $jobCard['JobID']);
+                            $partsStmt->execute();
+                            $parts = $partsStmt->fetchAll(PDO::FETCH_ASSOC);
+
+                            // Calculate subtotal and VAT for parts
+                            $subtotal = 0;
+                            $totalVat = 0;
+                            foreach ($parts as $part) {
+                                $lineTotal = $part['PiecesSold'] * $part['SellPrice'];
+                                $subtotal += $lineTotal;
+                                $totalVat += $lineTotal * ($part['Vat'] / 100);
+                            }
+
+                            // Add drive costs to subtotal
+                            $subtotal += $jobCard['DriveCosts'];
+                            
+                            // Add total (subtotal + VAT) to weekly income
+                            $IncomeCWeek += $subtotal + $totalVat;
+                        }
 
                         // Calculate last week's income for comparison
                         $FDayLWeek = new DateTime();
@@ -552,7 +580,36 @@ require_once '../config/db_connection.php';
                         $stmt->bindParam(':startDate', $startDate);
                         $stmt->bindParam(':endDate', $endDate);
                         $stmt->execute();
-                        $IncomeLWeek = $stmt->fetchColumn();
+                        $jobCards = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+                        $IncomeLWeek = 0;
+                        foreach ($jobCards as $jobCard) {
+                            // Get parts for this job card
+                            $partsSql = "SELECT p.PartDesc, jp.PiecesSold, p.SellPrice, p.Vat
+                                       FROM jobcardparts jp
+                                       JOIN parts p ON jp.PartID = p.PartID
+                                       WHERE jp.JobID = :jobId";
+                            
+                            $partsStmt = $pdo->prepare($partsSql);
+                            $partsStmt->bindParam(':jobId', $jobCard['JobID']);
+                            $partsStmt->execute();
+                            $parts = $partsStmt->fetchAll(PDO::FETCH_ASSOC);
+
+                            // Calculate subtotal and VAT for parts
+                            $subtotal = 0;
+                            $totalVat = 0;
+                            foreach ($parts as $part) {
+                                $lineTotal = $part['PiecesSold'] * $part['SellPrice'];
+                                $subtotal += $lineTotal;
+                                $totalVat += $lineTotal * ($part['Vat'] / 100);
+                            }
+
+                            // Add drive costs to subtotal
+                            $subtotal += $jobCard['DriveCosts'];
+                            
+                            // Add total (subtotal + VAT) to weekly income
+                            $IncomeLWeek += $subtotal + $totalVat;
+                        }
 
                         // Calculate percentage change
                         if ($IncomeLWeek != 0) {
@@ -560,7 +617,7 @@ require_once '../config/db_connection.php';
                         } else {
                           $IncomePer = number_format(0, 2);
                         }
-                      } catch (PDOException $e) {
+                      } catch (Exception $e) {
                         // Error handling
                         $IncomeCWeek = 0;
                         $IncomeLWeek = 0;
@@ -584,13 +641,30 @@ require_once '../config/db_connection.php';
                   <div>
                     <div class="stats-title">Total Jobs</div>
                     <div class="stats-value"><?php
-                      require_once 'JobCard_Management/config/db_connection.php';
-                      $sql = "SELECT COUNT(*) as total FROM jobcards 
-                              WHERE DateCall >= DATE_SUB(CURDATE(), INTERVAL 7 DAY)";
-                      $stmt = $pdo->prepare($sql);
-                      $stmt->execute();
-                      $result = $stmt->fetch(PDO::FETCH_ASSOC);
-                      echo $result['total'];
+                      try {
+                        // Calculate current week's date range
+                        $FDayCWeek = new DateTime();
+                        $FDayCWeek->modify('monday this week');
+                        $FDayCWeek->setTime(0, 0, 0);
+
+                        $LDayCWeek = new DateTime();
+                        $LDayCWeek->modify('sunday this week');
+                        $LDayCWeek->setTime(23, 59, 59);
+
+                        $startDate = $FDayCWeek->format("Y-m-d H:i:s");
+                        $endDate = $LDayCWeek->format("Y-m-d H:i:s");
+
+                        $sql = "SELECT COUNT(*) as total FROM jobcards 
+                               WHERE DateFinish BETWEEN :startDate AND :endDate";
+                        $stmt = $pdo->prepare($sql);
+                        $stmt->bindParam(':startDate', $startDate);
+                        $stmt->bindParam(':endDate', $endDate);
+                        $stmt->execute();
+                        $result = $stmt->fetch(PDO::FETCH_ASSOC);
+                        echo $result['total'];
+                      } catch (Exception $e) {
+                        echo "0";
+                      }
                     ?></div>
                     <div class="trend-up">
                       <i class="fas fa-arrow-up"></i>
