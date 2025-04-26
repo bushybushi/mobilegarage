@@ -155,7 +155,7 @@ $old_email = $emailStmt->fetchAll();
         </a>
         <!-- Title Display -->
         <div class="flex-grow-1 text-center">
-            <h2 class="mb-0">Edit Invoice</h2>
+            <h2 class="mb-0 h4 h3-md">Edit Invoice</h2>
         </div>
         <!-- Empty div for spacing -->
         <div style="width: 30px;"></div>
@@ -231,7 +231,7 @@ $old_email = $emailStmt->fetchAll();
                         <label for="supplierPhone">Supplier Phone <span class="text-info">*</span></label>
                         <input type="tel" id="supplierPhone" name="supplierPhone" class="form-control" 
                             value="<?php echo htmlspecialchars($invoice['SupplierPhone'] ?? ''); ?>">
-                        <small class="form-text text-muted">Either phone or email is required</small>
+                       
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -242,7 +242,7 @@ $old_email = $emailStmt->fetchAll();
                             oninput="validateEmailFormat(this)"
                             oninvalid="validateEmailFormat(this)">
                         <div class="invalid-feedback" style="display: none;"></div>
-                        <small class="form-text text-muted">Either phone or email is required</small>
+                        
                     </div>
                 </div>
             </div>
@@ -311,10 +311,10 @@ $old_email = $emailStmt->fetchAll();
                                     data-price="<?php echo $part['PricePerPiece']; ?>"
                                     data-bulk="<?php echo $part['PriceBulk']; ?>"
                                     data-selling="<?php echo $part['SellPrice']; ?>">
-                                <i class="fas fa-edit"></i> Edit
+                                <i class="fas fa-edit"></i>
                             </button>
                             <button type="button" class="btn btn-danger delete-part-btn" data-part-id="<?php echo $part['PartID']; ?>">
-                                <i class="fas fa-trash"></i> Delete
+                                <i class="fas fa-trash"></i>
                 </button>
             </div> 
              </div>
@@ -558,15 +558,6 @@ $old_email = $emailStmt->fetchAll();
     letter-spacing: 0.3px;
 }
 
-/* Styles for form controls */
-.form-control {
-    min-height: calc(1.5em + .75rem + 2px);
-    padding: .375rem .75rem;
-    line-height: 1.5;
-    display: block;
-    width: 100%;
-    height: calc(1.5em + .75rem + 2px);
-}
 
 /* Required field indicators */
 label {

@@ -275,19 +275,26 @@ $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <li class="dropdown pc-h-item d-inline-flex d-md-none">
       <a
         class="pc-head-link head-link-secondary dropdown-toggle arrow-none m-0"
-        data-bs-toggle="dropdown"
+        data-toggle="dropdown"
         href="#"
         role="button"
-        aria-haspopup="false"
+        aria-haspopup="true"
         aria-expanded="false"
       >
         <i class="ti ti-search"></i>
       </a>
-      <div class="dropdown-menu pc-h-dropdown drp-search">
-        <form class="px-3">
+      <div class="dropdown-menu pc-h-dropdown drp-search" style="min-width: 300px;">
+        <form class="px-3" method="GET" action="invoice_main.php">
           <div class="mb-0 d-flex align-items-center">
             <i data-feather="search"></i>
-            <input type="search" class="form-control border-0 shadow-none" placeholder="Search here . . ." />
+            <input 
+              type="search" 
+              name="filter" 
+              class="form-control border-0 shadow-none" 
+              placeholder="Search here . . ." 
+              value="<?= isset($_GET['filter']) ? htmlspecialchars($_GET['filter']) : '' ?>" 
+              autocomplete="off"
+            />
           </div>
         </form>
       </div>
@@ -466,7 +473,7 @@ $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
             <div class="title-container d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center mb-4">
                 <div class="mb-3 mb-md-0">
                     <h2 class="mb-0">Invoices</h2>
-                    <small class="text-muted">Total: <?php echo count($result); ?> Invoices</small>
+                    <small class="text-muted">Total: <?php echo $total_invoices; ?> Invoices</small>
                 </div>
                 <!-- Action Buttons -->
                 <div class="d-flex flex-wrap gap-2">
@@ -898,3 +905,28 @@ $(document).ready(function () {
   </body>
   <!-- [Body] end -->
 </html>
+
+<!-- Add this script at the bottom of the file, before the closing body tag -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize Bootstrap dropdowns
+    var dropdownElementList = [].slice.call(document.querySelectorAll('[data-bs-toggle="dropdown"]'));
+    dropdownElementList.forEach(function (dropdownToggleEl) {
+        new bootstrap.Dropdown(dropdownToggleEl, {
+            autoClose: false
+        });
+    });
+
+    // Initialize Feather icons
+    if (typeof feather !== 'undefined') {
+        feather.replace();
+    }
+
+    // Prevent dropdown from closing when clicking inside
+    document.querySelectorAll('.dropdown-menu').forEach(function(element) {
+        element.addEventListener('click', function(e) {
+            e.stopPropagation();
+        });
+    });
+});
+</script>

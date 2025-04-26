@@ -602,3 +602,103 @@
 (
 )
 
+[18-Apr-2025 20:05:01 UTC] UPDATE INVOICE POST DATA: Array
+(
+    [invoice_id] => 75
+    [InvoiceID] => 75
+    [invoiceNr] => 110
+    [dateCreated] => 2025-04-03
+    [supplier] => Supplier9
+    [supplierID] => 41
+    [original_supplier_phone] => 667777222
+    [original_supplier_email] => supplier9@email.com
+    [supplierPhone] => 667777222
+    [supplierEmail] => supplier9@email.com
+    [vat] => 19.00
+    [total] => 20.00
+    [parts] => [{"partId":63,"partDesc":"Part9","piecesPurch":"5","pricePerPiece":"6.00","priceBulk":"20.00 selling price","sellingPrice":"20.00"}]
+)
+
+[18-Apr-2025 20:05:01 UTC] FILES: Array
+(
+)
+
+[18-Apr-2025 20:05:03 UTC] UPDATE INVOICE POST DATA: Array
+(
+    [invoice_id] => 75
+    [InvoiceID] => 75
+    [invoiceNr] => 110
+    [dateCreated] => 2025-04-03
+    [supplier] => Supplier9
+    [supplierID] => 41
+    [original_supplier_phone] => 667777222
+    [original_supplier_email] => supplier9@email.com
+    [supplierPhone] => 667777222
+    [supplierEmail] => supplier9@email.com
+    [vat] => 19.00
+    [total] => 20.00
+    [parts] => [{"partId":63,"partDesc":"Part9","piecesPurch":"5","pricePerPiece":"6.00","priceBulk":"20.00 selling price","sellingPrice":"20.00"}]
+)
+
+[18-Apr-2025 20:05:03 UTC] FILES: Array
+(
+)
+
+[18-Apr-2025 20:07:02 UTC] Received POST data: Array
+(
+    [invoiceNr] => 123456
+    [dateCreated] => 2025-12-12
+    [supplier] => Antonis
+    [supplierID] => 43
+    [supplierPhone] => 99112233
+    [supplierEmail] => 
+    [vat] => 12
+    [total] => 200
+    [partDesc] => Array
+        (
+            [0] => ok
+        )
+
+    [piecesPurch] => Array
+        (
+            [0] => 12
+        )
+
+    [pricePerPiece] => Array
+        (
+            [0] => 21
+        )
+
+    [sellingPrice] => Array
+        (
+            [0] => 23
+        )
+
+    [parts] => [{"partDesc":"ok","piecesPurch":"12","pricePerPiece":"21","sellingPrice":"23"}]
+)
+
+[18-Apr-2025 20:07:02 UTC] Received FILES data: Array
+(
+)
+
+[22-Apr-2025 08:47:59 UTC] UPDATE INVOICE POST DATA: Array
+(
+    [invoice_id] => 76
+    [InvoiceID] => 76
+    [invoiceNr] => 110
+    [dateCreated] => 2025-04-08
+    [supplier] => Supplier10
+    [supplierID] => 42
+    [original_supplier_phone] => 986677576
+    [original_supplier_email] => supplier10@email.com
+    [supplierPhone] => 986677576
+    [supplierEmail] => supplier10@email.com
+    [vat] => 19.00
+    [total] => 20.00
+    [parts] => [{"partId":64,"partDesc":"Part10","piecesPurch":"5","pricePerPiece":"6.00","priceBulk":"20.00 selling price","sellingPrice":"20.00"}]
+)
+
+[22-Apr-2025 08:47:59 UTC] FILES: Array
+(
+)
+

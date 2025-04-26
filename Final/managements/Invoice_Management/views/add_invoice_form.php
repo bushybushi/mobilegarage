@@ -56,6 +56,38 @@ if (session_status() === PHP_SESSION_NONE) {
       margin: 0;
   }
 }
+
+/* Styles for part items */
+.part-item {
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.part-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.part-desc {
+    font-size: 1.1em;
+    font-weight: 500;
+    color: #333;
+}
+
+.pieces-badge {
+    background: #e8f5e9;
+    color: #2e7d32;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.9em;
+}
+
     </style>
 </head>
 <body>
@@ -124,7 +156,7 @@ if (isset($_SESSION['error_message'])) {
                     <div class="form-group">
                         <label for="supplierPhone">Supplier Phone <span class="text-info">*</span></label>
                         <input type="tel" id="supplierPhone" name="supplierPhone" class="form-control">
-                        <small class="form-text text-muted">Either phone or email is required</small>
+                        
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -137,7 +169,7 @@ if (isset($_SESSION['error_message'])) {
                                oninput="validateEmailFormat(this)"
                                oninvalid="validateEmailFormat(this)">
                         <div class="invalid-feedback" style="display: none;"></div>
-                        <small class="form-text text-muted">Either phone or email is required</small>
+                        
                     </div>
                 </div>
             </div>
@@ -440,7 +472,7 @@ $(document).ready(function() {
         }
 
         // Check if there are any parts added to the invoice
-        if (document.querySelectorAll('.part-row').length === 0) {
+        if (document.querySelectorAll('.part-item').length === 0) {
             hasErrors = true;
             const partsSection = document.getElementById('parts-section');
             let feedback = partsSection.querySelector('.invalid-feedback');
@@ -499,7 +531,7 @@ $(document).ready(function() {
 
         // Get all parts data
         const parts = [];
-        $('.part-row').each(function() {
+        $('.part-item').each(function() {
             const partId = $(this).attr('id');
             const hiddenInputs = $(`#hidden-${partId}`);
             parts.push({
@@ -692,20 +724,26 @@ function savePart() {
 
     // Create new part row with the unique ID
     const partRow = `
-        <div class="part-row" id="${partId}">
-            <div class="part-info">
-                <div class="part-desc">${partDesc}</div>
-                <div class="part-details">
-                    <span>Pieces: ${pieces}</span>
-                    <span>Price: €${pricePerPiece}</span>
-                    <span>Sell: €${sellingPrice}</span>
+        <div class="part-item" id="${partId}">
+            <div class="part-header">
+                <span class="part-desc">${partDesc}</span>
+                <span class="pieces-badge">${pieces} pieces</span>
+            </div>
+            <div class="part-pricing">
+                <div class="price-item">
+                    <i class="fas fa-tag"></i>
+                    <span>€${parseFloat(pricePerPiece).toFixed(2)} per piece</span>
+                </div>
+                <div class="price-item selling-price">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span>€${parseFloat(sellingPrice).toFixed(2)} selling price</span>
                 </div>
             </div>
             <div class="part-actions">
-                <button type="button" class="btn btn-primary btn-sm edit-part" onclick="editPart('${partId}')">
+                <button type="button" class="btn btn-primary edit-part" onclick="editPart('${partId}')">
                     <i class="fas fa-edit"></i>
                 </button>
-                <button type="button" class="btn btn-danger btn-sm remove-part" onclick="removePart('${partId}')">
+                <button type="button" class="btn btn-danger remove-part" onclick="removePart('${partId}')">
                     <i class="fas fa-trash"></i>
                 </button>
             </div>
@@ -923,7 +961,7 @@ $("#invoiceForm").submit(function(e) {
     }
 
     // Check if at least one part exists
-    if($(".part-row").length < 1) {
+    if($(".part-item").length < 1) {
         isValid = false;
         errorMessage += "At least one part is required.\n";
     }
@@ -990,36 +1028,91 @@ $("#invoiceForm").submit(function(e) {
     font-style: italic;
 }
 
-/* Styles for part rows */
-.part-row {
+/* Styles for part items */
+.part-item {
+    padding: 0.9rem;
+    border-bottom: 1px solid #e9ecef;
+    transition: background-color 0.2s ease;
+    margin-bottom: 10px;
+}
+
+.part-item:last-child {
+    border-bottom: none;
+}
+
+.part-item:hover {
+    background-color: #f8f9fa;
+}
+
+.part-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px;
-    margin-bottom: 10px;
-    background-color: #f8f9fa;
-    border-radius: 5px;
-    border: 1px solid #dee2e6;
-}
-
-.part-info {
-    flex-grow: 1;
+    margin-bottom: 0.75rem;
 }
 
 .part-desc {
+    font-size: 1.1rem;
     font-weight: 500;
-    margin-bottom: 5px;
+    color: #212529;
 }
 
-.part-details {
+.pieces-badge {
+    background: #e9ecef;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    color: #495057;
+}
+
+.part-pricing {
     display: flex;
-    gap: 20px;
-    color: #666;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 0.75rem;
+}
+
+.price-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #6c757d;
+    font-size: 0.95rem;
+}
+
+.price-item i {
+    color: #adb5bd;
     font-size: 0.9rem;
 }
 
-.remove-part {
-    margin-left: 10px;
+.selling-price {
+    color: #28a745;
+    font-weight: 500;
+}
+
+.selling-price i {
+    color: #28a745;
+}
+
+.part-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+@media (max-width: 768px) {
+    .part-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .part-pricing {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
 }
 
 /* Styles for modal */
