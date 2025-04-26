@@ -542,6 +542,21 @@ $(document).ready(function () {
   preset_change('preset-1');
 </script>
 
+<script>
+$(document).ready(function() {
+    // Check for expense to open from accounting view
+    const expenseId = sessionStorage.getItem('openExpenseId');
+    if (expenseId) {
+        // Clear the storage immediately
+        sessionStorage.removeItem('openExpenseId');
+        // Load the expense view
+        $.get('extraexpenses_view.php', { id: expenseId, previous_link: 'extra_expenses_main.php' }, function(response) {
+            $('#dynamicContent').html(response);
+        });
+    }
+});
+</script>
+
   </body>
   <!-- [Body] end -->
   

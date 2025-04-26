@@ -86,22 +86,22 @@ $reportDate = $currentDate->format("d/m/Y");
       margin: 20px;
     }
     .report-header {
-      text-align: center;
-      margin-bottom: 30px;
-      position: relative;
+       display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-bottom: 20px;
+                padding-bottom: 20px;
+                border-bottom: 2px solid #ddd;
     }
+
+    .header-text {
+                text-align: right;
+            }
     .report-logo {
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 100px;
+      width: 200px;
       height: auto;
     }
-    .report-title {
-      font-size: 24px;
-      font-weight: bold;
-      margin-bottom: 10px;
-    }
+
     .report-date {
       font-size: 14px;
       color: #666;
@@ -127,8 +127,10 @@ $reportDate = $currentDate->format("d/m/Y");
 <body>
   <div class="report-header">
     <img src="../assets/logo.png" alt="Logo" class="report-logo">
-    <div class="report-title">Financial Report</div>
-    <div class="report-date">Generated on <?= $reportDate ?></div>
+    <div class="header-text">
+    <h1><b>Financial Report</b></h1>
+    <p>Generated on <?= $reportDate ?></p>
+    </div>
   </div>
 
   <div class="summary-section">

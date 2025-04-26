@@ -14,18 +14,43 @@ $LDayCMonth->modify('last day of this month');
 //Finds income based on this month
 $startDate = $FDayCMonth->format("Y-m-d");
 $endDate = $LDayCMonth->format("Y-m-d");
-$sql = "SELECT SUM(i.Total) as Income
-		FROM jobcards j
-		LEFT JOIN invoicejob ij ON j.JobID = ij.JobID
-		LEFT JOIN invoices i ON ij.InvoiceID = i.InvoiceID
-		
-		WHERE j.DateFinish BETWEEN :startDate AND :endDate";
+$sql = "SELECT j.JobID, j.DriveCosts
+        FROM jobcards j
+        WHERE j.DateFinish BETWEEN :startDate AND :endDate";
 
 $stmt = $pdo->prepare($sql);
 $stmt->bindParam(':startDate', $startDate);
 $stmt->bindParam(':endDate', $endDate);
 $stmt->execute();
-$IncomeCMonth = $stmt->fetchColumn() ?? 0;
+$jobCards = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+$IncomeCMonth = 0;
+foreach ($jobCards as $jobCard) {
+    // Get parts for this job card
+    $partsSql = "SELECT p.PartDesc, jp.PiecesSold, p.SellPrice, p.Vat
+                 FROM jobcardparts jp
+                 JOIN parts p ON jp.PartID = p.PartID
+                 WHERE jp.JobID = :jobId";
+    
+    $partsStmt = $pdo->prepare($partsSql);
+    $partsStmt->bindParam(':jobId', $jobCard['JobID']);
+    $partsStmt->execute();
+    $parts = $partsStmt->fetchAll(PDO::FETCH_ASSOC);
+
+    // Calculate parts subtotal and VAT
+    $subtotal = 0;
+    $totalVat = 0;
+    foreach ($parts as $part) {
+        $lineTotal = $part['PiecesSold'] * $part['SellPrice'];
+        $subtotal += $lineTotal;
+        $totalVat += $lineTotal * ($part['Vat'] / 100);
+    }
+    // Add drive costs to subtotal
+    $subtotal += $jobCard['DriveCosts'];
+    
+    // Add total (subtotal + VAT) to monthly income
+    $IncomeCMonth += $subtotal + $totalVat;
+}
 
 //Finds expenses based on this month
 $sql = "SELECT SUM(total) AS Expenses
@@ -456,10 +481,24 @@ FROM (
 LEFT JOIN (
     SELECT 
         DATE_FORMAT(j.DateFinish, '%Y-%m-01') AS MonthDate,
-        SUM(i.Total) AS TotalIncome
+        SUM(
+            COALESCE(
+                (SELECT SUM(jp.PiecesSold * p.SellPrice) 
+                 FROM jobcardparts jp 
+                 JOIN parts p ON jp.PartID = p.PartID 
+                 WHERE jp.JobID = j.JobID),
+                0
+            ) + 
+            COALESCE(
+                (SELECT SUM(jp.PiecesSold * p.SellPrice * p.Vat / 100) 
+                 FROM jobcardparts jp 
+                 JOIN parts p ON jp.PartID = p.PartID 
+                 WHERE jp.JobID = j.JobID),
+                0
+            ) + 
+            j.DriveCosts
+        ) AS TotalIncome
     FROM jobcards j
-    LEFT JOIN invoicejob ij ON j.JobID = ij.JobID
-    LEFT JOIN invoices i ON ij.InvoiceID = i.InvoiceID
     WHERE j.DateFinish >= DATE_FORMAT(NOW(), '%Y-01-01')
     GROUP BY MonthDate
 ) AS i ON i.MonthDate = data.MonthDate
@@ -501,7 +540,7 @@ $expenses = [];
 foreach ($result as $row) {
     $months[] = $row['Month'];
     $incomes[] = (float) $row['Income'];
-	$expenses[] = $row['Expenses'];
+    $expenses[] = $row['Expenses'];
 }
 
 ?>

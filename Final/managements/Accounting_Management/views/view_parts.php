@@ -627,6 +627,7 @@ foreach ($result as $row) {
                             justify-content: space-between;
                             align-items: flex-start;
                             margin-bottom: 30px;
+                             border-bottom: 2px solid #ddd;
                         }
                         .logo {
                             max-height: 80px;
@@ -660,8 +661,9 @@ foreach ($result as $row) {
                             <img src="../assets/logo.png" alt="Logo" style="max-height: 80px;">
                         </div>
                         <div class="title">
-                            <h2>Parts</h2>
+                            <h1>Parts</h1>
                             <p>Total Parts: ${rows.length}</p>
+                            <p>Generated on: <?php echo date('Y-m-d H:i:s'); ?></p>
                         </div>
                     </div>
                     
@@ -742,9 +744,10 @@ foreach ($result as $row) {
 
     // Open form functionality
 function openForm(PartID) {
-    $.get('../../Parts_Management/views/parts_view.php', { id: PartID, previous_link: "/MGAdmin2025/managements/Accounting_Management/views/view_parts.php" }, function(response) {
-        $('#dynamicContent').html(response);
-    });
+    // Store the part ID in session storage
+    sessionStorage.setItem('openPartId', PartID);
+    // Redirect to parts main page
+    window.location.href = '../../Parts_Management/views/parts_main.php';
 }
 
 document.addEventListener('DOMContentLoaded', function() {

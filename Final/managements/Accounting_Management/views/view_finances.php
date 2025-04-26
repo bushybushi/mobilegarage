@@ -3,8 +3,35 @@ require_once '../config/db_connection.php';
 require_once '../includes/sanitize_inputs.php';
 require_once '../../UserAccess/protect.php';
 
-$startDate = $_GET['startDate'] ?? NULL;
-$endDate = $_GET['endDate'] ?? NULL;
+//Finds first and last date of this month
+$FDayCMonth = new DateTime();
+$FDayCMonth->modify('first day of this month');
+
+$LDayCMonth = new DateTime();
+$LDayCMonth->modify('last day of this month');
+
+//Finds monday and sunday of current and last weeks
+$FDayCWeek = new DateTime();
+$FDayCWeek->modify('monday this week');
+
+$LDayCWeek = new DateTime();
+$LDayCWeek->modify('sunday this week');
+
+$FDayLWeek = new DateTime();
+$FDayLWeek->modify('monday last week');
+
+$LDayLWeek = new DateTime();
+$LDayLWeek->modify('sunday last week');
+
+// Use current month dates by default
+$startDate = $FDayCMonth->format("Y-m-d");
+$endDate = $LDayCMonth->format("Y-m-d");
+
+// If specific dates are provided in URL, use those instead
+if (isset($_GET['startDate']) && isset($_GET['endDate'])) {
+    $startDate = date('Y-m-d', strtotime($_GET['startDate']));
+    $endDate = date('Y-m-d', strtotime($_GET['endDate']));
+}
 
 // Pagination parameters
 $itemsPerPage = 10;
@@ -17,7 +44,9 @@ $sql = "
         (SELECT p.PartID as ID, p.DateCreated as DateCreated, 
                 p.PartDesc as Name, 
                 'Part' as FromSource,
-                0 as Income,
+                (SELECT SUM(jp.PiecesSold * p.SellPrice)
+                 FROM jobcardparts jp
+                 WHERE jp.PartID = p.PartID) as Income,
                 p.PiecesPurch * p.PricePerPiece as Expenses
             FROM parts p)
             
@@ -26,14 +55,20 @@ $sql = "
         (SELECT DISTINCT j.JobID as ID, j.DateFinish as DateCreated, 
                 CONCAT(c.FirstName, ' ', c.LastName) as Name,
                 'Job' as FromSource,
-                i.Total as Income,
-                0 as Expenses
+                (SELECT SUM(jp.PiecesSold * p.SellPrice) + 
+                        SUM(jp.PiecesSold * p.SellPrice * p.Vat / 100) + 
+                        j.DriveCosts
+                 FROM jobcardparts jp
+                 LEFT JOIN parts p ON jp.PartID = p.PartID
+                 WHERE j.JobID = jp.JobID) as Income,
+                (SELECT SUM(jp.PiecesSold * p.PricePerPiece)
+                 FROM jobcardparts jp
+                 LEFT JOIN parts p ON jp.PartID = p.PartID
+                 WHERE j.JobID = jp.JobID) as Expenses
             FROM jobcards j 
             LEFT JOIN jobcar jc ON j.JobID = jc.JobID
             LEFT JOIN carassoc ca ON jc.LicenseNr = ca.LicenseNr
-            LEFT JOIN customers c ON ca.CustomerID = c.CustomerID
-            LEFT JOIN invoicejob ij ON j.JobID = ij.JobID
-            LEFT JOIN invoices i ON ij.InvoiceID = i.InvoiceID)
+            LEFT JOIN customers c ON ca.CustomerID = c.CustomerID)
 
         UNION
 
@@ -45,21 +80,16 @@ $sql = "
             FROM extraexpenses e)
     ) as finance_data";
 
-// Optional date filter
-if ($startDate != NULL && $endDate != NULL) {
-    // Transform dates into real dates
-    $startDate = date('Y-m-d', strtotime($startDate));
-    $endDate = date('Y-m-d', strtotime($endDate));
-    $sql .= " WHERE DateCreated BETWEEN :startDate AND :endDate";
-}
+// Apply date filter
+$sql .= " WHERE (FromSource = 'Part' AND DateCreated BETWEEN :startDate AND :endDate)
+          OR (FromSource = 'Job' AND DateCreated BETWEEN :startDate AND :endDate)
+          OR (FromSource = 'Extra' AND DateCreated BETWEEN :startDate AND :endDate)";
 
 $sql .= " ORDER BY DateCreated ASC LIMIT :limit OFFSET :offset";
 
 $stmt = $pdo->prepare($sql);
-if ($startDate != NULL && $endDate != NULL) {
-    $stmt->bindParam(':startDate', $startDate);
-    $stmt->bindParam(':endDate', $endDate);
-}
+$stmt->bindParam(':startDate', $startDate);
+$stmt->bindParam(':endDate', $endDate);
 $stmt->bindParam(':limit', $itemsPerPage, PDO::PARAM_INT);
 $stmt->bindParam(':offset', $offset, PDO::PARAM_INT);
 $stmt->execute();
@@ -73,20 +103,50 @@ $countSql = "
         (SELECT DISTINCT j.JobID, j.DateFinish as DateCreated FROM jobcards j)
         UNION ALL
         (SELECT e.ExpenseID, e.DateCreated FROM extraexpenses e)
-    ) as finance_data";
-
-if ($startDate != NULL && $endDate != NULL) {
-    $countSql .= " WHERE DateCreated BETWEEN :startDate AND :endDate";
-}
+    ) as finance_data
+    WHERE (DateCreated BETWEEN :startDate AND :endDate)";
 
 $countStmt = $pdo->prepare($countSql);
-if ($startDate != NULL && $endDate != NULL) {
-    $countStmt->bindParam(':startDate', $startDate);
-    $countStmt->bindParam(':endDate', $endDate);
-}
+$countStmt->bindParam(':startDate', $startDate);
+$countStmt->bindParam(':endDate', $endDate);
 $countStmt->execute();
 $totalItems = $countStmt->fetch(PDO::FETCH_ASSOC)['total'];
 $totalPages = ceil($totalItems / $itemsPerPage);
+
+// Calculate total profit from all records
+$totalProfitSql = "
+    SELECT 
+        (SELECT COALESCE(SUM(income), 0)
+         FROM (
+             SELECT 
+                 (SELECT SUM(jp.PiecesSold * p.SellPrice) + 
+                         SUM(jp.PiecesSold * p.SellPrice * p.Vat / 100) + 
+                         j.DriveCosts
+                  FROM jobcardparts jp
+                  LEFT JOIN parts p ON jp.PartID = p.PartID
+                  WHERE jp.JobID = j.JobID) as income
+             FROM jobcards j
+             WHERE j.DateFinish BETWEEN :startDate AND :endDate
+         ) as job_income) as totalIncome,
+        (SELECT COALESCE(SUM(expenses), 0)
+         FROM (
+             SELECT SUM(jp.PiecesSold * p.PricePerPiece) as expenses
+             FROM jobcardparts jp
+             LEFT JOIN parts p ON jp.PartID = p.PartID
+             LEFT JOIN jobcards j ON jp.JobID = j.JobID
+             WHERE j.DateFinish BETWEEN :startDate AND :endDate
+             UNION ALL
+             SELECT SUM(e.Expense) as expenses
+             FROM extraexpenses e
+             WHERE e.DateCreated BETWEEN :startDate AND :endDate
+         ) as all_expenses) as totalExpenses";
+
+$totalProfitStmt = $pdo->prepare($totalProfitSql);
+$totalProfitStmt->bindParam(':startDate', $startDate);
+$totalProfitStmt->bindParam(':endDate', $endDate);
+$totalProfitStmt->execute();
+$totalProfit = $totalProfitStmt->fetch(PDO::FETCH_ASSOC);
+$totalCosts = ($totalProfit['totalIncome'] ?: 0) - ($totalProfit['totalExpenses'] ?: 0);
 
 session_start();
 
@@ -100,15 +160,6 @@ if (isset($_SESSION['message'])) {
 
     unset($_SESSION['message']);
     unset($_SESSION['message_type']);
-}
-
-// Calculate total profit
-$totalCosts = 0;
-foreach ($result as $row) {
-    $expenses = $row['Expenses'] ?: 0;
-    $totalCosts -= $expenses;
-    $income = $row['Income'] ?: 0;
-    $totalCosts += $income;
 }
 ?>
 
@@ -521,7 +572,7 @@ foreach ($result as $row) {
             <div class="title-container d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center mb-3">
                 <div class="mb-2 mb-md-0">
                     <h2 class="mb-0">Financial Details</h2>
-                    <small class="text-muted">Total: <?php echo count($result); ?> Entries</small>
+                    <small class="text-muted">Total: <?php echo $totalItems; ?> Entries</small>
                 </div>
                 <div class="d-flex flex-wrap">
                     <div class="col-md-4 mb-2 mb-md-0">
@@ -551,7 +602,7 @@ foreach ($result as $row) {
                         <th>Name</th>
                         <th>Type</th>
                         <th>Date Created</th>
-                        <th>Expenses</th>
+                        <th>Expenses (exl. Vat)</th>
                         <th>Income</th>
                     </tr>
                 </thead>
@@ -580,8 +631,8 @@ foreach ($result as $row) {
                     echo $rowDate;
                 ?>
             </td>
-            <td><?php echo htmlspecialchars($row['Expenses'] ?: 'N/A'); ?></td>
-            <td><?php echo htmlspecialchars($row['Income'] ?: 'N/A'); ?></td>
+            <td><?php echo number_format($row['Expenses'] ?: 0, 2); ?></td>
+            <td><?php echo number_format($row['Income'] ?: 0, 2); ?></td>
         </tr>
     <?php endforeach; ?>
 </tbody>
@@ -805,21 +856,18 @@ function printFinances() {
 
 // Open form functionality
     function openPart(PartID) {
-    $.get('/MGAdmin2025/managements/Parts_Management/views/parts_view.php', { id: PartID, previous_link: "/MGAdmin2025/managements/Accounting_Management/views/view_finances.php" }, function(response) {
-        $('#dynamicContent').html(response);
-    });
-}
+        sessionStorage.setItem('openPartId', PartID);
+        window.location.href = '../../Parts_Management/views/parts_main.php';
+    }
 
 function openJob(JobID) {
-    $.get('/MGAdmin2025/managements/JobCard_Management/views/job_card_view.php', { id: JobID, previous_link: "/MGAdmin2025/managements/Accounting_Management/views/view_finances.php" }, function(response) {
-        $('#dynamicContent').html(response);
-    });
+    sessionStorage.setItem('openJobCardId', JobID);
+    window.location.href = '../../JobCard_Management/views/job_cards_main.php';
 }
 
 function openExpense(ExpenseID) {
-    $.get('/MGAdmin2025/managements/Accounting_Management/views/extraexpenses_view.php', { id: ExpenseID, previous_link: "/MGAdmin2025/managements/Accounting_Management/views/view_finances.php" }, function(response) {
-        $('#dynamicContent').html(response);
-    });
+    sessionStorage.setItem('openExpenseId', ExpenseID);
+    window.location.href = 'extra_expenses_main.php';
 }
 
 function setAccountingActive() {

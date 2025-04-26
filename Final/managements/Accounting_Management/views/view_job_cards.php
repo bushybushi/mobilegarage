@@ -13,7 +13,13 @@ $offset = ($currentPage - 1) * $itemsPerPage;
 
 // SQL query to fetch all job cards with related information
 $sql = "SELECT DISTINCT j.JobID as JobID, j.DateStart as DateStart, j.DateFinish as DateFinish, 
-            CONCAT(c.FirstName, ' ', c.LastName) as CustomerName, i.Total as Income,
+            CONCAT(c.FirstName, ' ', c.LastName) as CustomerName,
+            (SELECT SUM(jp.PiecesSold * p.SellPrice) + 
+                    SUM(jp.PiecesSold * p.SellPrice * p.Vat / 100) + 
+                    j.DriveCosts
+             FROM jobcardparts jp
+             LEFT JOIN parts p ON jp.PartID = p.PartID
+             WHERE j.JobID = jp.JobID) as Income,
             (SELECT SUM((jp.PiecesSold * p.PricePerPiece))
              FROM jobcardparts jp
              LEFT JOIN parts p ON jp.PartID = p.PartID
@@ -21,9 +27,7 @@ $sql = "SELECT DISTINCT j.JobID as JobID, j.DateStart as DateStart, j.DateFinish
         FROM jobcards j 
         LEFT JOIN jobcar jc ON j.JobID = jc.JobID
         LEFT JOIN carassoc ca ON jc.LicenseNr = ca.LicenseNr
-        LEFT JOIN customers c ON ca.CustomerID = c.CustomerID
-        LEFT JOIN invoicejob ij ON j.JobID = ij.JobID
-        LEFT JOIN invoices i ON ij.InvoiceID = i.InvoiceID";
+        LEFT JOIN customers c ON ca.CustomerID = c.CustomerID";
 
 if ($startDate != NULL && $endDate != NULL) {
     // Transform dates into real dates
@@ -49,9 +53,7 @@ $countSql = "SELECT COUNT(DISTINCT j.JobID) as total
              FROM jobcards j 
              LEFT JOIN jobcar jc ON j.JobID = jc.JobID
              LEFT JOIN carassoc ca ON jc.LicenseNr = ca.LicenseNr
-             LEFT JOIN customers c ON ca.CustomerID = c.CustomerID
-             LEFT JOIN invoicejob ij ON j.JobID = ij.JobID
-             LEFT JOIN invoices i ON ij.InvoiceID = i.InvoiceID";
+             LEFT JOIN customers c ON ca.CustomerID = c.CustomerID";
 
 if ($startDate != NULL && $endDate != NULL) {
     $countSql .= ' WHERE j.DateFinish BETWEEN :startDate AND :endDate';
@@ -514,7 +516,7 @@ foreach ($result as $row) {
                     <tr>
                         <th>Name</th>
                         <th>Job Start/End Date</th>
-                        <th>Expenses</th>
+                        <th>Expenses (exl. Vat)</th>
                         <th>Income</th>
                         <th>Profit</th>
                     </tr>
@@ -530,8 +532,8 @@ foreach ($result as $row) {
                                     echo $rowStartDate . ' - ' . $rowEndDate;
                                 ?>
                             </td>
-                            <td><?php echo htmlspecialchars($row['Expenses'] ?: 'N/A'); ?></td>
-                            <td><?php echo htmlspecialchars($row['Income'] ?: 'N/A'); ?></td>
+                            <td><?php echo number_format($row['Expenses'] ?: 0, 2); ?></td>
+                            <td><?php echo number_format($row['Income'] ?: 0, 2); ?></td>
                             <td class="profit" data-profit="<?php echo ($row['Income'] ?: 0) - ($row['Expenses'] ?: 0); ?>">
                                 <?php echo number_format(($row['Income'] ?: 0) - ($row['Expenses'] ?: 0), 2); ?>
                             </td>
@@ -624,6 +626,7 @@ foreach ($result as $row) {
                         justify-content: space-between;
                         align-items: flex-start;
                         margin-bottom: 30px;
+                        border-bottom: 2px solid #ddd;
                     }
                     .logo {
                         max-height: 80px;
@@ -657,8 +660,10 @@ foreach ($result as $row) {
                         <img src="../assets/logo.png" alt="Logo" style="max-height: 80px;">
                     </div>
                     <div class="title">
-                        <h2>Job Cards</h2>
+                        <h1>Job Cards</h1>
                         <p>Total Job Cards: ${tableRows.length}</p>
+                                    <p>Generated on: <?php echo date('Y-m-d H:i:s'); ?></p>
+
                     </div>
                 </div>
                 
@@ -723,9 +728,10 @@ foreach ($result as $row) {
 
 // Open form functionality
 function openForm(jobId) {
-    $.get('../../JobCard_Management/views/job_card_view.php', { id: jobId, previous_link: '/MGAdmin2025/managements/Accounting_Management/views/view_job_cards.php' }, function(response) {
-        $('#dynamicContent').html(response);
-    });
+        // Store the job ID in session storage
+        sessionStorage.setItem('openJobCardId', jobId);
+        // Redirect to job cards main page
+        window.location.href = '../../JobCard_Management/views/job_cards_main.php';
 }
 
 document.addEventListener('DOMContentLoaded', function() {
