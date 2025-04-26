@@ -126,14 +126,17 @@ if (isset($_SESSION['error_message'])) {
 </head>
 <body>
 <div class="form-container">
+  
+
     <div class="top-container d-flex justify-content-between align-items-center">
-        <a href="javascript:void(0);" onclick="window.location.href='<?php echo $_GET['previous_link']; ?>'" class="back-arrow">
+        <!-- Back Arrow Button -->
+        <a href="javascript:void(0);" onclick="openForm('<?php echo $id; ?>', '<?php echo $_GET['previous_link']?>')" class="back-arrow">
             <i class="fas fa-arrow-left"></i>
         </a>
+        <!-- Customer Name Display -->
         <div class="flex-grow-1 text-center">
-                <h2 class="mb-0">Edit Part</h2>
+            <h5 class="mb-0">Edit Part</h5>
         </div>
-        <div style="width: 30px;"></div>
     </div>
 
         <div id="successAlert" class="alert alert-success alert-dismissible fade" role="alert" style="display: none;">

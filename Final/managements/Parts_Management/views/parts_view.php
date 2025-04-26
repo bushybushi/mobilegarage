@@ -532,9 +532,9 @@ error_log("Part data in view: " . json_encode($part));
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <a href="#" id="goToInvoiceBtn" class="btn btn-primary" target="_blank">
+                <button type="button" id="goToInvoiceBtn" class="btn btn-primary mb-2 mb-md-0">
                     <i class="fas fa-external-link-alt"></i> Go to Invoice
-                </a>
+                </button>
             </div>
         </div>
     </div>
@@ -889,6 +889,33 @@ error_log("Part data in view: " . json_encode($part));
 
 <script>
 
+$('#goToInvoiceBtn').on('click', function(e) {
+    e.preventDefault();
+    const invoiceId = <?php echo $invoiceInfo ? $invoiceInfo['InvoiceID'] : 'null'; ?>;
+    if (invoiceId) {
+        // Close the modal and remove backdrop
+        $('#invoiceModal').modal('hide');
+        $('body').removeClass('modal-open');
+        $('.modal-backdrop').remove();
+        
+        // Store the invoice ID in session storage
+        sessionStorage.setItem('selectedInvoiceId', invoiceId);
+        
+        // Update the URL to reflect navigation to invoice management
+        window.history.pushState({}, '', '../../Invoice_Management/views/invoice_main.php');
+        
+        // Load the invoice main page first
+        $.get('../../Invoice_Management/views/invoice_main.php', function(response) {
+            $('#dynamicContent').html(response);
+            
+            // After invoice main page loads, trigger the invoice view
+            $.get('../../Invoice_Management/views/invoice_view.php', { id: invoiceId }, function(response) {
+                $('#dynamicContent').html(response);
+            });
+        });
+    }
+});
+
 function loadEditForm(partsId) {
     $.get('edit_parts.php', { id: partsId }, function(response) {
         $('#dynamicContent').html(response);
@@ -978,15 +1005,16 @@ function printParts() {
     window.print();
 }
 
+
+
+       
+
 function viewInvoice(invoiceId) {
     // Clear any previous content
     $('#invoiceContent').empty();
     
     // Show loading state
     $('#invoiceContent').html('<div class="text-center"><i class="fas fa-spinner fa-spin fa-2x"></i> Loading invoice details...</div>');
-    
-    // Update the "Go to Invoice" button href
-    $('#goToInvoiceBtn').attr('href', `../../Invoice_Management/views/invoice_view.php?id=${invoiceId}`);
     
     // Show the modal
     $('#invoiceModal').modal('show');

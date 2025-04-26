@@ -264,3 +264,74 @@
 [17-Apr-2025 14:51:20 UTC] Database connection established successfully
 [17-Apr-2025 14:51:20 UTC] Database connection established successfully
 [17-Apr-2025 14:51:20 UTC] Part data fetched: {"PartID":52,"SupplierID":31,"PartDesc":"TestPart1","PriceBulk":"8.00","SellPrice":"8.00","PiecesPurch":5,"PricePerPiece":"7.00","Vat":"19.00","DateCreated":"2025-04-01","Sold":1,"Stock":4,"SupplierName":"Testsupl","SupplierPhone":"00998877","SupplierEmail":"testsup1@email.com"}
+[18-Apr-2025 19:58:09 UTC] Received POST data: Array
+(
+    [supplier] => Antonis
+    [supplierID] => 
+    [supplierPhone] => 99112233
+    [supplierEmail] => antp.andreou@edu.cut.ac.cy
+    [dateCreated] => 2025-04-18
+    [parts] => [{"partDesc":"Oil","piecesPurch":"1","pricePerPiece":"10","priceBulk":"11.90","sellingPrice":"15","vat":"19"}]
+)
+
+[18-Apr-2025 19:58:09 UTC] Received FILES data: Array
+(
+)
+
+[18-Apr-2025 19:58:09 UTC] Database connection established successfully
+[18-Apr-2025 19:58:09 UTC] Database connection established successfully
+[18-Apr-2025 19:58:09 UTC] Database connection established successfully
+[18-Apr-2025 19:58:09 UTC] Decoded parts data: Array
+(
+    [0] => Array
+        (
+            [partDesc] => Oil
+            [piecesPurch] => 1
+            [pricePerPiece] => 10
+            [priceBulk] => 11.90
+            [sellingPrice] => 15
+            [vat] => 19
+        )
+
+)
+
+[18-Apr-2025 19:58:41 UTC] Database connection established successfully
+[18-Apr-2025 19:58:41 UTC] Database connection established successfully
+[18-Apr-2025 19:58:41 UTC] Part data fetched: {"PartID":65,"SupplierID":43,"PartDesc":"Oil","PriceBulk":"11.90","SellPrice":"15.00","PiecesPurch":1,"PricePerPiece":"10.00","Vat":"19.00","DateCreated":"2025-04-18","Sold":0,"Stock":1,"SupplierName":"Antonis","SupplierPhone":"99112233","SupplierEmail":"antp.andreou@edu.cut.ac.cy"}
+[18-Apr-2025 19:58:47 UTC] Database connection established successfully
+[18-Apr-2025 19:58:47 UTC] Delete part request received: {"partId":"65"}
+[18-Apr-2025 19:58:47 UTC] Database connection established successfully
+[18-Apr-2025 20:01:09 UTC] Received POST data: Array
+(
+    [supplier] => Antonis
+    [supplierID] => 43
+    [supplierPhone] => 99112233
+    [supplierEmail] => antp.andreou@edu.cut.ac.cy
+    [dateCreated] => 2025-04-18
+    [parts] => [{"partDesc":"Test","piecesPurch":"20","pricePerPiece":"20","priceBulk":"476.00","sellingPrice":"25","vat":"19"}]
+)
+
+[18-Apr-2025 20:01:09 UTC] Received FILES data: Array
+(
+)
+
+[18-Apr-2025 20:01:09 UTC] Database connection established successfully
+[18-Apr-2025 20:01:09 UTC] Database connection established successfully
+[18-Apr-2025 20:01:09 UTC] Database connection established successfully
+[18-Apr-2025 20:01:09 UTC] Decoded parts data: Array
+(
+    [0] => Array
+        (
+            [partDesc] => Test
+            [piecesPurch] => 20
+            [pricePerPiece] => 20
+            [priceBulk] => 476.00
+            [sellingPrice] => 25
+            [vat] => 19
+        )
+
+)
+
+[22-Apr-2025 15:42:52 UTC] Database connection established successfully
+[22-Apr-2025 15:42:52 UTC] Database connection established successfully
+[22-Apr-2025 15:42:52 UTC] Part data fetched: {"PartID":52,"SupplierID":31,"PartDesc":"TestPart1","PriceBulk":"41.65","SellPrice":"14.00","PiecesPurch":5,"PricePerPiece":"7.00","Vat":"19.00","DateCreated":"2025-04-01","Sold":6,"Stock":-1,"SupplierName":"Testsupl","SupplierPhone":"00998877","SupplierEmail":"testsup1@email.com"}

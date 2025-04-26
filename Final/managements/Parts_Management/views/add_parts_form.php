@@ -102,7 +102,6 @@ if (isset($_SESSION['error_message'])) {
                     <div class="form-group">
                         <label for="supplierPhone">Supplier Phone <span class="text-info">*</span></label>
                         <input type="tel" id="supplierPhone" name="supplierPhone" class="form-control">
-                        <small class="form-text text-muted">Either phone or email is required</small>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -115,7 +114,6 @@ if (isset($_SESSION['error_message'])) {
                                oninput="validateEmailFormat(this)"
                                oninvalid="validateEmailFormat(this)">
                         <div class="invalid-feedback" style="display: none;"></div>
-                        <small class="form-text text-muted">Either phone or email is required</small>
                     </div>
                 </div>
             </div>

@@ -3902,3 +3902,658 @@ Stack trace:
 [18-Apr-2025 19:57:29 UTC] Database connection established successfully
 [18-Apr-2025 19:57:29 UTC] Database connection established successfully
 [18-Apr-2025 19:57:29 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/models/parts_model.php on line 463
+[18-Apr-2025 19:58:11 UTC] Database connection established successfully
+[18-Apr-2025 19:58:11 UTC] Database connection established successfully
+[18-Apr-2025 19:58:11 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/models/parts_model.php on line 463
+[18-Apr-2025 19:58:14 UTC] Database connection established successfully
+[18-Apr-2025 19:58:14 UTC] Database connection established successfully
+[18-Apr-2025 19:58:14 UTC] Part data fetched: {"PartID":65,"SupplierID":43,"PartDesc":"Oil","PriceBulk":"11.90","SellPrice":"15.00","PiecesPurch":1,"PricePerPiece":"10.00","Vat":"19.00","DateCreated":"2025-04-18","Sold":0,"Stock":1,"SupplierName":"Antonis","SupplierPhone":"99112233","SupplierEmail":"antp.andreou@edu.cut.ac.cy"}
+[18-Apr-2025 19:58:14 UTC] No invoice information found for part ID: 65
+[18-Apr-2025 19:58:14 UTC] Part data in view: {"PartID":65,"SupplierID":43,"PartDesc":"Oil","PriceBulk":"11.90","SellPrice":"15.00","PiecesPurch":1,"PricePerPiece":"10.00","Vat":"19.00","DateCreated":"2025-04-18","Sold":0,"Stock":1,"SupplierName":"Antonis","SupplierPhone":"99112233","SupplierEmail":"antp.andreou@edu.cut.ac.cy"}
+[18-Apr-2025 19:58:34 UTC] Database connection established successfully
+[18-Apr-2025 19:58:34 UTC] Edit part page loading for ID: 65
+[18-Apr-2025 19:58:34 UTC] Database connection established successfully
+[18-Apr-2025 19:58:34 UTC] Part data fetched: {"PartID":65,"SupplierID":43,"PartDesc":"Oil","PriceBulk":"11.90","SellPrice":"15.00","PiecesPurch":1,"PricePerPiece":"10.00","Vat":"19.00","DateCreated":"2025-04-18","Sold":0,"Stock":1,"SupplierName":"Antonis","SupplierPhone":"99112233","SupplierEmail":"antp.andreou@edu.cut.ac.cy"}
+[18-Apr-2025 19:58:34 UTC] Part data from database: {"PartID":65,"SupplierID":43,"PartDesc":"Oil","PriceBulk":"11.90","SellPrice":"15.00","PiecesPurch":1,"PricePerPiece":"10.00","Vat":"19.00","DateCreated":"2025-04-18","Sold":0,"Stock":1,"SupplierName":"Antonis","SupplierPhone":"99112233","SupplierEmail":"antp.andreou@edu.cut.ac.cy"}
+[18-Apr-2025 19:58:34 UTC] PHP Warning:  Undefined array key "previous_link" in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/views/edit_parts.php on line 130
+[18-Apr-2025 19:58:34 UTC] PHP Warning:  Undefined array key "previous_link" in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/views/edit_parts.php on line 258
+[18-Apr-2025 19:58:37 UTC] Database connection established successfully
+[18-Apr-2025 19:58:37 UTC] Database connection established successfully
+[18-Apr-2025 19:58:37 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/models/parts_model.php on line 463
+[18-Apr-2025 19:58:43 UTC] Database connection established successfully
+[18-Apr-2025 19:58:43 UTC] Database connection established successfully
+[18-Apr-2025 19:58:43 UTC] Part data fetched: {"PartID":65,"SupplierID":43,"PartDesc":"Oil","PriceBulk":"12.00","SellPrice":"15.00","PiecesPurch":1,"PricePerPiece":"10.00","Vat":"20.00","DateCreated":"2025-04-18","Sold":0,"Stock":1,"SupplierName":"Antonis","SupplierPhone":"99112233","SupplierEmail":"antp.andreou@edu.cut.ac.cy"}
+[18-Apr-2025 19:58:43 UTC] No invoice information found for part ID: 65
+[18-Apr-2025 19:58:43 UTC] Part data in view: {"PartID":65,"SupplierID":43,"PartDesc":"Oil","PriceBulk":"12.00","SellPrice":"15.00","PiecesPurch":1,"PricePerPiece":"10.00","Vat":"20.00","DateCreated":"2025-04-18","Sold":0,"Stock":1,"SupplierName":"Antonis","SupplierPhone":"99112233","SupplierEmail":"antp.andreou@edu.cut.ac.cy"}
+[18-Apr-2025 19:59:16 UTC] Database connection established successfully
+[18-Apr-2025 19:59:16 UTC] Database connection established successfully
+[18-Apr-2025 19:59:16 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/models/parts_model.php on line 463
+[18-Apr-2025 20:00:35 UTC] Database connection established successfully
+[18-Apr-2025 20:00:35 UTC] Database connection established successfully
+[18-Apr-2025 20:00:35 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/models/parts_model.php on line 463
+[18-Apr-2025 20:02:30 UTC] Database connection established successfully
+[18-Apr-2025 20:02:30 UTC] Database connection established successfully
+[18-Apr-2025 20:02:30 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/models/parts_model.php on line 463
+[18-Apr-2025 20:02:31 UTC] Database connection established successfully
+[18-Apr-2025 20:02:31 UTC] Database connection established successfully
+[18-Apr-2025 20:02:31 UTC] Part data fetched: {"PartID":64,"SupplierID":42,"PartDesc":"Part10","PriceBulk":null,"SellPrice":"20.00","PiecesPurch":5,"PricePerPiece":"6.00","Vat":"19.00","DateCreated":"2025-04-08","Sold":2,"Stock":3,"SupplierName":"Supplier10","SupplierPhone":"986677576","SupplierEmail":"supplier10@email.com"}
+[18-Apr-2025 20:02:31 UTC] Found invoice information for part: {"InvoiceID":76,"InvoiceNr":110,"DateCreated":"2025-04-08"}
+[18-Apr-2025 20:02:31 UTC] Part data in view: {"PartID":64,"SupplierID":42,"PartDesc":"Part10","PriceBulk":null,"SellPrice":"20.00","PiecesPurch":5,"PricePerPiece":"6.00","Vat":"19.00","DateCreated":"2025-04-08","Sold":2,"Stock":3,"SupplierName":"Supplier10","SupplierPhone":"986677576","SupplierEmail":"supplier10@email.com"}
+[21-Apr-2025 21:05:27 UTC] Database connection established successfully
+[21-Apr-2025 21:05:27 UTC] Database connection established successfully
+[21-Apr-2025 21:05:27 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/models/parts_model.php on line 463
+[21-Apr-2025 21:05:37 UTC] Database connection established successfully
+[21-Apr-2025 21:05:37 UTC] Database connection established successfully
+[21-Apr-2025 21:05:37 UTC] Part data fetched: {"PartID":66,"SupplierID":43,"PartDesc":"Test","PriceBulk":"476.00","SellPrice":"25.00","PiecesPurch":20,"PricePerPiece":"20.00","Vat":"19.00","DateCreated":"2025-04-18","Sold":1,"Stock":19,"SupplierName":"Antonis","SupplierPhone":"99112233","SupplierEmail":""}
+[21-Apr-2025 21:05:37 UTC] No invoice information found for part ID: 66
+[21-Apr-2025 21:05:37 UTC] Part data in view: {"PartID":66,"SupplierID":43,"PartDesc":"Test","PriceBulk":"476.00","SellPrice":"25.00","PiecesPurch":20,"PricePerPiece":"20.00","Vat":"19.00","DateCreated":"2025-04-18","Sold":1,"Stock":19,"SupplierName":"Antonis","SupplierPhone":"99112233","SupplierEmail":""}
+[21-Apr-2025 21:05:46 UTC] Database connection established successfully
+[21-Apr-2025 21:05:46 UTC] Database connection established successfully
+[21-Apr-2025 21:05:46 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/models/parts_model.php on line 463
+[21-Apr-2025 21:05:48 UTC] Database connection established successfully
+[21-Apr-2025 21:05:48 UTC] Database connection established successfully
+[21-Apr-2025 21:05:48 UTC] Part data fetched: {"PartID":62,"SupplierID":40,"PartDesc":"Part8","PriceBulk":"112.00","SellPrice":"112.00","PiecesPurch":5,"PricePerPiece":"6.00","Vat":"19.00","DateCreated":"2025-04-10","Sold":7,"Stock":5,"SupplierName":"Supplier8","SupplierPhone":"777888999","SupplierEmail":"supplier8@email.com"}
+[21-Apr-2025 21:05:48 UTC] Found invoice information for part: {"InvoiceID":74,"InvoiceNr":108,"DateCreated":"2025-04-10"}
+[21-Apr-2025 21:05:48 UTC] Part data in view: {"PartID":62,"SupplierID":40,"PartDesc":"Part8","PriceBulk":"112.00","SellPrice":"112.00","PiecesPurch":5,"PricePerPiece":"6.00","Vat":"19.00","DateCreated":"2025-04-10","Sold":7,"Stock":5,"SupplierName":"Supplier8","SupplierPhone":"777888999","SupplierEmail":"supplier8@email.com"}
+[21-Apr-2025 21:14:03 UTC] Database connection established successfully
+[21-Apr-2025 21:14:03 UTC] Database connection established successfully
+[21-Apr-2025 21:14:03 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/models/parts_model.php on line 463
+[21-Apr-2025 21:14:08 UTC] Database connection established successfully
+[21-Apr-2025 21:14:08 UTC] Database connection established successfully
+[21-Apr-2025 21:14:08 UTC] Part data fetched: {"PartID":62,"SupplierID":40,"PartDesc":"Part8","PriceBulk":"112.00","SellPrice":"112.00","PiecesPurch":5,"PricePerPiece":"6.00","Vat":"19.00","DateCreated":"2025-04-10","Sold":7,"Stock":5,"SupplierName":"Supplier8","SupplierPhone":"777888999","SupplierEmail":"supplier8@email.com"}
+[21-Apr-2025 21:14:08 UTC] Found invoice information for part: {"InvoiceID":74,"InvoiceNr":108,"DateCreated":"2025-04-10"}
+[21-Apr-2025 21:14:08 UTC] Part data in view: {"PartID":62,"SupplierID":40,"PartDesc":"Part8","PriceBulk":"112.00","SellPrice":"112.00","PiecesPurch":5,"PricePerPiece":"6.00","Vat":"19.00","DateCreated":"2025-04-10","Sold":7,"Stock":5,"SupplierName":"Supplier8","SupplierPhone":"777888999","SupplierEmail":"supplier8@email.com"}
+[21-Apr-2025 21:14:11 UTC] Database connection established successfully
+[21-Apr-2025 21:14:11 UTC] Database connection established successfully
+[21-Apr-2025 21:14:11 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/models/parts_model.php on line 463
+[21-Apr-2025 21:15:58 UTC] Database connection established successfully
+[21-Apr-2025 21:15:58 UTC] Database connection established successfully
+[21-Apr-2025 21:15:58 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/models/parts_model.php on line 463
+[21-Apr-2025 21:16:00 UTC] Database connection established successfully
+[21-Apr-2025 21:16:00 UTC] Database connection established successfully
+[21-Apr-2025 21:16:00 UTC] Part data fetched: {"PartID":62,"SupplierID":40,"PartDesc":"Part8","PriceBulk":"112.00","SellPrice":"112.00","PiecesPurch":5,"PricePerPiece":"6.00","Vat":"19.00","DateCreated":"2025-04-10","Sold":7,"Stock":5,"SupplierName":"Supplier8","SupplierPhone":"777888999","SupplierEmail":"supplier8@email.com"}
+[21-Apr-2025 21:16:00 UTC] Found invoice information for part: {"InvoiceID":74,"InvoiceNr":108,"DateCreated":"2025-04-10"}
+[21-Apr-2025 21:16:00 UTC] Part data in view: {"PartID":62,"SupplierID":40,"PartDesc":"Part8","PriceBulk":"112.00","SellPrice":"112.00","PiecesPurch":5,"PricePerPiece":"6.00","Vat":"19.00","DateCreated":"2025-04-10","Sold":7,"Stock":5,"SupplierName":"Supplier8","SupplierPhone":"777888999","SupplierEmail":"supplier8@email.com"}
+[21-Apr-2025 21:16:19 UTC] Database connection established successfully
+[21-Apr-2025 21:16:19 UTC] Database connection established successfully
+[21-Apr-2025 21:16:19 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/models/parts_model.php on line 463
+[21-Apr-2025 21:16:20 UTC] Database connection established successfully
+[21-Apr-2025 21:16:20 UTC] Database connection established successfully
+[21-Apr-2025 21:16:20 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/models/parts_model.php on line 463
+[21-Apr-2025 21:16:21 UTC] Database connection established successfully
+[21-Apr-2025 21:16:21 UTC] Database connection established successfully
+[21-Apr-2025 21:16:21 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/models/parts_model.php on line 463
+[21-Apr-2025 21:16:25 UTC] Database connection established successfully
+[21-Apr-2025 21:16:25 UTC] Database connection established successfully
+[21-Apr-2025 21:16:25 UTC] Part data fetched: {"PartID":53,"SupplierID":32,"PartDesc":"TestPart2","PriceBulk":"49.98","SellPrice":"7.00","PiecesPurch":6,"PricePerPiece":"7.00","Vat":"19.00","DateCreated":"2025-04-10","Sold":13,"Stock":-7,"SupplierName":"Testsupl2","SupplierPhone":"12345678","SupplierEmail":"testsup2@email.com"}
+[21-Apr-2025 21:16:25 UTC] No invoice information found for part ID: 53
+[21-Apr-2025 21:16:25 UTC] Part data in view: {"PartID":53,"SupplierID":32,"PartDesc":"TestPart2","PriceBulk":"49.98","SellPrice":"7.00","PiecesPurch":6,"PricePerPiece":"7.00","Vat":"19.00","DateCreated":"2025-04-10","Sold":13,"Stock":-7,"SupplierName":"Testsupl2","SupplierPhone":"12345678","SupplierEmail":"testsup2@email.com"}
+[21-Apr-2025 21:16:25 UTC] Database connection established successfully
+[21-Apr-2025 21:16:25 UTC] Database connection established successfully
+[21-Apr-2025 21:16:25 UTC] Part data fetched: {"PartID":53,"SupplierID":32,"PartDesc":"TestPart2","PriceBulk":"49.98","SellPrice":"7.00","PiecesPurch":6,"PricePerPiece":"7.00","Vat":"19.00","DateCreated":"2025-04-10","Sold":13,"Stock":-7,"SupplierName":"Testsupl2","SupplierPhone":"12345678","SupplierEmail":"testsup2@email.com"}
+[21-Apr-2025 21:16:25 UTC] No invoice information found for part ID: 53
+[21-Apr-2025 21:16:25 UTC] Part data in view: {"PartID":53,"SupplierID":32,"PartDesc":"TestPart2","PriceBulk":"49.98","SellPrice":"7.00","PiecesPurch":6,"PricePerPiece":"7.00","Vat":"19.00","DateCreated":"2025-04-10","Sold":13,"Stock":-7,"SupplierName":"Testsupl2","SupplierPhone":"12345678","SupplierEmail":"testsup2@email.com"}
+[21-Apr-2025 21:16:28 UTC] Database connection established successfully
+[21-Apr-2025 21:16:28 UTC] Database connection established successfully
+[21-Apr-2025 21:16:28 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/models/parts_model.php on line 463
+[21-Apr-2025 21:16:29 UTC] Database connection established successfully
+[21-Apr-2025 21:16:29 UTC] Database connection established successfully
+[21-Apr-2025 21:16:29 UTC] Part data fetched: {"PartID":62,"SupplierID":40,"PartDesc":"Part8","PriceBulk":"112.00","SellPrice":"112.00","PiecesPurch":5,"PricePerPiece":"6.00","Vat":"19.00","DateCreated":"2025-04-10","Sold":7,"Stock":5,"SupplierName":"Supplier8","SupplierPhone":"777888999","SupplierEmail":"supplier8@email.com"}
+[21-Apr-2025 21:16:29 UTC] Found invoice information for part: {"InvoiceID":74,"InvoiceNr":108,"DateCreated":"2025-04-10"}
+[21-Apr-2025 21:16:29 UTC] Part data in view: {"PartID":62,"SupplierID":40,"PartDesc":"Part8","PriceBulk":"112.00","SellPrice":"112.00","PiecesPurch":5,"PricePerPiece":"6.00","Vat":"19.00","DateCreated":"2025-04-10","Sold":7,"Stock":5,"SupplierName":"Supplier8","SupplierPhone":"777888999","SupplierEmail":"supplier8@email.com"}
+[21-Apr-2025 21:16:58 UTC] Database connection established successfully
+[21-Apr-2025 21:16:58 UTC] Database connection established successfully
+[21-Apr-2025 21:16:58 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/models/parts_model.php on line 463
+[21-Apr-2025 21:17:01 UTC] Database connection established successfully
+[21-Apr-2025 21:17:01 UTC] Database connection established successfully
+[21-Apr-2025 21:17:01 UTC] Part data fetched: {"PartID":62,"SupplierID":40,"PartDesc":"Part8","PriceBulk":"112.00","SellPrice":"112.00","PiecesPurch":5,"PricePerPiece":"6.00","Vat":"19.00","DateCreated":"2025-04-10","Sold":7,"Stock":5,"SupplierName":"Supplier8","SupplierPhone":"777888999","SupplierEmail":"supplier8@email.com"}
+[21-Apr-2025 21:17:01 UTC] Found invoice information for part: {"InvoiceID":74,"InvoiceNr":108,"DateCreated":"2025-04-10"}
+[21-Apr-2025 21:17:01 UTC] Part data in view: {"PartID":62,"SupplierID":40,"PartDesc":"Part8","PriceBulk":"112.00","SellPrice":"112.00","PiecesPurch":5,"PricePerPiece":"6.00","Vat":"19.00","DateCreated":"2025-04-10","Sold":7,"Stock":5,"SupplierName":"Supplier8","SupplierPhone":"777888999","SupplierEmail":"supplier8@email.com"}
+[21-Apr-2025 21:17:57 UTC] Database connection established successfully
+[21-Apr-2025 21:17:57 UTC] Database connection established successfully
+[21-Apr-2025 21:17:57 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/models/parts_model.php on line 463
+[21-Apr-2025 21:18:01 UTC] Database connection established successfully
+[21-Apr-2025 21:18:01 UTC] Database connection established successfully
+[21-Apr-2025 21:18:01 UTC] Part data fetched: {"PartID":62,"SupplierID":40,"PartDesc":"Part8","PriceBulk":"112.00","SellPrice":"112.00","PiecesPurch":5,"PricePerPiece":"6.00","Vat":"19.00","DateCreated":"2025-04-10","Sold":7,"Stock":5,"SupplierName":"Supplier8","SupplierPhone":"777888999","SupplierEmail":"supplier8@email.com"}
+[21-Apr-2025 21:18:01 UTC] Found invoice information for part: {"InvoiceID":74,"InvoiceNr":108,"DateCreated":"2025-04-10"}
+[21-Apr-2025 21:18:01 UTC] Part data in view: {"PartID":62,"SupplierID":40,"PartDesc":"Part8","PriceBulk":"112.00","SellPrice":"112.00","PiecesPurch":5,"PricePerPiece":"6.00","Vat":"19.00","DateCreated":"2025-04-10","Sold":7,"Stock":5,"SupplierName":"Supplier8","SupplierPhone":"777888999","SupplierEmail":"supplier8@email.com"}
+[21-Apr-2025 21:20:46 UTC] Database connection established successfully
+[21-Apr-2025 21:20:46 UTC] Database connection established successfully
+[21-Apr-2025 21:20:46 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/models/parts_model.php on line 463
+[21-Apr-2025 21:20:48 UTC] Database connection established successfully
+[21-Apr-2025 21:20:48 UTC] Database connection established successfully
+[21-Apr-2025 21:20:48 UTC] Part data fetched: {"PartID":62,"SupplierID":40,"PartDesc":"Part8","PriceBulk":"112.00","SellPrice":"112.00","PiecesPurch":5,"PricePerPiece":"6.00","Vat":"19.00","DateCreated":"2025-04-10","Sold":7,"Stock":5,"SupplierName":"Supplier8","SupplierPhone":"777888999","SupplierEmail":"supplier8@email.com"}
+[21-Apr-2025 21:20:48 UTC] Found invoice information for part: {"InvoiceID":74,"InvoiceNr":108,"DateCreated":"2025-04-10"}
+[21-Apr-2025 21:20:48 UTC] Part data in view: {"PartID":62,"SupplierID":40,"PartDesc":"Part8","PriceBulk":"112.00","SellPrice":"112.00","PiecesPurch":5,"PricePerPiece":"6.00","Vat":"19.00","DateCreated":"2025-04-10","Sold":7,"Stock":5,"SupplierName":"Supplier8","SupplierPhone":"777888999","SupplierEmail":"supplier8@email.com"}
+[21-Apr-2025 21:21:08 UTC] Database connection established successfully
+[21-Apr-2025 21:21:08 UTC] Database connection established successfully
+[21-Apr-2025 21:21:08 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/models/parts_model.php on line 463
+[21-Apr-2025 21:21:10 UTC] Database connection established successfully
+[21-Apr-2025 21:21:10 UTC] Database connection established successfully
+[21-Apr-2025 21:21:10 UTC] Part data fetched: {"PartID":62,"SupplierID":40,"PartDesc":"Part8","PriceBulk":"112.00","SellPrice":"112.00","PiecesPurch":5,"PricePerPiece":"6.00","Vat":"19.00","DateCreated":"2025-04-10","Sold":7,"Stock":5,"SupplierName":"Supplier8","SupplierPhone":"777888999","SupplierEmail":"supplier8@email.com"}
+[21-Apr-2025 21:21:10 UTC] Found invoice information for part: {"InvoiceID":74,"InvoiceNr":108,"DateCreated":"2025-04-10"}
+[21-Apr-2025 21:21:10 UTC] Part data in view: {"PartID":62,"SupplierID":40,"PartDesc":"Part8","PriceBulk":"112.00","SellPrice":"112.00","PiecesPurch":5,"PricePerPiece":"6.00","Vat":"19.00","DateCreated":"2025-04-10","Sold":7,"Stock":5,"SupplierName":"Supplier8","SupplierPhone":"777888999","SupplierEmail":"supplier8@email.com"}
+[21-Apr-2025 21:22:40 UTC] Database connection established successfully
+[21-Apr-2025 21:22:40 UTC] Database connection established successfully
+[21-Apr-2025 21:22:40 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/models/parts_model.php on line 463
+[21-Apr-2025 21:22:41 UTC] Database connection established successfully
+[21-Apr-2025 21:22:41 UTC] Database connection established successfully
+[21-Apr-2025 21:22:41 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/models/parts_model.php on line 463
+[21-Apr-2025 21:22:47 UTC] Database connection established successfully
+[21-Apr-2025 21:22:47 UTC] Database connection established successfully
+[21-Apr-2025 21:22:47 UTC] Part data fetched: {"PartID":62,"SupplierID":40,"PartDesc":"Part8","PriceBulk":"112.00","SellPrice":"112.00","PiecesPurch":5,"PricePerPiece":"6.00","Vat":"19.00","DateCreated":"2025-04-10","Sold":7,"Stock":5,"SupplierName":"Supplier8","SupplierPhone":"777888999","SupplierEmail":"supplier8@email.com"}
+[21-Apr-2025 21:22:47 UTC] Found invoice information for part: {"InvoiceID":74,"InvoiceNr":108,"DateCreated":"2025-04-10"}
+[21-Apr-2025 21:22:47 UTC] Part data in view: {"PartID":62,"SupplierID":40,"PartDesc":"Part8","PriceBulk":"112.00","SellPrice":"112.00","PiecesPurch":5,"PricePerPiece":"6.00","Vat":"19.00","DateCreated":"2025-04-10","Sold":7,"Stock":5,"SupplierName":"Supplier8","SupplierPhone":"777888999","SupplierEmail":"supplier8@email.com"}
+[21-Apr-2025 21:22:59 UTC] Database connection established successfully
+[21-Apr-2025 21:22:59 UTC] Database connection established successfully
+[21-Apr-2025 21:22:59 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/models/parts_model.php on line 463
+[21-Apr-2025 21:23:04 UTC] Database connection established successfully
+[21-Apr-2025 21:23:04 UTC] Database connection established successfully
+[21-Apr-2025 21:23:04 UTC] Part data fetched: {"PartID":62,"SupplierID":40,"PartDesc":"Part8","PriceBulk":"112.00","SellPrice":"112.00","PiecesPurch":5,"PricePerPiece":"6.00","Vat":"19.00","DateCreated":"2025-04-10","Sold":7,"Stock":5,"SupplierName":"Supplier8","SupplierPhone":"777888999","SupplierEmail":"supplier8@email.com"}
+[21-Apr-2025 21:23:04 UTC] Found invoice information for part: {"InvoiceID":74,"InvoiceNr":108,"DateCreated":"2025-04-10"}
+[21-Apr-2025 21:23:04 UTC] Part data in view: {"PartID":62,"SupplierID":40,"PartDesc":"Part8","PriceBulk":"112.00","SellPrice":"112.00","PiecesPurch":5,"PricePerPiece":"6.00","Vat":"19.00","DateCreated":"2025-04-10","Sold":7,"Stock":5,"SupplierName":"Supplier8","SupplierPhone":"777888999","SupplierEmail":"supplier8@email.com"}
+[21-Apr-2025 21:24:03 UTC] Database connection established successfully
+[21-Apr-2025 21:24:03 UTC] Database connection established successfully
+[21-Apr-2025 21:24:03 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/models/parts_model.php on line 463
+[21-Apr-2025 21:24:05 UTC] Database connection established successfully
+[21-Apr-2025 21:24:05 UTC] Database connection established successfully
+[21-Apr-2025 21:24:05 UTC] Part data fetched: {"PartID":62,"SupplierID":40,"PartDesc":"Part8","PriceBulk":"112.00","SellPrice":"112.00","PiecesPurch":5,"PricePerPiece":"6.00","Vat":"19.00","DateCreated":"2025-04-10","Sold":7,"Stock":5,"SupplierName":"Supplier8","SupplierPhone":"777888999","SupplierEmail":"supplier8@email.com"}
+[21-Apr-2025 21:24:05 UTC] Found invoice information for part: {"InvoiceID":74,"InvoiceNr":108,"DateCreated":"2025-04-10"}
+[21-Apr-2025 21:24:05 UTC] Part data in view: {"PartID":62,"SupplierID":40,"PartDesc":"Part8","PriceBulk":"112.00","SellPrice":"112.00","PiecesPurch":5,"PricePerPiece":"6.00","Vat":"19.00","DateCreated":"2025-04-10","Sold":7,"Stock":5,"SupplierName":"Supplier8","SupplierPhone":"777888999","SupplierEmail":"supplier8@email.com"}
+[21-Apr-2025 21:25:12 UTC] Database connection established successfully
+[21-Apr-2025 21:25:12 UTC] Database connection established successfully
+[21-Apr-2025 21:25:12 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/models/parts_model.php on line 463
+[21-Apr-2025 21:25:14 UTC] Database connection established successfully
+[21-Apr-2025 21:25:14 UTC] Database connection established successfully
+[21-Apr-2025 21:25:14 UTC] Part data fetched: {"PartID":62,"SupplierID":40,"PartDesc":"Part8","PriceBulk":"112.00","SellPrice":"112.00","PiecesPurch":5,"PricePerPiece":"6.00","Vat":"19.00","DateCreated":"2025-04-10","Sold":7,"Stock":5,"SupplierName":"Supplier8","SupplierPhone":"777888999","SupplierEmail":"supplier8@email.com"}
+[21-Apr-2025 21:25:14 UTC] Found invoice information for part: {"InvoiceID":74,"InvoiceNr":108,"DateCreated":"2025-04-10"}
+[21-Apr-2025 21:25:14 UTC] Part data in view: {"PartID":62,"SupplierID":40,"PartDesc":"Part8","PriceBulk":"112.00","SellPrice":"112.00","PiecesPurch":5,"PricePerPiece":"6.00","Vat":"19.00","DateCreated":"2025-04-10","Sold":7,"Stock":5,"SupplierName":"Supplier8","SupplierPhone":"777888999","SupplierEmail":"supplier8@email.com"}
+[21-Apr-2025 21:25:24 UTC] Database connection established successfully
+[21-Apr-2025 21:25:24 UTC] Database connection established successfully
+[21-Apr-2025 21:25:24 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/models/parts_model.php on line 463
+[21-Apr-2025 21:25:28 UTC] Database connection established successfully
+[21-Apr-2025 21:25:28 UTC] Database connection established successfully
+[21-Apr-2025 21:25:28 UTC] Part data fetched: {"PartID":62,"SupplierID":40,"PartDesc":"Part8","PriceBulk":"112.00","SellPrice":"112.00","PiecesPurch":5,"PricePerPiece":"6.00","Vat":"19.00","DateCreated":"2025-04-10","Sold":7,"Stock":5,"SupplierName":"Supplier8","SupplierPhone":"777888999","SupplierEmail":"supplier8@email.com"}
+[21-Apr-2025 21:25:28 UTC] Found invoice information for part: {"InvoiceID":74,"InvoiceNr":108,"DateCreated":"2025-04-10"}
+[21-Apr-2025 21:25:28 UTC] Part data in view: {"PartID":62,"SupplierID":40,"PartDesc":"Part8","PriceBulk":"112.00","SellPrice":"112.00","PiecesPurch":5,"PricePerPiece":"6.00","Vat":"19.00","DateCreated":"2025-04-10","Sold":7,"Stock":5,"SupplierName":"Supplier8","SupplierPhone":"777888999","SupplierEmail":"supplier8@email.com"}
+[21-Apr-2025 21:27:31 UTC] Database connection established successfully
+[21-Apr-2025 21:27:31 UTC] Database connection established successfully
+[21-Apr-2025 21:27:31 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/models/parts_model.php on line 463
+[21-Apr-2025 21:27:34 UTC] Database connection established successfully
+[21-Apr-2025 21:27:34 UTC] Database connection established successfully
+[21-Apr-2025 21:27:34 UTC] Part data fetched: {"PartID":62,"SupplierID":40,"PartDesc":"Part8","PriceBulk":"112.00","SellPrice":"112.00","PiecesPurch":5,"PricePerPiece":"6.00","Vat":"19.00","DateCreated":"2025-04-10","Sold":7,"Stock":5,"SupplierName":"Supplier8","SupplierPhone":"777888999","SupplierEmail":"supplier8@email.com"}
+[21-Apr-2025 21:27:34 UTC] Found invoice information for part: {"InvoiceID":74,"InvoiceNr":108,"DateCreated":"2025-04-10"}
+[21-Apr-2025 21:27:34 UTC] Part data in view: {"PartID":62,"SupplierID":40,"PartDesc":"Part8","PriceBulk":"112.00","SellPrice":"112.00","PiecesPurch":5,"PricePerPiece":"6.00","Vat":"19.00","DateCreated":"2025-04-10","Sold":7,"Stock":5,"SupplierName":"Supplier8","SupplierPhone":"777888999","SupplierEmail":"supplier8@email.com"}
+[21-Apr-2025 21:28:56 UTC] Database connection established successfully
+[21-Apr-2025 21:28:56 UTC] Database connection established successfully
+[21-Apr-2025 21:28:56 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/models/parts_model.php on line 463
+[21-Apr-2025 21:28:58 UTC] Database connection established successfully
+[21-Apr-2025 21:28:58 UTC] Database connection established successfully
+[21-Apr-2025 21:28:58 UTC] Part data fetched: {"PartID":62,"SupplierID":40,"PartDesc":"Part8","PriceBulk":"112.00","SellPrice":"112.00","PiecesPurch":5,"PricePerPiece":"6.00","Vat":"19.00","DateCreated":"2025-04-10","Sold":7,"Stock":5,"SupplierName":"Supplier8","SupplierPhone":"777888999","SupplierEmail":"supplier8@email.com"}
+[21-Apr-2025 21:28:58 UTC] Found invoice information for part: {"InvoiceID":74,"InvoiceNr":108,"DateCreated":"2025-04-10"}
+[21-Apr-2025 21:28:58 UTC] Part data in view: {"PartID":62,"SupplierID":40,"PartDesc":"Part8","PriceBulk":"112.00","SellPrice":"112.00","PiecesPurch":5,"PricePerPiece":"6.00","Vat":"19.00","DateCreated":"2025-04-10","Sold":7,"Stock":5,"SupplierName":"Supplier8","SupplierPhone":"777888999","SupplierEmail":"supplier8@email.com"}
+[21-Apr-2025 21:29:07 UTC] Database connection established successfully
+[21-Apr-2025 21:29:07 UTC] Database connection established successfully
+[21-Apr-2025 21:29:07 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/models/parts_model.php on line 463
+[21-Apr-2025 21:30:15 UTC] Database connection established successfully
+[21-Apr-2025 21:30:15 UTC] Database connection established successfully
+[21-Apr-2025 21:30:15 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/models/parts_model.php on line 463
+[21-Apr-2025 21:30:16 UTC] Database connection established successfully
+[21-Apr-2025 21:30:16 UTC] Database connection established successfully
+[21-Apr-2025 21:30:16 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/models/parts_model.php on line 463
+[21-Apr-2025 21:30:17 UTC] Database connection established successfully
+[21-Apr-2025 21:30:17 UTC] Database connection established successfully
+[21-Apr-2025 21:30:17 UTC] Part data fetched: {"PartID":62,"SupplierID":40,"PartDesc":"Part8","PriceBulk":"112.00","SellPrice":"112.00","PiecesPurch":5,"PricePerPiece":"6.00","Vat":"19.00","DateCreated":"2025-04-10","Sold":7,"Stock":5,"SupplierName":"Supplier8","SupplierPhone":"777888999","SupplierEmail":"supplier8@email.com"}
+[21-Apr-2025 21:30:17 UTC] Found invoice information for part: {"InvoiceID":74,"InvoiceNr":108,"DateCreated":"2025-04-10"}
+[21-Apr-2025 21:30:17 UTC] Part data in view: {"PartID":62,"SupplierID":40,"PartDesc":"Part8","PriceBulk":"112.00","SellPrice":"112.00","PiecesPurch":5,"PricePerPiece":"6.00","Vat":"19.00","DateCreated":"2025-04-10","Sold":7,"Stock":5,"SupplierName":"Supplier8","SupplierPhone":"777888999","SupplierEmail":"supplier8@email.com"}
+[21-Apr-2025 21:30:30 UTC] Database connection established successfully
+[21-Apr-2025 21:30:30 UTC] Database connection established successfully
+[21-Apr-2025 21:30:30 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/models/parts_model.php on line 463
+[21-Apr-2025 21:30:33 UTC] Database connection established successfully
+[21-Apr-2025 21:30:33 UTC] Database connection established successfully
+[21-Apr-2025 21:30:33 UTC] Part data fetched: {"PartID":62,"SupplierID":40,"PartDesc":"Part8","PriceBulk":"112.00","SellPrice":"112.00","PiecesPurch":5,"PricePerPiece":"6.00","Vat":"19.00","DateCreated":"2025-04-10","Sold":7,"Stock":5,"SupplierName":"Supplier8","SupplierPhone":"777888999","SupplierEmail":"supplier8@email.com"}
+[21-Apr-2025 21:30:33 UTC] Found invoice information for part: {"InvoiceID":74,"InvoiceNr":108,"DateCreated":"2025-04-10"}
+[21-Apr-2025 21:30:33 UTC] Part data in view: {"PartID":62,"SupplierID":40,"PartDesc":"Part8","PriceBulk":"112.00","SellPrice":"112.00","PiecesPurch":5,"PricePerPiece":"6.00","Vat":"19.00","DateCreated":"2025-04-10","Sold":7,"Stock":5,"SupplierName":"Supplier8","SupplierPhone":"777888999","SupplierEmail":"supplier8@email.com"}
+[21-Apr-2025 21:31:46 UTC] Database connection established successfully
+[21-Apr-2025 21:31:46 UTC] Database connection established successfully
+[21-Apr-2025 21:31:46 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/models/parts_model.php on line 463
+[21-Apr-2025 21:31:49 UTC] Database connection established successfully
+[21-Apr-2025 21:31:49 UTC] Database connection established successfully
+[21-Apr-2025 21:31:49 UTC] Part data fetched: {"PartID":62,"SupplierID":40,"PartDesc":"Part8","PriceBulk":"112.00","SellPrice":"112.00","PiecesPurch":5,"PricePerPiece":"6.00","Vat":"19.00","DateCreated":"2025-04-10","Sold":7,"Stock":5,"SupplierName":"Supplier8","SupplierPhone":"777888999","SupplierEmail":"supplier8@email.com"}
+[21-Apr-2025 21:31:49 UTC] Found invoice information for part: {"InvoiceID":74,"InvoiceNr":108,"DateCreated":"2025-04-10"}
+[21-Apr-2025 21:31:49 UTC] Part data in view: {"PartID":62,"SupplierID":40,"PartDesc":"Part8","PriceBulk":"112.00","SellPrice":"112.00","PiecesPurch":5,"PricePerPiece":"6.00","Vat":"19.00","DateCreated":"2025-04-10","Sold":7,"Stock":5,"SupplierName":"Supplier8","SupplierPhone":"777888999","SupplierEmail":"supplier8@email.com"}
+[21-Apr-2025 21:31:58 UTC] Database connection established successfully
+[21-Apr-2025 21:31:58 UTC] Database connection established successfully
+[21-Apr-2025 21:31:58 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/models/parts_model.php on line 463
+[21-Apr-2025 21:31:58 UTC] Database connection established successfully
+[21-Apr-2025 21:31:58 UTC] Database connection established successfully
+[21-Apr-2025 21:31:58 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/models/parts_model.php on line 463
+[21-Apr-2025 21:31:59 UTC] Database connection established successfully
+[21-Apr-2025 21:31:59 UTC] Database connection established successfully
+[21-Apr-2025 21:31:59 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/models/parts_model.php on line 463
+[21-Apr-2025 21:32:00 UTC] Database connection established successfully
+[21-Apr-2025 21:32:00 UTC] Database connection established successfully
+[21-Apr-2025 21:32:00 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/models/parts_model.php on line 463
+[21-Apr-2025 21:32:02 UTC] Database connection established successfully
+[21-Apr-2025 21:32:02 UTC] Database connection established successfully
+[21-Apr-2025 21:32:02 UTC] Part data fetched: {"PartID":62,"SupplierID":40,"PartDesc":"Part8","PriceBulk":"112.00","SellPrice":"112.00","PiecesPurch":5,"PricePerPiece":"6.00","Vat":"19.00","DateCreated":"2025-04-10","Sold":7,"Stock":5,"SupplierName":"Supplier8","SupplierPhone":"777888999","SupplierEmail":"supplier8@email.com"}
+[21-Apr-2025 21:32:02 UTC] Found invoice information for part: {"InvoiceID":74,"InvoiceNr":108,"DateCreated":"2025-04-10"}
+[21-Apr-2025 21:32:02 UTC] Part data in view: {"PartID":62,"SupplierID":40,"PartDesc":"Part8","PriceBulk":"112.00","SellPrice":"112.00","PiecesPurch":5,"PricePerPiece":"6.00","Vat":"19.00","DateCreated":"2025-04-10","Sold":7,"Stock":5,"SupplierName":"Supplier8","SupplierPhone":"777888999","SupplierEmail":"supplier8@email.com"}
+[21-Apr-2025 21:33:26 UTC] Database connection established successfully
+[21-Apr-2025 21:33:26 UTC] Database connection established successfully
+[21-Apr-2025 21:33:26 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/models/parts_model.php on line 463
+[21-Apr-2025 21:33:26 UTC] Database connection established successfully
+[21-Apr-2025 21:33:26 UTC] Database connection established successfully
+[21-Apr-2025 21:33:26 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/models/parts_model.php on line 463
+[21-Apr-2025 21:33:28 UTC] Database connection established successfully
+[21-Apr-2025 21:33:28 UTC] Database connection established successfully
+[21-Apr-2025 21:33:28 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/models/parts_model.php on line 463
+[21-Apr-2025 21:33:29 UTC] Database connection established successfully
+[21-Apr-2025 21:33:29 UTC] Database connection established successfully
+[21-Apr-2025 21:33:29 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/models/parts_model.php on line 463
+[21-Apr-2025 21:33:31 UTC] Database connection established successfully
+[21-Apr-2025 21:33:31 UTC] Database connection established successfully
+[21-Apr-2025 21:33:31 UTC] Part data fetched: {"PartID":62,"SupplierID":40,"PartDesc":"Part8","PriceBulk":"112.00","SellPrice":"112.00","PiecesPurch":5,"PricePerPiece":"6.00","Vat":"19.00","DateCreated":"2025-04-10","Sold":7,"Stock":5,"SupplierName":"Supplier8","SupplierPhone":"777888999","SupplierEmail":"supplier8@email.com"}
+[21-Apr-2025 21:33:31 UTC] Found invoice information for part: {"InvoiceID":74,"InvoiceNr":108,"DateCreated":"2025-04-10"}
+[21-Apr-2025 21:33:31 UTC] Part data in view: {"PartID":62,"SupplierID":40,"PartDesc":"Part8","PriceBulk":"112.00","SellPrice":"112.00","PiecesPurch":5,"PricePerPiece":"6.00","Vat":"19.00","DateCreated":"2025-04-10","Sold":7,"Stock":5,"SupplierName":"Supplier8","SupplierPhone":"777888999","SupplierEmail":"supplier8@email.com"}
+[21-Apr-2025 21:33:40 UTC] Database connection established successfully
+[21-Apr-2025 21:33:40 UTC] Database connection established successfully
+[21-Apr-2025 21:33:40 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/models/parts_model.php on line 463
+[21-Apr-2025 21:33:50 UTC] Database connection established successfully
+[21-Apr-2025 21:33:50 UTC] Database connection established successfully
+[21-Apr-2025 21:33:50 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/models/parts_model.php on line 463
+[21-Apr-2025 21:33:54 UTC] Database connection established successfully
+[21-Apr-2025 21:33:54 UTC] Database connection established successfully
+[21-Apr-2025 21:33:54 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/models/parts_model.php on line 463
+[21-Apr-2025 21:33:56 UTC] Database connection established successfully
+[21-Apr-2025 21:33:56 UTC] Database connection established successfully
+[21-Apr-2025 21:33:56 UTC] Part data fetched: {"PartID":62,"SupplierID":40,"PartDesc":"Part8","PriceBulk":"112.00","SellPrice":"112.00","PiecesPurch":5,"PricePerPiece":"6.00","Vat":"19.00","DateCreated":"2025-04-10","Sold":7,"Stock":5,"SupplierName":"Supplier8","SupplierPhone":"777888999","SupplierEmail":"supplier8@email.com"}
+[21-Apr-2025 21:33:56 UTC] Found invoice information for part: {"InvoiceID":74,"InvoiceNr":108,"DateCreated":"2025-04-10"}
+[21-Apr-2025 21:33:56 UTC] Part data in view: {"PartID":62,"SupplierID":40,"PartDesc":"Part8","PriceBulk":"112.00","SellPrice":"112.00","PiecesPurch":5,"PricePerPiece":"6.00","Vat":"19.00","DateCreated":"2025-04-10","Sold":7,"Stock":5,"SupplierName":"Supplier8","SupplierPhone":"777888999","SupplierEmail":"supplier8@email.com"}
+[21-Apr-2025 21:35:26 UTC] Database connection established successfully
+[21-Apr-2025 21:35:26 UTC] Database connection established successfully
+[21-Apr-2025 21:35:26 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/models/parts_model.php on line 463
+[21-Apr-2025 21:35:26 UTC] Database connection established successfully
+[21-Apr-2025 21:35:26 UTC] Database connection established successfully
+[21-Apr-2025 21:35:26 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/models/parts_model.php on line 463
+[21-Apr-2025 21:35:28 UTC] Database connection established successfully
+[21-Apr-2025 21:35:28 UTC] Database connection established successfully
+[21-Apr-2025 21:35:28 UTC] Part data fetched: {"PartID":62,"SupplierID":40,"PartDesc":"Part8","PriceBulk":"112.00","SellPrice":"112.00","PiecesPurch":5,"PricePerPiece":"6.00","Vat":"19.00","DateCreated":"2025-04-10","Sold":7,"Stock":5,"SupplierName":"Supplier8","SupplierPhone":"777888999","SupplierEmail":"supplier8@email.com"}
+[21-Apr-2025 21:35:28 UTC] Found invoice information for part: {"InvoiceID":74,"InvoiceNr":108,"DateCreated":"2025-04-10"}
+[21-Apr-2025 21:35:28 UTC] Part data in view: {"PartID":62,"SupplierID":40,"PartDesc":"Part8","PriceBulk":"112.00","SellPrice":"112.00","PiecesPurch":5,"PricePerPiece":"6.00","Vat":"19.00","DateCreated":"2025-04-10","Sold":7,"Stock":5,"SupplierName":"Supplier8","SupplierPhone":"777888999","SupplierEmail":"supplier8@email.com"}
+[21-Apr-2025 21:35:42 UTC] Database connection established successfully
+[21-Apr-2025 21:35:42 UTC] Database connection established successfully
+[21-Apr-2025 21:35:42 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/models/parts_model.php on line 463
+[21-Apr-2025 21:35:43 UTC] Database connection established successfully
+[21-Apr-2025 21:35:43 UTC] Database connection established successfully
+[21-Apr-2025 21:35:43 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/models/parts_model.php on line 463
+[21-Apr-2025 21:35:45 UTC] Database connection established successfully
+[21-Apr-2025 21:35:45 UTC] Database connection established successfully
+[21-Apr-2025 21:35:45 UTC] Part data fetched: {"PartID":62,"SupplierID":40,"PartDesc":"Part8","PriceBulk":"112.00","SellPrice":"112.00","PiecesPurch":5,"PricePerPiece":"6.00","Vat":"19.00","DateCreated":"2025-04-10","Sold":7,"Stock":5,"SupplierName":"Supplier8","SupplierPhone":"777888999","SupplierEmail":"supplier8@email.com"}
+[21-Apr-2025 21:35:45 UTC] Found invoice information for part: {"InvoiceID":74,"InvoiceNr":108,"DateCreated":"2025-04-10"}
+[21-Apr-2025 21:35:45 UTC] Part data in view: {"PartID":62,"SupplierID":40,"PartDesc":"Part8","PriceBulk":"112.00","SellPrice":"112.00","PiecesPurch":5,"PricePerPiece":"6.00","Vat":"19.00","DateCreated":"2025-04-10","Sold":7,"Stock":5,"SupplierName":"Supplier8","SupplierPhone":"777888999","SupplierEmail":"supplier8@email.com"}
+[21-Apr-2025 21:35:55 UTC] Database connection established successfully
+[21-Apr-2025 21:35:55 UTC] Database connection established successfully
+[21-Apr-2025 21:35:55 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/models/parts_model.php on line 463
+[21-Apr-2025 21:36:56 UTC] Database connection established successfully
+[21-Apr-2025 21:36:56 UTC] Database connection established successfully
+[21-Apr-2025 21:36:56 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/models/parts_model.php on line 463
+[21-Apr-2025 21:36:57 UTC] Database connection established successfully
+[21-Apr-2025 21:36:57 UTC] Database connection established successfully
+[21-Apr-2025 21:36:57 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/models/parts_model.php on line 463
+[21-Apr-2025 21:36:58 UTC] Database connection established successfully
+[21-Apr-2025 21:36:58 UTC] Database connection established successfully
+[21-Apr-2025 21:36:58 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/models/parts_model.php on line 463
+[21-Apr-2025 21:36:58 UTC] Database connection established successfully
+[21-Apr-2025 21:36:58 UTC] Database connection established successfully
+[21-Apr-2025 21:36:58 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/models/parts_model.php on line 463
+[21-Apr-2025 21:37:00 UTC] Database connection established successfully
+[21-Apr-2025 21:37:00 UTC] Database connection established successfully
+[21-Apr-2025 21:37:00 UTC] Part data fetched: {"PartID":62,"SupplierID":40,"PartDesc":"Part8","PriceBulk":"112.00","SellPrice":"112.00","PiecesPurch":5,"PricePerPiece":"6.00","Vat":"19.00","DateCreated":"2025-04-10","Sold":7,"Stock":5,"SupplierName":"Supplier8","SupplierPhone":"777888999","SupplierEmail":"supplier8@email.com"}
+[21-Apr-2025 21:37:00 UTC] Found invoice information for part: {"InvoiceID":74,"InvoiceNr":108,"DateCreated":"2025-04-10"}
+[21-Apr-2025 21:37:00 UTC] Part data in view: {"PartID":62,"SupplierID":40,"PartDesc":"Part8","PriceBulk":"112.00","SellPrice":"112.00","PiecesPurch":5,"PricePerPiece":"6.00","Vat":"19.00","DateCreated":"2025-04-10","Sold":7,"Stock":5,"SupplierName":"Supplier8","SupplierPhone":"777888999","SupplierEmail":"supplier8@email.com"}
+[22-Apr-2025 08:32:39 UTC] Database connection established successfully
+[22-Apr-2025 08:32:39 UTC] Database connection established successfully
+[22-Apr-2025 08:32:39 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/models/parts_model.php on line 463
+[22-Apr-2025 08:32:42 UTC] Database connection established successfully
+[22-Apr-2025 08:32:42 UTC] Database connection established successfully
+[22-Apr-2025 08:32:42 UTC] Part data fetched: {"PartID":62,"SupplierID":40,"PartDesc":"Part8","PriceBulk":"112.00","SellPrice":"112.00","PiecesPurch":5,"PricePerPiece":"6.00","Vat":"19.00","DateCreated":"2025-04-10","Sold":7,"Stock":5,"SupplierName":"Supplier8","SupplierPhone":"777888999","SupplierEmail":"supplier8@email.com"}
+[22-Apr-2025 08:32:42 UTC] Found invoice information for part: {"InvoiceID":74,"InvoiceNr":108,"DateCreated":"2025-04-10"}
+[22-Apr-2025 08:32:42 UTC] Part data in view: {"PartID":62,"SupplierID":40,"PartDesc":"Part8","PriceBulk":"112.00","SellPrice":"112.00","PiecesPurch":5,"PricePerPiece":"6.00","Vat":"19.00","DateCreated":"2025-04-10","Sold":7,"Stock":5,"SupplierName":"Supplier8","SupplierPhone":"777888999","SupplierEmail":"supplier8@email.com"}
+[22-Apr-2025 08:33:47 UTC] Database connection established successfully
+[22-Apr-2025 08:33:47 UTC] Database connection established successfully
+[22-Apr-2025 08:33:47 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/models/parts_model.php on line 463
+[22-Apr-2025 08:33:48 UTC] Database connection established successfully
+[22-Apr-2025 08:33:48 UTC] Database connection established successfully
+[22-Apr-2025 08:33:48 UTC] Part data fetched: {"PartID":62,"SupplierID":40,"PartDesc":"Part8","PriceBulk":"112.00","SellPrice":"112.00","PiecesPurch":5,"PricePerPiece":"6.00","Vat":"19.00","DateCreated":"2025-04-10","Sold":7,"Stock":5,"SupplierName":"Supplier8","SupplierPhone":"777888999","SupplierEmail":"supplier8@email.com"}
+[22-Apr-2025 08:33:48 UTC] Found invoice information for part: {"InvoiceID":74,"InvoiceNr":108,"DateCreated":"2025-04-10"}
+[22-Apr-2025 08:33:48 UTC] Part data in view: {"PartID":62,"SupplierID":40,"PartDesc":"Part8","PriceBulk":"112.00","SellPrice":"112.00","PiecesPurch":5,"PricePerPiece":"6.00","Vat":"19.00","DateCreated":"2025-04-10","Sold":7,"Stock":5,"SupplierName":"Supplier8","SupplierPhone":"777888999","SupplierEmail":"supplier8@email.com"}
+[22-Apr-2025 08:34:00 UTC] Database connection established successfully
+[22-Apr-2025 08:34:00 UTC] Database connection established successfully
+[22-Apr-2025 08:34:00 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/models/parts_model.php on line 463
+[22-Apr-2025 08:34:22 UTC] Database connection established successfully
+[22-Apr-2025 08:34:22 UTC] Database connection established successfully
+[22-Apr-2025 08:34:22 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/models/parts_model.php on line 463
+[22-Apr-2025 08:34:26 UTC] Database connection established successfully
+[22-Apr-2025 08:34:26 UTC] Database connection established successfully
+[22-Apr-2025 08:34:26 UTC] Part data fetched: {"PartID":62,"SupplierID":40,"PartDesc":"Part8","PriceBulk":"112.00","SellPrice":"112.00","PiecesPurch":5,"PricePerPiece":"6.00","Vat":"19.00","DateCreated":"2025-04-10","Sold":7,"Stock":5,"SupplierName":"Supplier8","SupplierPhone":"777888999","SupplierEmail":"supplier8@email.com"}
+[22-Apr-2025 08:34:26 UTC] Found invoice information for part: {"InvoiceID":74,"InvoiceNr":108,"DateCreated":"2025-04-10"}
+[22-Apr-2025 08:34:26 UTC] Part data in view: {"PartID":62,"SupplierID":40,"PartDesc":"Part8","PriceBulk":"112.00","SellPrice":"112.00","PiecesPurch":5,"PricePerPiece":"6.00","Vat":"19.00","DateCreated":"2025-04-10","Sold":7,"Stock":5,"SupplierName":"Supplier8","SupplierPhone":"777888999","SupplierEmail":"supplier8@email.com"}
+[22-Apr-2025 08:34:34 UTC] Database connection established successfully
+[22-Apr-2025 08:34:34 UTC] Database connection established successfully
+[22-Apr-2025 08:34:34 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/models/parts_model.php on line 463
+[22-Apr-2025 16:38:57 UTC] Database connection established successfully
+[22-Apr-2025 16:38:57 UTC] Database connection established successfully
+[22-Apr-2025 16:38:57 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/models/parts_model.php on line 463
+[22-Apr-2025 16:38:59 UTC] Database connection established successfully
+[22-Apr-2025 16:38:59 UTC] Database connection established successfully
+[22-Apr-2025 16:38:59 UTC] Part data fetched: {"PartID":53,"SupplierID":32,"PartDesc":"TestPart2","PriceBulk":"49.98","SellPrice":"7.00","PiecesPurch":6,"PricePerPiece":"7.00","Vat":"19.00","DateCreated":"2025-04-10","Sold":12,"Stock":-6,"SupplierName":"Testsupl2","SupplierPhone":"12345678","SupplierEmail":"testsup2@email.com"}
+[22-Apr-2025 16:38:59 UTC] No invoice information found for part ID: 53
+[22-Apr-2025 16:38:59 UTC] Part data in view: {"PartID":53,"SupplierID":32,"PartDesc":"TestPart2","PriceBulk":"49.98","SellPrice":"7.00","PiecesPurch":6,"PricePerPiece":"7.00","Vat":"19.00","DateCreated":"2025-04-10","Sold":12,"Stock":-6,"SupplierName":"Testsupl2","SupplierPhone":"12345678","SupplierEmail":"testsup2@email.com"}
+[22-Apr-2025 16:39:06 UTC] Database connection established successfully
+[22-Apr-2025 16:39:06 UTC] Database connection established successfully
+[22-Apr-2025 16:39:06 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/models/parts_model.php on line 463
+[22-Apr-2025 16:39:06 UTC] Database connection established successfully
+[22-Apr-2025 16:39:06 UTC] Database connection established successfully
+[22-Apr-2025 16:39:06 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/models/parts_model.php on line 463
+[22-Apr-2025 16:39:06 UTC] Database connection established successfully
+[22-Apr-2025 16:39:06 UTC] Database connection established successfully
+[22-Apr-2025 16:39:06 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/models/parts_model.php on line 463
+[22-Apr-2025 16:39:07 UTC] Database connection established successfully
+[22-Apr-2025 16:39:07 UTC] Database connection established successfully
+[22-Apr-2025 16:39:07 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/models/parts_model.php on line 463
+[22-Apr-2025 16:39:10 UTC] Database connection established successfully
+[22-Apr-2025 16:39:10 UTC] Database connection established successfully
+[22-Apr-2025 16:39:10 UTC] Part data fetched: {"PartID":59,"SupplierID":37,"PartDesc":"Part5","PriceBulk":null,"SellPrice":"9.00","PiecesPurch":5,"PricePerPiece":"6.00","Vat":"19.00","DateCreated":"2025-04-05","Sold":1,"Stock":4,"SupplierName":"Supplier5","SupplierPhone":"222333444","SupplierEmail":"supplier5@email.com"}
+[22-Apr-2025 16:39:10 UTC] Found invoice information for part: {"InvoiceID":71,"InvoiceNr":105,"DateCreated":"2025-04-05"}
+[22-Apr-2025 16:39:10 UTC] Part data in view: {"PartID":59,"SupplierID":37,"PartDesc":"Part5","PriceBulk":null,"SellPrice":"9.00","PiecesPurch":5,"PricePerPiece":"6.00","Vat":"19.00","DateCreated":"2025-04-05","Sold":1,"Stock":4,"SupplierName":"Supplier5","SupplierPhone":"222333444","SupplierEmail":"supplier5@email.com"}
+[22-Apr-2025 16:43:19 UTC] Database connection established successfully
+[22-Apr-2025 16:43:19 UTC] Database connection established successfully
+[22-Apr-2025 16:43:19 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/models/parts_model.php on line 463
+[22-Apr-2025 16:43:21 UTC] Database connection established successfully
+[22-Apr-2025 16:43:21 UTC] Database connection established successfully
+[22-Apr-2025 16:43:21 UTC] Part data fetched: {"PartID":53,"SupplierID":32,"PartDesc":"TestPart2","PriceBulk":"49.98","SellPrice":"7.00","PiecesPurch":6,"PricePerPiece":"7.00","Vat":"19.00","DateCreated":"2025-04-10","Sold":12,"Stock":-6,"SupplierName":"Testsupl2","SupplierPhone":"12345678","SupplierEmail":"testsup2@email.com"}
+[22-Apr-2025 16:43:21 UTC] No invoice information found for part ID: 53
+[22-Apr-2025 16:43:21 UTC] Part data in view: {"PartID":53,"SupplierID":32,"PartDesc":"TestPart2","PriceBulk":"49.98","SellPrice":"7.00","PiecesPurch":6,"PricePerPiece":"7.00","Vat":"19.00","DateCreated":"2025-04-10","Sold":12,"Stock":-6,"SupplierName":"Testsupl2","SupplierPhone":"12345678","SupplierEmail":"testsup2@email.com"}
+[22-Apr-2025 16:43:28 UTC] Database connection established successfully
+[22-Apr-2025 16:43:28 UTC] Database connection established successfully
+[22-Apr-2025 16:43:28 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/models/parts_model.php on line 463
+[22-Apr-2025 16:43:28 UTC] Database connection established successfully
+[22-Apr-2025 16:43:28 UTC] Database connection established successfully
+[22-Apr-2025 16:43:28 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/models/parts_model.php on line 463
+[22-Apr-2025 16:43:28 UTC] Database connection established successfully
+[22-Apr-2025 16:43:28 UTC] Database connection established successfully
+[22-Apr-2025 16:43:28 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/models/parts_model.php on line 463
+[22-Apr-2025 16:43:28 UTC] Database connection established successfully
+[22-Apr-2025 16:43:28 UTC] Database connection established successfully
+[22-Apr-2025 16:43:28 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/models/parts_model.php on line 463
+[22-Apr-2025 16:43:30 UTC] Database connection established successfully
+[22-Apr-2025 16:43:30 UTC] Database connection established successfully
+[22-Apr-2025 16:43:30 UTC] Part data fetched: {"PartID":64,"SupplierID":42,"PartDesc":"Part10","PriceBulk":"20.00","SellPrice":"20.00","PiecesPurch":5,"PricePerPiece":"6.00","Vat":"19.00","DateCreated":"2025-04-08","Sold":1,"Stock":6,"SupplierName":"Supplier10","SupplierPhone":"986677576","SupplierEmail":"supplier10@email.com"}
+[22-Apr-2025 16:43:30 UTC] Found invoice information for part: {"InvoiceID":76,"InvoiceNr":110,"DateCreated":"2025-04-08"}
+[22-Apr-2025 16:43:30 UTC] Part data in view: {"PartID":64,"SupplierID":42,"PartDesc":"Part10","PriceBulk":"20.00","SellPrice":"20.00","PiecesPurch":5,"PricePerPiece":"6.00","Vat":"19.00","DateCreated":"2025-04-08","Sold":1,"Stock":6,"SupplierName":"Supplier10","SupplierPhone":"986677576","SupplierEmail":"supplier10@email.com"}
+[22-Apr-2025 16:45:29 UTC] Database connection established successfully
+[22-Apr-2025 16:45:29 UTC] Database connection established successfully
+[22-Apr-2025 16:45:29 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/models/parts_model.php on line 463
+[22-Apr-2025 16:45:32 UTC] Database connection established successfully
+[22-Apr-2025 16:45:32 UTC] Database connection established successfully
+[22-Apr-2025 16:45:32 UTC] Part data fetched: {"PartID":53,"SupplierID":32,"PartDesc":"TestPart2","PriceBulk":"49.98","SellPrice":"7.00","PiecesPurch":6,"PricePerPiece":"7.00","Vat":"19.00","DateCreated":"2025-04-10","Sold":12,"Stock":-6,"SupplierName":"Testsupl2","SupplierPhone":"12345678","SupplierEmail":"testsup2@email.com"}
+[22-Apr-2025 16:45:32 UTC] No invoice information found for part ID: 53
+[22-Apr-2025 16:45:32 UTC] Part data in view: {"PartID":53,"SupplierID":32,"PartDesc":"TestPart2","PriceBulk":"49.98","SellPrice":"7.00","PiecesPurch":6,"PricePerPiece":"7.00","Vat":"19.00","DateCreated":"2025-04-10","Sold":12,"Stock":-6,"SupplierName":"Testsupl2","SupplierPhone":"12345678","SupplierEmail":"testsup2@email.com"}
+[22-Apr-2025 16:48:44 UTC] Database connection established successfully
+[22-Apr-2025 16:48:44 UTC] Database connection established successfully
+[22-Apr-2025 16:48:44 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/models/parts_model.php on line 463
+[22-Apr-2025 16:48:45 UTC] Database connection established successfully
+[22-Apr-2025 16:48:45 UTC] Database connection established successfully
+[22-Apr-2025 16:48:45 UTC] Part data fetched: {"PartID":64,"SupplierID":42,"PartDesc":"Part10","PriceBulk":"20.00","SellPrice":"20.00","PiecesPurch":5,"PricePerPiece":"6.00","Vat":"19.00","DateCreated":"2025-04-08","Sold":1,"Stock":6,"SupplierName":"Supplier10","SupplierPhone":"986677576","SupplierEmail":"supplier10@email.com"}
+[22-Apr-2025 16:48:45 UTC] Found invoice information for part: {"InvoiceID":76,"InvoiceNr":110,"DateCreated":"2025-04-08"}
+[22-Apr-2025 16:48:45 UTC] Part data in view: {"PartID":64,"SupplierID":42,"PartDesc":"Part10","PriceBulk":"20.00","SellPrice":"20.00","PiecesPurch":5,"PricePerPiece":"6.00","Vat":"19.00","DateCreated":"2025-04-08","Sold":1,"Stock":6,"SupplierName":"Supplier10","SupplierPhone":"986677576","SupplierEmail":"supplier10@email.com"}
+[22-Apr-2025 16:50:41 UTC] Database connection established successfully
+[22-Apr-2025 16:50:41 UTC] Database connection established successfully
+[22-Apr-2025 16:50:41 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/models/parts_model.php on line 463
+[22-Apr-2025 16:50:43 UTC] Database connection established successfully
+[22-Apr-2025 16:50:43 UTC] Database connection established successfully
+[22-Apr-2025 16:50:43 UTC] Part data fetched: {"PartID":64,"SupplierID":42,"PartDesc":"Part10","PriceBulk":"20.00","SellPrice":"20.00","PiecesPurch":5,"PricePerPiece":"6.00","Vat":"19.00","DateCreated":"2025-04-08","Sold":1,"Stock":6,"SupplierName":"Supplier10","SupplierPhone":"986677576","SupplierEmail":"supplier10@email.com"}
+[22-Apr-2025 16:50:43 UTC] Found invoice information for part: {"InvoiceID":76,"InvoiceNr":110,"DateCreated":"2025-04-08"}
+[22-Apr-2025 16:50:43 UTC] Part data in view: {"PartID":64,"SupplierID":42,"PartDesc":"Part10","PriceBulk":"20.00","SellPrice":"20.00","PiecesPurch":5,"PricePerPiece":"6.00","Vat":"19.00","DateCreated":"2025-04-08","Sold":1,"Stock":6,"SupplierName":"Supplier10","SupplierPhone":"986677576","SupplierEmail":"supplier10@email.com"}
+[22-Apr-2025 16:50:48 UTC] Database connection established successfully
+[22-Apr-2025 16:50:48 UTC] Database connection established successfully
+[22-Apr-2025 16:50:48 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/models/parts_model.php on line 463
+[22-Apr-2025 16:50:50 UTC] Database connection established successfully
+[22-Apr-2025 16:50:50 UTC] Database connection established successfully
+[22-Apr-2025 16:50:50 UTC] Part data fetched: {"PartID":64,"SupplierID":42,"PartDesc":"Part10","PriceBulk":"20.00","SellPrice":"20.00","PiecesPurch":5,"PricePerPiece":"6.00","Vat":"19.00","DateCreated":"2025-04-08","Sold":1,"Stock":6,"SupplierName":"Supplier10","SupplierPhone":"986677576","SupplierEmail":"supplier10@email.com"}
+[22-Apr-2025 16:50:50 UTC] Found invoice information for part: {"InvoiceID":76,"InvoiceNr":110,"DateCreated":"2025-04-08"}
+[22-Apr-2025 16:50:50 UTC] Part data in view: {"PartID":64,"SupplierID":42,"PartDesc":"Part10","PriceBulk":"20.00","SellPrice":"20.00","PiecesPurch":5,"PricePerPiece":"6.00","Vat":"19.00","DateCreated":"2025-04-08","Sold":1,"Stock":6,"SupplierName":"Supplier10","SupplierPhone":"986677576","SupplierEmail":"supplier10@email.com"}
+[22-Apr-2025 16:51:34 UTC] Database connection established successfully
+[22-Apr-2025 16:51:34 UTC] Database connection established successfully
+[22-Apr-2025 16:51:34 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/models/parts_model.php on line 463
+[22-Apr-2025 16:51:36 UTC] Database connection established successfully
+[22-Apr-2025 16:51:36 UTC] Database connection established successfully
+[22-Apr-2025 16:51:36 UTC] Part data fetched: {"PartID":60,"SupplierID":38,"PartDesc":"Part6","PriceBulk":null,"SellPrice":"18.00","PiecesPurch":5,"PricePerPiece":"6.00","Vat":"19.00","DateCreated":"2025-04-05","Sold":5,"Stock":0,"SupplierName":"Supplier6","SupplierPhone":"333444555","SupplierEmail":"supplier6@email.com"}
+[22-Apr-2025 16:51:36 UTC] Found invoice information for part: {"InvoiceID":72,"InvoiceNr":106,"DateCreated":"2025-04-05"}
+[22-Apr-2025 16:51:36 UTC] Part data in view: {"PartID":60,"SupplierID":38,"PartDesc":"Part6","PriceBulk":null,"SellPrice":"18.00","PiecesPurch":5,"PricePerPiece":"6.00","Vat":"19.00","DateCreated":"2025-04-05","Sold":5,"Stock":0,"SupplierName":"Supplier6","SupplierPhone":"333444555","SupplierEmail":"supplier6@email.com"}
+[22-Apr-2025 16:53:13 UTC] Database connection established successfully
+[22-Apr-2025 16:53:13 UTC] Database connection established successfully
+[22-Apr-2025 16:53:13 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/models/parts_model.php on line 463
+[22-Apr-2025 16:53:15 UTC] Database connection established successfully
+[22-Apr-2025 16:53:15 UTC] Database connection established successfully
+[22-Apr-2025 16:53:15 UTC] Part data fetched: {"PartID":60,"SupplierID":38,"PartDesc":"Part6","PriceBulk":null,"SellPrice":"18.00","PiecesPurch":5,"PricePerPiece":"6.00","Vat":"19.00","DateCreated":"2025-04-05","Sold":5,"Stock":0,"SupplierName":"Supplier6","SupplierPhone":"333444555","SupplierEmail":"supplier6@email.com"}
+[22-Apr-2025 16:53:15 UTC] Found invoice information for part: {"InvoiceID":72,"InvoiceNr":106,"DateCreated":"2025-04-05"}
+[22-Apr-2025 16:53:15 UTC] Part data in view: {"PartID":60,"SupplierID":38,"PartDesc":"Part6","PriceBulk":null,"SellPrice":"18.00","PiecesPurch":5,"PricePerPiece":"6.00","Vat":"19.00","DateCreated":"2025-04-05","Sold":5,"Stock":0,"SupplierName":"Supplier6","SupplierPhone":"333444555","SupplierEmail":"supplier6@email.com"}
+[22-Apr-2025 16:53:52 UTC] Database connection established successfully
+[22-Apr-2025 16:53:52 UTC] Database connection established successfully
+[22-Apr-2025 16:53:52 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/models/parts_model.php on line 463
+[22-Apr-2025 16:53:53 UTC] Database connection established successfully
+[22-Apr-2025 16:53:53 UTC] Database connection established successfully
+[22-Apr-2025 16:53:53 UTC] Part data fetched: {"PartID":59,"SupplierID":37,"PartDesc":"Part5","PriceBulk":null,"SellPrice":"9.00","PiecesPurch":5,"PricePerPiece":"6.00","Vat":"19.00","DateCreated":"2025-04-05","Sold":1,"Stock":4,"SupplierName":"Supplier5","SupplierPhone":"222333444","SupplierEmail":"supplier5@email.com"}
+[22-Apr-2025 16:53:53 UTC] Found invoice information for part: {"InvoiceID":71,"InvoiceNr":105,"DateCreated":"2025-04-05"}
+[22-Apr-2025 16:53:53 UTC] Part data in view: {"PartID":59,"SupplierID":37,"PartDesc":"Part5","PriceBulk":null,"SellPrice":"9.00","PiecesPurch":5,"PricePerPiece":"6.00","Vat":"19.00","DateCreated":"2025-04-05","Sold":1,"Stock":4,"SupplierName":"Supplier5","SupplierPhone":"222333444","SupplierEmail":"supplier5@email.com"}
+[22-Apr-2025 16:54:17 UTC] Database connection established successfully
+[22-Apr-2025 16:54:17 UTC] Database connection established successfully
+[22-Apr-2025 16:54:17 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/models/parts_model.php on line 463
+[22-Apr-2025 16:54:18 UTC] Database connection established successfully
+[22-Apr-2025 16:54:18 UTC] Database connection established successfully
+[22-Apr-2025 16:54:18 UTC] Part data fetched: {"PartID":64,"SupplierID":42,"PartDesc":"Part10","PriceBulk":"20.00","SellPrice":"20.00","PiecesPurch":5,"PricePerPiece":"6.00","Vat":"19.00","DateCreated":"2025-04-08","Sold":1,"Stock":6,"SupplierName":"Supplier10","SupplierPhone":"986677576","SupplierEmail":"supplier10@email.com"}
+[22-Apr-2025 16:54:18 UTC] Found invoice information for part: {"InvoiceID":76,"InvoiceNr":110,"DateCreated":"2025-04-08"}
+[22-Apr-2025 16:54:18 UTC] Part data in view: {"PartID":64,"SupplierID":42,"PartDesc":"Part10","PriceBulk":"20.00","SellPrice":"20.00","PiecesPurch":5,"PricePerPiece":"6.00","Vat":"19.00","DateCreated":"2025-04-08","Sold":1,"Stock":6,"SupplierName":"Supplier10","SupplierPhone":"986677576","SupplierEmail":"supplier10@email.com"}
+[22-Apr-2025 16:55:45 UTC] Database connection established successfully
+[22-Apr-2025 16:55:45 UTC] Database connection established successfully
+[22-Apr-2025 16:55:45 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/models/parts_model.php on line 463
+[22-Apr-2025 16:55:47 UTC] Database connection established successfully
+[22-Apr-2025 16:55:47 UTC] Database connection established successfully
+[22-Apr-2025 16:55:47 UTC] Part data fetched: {"PartID":64,"SupplierID":42,"PartDesc":"Part10","PriceBulk":"20.00","SellPrice":"20.00","PiecesPurch":5,"PricePerPiece":"6.00","Vat":"19.00","DateCreated":"2025-04-08","Sold":1,"Stock":6,"SupplierName":"Supplier10","SupplierPhone":"986677576","SupplierEmail":"supplier10@email.com"}
+[22-Apr-2025 16:55:47 UTC] Found invoice information for part: {"InvoiceID":76,"InvoiceNr":110,"DateCreated":"2025-04-08"}
+[22-Apr-2025 16:55:47 UTC] Part data in view: {"PartID":64,"SupplierID":42,"PartDesc":"Part10","PriceBulk":"20.00","SellPrice":"20.00","PiecesPurch":5,"PricePerPiece":"6.00","Vat":"19.00","DateCreated":"2025-04-08","Sold":1,"Stock":6,"SupplierName":"Supplier10","SupplierPhone":"986677576","SupplierEmail":"supplier10@email.com"}
+[22-Apr-2025 16:56:42 UTC] Database connection established successfully
+[22-Apr-2025 16:56:42 UTC] Database connection established successfully
+[22-Apr-2025 16:56:42 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/models/parts_model.php on line 463
+[22-Apr-2025 16:56:45 UTC] Database connection established successfully
+[22-Apr-2025 16:56:45 UTC] Database connection established successfully
+[22-Apr-2025 16:56:45 UTC] Part data fetched: {"PartID":61,"SupplierID":39,"PartDesc":"Part 7","PriceBulk":null,"SellPrice":"100.00","PiecesPurch":5,"PricePerPiece":"6.00","Vat":"19.00","DateCreated":"2025-04-04","Sold":3,"Stock":2,"SupplierName":"Supplier7","SupplierPhone":"55444666","SupplierEmail":"supplier7@email.com"}
+[22-Apr-2025 16:56:45 UTC] Found invoice information for part: {"InvoiceID":73,"InvoiceNr":107,"DateCreated":"2025-04-04"}
+[22-Apr-2025 16:56:45 UTC] Part data in view: {"PartID":61,"SupplierID":39,"PartDesc":"Part 7","PriceBulk":null,"SellPrice":"100.00","PiecesPurch":5,"PricePerPiece":"6.00","Vat":"19.00","DateCreated":"2025-04-04","Sold":3,"Stock":2,"SupplierName":"Supplier7","SupplierPhone":"55444666","SupplierEmail":"supplier7@email.com"}
+[22-Apr-2025 16:56:56 UTC] Database connection established successfully
+[22-Apr-2025 16:56:56 UTC] Database connection established successfully
+[22-Apr-2025 16:56:56 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/models/parts_model.php on line 463
+[22-Apr-2025 16:56:58 UTC] Database connection established successfully
+[22-Apr-2025 16:56:58 UTC] Database connection established successfully
+[22-Apr-2025 16:56:58 UTC] Part data fetched: {"PartID":64,"SupplierID":42,"PartDesc":"Part10","PriceBulk":"20.00","SellPrice":"20.00","PiecesPurch":5,"PricePerPiece":"6.00","Vat":"19.00","DateCreated":"2025-04-08","Sold":1,"Stock":6,"SupplierName":"Supplier10","SupplierPhone":"986677576","SupplierEmail":"supplier10@email.com"}
+[22-Apr-2025 16:56:58 UTC] Found invoice information for part: {"InvoiceID":76,"InvoiceNr":110,"DateCreated":"2025-04-08"}
+[22-Apr-2025 16:56:58 UTC] Part data in view: {"PartID":64,"SupplierID":42,"PartDesc":"Part10","PriceBulk":"20.00","SellPrice":"20.00","PiecesPurch":5,"PricePerPiece":"6.00","Vat":"19.00","DateCreated":"2025-04-08","Sold":1,"Stock":6,"SupplierName":"Supplier10","SupplierPhone":"986677576","SupplierEmail":"supplier10@email.com"}
+[22-Apr-2025 16:58:43 UTC] Database connection established successfully
+[22-Apr-2025 16:58:43 UTC] Database connection established successfully
+[22-Apr-2025 16:58:43 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/models/parts_model.php on line 463
+[22-Apr-2025 16:58:45 UTC] Database connection established successfully
+[22-Apr-2025 16:58:45 UTC] Database connection established successfully
+[22-Apr-2025 16:58:45 UTC] Part data fetched: {"PartID":64,"SupplierID":42,"PartDesc":"Part10","PriceBulk":"20.00","SellPrice":"20.00","PiecesPurch":5,"PricePerPiece":"6.00","Vat":"19.00","DateCreated":"2025-04-08","Sold":1,"Stock":6,"SupplierName":"Supplier10","SupplierPhone":"986677576","SupplierEmail":"supplier10@email.com"}
+[22-Apr-2025 16:58:45 UTC] Found invoice information for part: {"InvoiceID":76,"InvoiceNr":110,"DateCreated":"2025-04-08"}
+[22-Apr-2025 16:58:45 UTC] Part data in view: {"PartID":64,"SupplierID":42,"PartDesc":"Part10","PriceBulk":"20.00","SellPrice":"20.00","PiecesPurch":5,"PricePerPiece":"6.00","Vat":"19.00","DateCreated":"2025-04-08","Sold":1,"Stock":6,"SupplierName":"Supplier10","SupplierPhone":"986677576","SupplierEmail":"supplier10@email.com"}
+[22-Apr-2025 16:59:38 UTC] Database connection established successfully
+[22-Apr-2025 16:59:38 UTC] Database connection established successfully
+[22-Apr-2025 16:59:38 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/models/parts_model.php on line 463
+[22-Apr-2025 16:59:40 UTC] Database connection established successfully
+[22-Apr-2025 16:59:40 UTC] Database connection established successfully
+[22-Apr-2025 16:59:40 UTC] Part data fetched: {"PartID":53,"SupplierID":32,"PartDesc":"TestPart2","PriceBulk":"49.98","SellPrice":"7.00","PiecesPurch":6,"PricePerPiece":"7.00","Vat":"19.00","DateCreated":"2025-04-10","Sold":12,"Stock":-6,"SupplierName":"Testsupl2","SupplierPhone":"12345678","SupplierEmail":"testsup2@email.com"}
+[22-Apr-2025 16:59:40 UTC] No invoice information found for part ID: 53
+[22-Apr-2025 16:59:40 UTC] Part data in view: {"PartID":53,"SupplierID":32,"PartDesc":"TestPart2","PriceBulk":"49.98","SellPrice":"7.00","PiecesPurch":6,"PricePerPiece":"7.00","Vat":"19.00","DateCreated":"2025-04-10","Sold":12,"Stock":-6,"SupplierName":"Testsupl2","SupplierPhone":"12345678","SupplierEmail":"testsup2@email.com"}
+[22-Apr-2025 17:05:31 UTC] Database connection established successfully
+[22-Apr-2025 17:05:31 UTC] Database connection established successfully
+[22-Apr-2025 17:05:31 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/models/parts_model.php on line 463
+[22-Apr-2025 17:05:33 UTC] Database connection established successfully
+[22-Apr-2025 17:05:33 UTC] Database connection established successfully
+[22-Apr-2025 17:05:33 UTC] Part data fetched: {"PartID":60,"SupplierID":38,"PartDesc":"Part6","PriceBulk":null,"SellPrice":"18.00","PiecesPurch":5,"PricePerPiece":"6.00","Vat":"19.00","DateCreated":"2025-04-05","Sold":5,"Stock":0,"SupplierName":"Supplier6","SupplierPhone":"333444555","SupplierEmail":"supplier6@email.com"}
+[22-Apr-2025 17:05:33 UTC] Found invoice information for part: {"InvoiceID":72,"InvoiceNr":106,"DateCreated":"2025-04-05"}
+[22-Apr-2025 17:05:33 UTC] Part data in view: {"PartID":60,"SupplierID":38,"PartDesc":"Part6","PriceBulk":null,"SellPrice":"18.00","PiecesPurch":5,"PricePerPiece":"6.00","Vat":"19.00","DateCreated":"2025-04-05","Sold":5,"Stock":0,"SupplierName":"Supplier6","SupplierPhone":"333444555","SupplierEmail":"supplier6@email.com"}
+[22-Apr-2025 17:11:11 UTC] Database connection established successfully
+[22-Apr-2025 17:11:11 UTC] Database connection established successfully
+[22-Apr-2025 17:11:11 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/models/parts_model.php on line 463
+[22-Apr-2025 17:11:13 UTC] Database connection established successfully
+[22-Apr-2025 17:11:13 UTC] Database connection established successfully
+[22-Apr-2025 17:11:13 UTC] Part data fetched: {"PartID":64,"SupplierID":42,"PartDesc":"Part10","PriceBulk":"20.00","SellPrice":"20.00","PiecesPurch":5,"PricePerPiece":"6.00","Vat":"19.00","DateCreated":"2025-04-08","Sold":1,"Stock":6,"SupplierName":"Supplier10","SupplierPhone":"986677576","SupplierEmail":"supplier10@email.com"}
+[22-Apr-2025 17:11:13 UTC] Found invoice information for part: {"InvoiceID":76,"InvoiceNr":110,"DateCreated":"2025-04-08"}
+[22-Apr-2025 17:11:13 UTC] Part data in view: {"PartID":64,"SupplierID":42,"PartDesc":"Part10","PriceBulk":"20.00","SellPrice":"20.00","PiecesPurch":5,"PricePerPiece":"6.00","Vat":"19.00","DateCreated":"2025-04-08","Sold":1,"Stock":6,"SupplierName":"Supplier10","SupplierPhone":"986677576","SupplierEmail":"supplier10@email.com"}
+[22-Apr-2025 17:22:42 UTC] Database connection established successfully
+[22-Apr-2025 17:22:42 UTC] Database connection established successfully
+[22-Apr-2025 17:22:42 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/models/parts_model.php on line 463
+[22-Apr-2025 17:22:43 UTC] Database connection established successfully
+[22-Apr-2025 17:22:43 UTC] Database connection established successfully
+[22-Apr-2025 17:22:43 UTC] Part data fetched: {"PartID":59,"SupplierID":37,"PartDesc":"Part5","PriceBulk":null,"SellPrice":"9.00","PiecesPurch":5,"PricePerPiece":"6.00","Vat":"19.00","DateCreated":"2025-04-05","Sold":1,"Stock":4,"SupplierName":"Supplier5","SupplierPhone":"222333444","SupplierEmail":"supplier5@email.com"}
+[22-Apr-2025 17:22:43 UTC] Found invoice information for part: {"InvoiceID":71,"InvoiceNr":105,"DateCreated":"2025-04-05"}
+[22-Apr-2025 17:22:43 UTC] Part data in view: {"PartID":59,"SupplierID":37,"PartDesc":"Part5","PriceBulk":null,"SellPrice":"9.00","PiecesPurch":5,"PricePerPiece":"6.00","Vat":"19.00","DateCreated":"2025-04-05","Sold":1,"Stock":4,"SupplierName":"Supplier5","SupplierPhone":"222333444","SupplierEmail":"supplier5@email.com"}
+[22-Apr-2025 17:30:02 UTC] Database connection established successfully
+[22-Apr-2025 17:30:02 UTC] Database connection established successfully
+[22-Apr-2025 17:30:02 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/models/parts_model.php on line 463
+[22-Apr-2025 17:30:03 UTC] Database connection established successfully
+[22-Apr-2025 17:30:03 UTC] Database connection established successfully
+[22-Apr-2025 17:30:03 UTC] Part data fetched: {"PartID":59,"SupplierID":37,"PartDesc":"Part5","PriceBulk":null,"SellPrice":"9.00","PiecesPurch":5,"PricePerPiece":"6.00","Vat":"19.00","DateCreated":"2025-04-05","Sold":1,"Stock":4,"SupplierName":"Supplier5","SupplierPhone":"222333444","SupplierEmail":"supplier5@email.com"}
+[22-Apr-2025 17:30:03 UTC] Found invoice information for part: {"InvoiceID":71,"InvoiceNr":105,"DateCreated":"2025-04-05"}
+[22-Apr-2025 17:30:03 UTC] Part data in view: {"PartID":59,"SupplierID":37,"PartDesc":"Part5","PriceBulk":null,"SellPrice":"9.00","PiecesPurch":5,"PricePerPiece":"6.00","Vat":"19.00","DateCreated":"2025-04-05","Sold":1,"Stock":4,"SupplierName":"Supplier5","SupplierPhone":"222333444","SupplierEmail":"supplier5@email.com"}
+[22-Apr-2025 17:30:36 UTC] Database connection established successfully
+[22-Apr-2025 17:30:36 UTC] Database connection established successfully
+[22-Apr-2025 17:30:36 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/models/parts_model.php on line 463
+[22-Apr-2025 17:30:37 UTC] Database connection established successfully
+[22-Apr-2025 17:30:37 UTC] Database connection established successfully
+[22-Apr-2025 17:30:37 UTC] Part data fetched: {"PartID":59,"SupplierID":37,"PartDesc":"Part5","PriceBulk":null,"SellPrice":"9.00","PiecesPurch":5,"PricePerPiece":"6.00","Vat":"19.00","DateCreated":"2025-04-05","Sold":1,"Stock":4,"SupplierName":"Supplier5","SupplierPhone":"222333444","SupplierEmail":"supplier5@email.com"}
+[22-Apr-2025 17:30:37 UTC] Found invoice information for part: {"InvoiceID":71,"InvoiceNr":105,"DateCreated":"2025-04-05"}
+[22-Apr-2025 17:30:37 UTC] Part data in view: {"PartID":59,"SupplierID":37,"PartDesc":"Part5","PriceBulk":null,"SellPrice":"9.00","PiecesPurch":5,"PricePerPiece":"6.00","Vat":"19.00","DateCreated":"2025-04-05","Sold":1,"Stock":4,"SupplierName":"Supplier5","SupplierPhone":"222333444","SupplierEmail":"supplier5@email.com"}
+[22-Apr-2025 17:32:18 UTC] Database connection established successfully
+[22-Apr-2025 17:32:18 UTC] Database connection established successfully
+[22-Apr-2025 17:32:18 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/models/parts_model.php on line 463
+[22-Apr-2025 17:32:55 UTC] Database connection established successfully
+[22-Apr-2025 17:32:55 UTC] Database connection established successfully
+[22-Apr-2025 17:32:55 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/models/parts_model.php on line 463
+[22-Apr-2025 17:33:42 UTC] Database connection established successfully
+[22-Apr-2025 17:33:42 UTC] Database connection established successfully
+[22-Apr-2025 17:33:42 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/models/parts_model.php on line 463
+[22-Apr-2025 20:49:29 UTC] Database connection established successfully
+[22-Apr-2025 20:49:29 UTC] Database connection established successfully
+[22-Apr-2025 20:49:29 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/models/parts_model.php on line 463
+[22-Apr-2025 20:55:45 UTC] Database connection established successfully
+[22-Apr-2025 20:55:45 UTC] Database connection established successfully
+[22-Apr-2025 20:55:45 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/models/parts_model.php on line 463
+[22-Apr-2025 20:56:02 UTC] Database connection established successfully
+[22-Apr-2025 20:56:02 UTC] Database connection established successfully
+[22-Apr-2025 20:56:02 UTC] Part data fetched: {"PartID":61,"SupplierID":39,"PartDesc":"Part 7","PriceBulk":null,"SellPrice":"100.00","PiecesPurch":5,"PricePerPiece":"6.00","Vat":"19.00","DateCreated":"2025-04-04","Sold":3,"Stock":2,"SupplierName":"Supplier7","SupplierPhone":"55444666","SupplierEmail":"supplier7@email.com"}
+[22-Apr-2025 20:56:02 UTC] Found invoice information for part: {"InvoiceID":73,"InvoiceNr":107,"DateCreated":"2025-04-04"}
+[22-Apr-2025 20:56:02 UTC] Part data in view: {"PartID":61,"SupplierID":39,"PartDesc":"Part 7","PriceBulk":null,"SellPrice":"100.00","PiecesPurch":5,"PricePerPiece":"6.00","Vat":"19.00","DateCreated":"2025-04-04","Sold":3,"Stock":2,"SupplierName":"Supplier7","SupplierPhone":"55444666","SupplierEmail":"supplier7@email.com"}
+[22-Apr-2025 20:56:04 UTC] Database connection established successfully
+[22-Apr-2025 20:56:04 UTC] Database connection established successfully
+[22-Apr-2025 20:56:04 UTC] Part data fetched: {"PartID":61,"SupplierID":39,"PartDesc":"Part 7","PriceBulk":null,"SellPrice":"100.00","PiecesPurch":5,"PricePerPiece":"6.00","Vat":"19.00","DateCreated":"2025-04-04","Sold":3,"Stock":2,"SupplierName":"Supplier7","SupplierPhone":"55444666","SupplierEmail":"supplier7@email.com"}
+[22-Apr-2025 20:56:04 UTC] Found invoice information for part: {"InvoiceID":73,"InvoiceNr":107,"DateCreated":"2025-04-04"}
+[22-Apr-2025 20:56:04 UTC] Part data in view: {"PartID":61,"SupplierID":39,"PartDesc":"Part 7","PriceBulk":null,"SellPrice":"100.00","PiecesPurch":5,"PricePerPiece":"6.00","Vat":"19.00","DateCreated":"2025-04-04","Sold":3,"Stock":2,"SupplierName":"Supplier7","SupplierPhone":"55444666","SupplierEmail":"supplier7@email.com"}
+[22-Apr-2025 20:56:08 UTC] Database connection established successfully
+[22-Apr-2025 20:56:08 UTC] Database connection established successfully
+[22-Apr-2025 20:56:08 UTC] Part data fetched: {"PartID":61,"SupplierID":39,"PartDesc":"Part 7","PriceBulk":null,"SellPrice":"100.00","PiecesPurch":5,"PricePerPiece":"6.00","Vat":"19.00","DateCreated":"2025-04-04","Sold":3,"Stock":2,"SupplierName":"Supplier7","SupplierPhone":"55444666","SupplierEmail":"supplier7@email.com"}
+[22-Apr-2025 20:56:08 UTC] Found invoice information for part: {"InvoiceID":73,"InvoiceNr":107,"DateCreated":"2025-04-04"}
+[22-Apr-2025 20:56:08 UTC] Part data in view: {"PartID":61,"SupplierID":39,"PartDesc":"Part 7","PriceBulk":null,"SellPrice":"100.00","PiecesPurch":5,"PricePerPiece":"6.00","Vat":"19.00","DateCreated":"2025-04-04","Sold":3,"Stock":2,"SupplierName":"Supplier7","SupplierPhone":"55444666","SupplierEmail":"supplier7@email.com"}
+[22-Apr-2025 21:00:05 UTC] Database connection established successfully
+[22-Apr-2025 21:00:05 UTC] Database connection established successfully
+[22-Apr-2025 21:00:05 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/models/parts_model.php on line 463
+[22-Apr-2025 21:00:08 UTC] Database connection established successfully
+[22-Apr-2025 21:00:08 UTC] Database connection established successfully
+[22-Apr-2025 21:00:08 UTC] Part data fetched: {"PartID":61,"SupplierID":39,"PartDesc":"Part 7","PriceBulk":null,"SellPrice":"100.00","PiecesPurch":5,"PricePerPiece":"6.00","Vat":"19.00","DateCreated":"2025-04-04","Sold":3,"Stock":2,"SupplierName":"Supplier7","SupplierPhone":"55444666","SupplierEmail":"supplier7@email.com"}
+[22-Apr-2025 21:00:08 UTC] Found invoice information for part: {"InvoiceID":73,"InvoiceNr":107,"DateCreated":"2025-04-04"}
+[22-Apr-2025 21:00:08 UTC] Part data in view: {"PartID":61,"SupplierID":39,"PartDesc":"Part 7","PriceBulk":null,"SellPrice":"100.00","PiecesPurch":5,"PricePerPiece":"6.00","Vat":"19.00","DateCreated":"2025-04-04","Sold":3,"Stock":2,"SupplierName":"Supplier7","SupplierPhone":"55444666","SupplierEmail":"supplier7@email.com"}
+[22-Apr-2025 21:00:19 UTC] Database connection established successfully
+[22-Apr-2025 21:00:19 UTC] Database connection established successfully
+[22-Apr-2025 21:00:19 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/models/parts_model.php on line 463
+[22-Apr-2025 21:00:24 UTC] Database connection established successfully
+[22-Apr-2025 21:00:24 UTC] Database connection established successfully
+[22-Apr-2025 21:00:24 UTC] Part data fetched: {"PartID":60,"SupplierID":38,"PartDesc":"Part6","PriceBulk":null,"SellPrice":"18.00","PiecesPurch":5,"PricePerPiece":"6.00","Vat":"19.00","DateCreated":"2025-04-05","Sold":5,"Stock":0,"SupplierName":"Supplier6","SupplierPhone":"333444555","SupplierEmail":"supplier6@email.com"}
+[22-Apr-2025 21:00:24 UTC] Found invoice information for part: {"InvoiceID":72,"InvoiceNr":106,"DateCreated":"2025-04-05"}
+[22-Apr-2025 21:00:24 UTC] Part data in view: {"PartID":60,"SupplierID":38,"PartDesc":"Part6","PriceBulk":null,"SellPrice":"18.00","PiecesPurch":5,"PricePerPiece":"6.00","Vat":"19.00","DateCreated":"2025-04-05","Sold":5,"Stock":0,"SupplierName":"Supplier6","SupplierPhone":"333444555","SupplierEmail":"supplier6@email.com"}
+[22-Apr-2025 22:01:47 UTC] Database connection established successfully
+[22-Apr-2025 22:01:47 UTC] Database connection established successfully
+[22-Apr-2025 22:01:47 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/models/parts_model.php on line 463
+[22-Apr-2025 22:01:48 UTC] Database connection established successfully
+[22-Apr-2025 22:01:48 UTC] Database connection established successfully
+[22-Apr-2025 22:01:48 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/models/parts_model.php on line 463
+[22-Apr-2025 22:01:48 UTC] Database connection established successfully
+[22-Apr-2025 22:01:48 UTC] Database connection established successfully
+[22-Apr-2025 22:01:48 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/models/parts_model.php on line 463
+[22-Apr-2025 22:01:48 UTC] Database connection established successfully
+[22-Apr-2025 22:01:48 UTC] Database connection established successfully
+[22-Apr-2025 22:01:48 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/models/parts_model.php on line 463
+[22-Apr-2025 22:41:20 UTC] Database connection established successfully
+[22-Apr-2025 22:41:20 UTC] Database connection established successfully
+[22-Apr-2025 22:41:20 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/models/parts_model.php on line 463
+[22-Apr-2025 22:41:25 UTC] Database connection established successfully
+[22-Apr-2025 22:41:25 UTC] Database connection established successfully
+[22-Apr-2025 22:41:25 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/models/parts_model.php on line 463
+[22-Apr-2025 22:42:02 UTC] Database connection established successfully
+[22-Apr-2025 22:42:02 UTC] Database connection established successfully
+[22-Apr-2025 22:42:02 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/models/parts_model.php on line 463
+[22-Apr-2025 22:42:33 UTC] Database connection established successfully
+[22-Apr-2025 22:42:33 UTC] Database connection established successfully
+[22-Apr-2025 22:42:33 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/models/parts_model.php on line 463
+[22-Apr-2025 22:42:37 UTC] Database connection established successfully
+[22-Apr-2025 22:42:37 UTC] Database connection established successfully
+[22-Apr-2025 22:42:37 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/views/parts_main.php on line 502
+[22-Apr-2025 22:42:40 UTC] Database connection established successfully
+[22-Apr-2025 22:42:40 UTC] Database connection established successfully
+[22-Apr-2025 22:42:43 UTC] Database connection established successfully
+[22-Apr-2025 22:42:43 UTC] Database connection established successfully
+[22-Apr-2025 22:42:46 UTC] Database connection established successfully
+[22-Apr-2025 22:42:46 UTC] Database connection established successfully
+[22-Apr-2025 22:42:46 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/views/parts_main.php on line 502
+[22-Apr-2025 22:47:14 UTC] Database connection established successfully
+[22-Apr-2025 22:47:14 UTC] Database connection established successfully
+[22-Apr-2025 22:47:14 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/models/parts_model.php on line 463
+[23-Apr-2025 11:58:11 UTC] Database connection established successfully
+[23-Apr-2025 11:58:11 UTC] Database connection established successfully
+[23-Apr-2025 11:58:11 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/models/parts_model.php on line 463
+[23-Apr-2025 11:58:12 UTC] Database connection established successfully
+[23-Apr-2025 11:58:12 UTC] Database connection established successfully
+[23-Apr-2025 11:58:12 UTC] Part data fetched: {"PartID":66,"SupplierID":43,"PartDesc":"Test","PriceBulk":"476.00","SellPrice":"25.00","PiecesPurch":20,"PricePerPiece":"20.00","Vat":"19.00","DateCreated":"2025-04-18","Sold":2,"Stock":18,"SupplierName":"Antonis","SupplierPhone":"99112233","SupplierEmail":""}
+[23-Apr-2025 11:58:12 UTC] No invoice information found for part ID: 66
+[23-Apr-2025 11:58:12 UTC] Part data in view: {"PartID":66,"SupplierID":43,"PartDesc":"Test","PriceBulk":"476.00","SellPrice":"25.00","PiecesPurch":20,"PricePerPiece":"20.00","Vat":"19.00","DateCreated":"2025-04-18","Sold":2,"Stock":18,"SupplierName":"Antonis","SupplierPhone":"99112233","SupplierEmail":""}
+[23-Apr-2025 11:58:14 UTC] Database connection established successfully
+[23-Apr-2025 11:58:14 UTC] Database connection established successfully
+[23-Apr-2025 11:58:14 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/models/parts_model.php on line 463
+[23-Apr-2025 11:58:17 UTC] Database connection established successfully
+[23-Apr-2025 11:58:17 UTC] Database connection established successfully
+[23-Apr-2025 11:58:17 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/models/parts_model.php on line 463
+[23-Apr-2025 11:58:18 UTC] Database connection established successfully
+[23-Apr-2025 11:58:18 UTC] Database connection established successfully
+[23-Apr-2025 11:58:18 UTC] Part data fetched: {"PartID":53,"SupplierID":32,"PartDesc":"TestPart2","PriceBulk":"49.98","SellPrice":"7.00","PiecesPurch":6,"PricePerPiece":"7.00","Vat":"19.00","DateCreated":"2025-04-10","Sold":12,"Stock":-6,"SupplierName":"Testsupl2","SupplierPhone":"12345678","SupplierEmail":"testsup2@email.com"}
+[23-Apr-2025 11:58:18 UTC] No invoice information found for part ID: 53
+[23-Apr-2025 11:58:18 UTC] Part data in view: {"PartID":53,"SupplierID":32,"PartDesc":"TestPart2","PriceBulk":"49.98","SellPrice":"7.00","PiecesPurch":6,"PricePerPiece":"7.00","Vat":"19.00","DateCreated":"2025-04-10","Sold":12,"Stock":-6,"SupplierName":"Testsupl2","SupplierPhone":"12345678","SupplierEmail":"testsup2@email.com"}
+[23-Apr-2025 11:58:19 UTC] Database connection established successfully
+[23-Apr-2025 11:58:19 UTC] Database connection established successfully
+[23-Apr-2025 11:58:19 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/models/parts_model.php on line 463
+[23-Apr-2025 11:58:28 UTC] Database connection established successfully
+[23-Apr-2025 11:58:28 UTC] Database connection established successfully
+[23-Apr-2025 11:58:28 UTC] Part data fetched: {"PartID":52,"SupplierID":31,"PartDesc":"TestPart1","PriceBulk":"49.98","SellPrice":"14.00","PiecesPurch":6,"PricePerPiece":"7.00","Vat":"19.00","DateCreated":"2025-04-01","Sold":6,"Stock":-1,"SupplierName":"Testsupl","SupplierPhone":"00998877","SupplierEmail":"testsup1@email.com"}
+[23-Apr-2025 11:58:28 UTC] Found invoice information for part: {"InvoiceID":63,"InvoiceNr":122,"DateCreated":"2025-04-01"}
+[23-Apr-2025 11:58:28 UTC] Part data in view: {"PartID":52,"SupplierID":31,"PartDesc":"TestPart1","PriceBulk":"49.98","SellPrice":"14.00","PiecesPurch":6,"PricePerPiece":"7.00","Vat":"19.00","DateCreated":"2025-04-01","Sold":6,"Stock":-1,"SupplierName":"Testsupl","SupplierPhone":"00998877","SupplierEmail":"testsup1@email.com"}
+[23-Apr-2025 12:02:25 UTC] Database connection established successfully
+[23-Apr-2025 12:02:25 UTC] Database connection established successfully
+[23-Apr-2025 12:02:25 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/models/parts_model.php on line 463
+[23-Apr-2025 12:02:26 UTC] Database connection established successfully
+[23-Apr-2025 12:02:26 UTC] Database connection established successfully
+[23-Apr-2025 12:02:26 UTC] Part data fetched: {"PartID":52,"SupplierID":31,"PartDesc":"TestPart1","PriceBulk":"49.98","SellPrice":"14.00","PiecesPurch":6,"PricePerPiece":"7.00","Vat":"19.00","DateCreated":"2025-04-01","Sold":6,"Stock":-1,"SupplierName":"Testsupl","SupplierPhone":"00998877","SupplierEmail":"testsup1@email.com"}
+[23-Apr-2025 12:02:26 UTC] Found invoice information for part: {"InvoiceID":63,"InvoiceNr":122,"DateCreated":"2025-04-01"}
+[23-Apr-2025 12:02:26 UTC] Part data in view: {"PartID":52,"SupplierID":31,"PartDesc":"TestPart1","PriceBulk":"49.98","SellPrice":"14.00","PiecesPurch":6,"PricePerPiece":"7.00","Vat":"19.00","DateCreated":"2025-04-01","Sold":6,"Stock":-1,"SupplierName":"Testsupl","SupplierPhone":"00998877","SupplierEmail":"testsup1@email.com"}
+[23-Apr-2025 12:02:28 UTC] Database connection established successfully
+[23-Apr-2025 12:02:28 UTC] Database connection established successfully
+[23-Apr-2025 12:02:28 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webvaria/mobilegaragelarnaca.com/MGAdmin2025/managements/Parts_Management/models/parts_model.php on line 463

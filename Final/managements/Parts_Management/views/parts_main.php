@@ -179,16 +179,23 @@ if (!$result) {
         data-bs-toggle="dropdown"
         href="#"
         role="button"
-        aria-haspopup="false"
+        aria-haspopup="true"
         aria-expanded="false"
       >
         <i class="ti ti-search"></i>
       </a>
-      <div class="dropdown-menu pc-h-dropdown drp-search">
-        <form class="px-3">
+      <div class="dropdown-menu pc-h-dropdown drp-search" style="min-width: 300px;">
+        <form class="px-3" method="GET" action="parts_main.php">
           <div class="mb-0 d-flex align-items-center">
             <i data-feather="search"></i>
-            <input type="search" class="form-control border-0 shadow-none" placeholder="Search here . . ." />
+            <input 
+              type="search" 
+              name="filter" 
+              class="form-control border-0 shadow-none" 
+              placeholder="Search here . . ." 
+              value="<?= isset($_GET['filter']) ? htmlspecialchars($_GET['filter']) : '' ?>" 
+              autocomplete="off"
+            />
           </div>
         </form>
       </div>
@@ -1255,17 +1262,43 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <script>
   $(document).ready(function() {
+    // Check for part to open from accounting view
+    const partId = sessionStorage.getItem('openPartId');
+    if (partId) {
+      // Clear the storage immediately
+      sessionStorage.removeItem('openPartId');
+      // Load the part view
+      $.get('parts_view.php', { id: partId }, function(response) {
+        $('#dynamicContent').html(response);
+      });
+    }
+
     // Check if we need to open the add form
-    const openAddPartForm = sessionStorage.getItem('openAddPartForm');
-    if (openAddPartForm === 'true') {
+    const openPartForm = sessionStorage.getItem('openPartForm');
+    if (openPartForm === 'true') {
       // Load the add part form
-      $.get('add_parts_form.php', function(response) {
+      $.get('parts.php', function(response) {
         $('#dynamicContent').html(response);
       });
       // Clear the flag
-      sessionStorage.removeItem('openAddPartForm');
+      sessionStorage.removeItem('openPartForm');
     }
   });
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize Bootstrap dropdowns
+    var dropdownElementList = [].slice.call(document.querySelectorAll('[data-bs-toggle="dropdown"]'));
+    var dropdownList = dropdownElementList.map(function (dropdownToggleEl) {
+        return new bootstrap.Dropdown(dropdownToggleEl);
+    });
+
+    // Initialize Feather icons
+    if (typeof feather !== 'undefined') {
+        feather.replace();
+    }
+});
 </script>
 
 
